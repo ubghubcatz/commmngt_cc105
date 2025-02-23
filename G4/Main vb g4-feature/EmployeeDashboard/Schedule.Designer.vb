@@ -25,13 +25,13 @@ Partial Class Schedule
         Label1 = New Label()
         Shift = New TabControl()
         Weekly = New TabPage()
-        Monthly = New TabPage()
         WeeklyShift = New DataGridView()
+        Monthly = New TabPage()
         MonthlyShift = New DataGridView()
         Shift.SuspendLayout()
         Weekly.SuspendLayout()
-        Monthly.SuspendLayout()
         CType(WeeklyShift, ComponentModel.ISupportInitialize).BeginInit()
+        Monthly.SuspendLayout()
         CType(MonthlyShift, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -39,7 +39,7 @@ Partial Class Schedule
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
-        Label1.Location = New Point(286, 51)
+        Label1.Location = New Point(304, 49)
         Label1.Name = "Label1"
         Label1.Size = New Size(184, 35)
         Label1.TabIndex = 1
@@ -66,6 +66,15 @@ Partial Class Schedule
         Weekly.TabIndex = 0
         Weekly.Text = "Weekly"
         ' 
+        ' WeeklyShift
+        ' 
+        WeeklyShift.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        WeeklyShift.Location = New Point(15, 22)
+        WeeklyShift.Name = "WeeklyShift"
+        WeeklyShift.RowHeadersWidth = 51
+        WeeklyShift.Size = New Size(621, 236)
+        WeeklyShift.TabIndex = 0
+        ' 
         ' Monthly
         ' 
         Monthly.BackColor = Color.Transparent
@@ -76,15 +85,6 @@ Partial Class Schedule
         Monthly.Size = New Size(655, 276)
         Monthly.TabIndex = 1
         Monthly.Text = "Monthly"
-        ' 
-        ' WeeklyShift
-        ' 
-        WeeklyShift.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        WeeklyShift.Location = New Point(15, 22)
-        WeeklyShift.Name = "WeeklyShift"
-        WeeklyShift.RowHeadersWidth = 51
-        WeeklyShift.Size = New Size(621, 236)
-        WeeklyShift.TabIndex = 0
         ' 
         ' MonthlyShift
         ' 
@@ -99,7 +99,7 @@ Partial Class Schedule
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(255), CByte(245), CByte(145))
+        BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
         ClientSize = New Size(800, 450)
         Controls.Add(Shift)
         Controls.Add(Label1)
@@ -108,8 +108,8 @@ Partial Class Schedule
         Text = "Schedule"
         Shift.ResumeLayout(False)
         Weekly.ResumeLayout(False)
-        Monthly.ResumeLayout(False)
         CType(WeeklyShift, ComponentModel.ISupportInitialize).EndInit()
+        Monthly.ResumeLayout(False)
         CType(MonthlyShift, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
