@@ -9,7 +9,7 @@ Public Class IDcard
         idNumber.Text = employeeID
     End Sub
 
-    Private Sub btnloadDetails_Click(sender As Object, e As EventArgs) Handles btnloadDetails.Click
+    Private Sub BtnloadDetails_Click(sender As Object, e As EventArgs) Handles btnloadDetails.Click
         Try
             ' Debugging: Check if Employee ID is passed correctly
             If String.IsNullOrEmpty(idNumber.Text.Trim()) Then
@@ -57,5 +57,10 @@ Public Class IDcard
             conn.Close()
         End Try
     End Sub
+
+    Private Sub IDcard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
 
 End Class
