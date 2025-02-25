@@ -44,7 +44,7 @@ Partial Class Attendance
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
-        Label1.Location = New Point(39, 44)
+        Label1.Location = New Point(61, 58)
         Label1.Name = "Label1"
         Label1.Size = New Size(272, 35)
         Label1.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class Attendance
         lblName.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
         lblName.BorderStyle = BorderStyle.FixedSingle
         lblName.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblName.Location = New Point(42, 174)
+        lblName.Location = New Point(64, 188)
         lblName.Name = "lblName"
         lblName.Padding = New Padding(5)
         lblName.Size = New Size(298, 35)
@@ -66,7 +66,7 @@ Partial Class Attendance
         lblID.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
         lblID.BorderStyle = BorderStyle.FixedSingle
         lblID.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblID.Location = New Point(42, 334)
+        lblID.Location = New Point(64, 348)
         lblID.Name = "lblID"
         lblID.Padding = New Padding(5)
         lblID.Size = New Size(131, 35)
@@ -77,7 +77,7 @@ Partial Class Attendance
         lblPosition.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
         lblPosition.BorderStyle = BorderStyle.FixedSingle
         lblPosition.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblPosition.Location = New Point(42, 254)
+        lblPosition.Location = New Point(64, 268)
         lblPosition.Name = "lblPosition"
         lblPosition.Padding = New Padding(5)
         lblPosition.Size = New Size(298, 35)
@@ -86,7 +86,7 @@ Partial Class Attendance
         ' pbEmployeePhoto
         ' 
         pbEmployeePhoto.BackColor = SystemColors.Control
-        pbEmployeePhoto.Location = New Point(360, 145)
+        pbEmployeePhoto.Location = New Point(382, 159)
         pbEmployeePhoto.Name = "pbEmployeePhoto"
         pbEmployeePhoto.Size = New Size(162, 162)
         pbEmployeePhoto.TabIndex = 11
@@ -97,7 +97,7 @@ Partial Class Attendance
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label2.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label2.Location = New Point(39, 145)
+        Label2.Location = New Point(61, 159)
         Label2.Name = "Label2"
         Label2.Size = New Size(93, 20)
         Label2.TabIndex = 12
@@ -108,7 +108,7 @@ Partial Class Attendance
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label3.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label3.Location = New Point(39, 228)
+        Label3.Location = New Point(61, 242)
         Label3.Name = "Label3"
         Label3.Size = New Size(79, 20)
         Label3.TabIndex = 13
@@ -119,7 +119,7 @@ Partial Class Attendance
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label4.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label4.Location = New Point(39, 309)
+        Label4.Location = New Point(61, 323)
         Label4.Name = "Label4"
         Label4.Size = New Size(94, 20)
         Label4.TabIndex = 14
@@ -130,7 +130,7 @@ Partial Class Attendance
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label5.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label5.Location = New Point(559, 145)
+        Label5.Location = New Point(581, 159)
         Label5.Name = "Label5"
         Label5.Size = New Size(66, 20)
         Label5.TabIndex = 15
@@ -141,7 +141,7 @@ Partial Class Attendance
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label6.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label6.Location = New Point(559, 215)
+        Label6.Location = New Point(581, 229)
         Label6.Name = "Label6"
         Label6.Size = New Size(80, 20)
         Label6.TabIndex = 16
@@ -152,7 +152,7 @@ Partial Class Attendance
         lblTimeIn.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
         lblTimeIn.BorderStyle = BorderStyle.FixedSingle
         lblTimeIn.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblTimeIn.Location = New Point(559, 165)
+        lblTimeIn.Location = New Point(581, 179)
         lblTimeIn.Name = "lblTimeIn"
         lblTimeIn.Padding = New Padding(5)
         lblTimeIn.Size = New Size(90, 35)
@@ -163,7 +163,7 @@ Partial Class Attendance
         lblTimeOut.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
         lblTimeOut.BorderStyle = BorderStyle.FixedSingle
         lblTimeOut.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblTimeOut.Location = New Point(559, 235)
+        lblTimeOut.Location = New Point(581, 249)
         lblTimeOut.Name = "lblTimeOut"
         lblTimeOut.Padding = New Padding(5)
         lblTimeOut.Size = New Size(88, 35)
@@ -172,7 +172,7 @@ Partial Class Attendance
         ' txtEmployeeID
         ' 
         txtEmployeeID.BorderStyle = BorderStyle.None
-        txtEmployeeID.Location = New Point(506, 352)
+        txtEmployeeID.Location = New Point(562, 394)
         txtEmployeeID.MinimumSize = New Size(0, 35)
         txtEmployeeID.Name = "txtEmployeeID"
         txtEmployeeID.Size = New Size(222, 35)
@@ -183,7 +183,7 @@ Partial Class Attendance
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        Label7.Location = New Point(511, 319)
+        Label7.Location = New Point(567, 361)
         Label7.Name = "Label7"
         Label7.Size = New Size(210, 30)
         Label7.TabIndex = 20
@@ -196,7 +196,7 @@ Partial Class Attendance
         btnTimeInOut.FlatStyle = FlatStyle.Flat
         btnTimeInOut.Font = New Font("Segoe UI", 11F)
         btnTimeInOut.ForeColor = Color.White
-        btnTimeInOut.Location = New Point(604, 393)
+        btnTimeInOut.Location = New Point(660, 435)
         btnTimeInOut.Name = "btnTimeInOut"
         btnTimeInOut.Size = New Size(124, 56)
         btnTimeInOut.TabIndex = 21
@@ -208,7 +208,7 @@ Partial Class Attendance
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(795, 486)
+        ClientSize = New Size(829, 522)
         Controls.Add(btnTimeInOut)
         Controls.Add(Label7)
         Controls.Add(txtEmployeeID)
