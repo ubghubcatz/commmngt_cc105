@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class IDcard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,10 +20,8 @@ Partial Class IDcard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IDcard))
-        idCardbase = New PictureBox()
         idPic = New PictureBox()
         lblFullName = New Label()
         IDNumberlbl = New Label()
@@ -31,47 +29,43 @@ Partial Class IDcard
         btnloadDetails = New Button()
         idNumber = New TextBox()
         lblIDnumber = New Label()
-        CType(idCardbase, ComponentModel.ISupportInitialize).BeginInit()
+        idPicPanel = New Panel()
+        idBackPanel = New Panel()
+        lblFullAddress = New Label()
+        lblContactNo = New Label()
         CType(idPic, ComponentModel.ISupportInitialize).BeginInit()
+        idPicPanel.SuspendLayout()
+        idBackPanel.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' idCardbase
-        ' 
-        idCardbase.BackColor = Color.White
-        idCardbase.BackgroundImage = CType(resources.GetObject("idCardbase.BackgroundImage"), Image)
-        idCardbase.BackgroundImageLayout = ImageLayout.Zoom
-        idCardbase.Location = New Point(280, 27)
-        idCardbase.Name = "idCardbase"
-        idCardbase.Size = New Size(280, 397)
-        idCardbase.TabIndex = 0
-        idCardbase.TabStop = False
         ' 
         ' idPic
         ' 
+        idPic.BackColor = Color.Transparent
         idPic.BackgroundImageLayout = ImageLayout.Center
-        idPic.Location = New Point(351, 127)
+        idPic.Location = New Point(64, 61)
         idPic.Name = "idPic"
-        idPic.Size = New Size(140, 135)
+        idPic.Size = New Size(152, 152)
         idPic.TabIndex = 1
         idPic.TabStop = False
         ' 
         ' lblFullName
         ' 
-        lblFullName.BackColor = Color.White
+        lblFullName.BackColor = Color.Transparent
         lblFullName.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
-        lblFullName.Location = New Point(291, 275)
+        lblFullName.ForeColor = Color.FromArgb(CByte(0), CByte(120), CByte(62))
+        lblFullName.Location = New Point(15, 254)
         lblFullName.Name = "lblFullName"
-        lblFullName.Size = New Size(256, 25)
+        lblFullName.Size = New Size(245, 25)
         lblFullName.TabIndex = 2
-        lblFullName.Text = "Ricardo Diego Sun Aquino"
+        lblFullName.Text = "Employee Full Name"
         lblFullName.TextAlign = ContentAlignment.TopCenter
         ' 
         ' IDNumberlbl
         ' 
-        IDNumberlbl.BackColor = Color.Green
+        IDNumberlbl.BackColor = Color.Transparent
         IDNumberlbl.Font = New Font("Calibri", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         IDNumberlbl.ForeColor = Color.White
-        IDNumberlbl.Location = New Point(319, 349)
+        IDNumberlbl.Location = New Point(38, 324)
         IDNumberlbl.Name = "IDNumberlbl"
         IDNumberlbl.Size = New Size(203, 28)
         IDNumberlbl.TabIndex = 3
@@ -80,12 +74,14 @@ Partial Class IDcard
         ' 
         ' lblPosition
         ' 
-        lblPosition.BackColor = Color.White
-        lblPosition.Font = New Font("Segoe UI", 8F)
-        lblPosition.Location = New Point(296, 302)
+        lblPosition.Anchor = AnchorStyles.Top
+        lblPosition.BackColor = Color.Transparent
+        lblPosition.Font = New Font("Segoe UI", 9F)
+        lblPosition.ForeColor = Color.White
+        lblPosition.Location = New Point(15, 277)
         lblPosition.MaximumSize = New Size(250, 0)
         lblPosition.Name = "lblPosition"
-        lblPosition.Size = New Size(249, 36)
+        lblPosition.Size = New Size(245, 35)
         lblPosition.TabIndex = 4
         lblPosition.Text = "Position"
         lblPosition.TextAlign = ContentAlignment.MiddleCenter
@@ -96,48 +92,98 @@ Partial Class IDcard
         btnloadDetails.FlatAppearance.BorderSize = 0
         btnloadDetails.FlatStyle = FlatStyle.Flat
         btnloadDetails.ForeColor = Color.White
-        btnloadDetails.Location = New Point(612, 415)
+        btnloadDetails.Location = New Point(655, 438)
         btnloadDetails.Name = "btnloadDetails"
-        btnloadDetails.Size = New Size(125, 43)
+        btnloadDetails.Size = New Size(136, 43)
         btnloadDetails.TabIndex = 5
         btnloadDetails.Text = "Load Details"
         btnloadDetails.UseVisualStyleBackColor = False
         ' 
         ' idNumber
         ' 
-        idNumber.Location = New Point(612, 364)
+        idNumber.Location = New Point(655, 405)
         idNumber.Name = "idNumber"
-        idNumber.Size = New Size(125, 27)
+        idNumber.Size = New Size(136, 27)
         idNumber.TabIndex = 6
+        idNumber.WordWrap = False
         ' 
         ' lblIDnumber
         ' 
         lblIDnumber.AutoSize = True
-        lblIDnumber.Location = New Point(612, 333)
+        lblIDnumber.BackColor = Color.Transparent
+        lblIDnumber.Location = New Point(655, 382)
         lblIDnumber.Name = "lblIDnumber"
-        lblIDnumber.Size = New Size(123, 20)
+        lblIDnumber.Size = New Size(136, 20)
         lblIDnumber.TabIndex = 7
-        lblIDnumber.Text = "Enter ID Number:"
+        lblIDnumber.Text = "ENTER ID NUMBER"
+        ' 
+        ' idPicPanel
+        ' 
+        idPicPanel.BackgroundImage = My.Resources.Resources.ID_F__1_
+        idPicPanel.BackgroundImageLayout = ImageLayout.Zoom
+        idPicPanel.Controls.Add(idPic)
+        idPicPanel.Controls.Add(lblFullName)
+        idPicPanel.Controls.Add(lblPosition)
+        idPicPanel.Controls.Add(IDNumberlbl)
+        idPicPanel.Location = New Point(65, 38)
+        idPicPanel.Name = "idPicPanel"
+        idPicPanel.Size = New Size(277, 394)
+        idPicPanel.TabIndex = 8
+        ' 
+        ' idBackPanel
+        ' 
+        idBackPanel.BackgroundImage = My.Resources.Resources.ID_F
+        idBackPanel.BackgroundImageLayout = ImageLayout.Zoom
+        idBackPanel.Controls.Add(lblFullAddress)
+        idBackPanel.Controls.Add(lblContactNo)
+        idBackPanel.Location = New Point(353, 38)
+        idBackPanel.Name = "idBackPanel"
+        idBackPanel.Size = New Size(277, 394)
+        idBackPanel.TabIndex = 9
+        ' 
+        ' lblFullAddress
+        ' 
+        lblFullAddress.AllowDrop = True
+        lblFullAddress.BackColor = Color.Transparent
+        lblFullAddress.Font = New Font("Calibri", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblFullAddress.ForeColor = Color.Black
+        lblFullAddress.Location = New Point(20, 113)
+        lblFullAddress.Name = "lblFullAddress"
+        lblFullAddress.Size = New Size(239, 46)
+        lblFullAddress.TabIndex = 1
+        lblFullAddress.Text = "Complete Address"
+        lblFullAddress.TextAlign = ContentAlignment.MiddleCenter
+        lblFullAddress.UseCompatibleTextRendering = True
+        ' 
+        ' lblContactNo
+        ' 
+        lblContactNo.BackColor = Color.Transparent
+        lblContactNo.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        lblContactNo.ForeColor = Color.Black
+        lblContactNo.Location = New Point(20, 88)
+        lblContactNo.Name = "lblContactNo"
+        lblContactNo.Size = New Size(239, 25)
+        lblContactNo.TabIndex = 0
+        lblContactNo.Text = "Contact Number"
+        lblContactNo.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' IDcard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(795, 486)
+        ClientSize = New Size(829, 522)
+        Controls.Add(idBackPanel)
+        Controls.Add(idPicPanel)
         Controls.Add(lblIDnumber)
         Controls.Add(idNumber)
         Controls.Add(btnloadDetails)
-        Controls.Add(lblPosition)
-        Controls.Add(IDNumberlbl)
-        Controls.Add(lblFullName)
-        Controls.Add(idPic)
-        Controls.Add(idCardbase)
         FormBorderStyle = FormBorderStyle.None
         Name = "IDcard"
         Text = "IDcard"
-        CType(idCardbase, ComponentModel.ISupportInitialize).EndInit()
         CType(idPic, ComponentModel.ISupportInitialize).EndInit()
+        idPicPanel.ResumeLayout(False)
+        idBackPanel.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -150,4 +196,8 @@ Partial Class IDcard
     Friend WithEvents btnloadDetails As Button
     Friend WithEvents idNumber As TextBox
     Friend WithEvents lblIDnumber As Label
+    Friend WithEvents idPicPanel As Panel
+    Friend WithEvents idBackPanel As Panel
+    Friend WithEvents lblFullAddress As Label
+    Friend WithEvents lblContactNo As Label
 End Class

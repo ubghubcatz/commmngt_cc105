@@ -3,6 +3,8 @@
 Public Class Attendance
     Dim conn As New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=employeeSampleData;Integrated Security=True;TrustServerCertificate=True")
 
+    'Method para sa button para mag automatic Time in and Time out
+
     Private Sub btnTimeInOut_Click(sender As Object, e As EventArgs) Handles btnTimeInOut.Click
 
         Dim empID As String = txtEmployeeID.Text.Trim()
@@ -15,7 +17,6 @@ Public Class Attendance
         Try
             conn.Open()
 
-            ' Step 1: Fetch Employee Details & Photo (JOIN EmployeeDetails and Employee tables)
             Dim query As String = "SELECT e.photo_path, ed.EmployeeName, ed.Position, ed.EmployeeID 
                                    FROM EmployeeDetails ed 
                                    INNER JOIN Employees e ON ed.EmployeeID = e.EmployeeID 
@@ -35,7 +36,7 @@ Public Class Attendance
 
                 If IO.File.Exists(imgPath) Then
                     Dim img As Image = Image.FromFile(imgPath)
-                    pbEmployeePhoto.SizeMode = PictureBoxSizeMode.Zoom ' 🔹 Scale image to fit without distortion
+                    pbEmployeePhoto.SizeMode = PictureBoxSizeMode.Zoom
                     pbEmployeePhoto.Image = img
                 Else
                     pbEmployeePhoto.Image = Nothing ' No image found
@@ -48,7 +49,6 @@ Public Class Attendance
             End If
             reader.Close()
 
-            ' Step 2: Check Last Attendance Type (Time In/Out)
             Dim checkQuery As String = "SELECT TOP 1 ScanType FROM EmployeeAttendance WHERE EmployeeID = @empID ORDER BY ScanTime DESC"
             Dim checkCmd As New SqlCommand(checkQuery, conn)
             checkCmd.Parameters.AddWithValue("@empID", empID)
@@ -56,14 +56,12 @@ Public Class Attendance
             Dim lastScanType As Object = checkCmd.ExecuteScalar()
             Dim newScanType As String = If(lastScanType IsNot Nothing AndAlso lastScanType.ToString() = "IN", "OUT", "IN")
 
-            ' Step 3: Insert Time In/Out Record
             Dim insertQuery As String = "INSERT INTO EmployeeAttendance (EmployeeID, ScanTime, ScanType) VALUES (@empID, GETDATE(), @scanType)"
             Dim insertCmd As New SqlCommand(insertQuery, conn)
             insertCmd.Parameters.AddWithValue("@empID", empID)
             insertCmd.Parameters.AddWithValue("@scanType", newScanType)
             insertCmd.ExecuteNonQuery()
 
-            ' Step 4: Display Time In/Out
             If newScanType = "IN" Then
                 lblTimeIn.Text = DateTime.Now.ToString("hh:mm:ss tt")
                 lblTimeOut.Text = "N/A"
@@ -79,6 +77,10 @@ Public Class Attendance
             conn.Close()
         End Try
 
+
+    End Sub
+
+    Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
