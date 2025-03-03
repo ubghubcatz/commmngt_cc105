@@ -1,0 +1,7 @@
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.Form1.resources
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.Resources.resources
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.vbproj.GenerateResource.cache
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.AssemblyInfoInputs.cache
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.AssemblyInfo.vb
+C:\Users\darre\source\repos\BarangaySystem\BarangaySystem\obj\Debug\net8.0-windows\BarangaySystem.vbproj.CoreCompileInputs.cache
