@@ -3,7 +3,8 @@
 Public Class Schedule
 
     ' Connection String
-    Dim conn As New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=employeeSampleData;Integrated Security=True;TrustServerCertificate=True")
+    ' Dim conn As New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=employeeSampleData;Integrated Security=True;TrustServerCertificate=True")
+    Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
 
 
     ' Method para sa ComboBox para pwede pumili kung tanod ba o baranggay health worker
@@ -36,13 +37,13 @@ Public Class Schedule
         ' SQL query to retrieve employees based on the selected role
         Dim query As String
         If selectedRole = "All" Then
-            query = "SELECT EmployeeID, Position FROM EmployeeDetails WHERE Position IN ('Barangay Tanod', 'Barangay Health Worker')"
+            query = "SELECT EmployeeID, Position FROM g4_EmployeeDetails WHERE Position IN ('Barangay Tanod', 'Barangay Health Worker')"
         Else
-            query = "SELECT EmployeeID, Position FROM EmployeeDetails WHERE Position = @Position"
+            query = "SELECT EmployeeID, Position FROM g4_EmployeeDetails WHERE Position = @Position"
         End If
 
         ' Retrieve employees based on Position
-        Using conn As New SqlConnection("Data Source=localhost\SQLEXPRESS; Initial Catalog=employeeSampleData; Integrated Security=True; TrustServerCertificate=True")
+        Using conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
             conn.Open()
             Dim cmd As New SqlCommand(query, conn)
 
@@ -98,9 +99,9 @@ Public Class Schedule
 
     Private Sub LoadShifts(Optional filter As String = "All")
 
-        Dim query As String = "SELECT ShiftID, EmployeeName, EmployeeID, Role, ShiftDate, StartTime, EndTime FROM ShiftSchedule"
+        Dim query As String = "SELECT ShiftID, EmployeeName, EmployeeID, Role, ShiftDate, StartTime, EndTime FROM g4_ShiftSchedule"
 
-        Using conn As New SqlConnection("Data Source=localhost\SQLEXPRESS; Initial Catalog=employeeSampleData; Integrated Security=True; TrustServerCertificate=True")
+        Using conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
             conn.Open()
 
             Using cmd As New SqlCommand(query, conn)
@@ -133,13 +134,13 @@ Public Class Schedule
     ' Method to Save generated shifts to database
 
     Private Sub SaveShiftsToDatabase(shiftSchedule As List(Of Tuple(Of String, String, Date, TimeSpan, TimeSpan)))
-        Using conn As New SqlConnection("Data Source=localhost\SQLEXPRESS; Initial Catalog=employeeSampleData; Integrated Security=True; TrustServerCertificate=True")
+        Using conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
             conn.Open()
             Dim rowsInserted As Integer = 0
 
             For Each shift In shiftSchedule
-                Dim cmd As New SqlCommand("INSERT INTO ShiftSchedule (EmployeeID, EmployeeName, Role, ShiftDate, StartTime, EndTime) 
-                                           VALUES (@EmployeeID, (SELECT EmployeeName FROM EmployeeDetails WHERE EmployeeID = @EmployeeID), @Role, @ShiftDate, @StartTime, @EndTime)", conn)
+                Dim cmd As New SqlCommand("INSERT INTO g4_ShiftSchedule (EmployeeID, EmployeeName, Role, ShiftDate, StartTime, EndTime) 
+                                           VALUES (@EmployeeID, (SELECT EmployeeName FROM g4_EmployeeDetails WHERE EmployeeID = @EmployeeID), @Role, @ShiftDate, @StartTime, @EndTime)", conn)
                 cmd.Parameters.AddWithValue("@EmployeeID", shift.Item1)
                 cmd.Parameters.AddWithValue("@Role", shift.Item2)
                 cmd.Parameters.AddWithValue("@ShiftDate", shift.Item3)
@@ -165,9 +166,9 @@ Public Class Schedule
         End If
 
         ' Delete all shifts from ShiftSchedule table
-        Using conn As New SqlConnection("Data Source=localhost\SQLEXPRESS; Initial Catalog=employeeSampleData; Integrated Security=True; TrustServerCertificate=True")
+        Using conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
             conn.Open()
-            Dim deleteCmd As New SqlCommand("DELETE FROM ShiftSchedule", conn)
+            Dim deleteCmd As New SqlCommand("DELETE FROM g4_ShiftSchedule", conn)
             deleteCmd.ExecuteNonQuery()
         End Using
 

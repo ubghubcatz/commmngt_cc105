@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\EmployeeDashboard.vbproj": {}
+    "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\EmployeeDashboard.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\EmployeeDashboard.vbproj": {
+    "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\EmployeeDashboard.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\EmployeeDashboard.vbproj",
+        "projectUniqueName": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\EmployeeDashboard.vbproj",
         "projectName": "EmployeeDashboard",
-        "projectPath": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\EmployeeDashboard.vbproj",
+        "projectPath": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\EmployeeDashboard.vbproj",
         "packagesPath": "C:\\Users\\Trisha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\obj\\",
+        "outputPath": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

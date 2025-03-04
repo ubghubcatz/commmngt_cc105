@@ -2,7 +2,7 @@
 Imports System.IO
 
 Public Class IDcard
-    Dim conn As New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=employeeSampleData;Integrated Security=True;TrustServerCertificate=True")
+    Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
     ' Accept Employee ID from List form
     Public Sub LoadEmployeeDetails(employeeID As String)
         idNumber.Text = employeeID
@@ -20,9 +20,9 @@ Public Class IDcard
 
             conn.Open()
 
-            Dim sql As String = "SELECT e.EmployeeID, e.FirstName, e.MiddleName, e.LastName, e.Position, e.ContactNumber, e.photo_path, d.FullAddress 
-                     FROM Employees e 
-                     INNER JOIN EmployeeDetails d ON e.EmployeeID = d.EmployeeID
+            Dim sql As String = "SELECT e.EmployeeID, e.FirstName, e.MiddleName, e.LastName, e.Position, e.ContactNumber, e.PhotoPath, d.FullAddress 
+                     FROM g4_EmployeesInfo e 
+                     INNER JOIN g4_EmployeeDetails d ON e.EmployeeID = d.EmployeeID
                      WHERE e.EmployeeID = @EmployeeID"
 
             Dim cmd As New SqlCommand(sql, conn)
@@ -42,7 +42,7 @@ Public Class IDcard
 
 
                 ' Load Photo
-                Dim photoPath As String = reader("photo_path").ToString()
+                Dim photoPath As String = reader("PhotoPath").ToString()
                 If Not String.IsNullOrEmpty(photoPath) AndAlso File.Exists(photoPath) Then
                     idPic.Image = Image.FromFile(photoPath)
                     idPic.SizeMode = PictureBoxSizeMode.Zoom ' Or use StretchImage

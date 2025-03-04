@@ -1,6 +1,6 @@
 ﻿Imports System.Runtime.CompilerServices
 
-Public Class Form1
+Public Class g4_EmployeeDashboard
 
     Sub Childform(ByVal panel As Form)
         pnlMain.Controls.Clear()
@@ -23,4 +23,7 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

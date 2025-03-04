@@ -1,14 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\",
+  "WorkspaceRootPath": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\cc105_grp4\\employeedashboard\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\bakcup file\\employeedashboard\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|solutionrelative:attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\bakcup file\\employeedashboard\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|solutionrelative:schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\cc105_grp4\\employeedashboard\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|solutionrelative:schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\bakcup file\\employeedashboard\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|solutionrelative:list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\bakcup file\\employeedashboard\\idcard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|solutionrelative:idcard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|c:\\users\\trisha\\desktop\\bakcup file\\employeedashboard\\g4_employeedashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7F15A09B-0BF3-4A43-89C6-021C48261F1B}|EmployeeDashboard.vbproj|solutionrelative:g4_employeedashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Schedule.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\Schedule.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\Schedule.vb",
               "RelativeDocumentMoniker": "Schedule.vb",
-              "ToolTip": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\Schedule.vb",
+              "ToolTip": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\Schedule.vb",
               "RelativeToolTip": "Schedule.vb",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAAwI0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAowK0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-02-25T06:16:45.494Z",
               "IsPinned": true,
@@ -40,15 +52,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Schedule.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\Schedule.vb",
-              "RelativeDocumentMoniker": "Schedule.vb",
-              "ToolTip": "C:\\Users\\Trisha\\Desktop\\CC105_grp4\\EmployeeDashboard\\Schedule.vb [Design]",
-              "RelativeToolTip": "Schedule.vb [Design]",
+              "DocumentIndex": 0,
+              "Title": "Attendance.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\Attendance.vb",
+              "RelativeDocumentMoniker": "Attendance.vb",
+              "ToolTip": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\Attendance.vb",
+              "RelativeToolTip": "Attendance.vb",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwFUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-02-25T06:16:43.22Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-04T04:40:46.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "List.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\List.vb",
+              "RelativeDocumentMoniker": "List.vb",
+              "ToolTip": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\List.vb",
+              "RelativeToolTip": "List.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-04T04:39:16.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IDcard.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\IDcard.vb",
+              "RelativeDocumentMoniker": "IDcard.vb",
+              "ToolTip": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\IDcard.vb",
+              "RelativeToolTip": "IDcard.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-04T04:38:44.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "g4_EmployeeDashboard.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\g4_EmployeeDashboard.vb",
+              "RelativeDocumentMoniker": "g4_EmployeeDashboard.vb",
+              "ToolTip": "C:\\Users\\Trisha\\Desktop\\bakcup file\\EmployeeDashboard\\g4_EmployeeDashboard.vb",
+              "RelativeToolTip": "g4_EmployeeDashboard.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-04T04:36:51.878Z",
+              "EditorCaption": ""
             }
           ]
         }

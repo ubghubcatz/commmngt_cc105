@@ -1,7 +1,7 @@
 ﻿Imports Microsoft.Data.SqlClient
 
 Public Class Attendance
-    Dim conn As New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=employeeSampleData;Integrated Security=True;TrustServerCertificate=True")
+    Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
 
     'Method para sa button para mag automatic Time in and Time out
 
@@ -17,9 +17,9 @@ Public Class Attendance
         Try
             conn.Open()
 
-            Dim query As String = "SELECT e.photo_path, ed.EmployeeName, ed.Position, ed.EmployeeID 
-                                   FROM EmployeeDetails ed 
-                                   INNER JOIN Employees e ON ed.EmployeeID = e.EmployeeID 
+            Dim query As String = "SELECT e.PhotoPath, ed.EmployeeName, ed.Position, ed.EmployeeID 
+                                   FROM g4_EmployeeDetails ed 
+                                   INNER JOIN g4_EmployeesInfo e ON ed.EmployeeID = e.EmployeeID 
                                    WHERE ed.EmployeeID = @empID"
             Dim cmd As New SqlCommand(query, conn)
             cmd.Parameters.AddWithValue("@empID", empID)
@@ -32,7 +32,7 @@ Public Class Attendance
                 lblPosition.Text = reader("Position").ToString()
                 lblID.Text = reader("EmployeeID").ToString()
 
-                Dim imgPath As String = reader("photo_path").ToString()
+                Dim imgPath As String = reader("PhotoPath").ToString()
 
                 If IO.File.Exists(imgPath) Then
                     Dim img As Image = Image.FromFile(imgPath)
@@ -49,14 +49,14 @@ Public Class Attendance
             End If
             reader.Close()
 
-            Dim checkQuery As String = "SELECT TOP 1 ScanType FROM EmployeeAttendance WHERE EmployeeID = @empID ORDER BY ScanTime DESC"
+            Dim checkQuery As String = "SELECT TOP 1 ScanType FROM g4_EmployeeAttendance WHERE EmployeeID = @empID ORDER BY ScanTime DESC"
             Dim checkCmd As New SqlCommand(checkQuery, conn)
             checkCmd.Parameters.AddWithValue("@empID", empID)
 
             Dim lastScanType As Object = checkCmd.ExecuteScalar()
             Dim newScanType As String = If(lastScanType IsNot Nothing AndAlso lastScanType.ToString() = "IN", "OUT", "IN")
 
-            Dim insertQuery As String = "INSERT INTO EmployeeAttendance (EmployeeID, ScanTime, ScanType) VALUES (@empID, GETDATE(), @scanType)"
+            Dim insertQuery As String = "INSERT INTO g4_EmployeeAttendance (EmployeeID, ScanTime, ScanType) VALUES (@empID, GETDATE(), @scanType)"
             Dim insertCmd As New SqlCommand(insertQuery, conn)
             insertCmd.Parameters.AddWithValue("@empID", empID)
             insertCmd.Parameters.AddWithValue("@scanType", newScanType)
