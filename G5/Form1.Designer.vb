@@ -31,10 +31,8 @@ Partial Class Form1
         Button1 = New Button()
         btnNew = New Button()
         btnRecords = New Button()
-        PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
-        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
@@ -65,7 +63,6 @@ Partial Class Form1
         Panel2.Controls.Add(Button1)
         Panel2.Controls.Add(btnNew)
         Panel2.Controls.Add(btnRecords)
-        Panel2.Controls.Add(PictureBox1)
         Panel2.Dock = DockStyle.Left
         Panel2.Location = New Point(0, 94)
         Panel2.Name = "Panel2"
@@ -134,14 +131,6 @@ Partial Class Form1
         btnRecords.TextImageRelation = TextImageRelation.ImageAboveText
         btnRecords.UseVisualStyleBackColor = True
         ' 
-        ' PictureBox1
-        ' 
-        PictureBox1.Location = New Point(0, 0)
-        PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(193, 151)
-        PictureBox1.TabIndex = 2
-        PictureBox1.TabStop = False
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(10F, 24F)
@@ -158,14 +147,12 @@ Partial Class Form1
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         Panel2.ResumeLayout(False)
-        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnRecords As Button
     Friend WithEvents btnNew As Button
     Friend WithEvents Button1 As Button
