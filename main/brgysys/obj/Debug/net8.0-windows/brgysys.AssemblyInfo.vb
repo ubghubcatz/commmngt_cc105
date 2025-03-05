@@ -13,12 +13,12 @@ Option Explicit On
 
 Imports System
 Imports System.Reflection
-<Assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsApp1"),  _
+<Assembly: System.Reflection.AssemblyCompanyAttribute("brgysys"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e96d414bb848f5299a20efb0fa62610f3833166"),  _
- Assembly: System.Reflection.AssemblyProductAttribute("WinFormsApp1"),  _
- Assembly: System.Reflection.AssemblyTitleAttribute("WinFormsApp1"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3a6c9464757eba5589e9b55aca5221f23fd64cd"),  _
+ Assembly: System.Reflection.AssemblyProductAttribute("brgysys"),  _
+ Assembly: System.Reflection.AssemblyTitleAttribute("brgysys"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
  Assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0"),  _
  Assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")> 
