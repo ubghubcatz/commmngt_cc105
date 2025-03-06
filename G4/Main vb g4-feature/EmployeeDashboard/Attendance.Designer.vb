@@ -43,8 +43,10 @@ Partial Class Attendance
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
-        Label1.Location = New Point(61, 58)
+        Label1.ForeColor = Color.Transparent
+        Label1.Location = New Point(147, 56)
         Label1.Name = "Label1"
         Label1.Size = New Size(272, 35)
         Label1.TabIndex = 1
@@ -52,52 +54,51 @@ Partial Class Attendance
         ' 
         ' lblName
         ' 
-        lblName.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
-        lblName.BorderStyle = BorderStyle.FixedSingle
+        lblName.BackColor = Color.White
         lblName.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblName.Location = New Point(64, 188)
+        lblName.Location = New Point(143, 366)
         lblName.Name = "lblName"
         lblName.Padding = New Padding(5)
-        lblName.Size = New Size(298, 35)
+        lblName.Size = New Size(272, 35)
         lblName.TabIndex = 2
         ' 
         ' lblID
         ' 
-        lblID.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
-        lblID.BorderStyle = BorderStyle.FixedSingle
+        lblID.BackColor = Color.White
+        lblID.FlatStyle = FlatStyle.Flat
         lblID.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblID.Location = New Point(64, 348)
+        lblID.Location = New Point(448, 94)
         lblID.Name = "lblID"
         lblID.Padding = New Padding(5)
-        lblID.Size = New Size(131, 35)
+        lblID.Size = New Size(199, 35)
         lblID.TabIndex = 4
         ' 
         ' lblPosition
         ' 
-        lblPosition.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
-        lblPosition.BorderStyle = BorderStyle.FixedSingle
+        lblPosition.BackColor = Color.White
         lblPosition.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblPosition.Location = New Point(64, 268)
+        lblPosition.Location = New Point(143, 435)
         lblPosition.Name = "lblPosition"
         lblPosition.Padding = New Padding(5)
-        lblPosition.Size = New Size(298, 35)
+        lblPosition.Size = New Size(272, 35)
         lblPosition.TabIndex = 6
         ' 
         ' pbEmployeePhoto
         ' 
         pbEmployeePhoto.BackColor = SystemColors.Control
-        pbEmployeePhoto.Location = New Point(382, 159)
+        pbEmployeePhoto.Location = New Point(169, 107)
         pbEmployeePhoto.Name = "pbEmployeePhoto"
-        pbEmployeePhoto.Size = New Size(162, 162)
+        pbEmployeePhoto.Size = New Size(215, 215)
         pbEmployeePhoto.TabIndex = 11
         pbEmployeePhoto.TabStop = False
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label2.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label2.Location = New Point(61, 159)
+        Label2.ForeColor = Color.White
+        Label2.Location = New Point(138, 343)
         Label2.Name = "Label2"
         Label2.Size = New Size(93, 20)
         Label2.TabIndex = 12
@@ -106,9 +107,10 @@ Partial Class Attendance
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        Label3.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label3.Location = New Point(61, 242)
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(139, 413)
         Label3.Name = "Label3"
         Label3.Size = New Size(79, 20)
         Label3.TabIndex = 13
@@ -117,9 +119,10 @@ Partial Class Attendance
         ' Label4
         ' 
         Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label4.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label4.Location = New Point(61, 323)
+        Label4.Location = New Point(446, 64)
         Label4.Name = "Label4"
         Label4.Size = New Size(94, 20)
         Label4.TabIndex = 14
@@ -128,9 +131,10 @@ Partial Class Attendance
         ' Label5
         ' 
         Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label5.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label5.Location = New Point(581, 159)
+        Label5.Location = New Point(447, 179)
         Label5.Name = "Label5"
         Label5.Size = New Size(66, 20)
         Label5.TabIndex = 15
@@ -139,9 +143,10 @@ Partial Class Attendance
         ' Label6
         ' 
         Label6.AutoSize = True
+        Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label6.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label6.Location = New Point(581, 229)
+        Label6.Location = New Point(446, 284)
         Label6.Name = "Label6"
         Label6.Size = New Size(80, 20)
         Label6.TabIndex = 16
@@ -149,43 +154,48 @@ Partial Class Attendance
         ' 
         ' lblTimeIn
         ' 
-        lblTimeIn.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
-        lblTimeIn.BorderStyle = BorderStyle.FixedSingle
+        lblTimeIn.BackColor = Color.White
+        lblTimeIn.FlatStyle = FlatStyle.Flat
         lblTimeIn.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblTimeIn.Location = New Point(581, 179)
+        lblTimeIn.Location = New Point(449, 208)
         lblTimeIn.Name = "lblTimeIn"
         lblTimeIn.Padding = New Padding(5)
-        lblTimeIn.Size = New Size(90, 35)
+        lblTimeIn.Size = New Size(198, 35)
         lblTimeIn.TabIndex = 17
         ' 
         ' lblTimeOut
         ' 
-        lblTimeOut.BackColor = Color.FromArgb(CByte(234), CByte(250), CByte(241))
-        lblTimeOut.BorderStyle = BorderStyle.FixedSingle
+        lblTimeOut.BackColor = Color.White
+        lblTimeOut.FlatStyle = FlatStyle.Flat
         lblTimeOut.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblTimeOut.Location = New Point(581, 249)
+        lblTimeOut.Location = New Point(448, 312)
         lblTimeOut.Name = "lblTimeOut"
         lblTimeOut.Padding = New Padding(5)
-        lblTimeOut.Size = New Size(88, 35)
+        lblTimeOut.Size = New Size(196, 35)
         lblTimeOut.TabIndex = 18
         ' 
         ' txtEmployeeID
         ' 
-        txtEmployeeID.BorderStyle = BorderStyle.None
-        txtEmployeeID.Location = New Point(562, 394)
+        txtEmployeeID.BackColor = SystemColors.Control
+        txtEmployeeID.BorderStyle = BorderStyle.FixedSingle
+        txtEmployeeID.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        txtEmployeeID.ForeColor = SystemColors.MenuHighlight
+        txtEmployeeID.Location = New Point(449, 421)
         txtEmployeeID.MinimumSize = New Size(0, 35)
         txtEmployeeID.Name = "txtEmployeeID"
-        txtEmployeeID.Size = New Size(222, 35)
+        txtEmployeeID.Size = New Size(200, 35)
         txtEmployeeID.TabIndex = 19
         txtEmployeeID.WordWrap = False
         ' 
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 13F, FontStyle.Bold)
-        Label7.Location = New Point(567, 361)
+        Label7.BackColor = Color.Transparent
+        Label7.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label7.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
+        Label7.Location = New Point(449, 388)
         Label7.Name = "Label7"
-        Label7.Size = New Size(210, 30)
+        Label7.Size = New Size(162, 23)
         Label7.TabIndex = 20
         Label7.Text = "ENTER ID NUMBER"
         ' 
@@ -196,7 +206,7 @@ Partial Class Attendance
         btnTimeInOut.FlatStyle = FlatStyle.Flat
         btnTimeInOut.Font = New Font("Segoe UI", 11F)
         btnTimeInOut.ForeColor = Color.White
-        btnTimeInOut.Location = New Point(660, 435)
+        btnTimeInOut.Location = New Point(678, 421)
         btnTimeInOut.Name = "btnTimeInOut"
         btnTimeInOut.Size = New Size(124, 56)
         btnTimeInOut.TabIndex = 21
@@ -207,7 +217,9 @@ Partial Class Attendance
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
+        BackColor = Color.White
+        BackgroundImage = My.Resources.Resources.attendance__2_
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(829, 522)
         Controls.Add(btnTimeInOut)
         Controls.Add(Label7)
@@ -224,6 +236,7 @@ Partial Class Attendance
         Controls.Add(lblID)
         Controls.Add(lblName)
         Controls.Add(Label1)
+        DoubleBuffered = True
         Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         FormBorderStyle = FormBorderStyle.None
         Name = "Attendance"
