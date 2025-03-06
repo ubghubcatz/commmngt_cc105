@@ -152,7 +152,6 @@ C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\obj\Debug
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.vbproj.AssemblyReference.cache
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.Attendance.resources
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.g4_EmployeeDashboard.resources
-C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.IDcard.resources
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.List.resources
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.Resources.resources
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.Schedule.resources
@@ -224,3 +223,5 @@ C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\bin\Debug\net8.0-windows\r
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\Employee.A7B61B28.Up2Date
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.genruntimeconfig.cache
 C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\ref\EmployeeDashboard.dll
+C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.g4_EmployeeID.resources
+C:\Users\Trisha\Desktop\bakcup file\EmployeeDashboard\bin\Debug\net8.0-windows\QRCoder.dll

@@ -23,7 +23,7 @@ Public Class g4_EmployeeDashboard
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub EmployeeIDBtn_Click(sender As Object, e As EventArgs) Handles EmployeeIDBtn.Click
+        Childform(g4_EmployeeID)
     End Sub
 End Class

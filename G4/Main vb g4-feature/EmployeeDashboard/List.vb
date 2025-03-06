@@ -4,15 +4,15 @@ Imports System.IO
 Public Class List
     Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
 
-    Private Sub btnviewID_Click(sender As Object, e As EventArgs) Handles btnviewID.Click
-        ' Get the reference to the main form
-        Dim mainForm As g4_EmployeeDashboard = Me.ParentForm
+    ' Private Sub btnviewID_Click(sender As Object, e As EventArgs)
+    ' Get the reference to the main form
+    ' Dim mainForm As g4_EmployeeDashboard = ParentForm
 
-        ' Check if mainForm exists and has the childform method
-        If mainForm IsNot Nothing Then
-            mainForm.Childform(New IDcard())
-        End If
-    End Sub
+    ' Check if mainForm exists and has the childform method
+    'If mainForm IsNot Nothing Then
+    '       mainForm.Childform(New IDcard)
+    'End If
+    'End Sub
 
     'method to fetch employee details from database
     Private Sub LoadEmployees()

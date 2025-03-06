@@ -23,6 +23,7 @@ Partial Class g4_EmployeeDashboard
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         pnlSideBar = New Panel()
+        EmployeeIDBtn = New Button()
         SchedBtn = New Button()
         AttendanceBtn = New Button()
         ListBtn = New Button()
@@ -37,6 +38,7 @@ Partial Class g4_EmployeeDashboard
         ' pnlSideBar
         ' 
         pnlSideBar.BackColor = Color.FromArgb(CByte(71), CByte(184), CByte(129))
+        pnlSideBar.Controls.Add(EmployeeIDBtn)
         pnlSideBar.Controls.Add(SchedBtn)
         pnlSideBar.Controls.Add(AttendanceBtn)
         pnlSideBar.Controls.Add(ListBtn)
@@ -46,6 +48,18 @@ Partial Class g4_EmployeeDashboard
         pnlSideBar.Name = "pnlSideBar"
         pnlSideBar.Size = New Size(250, 591)
         pnlSideBar.TabIndex = 0
+        ' 
+        ' EmployeeIDBtn
+        ' 
+        EmployeeIDBtn.BackColor = SystemColors.ControlLightLight
+        EmployeeIDBtn.FlatAppearance.BorderSize = 0
+        EmployeeIDBtn.FlatStyle = FlatStyle.Flat
+        EmployeeIDBtn.Location = New Point(5, 340)
+        EmployeeIDBtn.Name = "EmployeeIDBtn"
+        EmployeeIDBtn.Size = New Size(240, 60)
+        EmployeeIDBtn.TabIndex = 4
+        EmployeeIDBtn.Text = "Employee ID"
+        EmployeeIDBtn.UseVisualStyleBackColor = False
         ' 
         ' SchedBtn
         ' 
@@ -125,7 +139,7 @@ Partial Class g4_EmployeeDashboard
         Label1.TabIndex = 0
         Label1.Text = "Scheduler / Employee Task Assignment"
         ' 
-        ' Form1
+        ' g4_EmployeeDashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
@@ -133,7 +147,7 @@ Partial Class g4_EmployeeDashboard
         Controls.Add(pnlMain)
         Controls.Add(Panel1)
         Controls.Add(pnlSideBar)
-        Name = "Form1"
+        Name = "g4_EmployeeDashboard"
         Text = "Form1"
         pnlSideBar.ResumeLayout(False)
         pnlMain.ResumeLayout(False)
@@ -149,5 +163,6 @@ Partial Class g4_EmployeeDashboard
     Friend WithEvents Panel1 As Panel
     Friend WithEvents pnlMain As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents EmployeeIDBtn As Button
 
 End Class

@@ -7,7 +7,7 @@
     <Compile Update="g4_EmployeeDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="IDcard.vb">
+    <Compile Update="g4_EmployeeID.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="List.vb">
