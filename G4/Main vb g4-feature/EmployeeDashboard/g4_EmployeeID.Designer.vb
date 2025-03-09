@@ -26,19 +26,20 @@ Partial Class g4_EmployeeID
         lblFullName = New Label()
         lblPosition = New Label()
         IDNumberlbl = New Label()
-        idBackPanel = New Panel()
+        backPanel = New Panel()
         QRpbox = New PictureBox()
         lblFullAddress = New Label()
         lblContactNo = New Label()
-        idPicPanel = New Panel()
+        frontPanel = New Panel()
         lblIDnumber = New Label()
         idNumber = New TextBox()
         btnloadDetails = New Button()
         btnSaveQR = New Button()
+        btnPrint = New Button()
         CType(idPic, ComponentModel.ISupportInitialize).BeginInit()
-        idBackPanel.SuspendLayout()
+        backPanel.SuspendLayout()
         CType(QRpbox, ComponentModel.ISupportInitialize).BeginInit()
-        idPicPanel.SuspendLayout()
+        frontPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' idPic
@@ -89,17 +90,17 @@ Partial Class g4_EmployeeID
         IDNumberlbl.Text = "ID Number"
         IDNumberlbl.TextAlign = ContentAlignment.TopCenter
         ' 
-        ' idBackPanel
+        ' backPanel
         ' 
-        idBackPanel.BackgroundImage = My.Resources.Resources.ID_F
-        idBackPanel.BackgroundImageLayout = ImageLayout.Zoom
-        idBackPanel.Controls.Add(QRpbox)
-        idBackPanel.Controls.Add(lblFullAddress)
-        idBackPanel.Controls.Add(lblContactNo)
-        idBackPanel.Location = New Point(344, 45)
-        idBackPanel.Name = "idBackPanel"
-        idBackPanel.Size = New Size(277, 394)
-        idBackPanel.TabIndex = 14
+        backPanel.BackgroundImage = My.Resources.Resources.ID_F
+        backPanel.BackgroundImageLayout = ImageLayout.Zoom
+        backPanel.Controls.Add(QRpbox)
+        backPanel.Controls.Add(lblFullAddress)
+        backPanel.Controls.Add(lblContactNo)
+        backPanel.Location = New Point(344, 45)
+        backPanel.Name = "backPanel"
+        backPanel.Size = New Size(277, 394)
+        backPanel.TabIndex = 14
         ' 
         ' QRpbox
         ' 
@@ -138,32 +139,33 @@ Partial Class g4_EmployeeID
         lblContactNo.Text = "Contact Number"
         lblContactNo.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' idPicPanel
+        ' frontPanel
         ' 
-        idPicPanel.BackgroundImage = My.Resources.Resources.ID_F__1_
-        idPicPanel.BackgroundImageLayout = ImageLayout.Zoom
-        idPicPanel.Controls.Add(idPic)
-        idPicPanel.Controls.Add(lblFullName)
-        idPicPanel.Controls.Add(lblPosition)
-        idPicPanel.Controls.Add(IDNumberlbl)
-        idPicPanel.Location = New Point(56, 45)
-        idPicPanel.Name = "idPicPanel"
-        idPicPanel.Size = New Size(277, 394)
-        idPicPanel.TabIndex = 13
+        frontPanel.BackgroundImage = My.Resources.Resources.ID_F__1_
+        frontPanel.BackgroundImageLayout = ImageLayout.Zoom
+        frontPanel.Controls.Add(idPic)
+        frontPanel.Controls.Add(lblFullName)
+        frontPanel.Controls.Add(lblPosition)
+        frontPanel.Controls.Add(IDNumberlbl)
+        frontPanel.Location = New Point(56, 45)
+        frontPanel.Name = "frontPanel"
+        frontPanel.Size = New Size(277, 394)
+        frontPanel.TabIndex = 13
         ' 
         ' lblIDnumber
         ' 
         lblIDnumber.AutoSize = True
         lblIDnumber.BackColor = Color.Transparent
-        lblIDnumber.Location = New Point(663, 291)
+        lblIDnumber.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        lblIDnumber.Location = New Point(630, 340)
         lblIDnumber.Name = "lblIDnumber"
-        lblIDnumber.Size = New Size(136, 20)
+        lblIDnumber.Size = New Size(145, 20)
         lblIDnumber.TabIndex = 12
         lblIDnumber.Text = "ENTER ID NUMBER"
         ' 
         ' idNumber
         ' 
-        idNumber.Location = New Point(663, 314)
+        idNumber.Location = New Point(635, 363)
         idNumber.Name = "idNumber"
         idNumber.Size = New Size(136, 27)
         idNumber.TabIndex = 11
@@ -175,7 +177,7 @@ Partial Class g4_EmployeeID
         btnloadDetails.FlatAppearance.BorderSize = 0
         btnloadDetails.FlatStyle = FlatStyle.Flat
         btnloadDetails.ForeColor = Color.White
-        btnloadDetails.Location = New Point(663, 347)
+        btnloadDetails.Location = New Point(635, 396)
         btnloadDetails.Name = "btnloadDetails"
         btnloadDetails.Size = New Size(136, 43)
         btnloadDetails.TabIndex = 10
@@ -188,12 +190,25 @@ Partial Class g4_EmployeeID
         btnSaveQR.FlatAppearance.BorderSize = 0
         btnSaveQR.FlatStyle = FlatStyle.Flat
         btnSaveQR.ForeColor = Color.White
-        btnSaveQR.Location = New Point(663, 396)
+        btnSaveQR.Location = New Point(635, 94)
         btnSaveQR.Name = "btnSaveQR"
         btnSaveQR.Size = New Size(136, 43)
         btnSaveQR.TabIndex = 15
         btnSaveQR.Text = "Save QR"
         btnSaveQR.UseVisualStyleBackColor = False
+        ' 
+        ' btnPrint
+        ' 
+        btnPrint.BackColor = Color.Blue
+        btnPrint.FlatAppearance.BorderSize = 0
+        btnPrint.FlatStyle = FlatStyle.Flat
+        btnPrint.ForeColor = Color.White
+        btnPrint.Location = New Point(635, 45)
+        btnPrint.Name = "btnPrint"
+        btnPrint.Size = New Size(136, 43)
+        btnPrint.TabIndex = 16
+        btnPrint.Text = "Print ID"
+        btnPrint.UseVisualStyleBackColor = False
         ' 
         ' g4_EmployeeID
         ' 
@@ -201,9 +216,10 @@ Partial Class g4_EmployeeID
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
         ClientSize = New Size(829, 522)
+        Controls.Add(btnPrint)
         Controls.Add(btnSaveQR)
-        Controls.Add(idBackPanel)
-        Controls.Add(idPicPanel)
+        Controls.Add(backPanel)
+        Controls.Add(frontPanel)
         Controls.Add(lblIDnumber)
         Controls.Add(idNumber)
         Controls.Add(btnloadDetails)
@@ -211,9 +227,9 @@ Partial Class g4_EmployeeID
         Name = "g4_EmployeeID"
         Text = "g4_EmployeeID"
         CType(idPic, ComponentModel.ISupportInitialize).EndInit()
-        idBackPanel.ResumeLayout(False)
+        backPanel.ResumeLayout(False)
         CType(QRpbox, ComponentModel.ISupportInitialize).EndInit()
-        idPicPanel.ResumeLayout(False)
+        frontPanel.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -222,13 +238,14 @@ Partial Class g4_EmployeeID
     Friend WithEvents lblFullName As Label
     Friend WithEvents lblPosition As Label
     Friend WithEvents IDNumberlbl As Label
-    Friend WithEvents idBackPanel As Panel
+    Friend WithEvents backPanel As Panel
     Friend WithEvents lblFullAddress As Label
     Friend WithEvents lblContactNo As Label
-    Friend WithEvents idPicPanel As Panel
+    Friend WithEvents frontPanel As Panel
     Friend WithEvents lblIDnumber As Label
     Friend WithEvents idNumber As TextBox
     Friend WithEvents btnloadDetails As Button
     Friend WithEvents QRpbox As PictureBox
     Friend WithEvents btnSaveQR As Button
+    Friend WithEvents btnPrint As Button
 End Class

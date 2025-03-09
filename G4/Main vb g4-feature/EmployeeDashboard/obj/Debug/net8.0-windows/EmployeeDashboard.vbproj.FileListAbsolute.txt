@@ -301,3 +301,4 @@ C:\Users\Trisha\Desktop\main working vb\EmployeeDashboard\obj\Debug\net8.0-windo
 C:\Users\Trisha\Desktop\main working vb\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.pdb
 C:\Users\Trisha\Desktop\main working vb\EmployeeDashboard\obj\Debug\net8.0-windows\EmployeeDashboard.genruntimeconfig.cache
 C:\Users\Trisha\Desktop\main working vb\EmployeeDashboard\obj\Debug\net8.0-windows\ref\EmployeeDashboard.dll
+C:\Users\Trisha\Desktop\main working vb\EmployeeDashboard\bin\Debug\net8.0-windows\zxing.dll

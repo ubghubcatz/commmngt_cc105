@@ -1,6 +1,10 @@
 ﻿Imports Microsoft.Data.SqlClient
 Imports System.IO
 Imports QRCoder
+Imports System.Drawing
+Imports System.Drawing.Printing
+Imports System.Windows.Forms
+
 
 Public Class g4_EmployeeID
 
@@ -97,5 +101,47 @@ Public Class g4_EmployeeID
             MessageBox.Show("No QR Code to save.")
         End If
     End Sub
+
+    'Method to print the ID or save as Image
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+        Try
+            ' Capture the front and back panels as images
+            Dim frontImage As Bitmap = CapturePanel(frontPanel)
+            Dim backImage As Bitmap = CapturePanel(backPanel)
+
+            ' Merge both images into one
+            Dim finalImage As New Bitmap(frontPanel.Width * 2, frontPanel.Height) ' Width * 2 to fit both images
+            Using g As Graphics = Graphics.FromImage(finalImage)
+                g.DrawImage(frontImage, 0, 0) ' Draw front panel
+                g.DrawImage(backImage, frontPanel.Width, 0) ' Draw back panel beside it
+            End Using
+
+            ' Print the final image
+            Dim printDoc As New Printing.PrintDocument()
+            AddHandler printDoc.PrintPage, Sub(senderObj, ev)
+                                               ev.Graphics.DrawImage(finalImage, 0, 0)
+                                           End Sub
+
+            ' Show print preview before printing
+            Dim printPreview As New PrintPreviewDialog() With {
+            .Document = printDoc
+        }
+            printPreview.ShowDialog()
+
+        Catch ex As Exception
+            MessageBox.Show("Error printing ID: " & ex.Message)
+        End Try
+    End Sub
+
+    'Function of the Capture of Panel from btnPrint
+
+    Private Function CapturePanel(panel As Panel) As Bitmap
+        Dim bmp As New Bitmap(panel.Width, panel.Height)
+        panel.DrawToBitmap(bmp, New Rectangle(0, 0, panel.Width, panel.Height))
+        Return bmp
+    End Function
+
+
+
 
 End Class
