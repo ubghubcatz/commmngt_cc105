@@ -53,8 +53,9 @@ Public Class g4_EmployeeID
                 End If
 
                 ' Generate QR Code
-                Dim qrData As String = $"ID: {reader("EmployeeID")}, Name: {reader("FirstName")} {reader("MiddleName")} {reader("LastName")}, Position: {reader("Position")}"
+                Dim qrData As String = reader("EmployeeID").ToString()
                 GenerateQRCode(qrData)
+
 
             Else
                 MessageBox.Show("Employee not found.")
@@ -141,7 +142,7 @@ Public Class g4_EmployeeID
         Return bmp
     End Function
 
+    Private Sub g4_EmployeeID_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
-
+    End Sub
 End Class

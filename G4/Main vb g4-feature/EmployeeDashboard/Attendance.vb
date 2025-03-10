@@ -1,17 +1,81 @@
-﻿Imports Microsoft.Data.SqlClient
+﻿Imports ZXing
+Imports AForge.Video
+Imports AForge.Video.DirectShow
+Imports Microsoft.Data.SqlClient
+Imports ZXing.Windows.Compatibility
 
 Public Class Attendance
     Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
+    Dim captureDevice As FilterInfoCollection
+    Dim videoSource As VideoCaptureDevice
+    Private WithEvents scanTimer As New Timer()
 
-    'Method para sa button para mag automatic Time in and Time out
-    Private Sub btnTimeInOut_Click(sender As Object, e As EventArgs) Handles btnTimeInOut.Click
-        Dim empID As String = txtEmployeeID.Text.Trim()
 
-        If empID = "" Then
-            MessageBox.Show("Please enter an Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
+    ' Automatically start scanning when the form loads
+    Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        captureDevice = New FilterInfoCollection(FilterCategory.VideoInputDevice)
+        If captureDevice.Count > 0 Then
+            videoSource = New VideoCaptureDevice(captureDevice(0).MonikerString)
+            AddHandler videoSource.NewFrame, AddressOf CaptureFrame
+            videoSource.Start()
+            scanTimer.Start()
+        Else
+            MessageBox.Show("No webcam detected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+    End Sub
+
+    ' Capture and process QR code from the camera feed
+    Private Sub CaptureFrame(sender As Object, eventArgs As NewFrameEventArgs)
+        Try
+            Dim frame As Bitmap = DirectCast(eventArgs.Frame.Clone(), Bitmap)
+
+            ' Flip the image horizontally (mirror effect)
+            frame.RotateFlip(RotateFlipType.RotateNoneFlipX)
+
+            ' Display mirrored image in PictureBox
+            pbCamera.Image = frame
+        Catch ex As Exception
+            MessageBox.Show("Error capturing frame: " & ex.Message, "Camera Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+    ' Timer to check for QR codes
+    Sub scanTimer_Tick(sender As Object, e As EventArgs) Handles scanTimer.Tick
+        ' Check if the PictureBox contains an image
+        If pbCamera.Image Is Nothing Then
+            Exit Sub ' Exit if there's no image
         End If
 
+        Try
+            ' Convert PictureBox image to Bitmap
+            Dim bitmap As New Bitmap(pbCamera.Image)
+
+            ' Flip the image if necessary (mirrored input)
+            bitmap.RotateFlip(RotateFlipType.RotateNoneFlipX)
+
+            ' Create a BarcodeReader instance
+            Dim Reader As New BarcodeReader()
+
+            ' Decode the QR code from the Bitmap
+            Dim result As Result = Reader.Decode(bitmap)
+
+            If result Is Nothing Then
+                Exit Sub ' Prevents the error if no QR code is found
+            End If
+
+            Dim empID As String = result.Text.Trim()
+            scanTimer.Stop()
+            ProcessAttendance(empID)
+
+        Catch ex As Exception
+            MessageBox.Show("Error decoding QR code: " & ex.Message, "QR Code Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+    ' Process Attendance based on Employee ID from QR
+    Private Sub ProcessAttendance(empID As String)
         Try
             conn.Open()
 
@@ -24,26 +88,23 @@ Public Class Attendance
             cmd.Parameters.AddWithValue("@empID", empID)
 
             Dim reader As SqlDataReader = cmd.ExecuteReader()
-
             If reader.Read() Then
                 lblName.Text = reader("EmployeeName").ToString()
                 lblPosition.Text = reader("Position").ToString()
                 lblID.Text = reader("EmployeeID").ToString()
 
                 Dim imgPath As String = reader("PhotoPath").ToString()
-
                 If IO.File.Exists(imgPath) Then
-                    Dim img As Image = Image.FromFile(imgPath)
+                    pbEmployeePhoto.Image = Image.FromFile(imgPath)
                     pbEmployeePhoto.SizeMode = PictureBoxSizeMode.Zoom
-                    pbEmployeePhoto.Image = img
                 Else
-                    pbEmployeePhoto.Image = Nothing ' No image found
-                    pbEmployeePhoto.SizeMode = PictureBoxSizeMode.Normal
+                    pbEmployeePhoto.Image = Nothing
                 End If
             Else
                 MessageBox.Show("Employee not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 reader.Close()
                 conn.Close()
+                scanTimer.Start()
                 Return
             End If
             reader.Close()
@@ -102,6 +163,14 @@ Public Class Attendance
             MessageBox.Show("Error: " & ex.Message)
         Finally
             conn.Close()
+            scanTimer.Start()
         End Try
+    End Sub
+
+    ' Stop camera when form is closed
+    Private Sub Attendance_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If videoSource IsNot Nothing AndAlso videoSource.IsRunning Then
+            videoSource.SignalToStop()
+        End If
     End Sub
 End Class
