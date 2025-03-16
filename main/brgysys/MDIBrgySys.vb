@@ -4,14 +4,16 @@ Public Class MDIBrgySys
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
-        Dim ChildForm As New System.Windows.Forms.Form
-        ' Make it a child of this MDI form before showing it.
-        ChildForm.MdiParent = Me
+        'Dim ChildForm As New System.Windows.Forms.Form
+        '' Make it a child of this MDI form before showing it.
+        'ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Window " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Window " & m_ChildFormNumber
 
-        ChildForm.Show()
+        'ChildForm.Show()
+        Attendance.MdiParent = Me
+        Attendance.Show()
     End Sub
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
@@ -85,4 +87,23 @@ Public Class MDIBrgySys
 
     Private m_ChildFormNumber As Integer
 
+    Private Sub FileMenu_Click(sender As Object, e As EventArgs) Handles FileMenu.Click
+
+    End Sub
+
+    Private Sub MDIBrgySys_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''Dim ChildForm As New System.Windows.Forms.Form
+        '' Make it a child of this MDI form before showing it.
+        'Attendance.MdiParent = Me
+
+        ''m_ChildFormNumber += 1
+        ''ChildForm.Text = "Window " & m_ChildFormNumber
+
+        'Attendance.Show()
+        ''For Each ChildForm As Form In Me.MdiChildren
+        ''    Attendance.Show()
+        ''    ' ChildForm.Close()
+        ''Next
+
+    End Sub
 End Class

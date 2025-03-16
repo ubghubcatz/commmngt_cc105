@@ -98,8 +98,8 @@ Partial Class MDIBrgySys
         FileMenu.DropDownItems.AddRange(New ToolStripItem() {NewToolStripMenuItem, OpenToolStripMenuItem, ToolStripSeparator3, SaveToolStripMenuItem, SaveAsToolStripMenuItem, ToolStripSeparator4, PrintToolStripMenuItem, PrintPreviewToolStripMenuItem, PrintSetupToolStripMenuItem, ToolStripSeparator5, ExitToolStripMenuItem})
         FileMenu.ImageTransparentColor = SystemColors.ActiveBorder
         FileMenu.Name = "FileMenu"
-        FileMenu.Size = New Size(37, 20)
-        FileMenu.Text = "&File"
+        FileMenu.Size = New Size(63, 20)
+        FileMenu.Text = "&Features"
         ' 
         ' NewToolStripMenuItem
         ' 
@@ -107,8 +107,8 @@ Partial Class MDIBrgySys
         NewToolStripMenuItem.ImageTransparentColor = Color.Black
         NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         NewToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.N
-        NewToolStripMenuItem.Size = New Size(146, 22)
-        NewToolStripMenuItem.Text = "&New"
+        NewToolStripMenuItem.Size = New Size(180, 22)
+        NewToolStripMenuItem.Text = "&Employee"
         ' 
         ' OpenToolStripMenuItem
         ' 
@@ -116,13 +116,13 @@ Partial Class MDIBrgySys
         OpenToolStripMenuItem.ImageTransparentColor = Color.Black
         OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         OpenToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
-        OpenToolStripMenuItem.Size = New Size(146, 22)
+        OpenToolStripMenuItem.Size = New Size(180, 22)
         OpenToolStripMenuItem.Text = "&Open"
         ' 
         ' ToolStripSeparator3
         ' 
         ToolStripSeparator3.Name = "ToolStripSeparator3"
-        ToolStripSeparator3.Size = New Size(143, 6)
+        ToolStripSeparator3.Size = New Size(177, 6)
         ' 
         ' SaveToolStripMenuItem
         ' 
@@ -130,19 +130,19 @@ Partial Class MDIBrgySys
         SaveToolStripMenuItem.ImageTransparentColor = Color.Black
         SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         SaveToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.S
-        SaveToolStripMenuItem.Size = New Size(146, 22)
+        SaveToolStripMenuItem.Size = New Size(180, 22)
         SaveToolStripMenuItem.Text = "&Save"
         ' 
         ' SaveAsToolStripMenuItem
         ' 
         SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        SaveAsToolStripMenuItem.Size = New Size(146, 22)
+        SaveAsToolStripMenuItem.Size = New Size(180, 22)
         SaveAsToolStripMenuItem.Text = "Save &As"
         ' 
         ' ToolStripSeparator4
         ' 
         ToolStripSeparator4.Name = "ToolStripSeparator4"
-        ToolStripSeparator4.Size = New Size(143, 6)
+        ToolStripSeparator4.Size = New Size(177, 6)
         ' 
         ' PrintToolStripMenuItem
         ' 
@@ -150,7 +150,7 @@ Partial Class MDIBrgySys
         PrintToolStripMenuItem.ImageTransparentColor = Color.Black
         PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         PrintToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.P
-        PrintToolStripMenuItem.Size = New Size(146, 22)
+        PrintToolStripMenuItem.Size = New Size(180, 22)
         PrintToolStripMenuItem.Text = "&Print"
         ' 
         ' PrintPreviewToolStripMenuItem
@@ -158,24 +158,24 @@ Partial Class MDIBrgySys
         PrintPreviewToolStripMenuItem.Image = CType(resources.GetObject("PrintPreviewToolStripMenuItem.Image"), Image)
         PrintPreviewToolStripMenuItem.ImageTransparentColor = Color.Black
         PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        PrintPreviewToolStripMenuItem.Size = New Size(146, 22)
+        PrintPreviewToolStripMenuItem.Size = New Size(180, 22)
         PrintPreviewToolStripMenuItem.Text = "Print Pre&view"
         ' 
         ' PrintSetupToolStripMenuItem
         ' 
         PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        PrintSetupToolStripMenuItem.Size = New Size(146, 22)
+        PrintSetupToolStripMenuItem.Size = New Size(180, 22)
         PrintSetupToolStripMenuItem.Text = "Print Setup"
         ' 
         ' ToolStripSeparator5
         ' 
         ToolStripSeparator5.Name = "ToolStripSeparator5"
-        ToolStripSeparator5.Size = New Size(143, 6)
+        ToolStripSeparator5.Size = New Size(177, 6)
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(146, 22)
+        ExitToolStripMenuItem.Size = New Size(180, 22)
         ExitToolStripMenuItem.Text = "E&xit"
         ' 
         ' EditMenu

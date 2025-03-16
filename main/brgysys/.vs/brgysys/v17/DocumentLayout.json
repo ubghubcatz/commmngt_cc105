@@ -3,24 +3,60 @@
   "WorkspaceRootPath": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\employee\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:employee\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:form1.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:brgysys.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\employee\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:employee\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\frmlogin2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin2.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:form1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:my project\\application.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|d:\\2024_2025ubghub_2s\\commmngt_cc105\\main\\brgysys\\splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,49 +66,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Attendance.vb",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Employee\\Attendance.vb",
+              "RelativeDocumentMoniker": "Employee\\Attendance.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Employee\\Attendance.vb",
+              "RelativeToolTip": "Employee\\Attendance.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-06T00:14:20.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form1.vb",
               "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
               "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.vb",
               "RelativeToolTip": "Form1.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAxwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-05T12:44:12.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.resx",
-              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.resx",
-              "RelativeDocumentMoniker": "Form1.resx",
-              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.resx",
-              "RelativeToolTip": "Form1.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-03-05T12:43:28.184Z",
+              "DocumentIndex": 6,
+              "Title": "brgysys.vbproj",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "RelativeDocumentMoniker": "brgysys.vbproj",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "RelativeToolTip": "brgysys.vbproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-03-05T14:20:24.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Application.Designer.vb",
-              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\My Project\\Application.Designer.vb",
-              "RelativeDocumentMoniker": "My Project\\Application.Designer.vb",
-              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\My Project\\Application.Designer.vb",
-              "RelativeToolTip": "My Project\\Application.Designer.vb",
-              "ViewState": "AgIAABMAAAAAAAAAAAAMwBoAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "SplashScreen1.vb",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
+              "RelativeDocumentMoniker": "SplashScreen1.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
+              "RelativeToolTip": "SplashScreen1.vb",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowDMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-05T12:43:04.498Z",
+              "WhenOpened": "2025-03-05T13:58:07.196Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "MDIBrgySys.vb [Design]",
               "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
@@ -85,6 +135,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MDIBrgySys.vb",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeDocumentMoniker": "MDIBrgySys.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeToolTip": "MDIBrgySys.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-06T00:08:22.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form1.Designer.vb",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.Designer.vb",
+              "RelativeDocumentMoniker": "Form1.Designer.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.Designer.vb",
+              "RelativeToolTip": "Form1.Designer.vb",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-05T13:23:25.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Form1.vb [Design]",
               "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.vb",
               "RelativeDocumentMoniker": "Form1.vb",
@@ -93,6 +169,79 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-05T12:35:06.954Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Module1.vb",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Module1.vb",
+              "RelativeDocumentMoniker": "Module1.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Module1.vb",
+              "RelativeToolTip": "Module1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-06T00:56:52.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Attendance.vb [Design]",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Employee\\Attendance.vb",
+              "RelativeDocumentMoniker": "Employee\\Attendance.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Employee\\Attendance.vb [Design]",
+              "RelativeToolTip": "Employee\\Attendance.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-06T00:17:34.606Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.resx",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.resx",
+              "RelativeDocumentMoniker": "Form1.resx",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\Form1.resx",
+              "RelativeToolTip": "Form1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-05T12:43:28.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmLogin2.vb [Design]",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\frmLogin2.vb",
+              "RelativeDocumentMoniker": "frmLogin2.vb",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\frmLogin2.vb [Design]",
+              "RelativeToolTip": "frmLogin2.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-05T14:20:48.949Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "brgysys",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "RelativeDocumentMoniker": "brgysys.vbproj",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "RelativeToolTip": "brgysys.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-03-05T14:21:57.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SplashScreen1.resx",
+              "DocumentMoniker": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
+              "RelativeDocumentMoniker": "SplashScreen1.resx",
+              "ToolTip": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
+              "RelativeToolTip": "SplashScreen1.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-05T13:58:14.924Z",
+              "EditorCaption": ""
             }
           ]
         }

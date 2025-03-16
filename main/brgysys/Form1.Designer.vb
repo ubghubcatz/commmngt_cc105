@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmLogin
+Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,9 +24,9 @@ Partial Class frmLogin
     Private Sub InitializeComponent()
         Label1 = New Label()
         btnOK = New Button()
-        TextBox1 = New TextBox()
+        txtUser = New TextBox()
         Label2 = New Label()
-        TextBox2 = New TextBox()
+        txtPassword = New TextBox()
         Label3 = New Label()
         btnCancel = New Button()
         SuspendLayout()
@@ -49,12 +49,13 @@ Partial Class frmLogin
         btnOK.Text = "&Ok"
         btnOK.UseVisualStyleBackColor = True
         ' 
-        ' TextBox1
+        ' txtUser
         ' 
-        TextBox1.Location = New Point(137, 48)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(100, 23)
-        TextBox1.TabIndex = 2
+        txtUser.Location = New Point(137, 48)
+        txtUser.Name = "txtUser"
+        txtUser.Size = New Size(100, 23)
+        txtUser.TabIndex = 2
+        txtUser.Text = "sysadmin"
         ' 
         ' Label2
         ' 
@@ -66,12 +67,14 @@ Partial Class frmLogin
         Label2.TabIndex = 3
         Label2.Text = "Enter username and password"
         ' 
-        ' TextBox2
+        ' txtPassword
         ' 
-        TextBox2.Location = New Point(137, 77)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(100, 23)
-        TextBox2.TabIndex = 5
+        txtPassword.Location = New Point(137, 77)
+        txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
+        txtPassword.Size = New Size(100, 23)
+        txtPassword.TabIndex = 5
+        txtPassword.Text = "admin"
         ' 
         ' Label3
         ' 
@@ -91,20 +94,20 @@ Partial Class frmLogin
         btnCancel.Text = "&Cancel"
         btnCancel.UseVisualStyleBackColor = True
         ' 
-        ' frmLogin
+        ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(284, 193)
         Controls.Add(btnCancel)
-        Controls.Add(TextBox2)
+        Controls.Add(txtPassword)
         Controls.Add(Label3)
         Controls.Add(Label2)
-        Controls.Add(TextBox1)
+        Controls.Add(txtUser)
         Controls.Add(btnOK)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
-        Name = "frmLogin"
+        Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Login"
         ResumeLayout(False)
@@ -113,9 +116,9 @@ Partial Class frmLogin
 
     Friend WithEvents Label1 As Label
     Friend WithEvents btnOK As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtUser As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents btnCancel As Button
 
