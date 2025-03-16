@@ -94,12 +94,23 @@ Public Class Attendance
                 lblID.Text = reader("EmployeeID").ToString()
 
                 Dim imgPath As String = reader("PhotoPath").ToString()
-                If IO.File.Exists(imgPath) Then
+                If imgPath.StartsWith("http") Then
+                    Try
+                        Dim client As New System.Net.WebClient()
+                        Dim imgStream As New IO.MemoryStream(client.DownloadData(imgPath))
+                        pbEmployeePhoto.Image = Image.FromStream(imgStream)
+                        pbEmployeePhoto.SizeMode = PictureBoxSizeMode.Zoom
+                    Catch ex As Exception
+                        pbEmployeePhoto.Image = Nothing
+                        MessageBox.Show("Failed to load employee photo.", "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                    End Try
+                ElseIf IO.File.Exists(imgPath) Then
                     pbEmployeePhoto.Image = Image.FromFile(imgPath)
                     pbEmployeePhoto.SizeMode = PictureBoxSizeMode.Zoom
                 Else
                     pbEmployeePhoto.Image = Nothing
                 End If
+
             Else
                 MessageBox.Show("Employee not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 reader.Close()

@@ -4,6 +4,7 @@ Imports QRCoder
 Imports System.Drawing
 Imports System.Drawing.Printing
 Imports System.Windows.Forms
+Imports System.Net
 
 
 Public Class g4_EmployeeID
@@ -44,13 +45,23 @@ Public Class g4_EmployeeID
 
                 ' Load Photo
                 Dim photoPath As String = reader("PhotoPath").ToString()
-                If Not String.IsNullOrEmpty(photoPath) AndAlso File.Exists(photoPath) Then
-                    idPic.Image = Image.FromFile(photoPath)
-                    idPic.SizeMode = PictureBoxSizeMode.Zoom
+                If Not String.IsNullOrEmpty(photoPath) Then
+                    Try
+                        Dim webClient As New WebClient()
+                        Dim imageBytes() As Byte = webClient.DownloadData(photoPath)
+                        Using ms As New MemoryStream(imageBytes)
+                            idPic.Image = Image.FromStream(ms)
+                        End Using
+                        idPic.SizeMode = PictureBoxSizeMode.Zoom
+                    Catch ex As Exception
+                        MessageBox.Show("Failed to load image from URL: " & ex.Message)
+                        idPic.Image = Nothing
+                    End Try
                 Else
-                    MessageBox.Show("Photo not found: " & photoPath)
+                    MessageBox.Show("Photo not found.")
                     idPic.Image = Nothing
                 End If
+
 
                 ' Generate QR Code
                 Dim qrData As String = reader("EmployeeID").ToString()
