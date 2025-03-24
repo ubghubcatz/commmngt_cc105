@@ -9,7 +9,7 @@
       "brgysys/1.0.0": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "6.0.1",
-          "System.Data.OleDb": "9.0.2"
+          "System.Data.OleDb": "9.0.3"
         },
         "runtime": {
           "brgysys.dll": {}
@@ -39,7 +39,7 @@
           "Microsoft.Identity.Client": "4.61.3",
           "Microsoft.Identity.Client.Extensions.Msal": "4.61.3",
           "System.Memory": "4.5.4",
-          "System.Security.Cryptography.ProtectedData": "9.0.2",
+          "System.Security.Cryptography.ProtectedData": "9.0.3",
           "System.Text.Json": "4.7.2",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
@@ -75,7 +75,7 @@
           "Microsoft.IdentityModel.JsonWebTokens": "7.5.0",
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "7.5.0",
           "Microsoft.SqlServer.Server": "1.0.0",
-          "System.Configuration.ConfigurationManager": "9.0.2",
+          "System.Configuration.ConfigurationManager": "9.0.3",
           "System.Security.Cryptography.Pkcs": "8.0.1"
         },
         "runtime": {
@@ -239,7 +239,7 @@
       "Microsoft.Identity.Client.Extensions.Msal/4.61.3": {
         "dependencies": {
           "Microsoft.Identity.Client": "4.61.3",
-          "System.Security.Cryptography.ProtectedData": "9.0.2"
+          "System.Security.Cryptography.ProtectedData": "9.0.3"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll": {
@@ -332,35 +332,35 @@
           }
         }
       },
-      "System.Configuration.ConfigurationManager/9.0.2": {
+      "System.Configuration.ConfigurationManager/9.0.3": {
         "dependencies": {
-          "System.Diagnostics.EventLog": "9.0.2",
-          "System.Security.Cryptography.ProtectedData": "9.0.2"
+          "System.Diagnostics.EventLog": "9.0.3",
+          "System.Security.Cryptography.ProtectedData": "9.0.3"
         },
         "runtime": {
           "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.225.6610"
+            "fileVersion": "9.0.325.11113"
           }
         }
       },
-      "System.Data.OleDb/9.0.2": {
+      "System.Data.OleDb/9.0.3": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "9.0.2",
-          "System.Diagnostics.PerformanceCounter": "9.0.2"
+          "System.Configuration.ConfigurationManager": "9.0.3",
+          "System.Diagnostics.PerformanceCounter": "9.0.3"
         },
         "runtime": {
           "lib/net8.0/System.Data.OleDb.dll": {
-            "assemblyVersion": "9.0.0.2",
-            "fileVersion": "9.0.225.6610"
+            "assemblyVersion": "9.0.0.3",
+            "fileVersion": "9.0.325.11113"
           }
         },
         "runtimeTargets": {
           "runtimes/win/lib/net8.0/System.Data.OleDb.dll": {
             "rid": "win",
             "assetType": "runtime",
-            "assemblyVersion": "9.0.0.2",
-            "fileVersion": "9.0.225.6610"
+            "assemblyVersion": "9.0.0.3",
+            "fileVersion": "9.0.325.11113"
           }
         }
       },
@@ -369,11 +369,11 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Diagnostics.EventLog/9.0.2": {
+      "System.Diagnostics.EventLog/9.0.3": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.EventLog.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.225.6610"
+            "fileVersion": "9.0.325.11113"
           }
         },
         "runtimeTargets": {
@@ -387,18 +387,18 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.225.6610"
+            "fileVersion": "9.0.325.11113"
           }
         }
       },
-      "System.Diagnostics.PerformanceCounter/9.0.2": {
+      "System.Diagnostics.PerformanceCounter/9.0.3": {
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "9.0.2"
+          "System.Configuration.ConfigurationManager": "9.0.3"
         },
         "runtime": {
           "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.225.6610"
+            "fileVersion": "9.0.325.11113"
           }
         },
         "runtimeTargets": {
@@ -406,7 +406,7 @@
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.225.6610"
+            "fileVersion": "9.0.325.11113"
           }
         }
       },
@@ -453,11 +453,11 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/9.0.2": {
+      "System.Security.Cryptography.ProtectedData/9.0.3": {
         "runtime": {
           "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
             "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.225.6610"
+            "fileVersion": "9.0.325.11113"
           }
         }
       },
@@ -626,19 +626,19 @@
       "path": "system.clientmodel/1.0.0",
       "hashPath": "system.clientmodel.1.0.0.nupkg.sha512"
     },
-    "System.Configuration.ConfigurationManager/9.0.2": {
+    "System.Configuration.ConfigurationManager/9.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-pX5GhR4/mfYUbebRdINO6P4B8stIbVWaAWGgWzYO1eC30nUVpCQdzQjKwCPhtLdzjR3d/q+MQ0sRG3B1GLSyqw==",
-      "path": "system.configuration.configurationmanager/9.0.2",
-      "hashPath": "system.configuration.configurationmanager.9.0.2.nupkg.sha512"
+      "sha512": "sha512-0kw80ykL/iFhNtFbPpjxIavmCk7/l6MqQwNSNhEoSNuI9C82ZZ251thzQZ/btHut21Y2G9M+amQY1K5bhaAjKg==",
+      "path": "system.configuration.configurationmanager/9.0.3",
+      "hashPath": "system.configuration.configurationmanager.9.0.3.nupkg.sha512"
     },
-    "System.Data.OleDb/9.0.2": {
+    "System.Data.OleDb/9.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7jJf3gmMMV7MF7xe1JgpqjMuMzJ8BrHSqDKALjNKWgW4pWxX4BTbPX/p636Y++jA3FsC57tSu/gvFmyob5+wGQ==",
-      "path": "system.data.oledb/9.0.2",
-      "hashPath": "system.data.oledb.9.0.2.nupkg.sha512"
+      "sha512": "sha512-DlnjoH2mAIY1IueWzpqp2FJlLbg3Rmvxk4D7qN/ImT1E+h5M+UzmamG7S9hUBzvU3S7LZVLXF1HW8RZOvp2ARw==",
+      "path": "system.data.oledb/9.0.3",
+      "hashPath": "system.data.oledb.9.0.3.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/6.0.1": {
       "type": "package",
@@ -647,19 +647,19 @@
       "path": "system.diagnostics.diagnosticsource/6.0.1",
       "hashPath": "system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512"
     },
-    "System.Diagnostics.EventLog/9.0.2": {
+    "System.Diagnostics.EventLog/9.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-i+Fe6Fpst/onydFLBGilCr/Eh9OFdlaTU/c3alPp6IbLZXQJOgpIu3l4MOnmsN8fDYq5nAyHSqNIJesc74Yw3Q==",
-      "path": "system.diagnostics.eventlog/9.0.2",
-      "hashPath": "system.diagnostics.eventlog.9.0.2.nupkg.sha512"
+      "sha512": "sha512-0nDJBZ06DVdTG2vvCZ4XjazLVaFawdT0pnji23ISX8I8fEOlRJyzH2I0kWiAbCtFwry2Zir4qE4l/GStLATfFw==",
+      "path": "system.diagnostics.eventlog/9.0.3",
+      "hashPath": "system.diagnostics.eventlog.9.0.3.nupkg.sha512"
     },
-    "System.Diagnostics.PerformanceCounter/9.0.2": {
+    "System.Diagnostics.PerformanceCounter/9.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hRq8SBG2CYALIJqOYLsZW749wITem4JTXIL0YxYfovWSbCKF6Eu1AEMJ54Va1rg2I5o3aTD6QvBaRw4x/v7Sfw==",
-      "path": "system.diagnostics.performancecounter/9.0.2",
-      "hashPath": "system.diagnostics.performancecounter.9.0.2.nupkg.sha512"
+      "sha512": "sha512-SpTZ1LgraLWM8sVqpWvyzOJaei1yDsHeDhlV7thxv+vhKNSWJ+Q6jYUs9YHomBd2HPQlthyCm3J5LA+2pbCXew==",
+      "path": "system.diagnostics.performancecounter/9.0.3",
+      "hashPath": "system.diagnostics.performancecounter.9.0.3.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/7.5.0": {
       "type": "package",
@@ -703,12 +703,12 @@
       "path": "system.security.cryptography.pkcs/8.0.1",
       "hashPath": "system.security.cryptography.pkcs.8.0.1.nupkg.sha512"
     },
-    "System.Security.Cryptography.ProtectedData/9.0.2": {
+    "System.Security.Cryptography.ProtectedData/9.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+z9JWtU9di45tW/w6zpuJms4SnAAqKY2Usmmxs7MpOhxWoIeR2pKl1vEkaFbEx52ZfrMFcZXsFe+8WERMozzGg==",
-      "path": "system.security.cryptography.protecteddata/9.0.2",
-      "hashPath": "system.security.cryptography.protecteddata.9.0.2.nupkg.sha512"
+      "sha512": "sha512-4PAwR9l3rhAESfymptisnO2KWpHmiTnKxovnREqmiY4BEakXD2ahQU4/NO0vzEarMw8RGzwpmWoiHwvL/waHfQ==",
+      "path": "system.security.cryptography.protecteddata/9.0.3",
+      "hashPath": "system.security.cryptography.protecteddata.9.0.3.nupkg.sha512"
     },
     "System.Text.Encodings.Web/4.7.2": {
       "type": "package",

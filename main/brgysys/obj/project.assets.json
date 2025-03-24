@@ -437,11 +437,11 @@
           }
         }
       },
-      "System.Configuration.ConfigurationManager/9.0.2": {
+      "System.Configuration.ConfigurationManager/9.0.3": {
         "type": "package",
         "dependencies": {
-          "System.Diagnostics.EventLog": "9.0.2",
-          "System.Security.Cryptography.ProtectedData": "9.0.2"
+          "System.Diagnostics.EventLog": "9.0.3",
+          "System.Security.Cryptography.ProtectedData": "9.0.3"
         },
         "compile": {
           "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
@@ -457,11 +457,11 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "System.Data.OleDb/9.0.2": {
+      "System.Data.OleDb/9.0.3": {
         "type": "package",
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "9.0.2",
-          "System.Diagnostics.PerformanceCounter": "9.0.2"
+          "System.Configuration.ConfigurationManager": "9.0.3",
+          "System.Diagnostics.PerformanceCounter": "9.0.3"
         },
         "compile": {
           "lib/net8.0/System.Data.OleDb.dll": {
@@ -502,7 +502,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "System.Diagnostics.EventLog/9.0.2": {
+      "System.Diagnostics.EventLog/9.0.3": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.Diagnostics.EventLog.dll": {
@@ -528,10 +528,10 @@
           }
         }
       },
-      "System.Diagnostics.PerformanceCounter/9.0.2": {
+      "System.Diagnostics.PerformanceCounter/9.0.3": {
         "type": "package",
         "dependencies": {
-          "System.Configuration.ConfigurationManager": "9.0.2"
+          "System.Configuration.ConfigurationManager": "9.0.3"
         },
         "compile": {
           "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
@@ -643,7 +643,7 @@
           }
         }
       },
-      "System.Security.Cryptography.ProtectedData/9.0.2": {
+      "System.Security.Cryptography.ProtectedData/9.0.3": {
         "type": "package",
         "compile": {
           "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -1324,10 +1324,10 @@
         "system.clientmodel.nuspec"
       ]
     },
-    "System.Configuration.ConfigurationManager/9.0.2": {
-      "sha512": "pX5GhR4/mfYUbebRdINO6P4B8stIbVWaAWGgWzYO1eC30nUVpCQdzQjKwCPhtLdzjR3d/q+MQ0sRG3B1GLSyqw==",
+    "System.Configuration.ConfigurationManager/9.0.3": {
+      "sha512": "0kw80ykL/iFhNtFbPpjxIavmCk7/l6MqQwNSNhEoSNuI9C82ZZ251thzQZ/btHut21Y2G9M+amQY1K5bhaAjKg==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/9.0.2",
+      "path": "system.configuration.configurationmanager/9.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1347,15 +1347,15 @@
         "lib/net9.0/System.Configuration.ConfigurationManager.xml",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.9.0.2.nupkg.sha512",
+        "system.configuration.configurationmanager.9.0.3.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Data.OleDb/9.0.2": {
-      "sha512": "7jJf3gmMMV7MF7xe1JgpqjMuMzJ8BrHSqDKALjNKWgW4pWxX4BTbPX/p636Y++jA3FsC57tSu/gvFmyob5+wGQ==",
+    "System.Data.OleDb/9.0.3": {
+      "sha512": "DlnjoH2mAIY1IueWzpqp2FJlLbg3Rmvxk4D7qN/ImT1E+h5M+UzmamG7S9hUBzvU3S7LZVLXF1HW8RZOvp2ARw==",
       "type": "package",
-      "path": "system.data.oledb/9.0.2",
+      "path": "system.data.oledb/9.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1379,7 +1379,7 @@
         "runtimes/win/lib/net8.0/System.Data.OleDb.xml",
         "runtimes/win/lib/net9.0/System.Data.OleDb.dll",
         "runtimes/win/lib/net9.0/System.Data.OleDb.xml",
-        "system.data.oledb.9.0.2.nupkg.sha512",
+        "system.data.oledb.9.0.3.nupkg.sha512",
         "system.data.oledb.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1409,10 +1409,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Diagnostics.EventLog/9.0.2": {
-      "sha512": "i+Fe6Fpst/onydFLBGilCr/Eh9OFdlaTU/c3alPp6IbLZXQJOgpIu3l4MOnmsN8fDYq5nAyHSqNIJesc74Yw3Q==",
+    "System.Diagnostics.EventLog/9.0.3": {
+      "sha512": "0nDJBZ06DVdTG2vvCZ4XjazLVaFawdT0pnji23ISX8I8fEOlRJyzH2I0kWiAbCtFwry2Zir4qE4l/GStLATfFw==",
       "type": "package",
-      "path": "system.diagnostics.eventlog/9.0.2",
+      "path": "system.diagnostics.eventlog/9.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1438,15 +1438,15 @@
         "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll",
         "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll",
         "runtimes/win/lib/net9.0/System.Diagnostics.EventLog.xml",
-        "system.diagnostics.eventlog.9.0.2.nupkg.sha512",
+        "system.diagnostics.eventlog.9.0.3.nupkg.sha512",
         "system.diagnostics.eventlog.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Diagnostics.PerformanceCounter/9.0.2": {
-      "sha512": "hRq8SBG2CYALIJqOYLsZW749wITem4JTXIL0YxYfovWSbCKF6Eu1AEMJ54Va1rg2I5o3aTD6QvBaRw4x/v7Sfw==",
+    "System.Diagnostics.PerformanceCounter/9.0.3": {
+      "sha512": "SpTZ1LgraLWM8sVqpWvyzOJaei1yDsHeDhlV7thxv+vhKNSWJ+Q6jYUs9YHomBd2HPQlthyCm3J5LA+2pbCXew==",
       "type": "package",
-      "path": "system.diagnostics.performancecounter/9.0.2",
+      "path": "system.diagnostics.performancecounter/9.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1470,7 +1470,7 @@
         "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.xml",
         "runtimes/win/lib/net9.0/System.Diagnostics.PerformanceCounter.dll",
         "runtimes/win/lib/net9.0/System.Diagnostics.PerformanceCounter.xml",
-        "system.diagnostics.performancecounter.9.0.2.nupkg.sha512",
+        "system.diagnostics.performancecounter.9.0.3.nupkg.sha512",
         "system.diagnostics.performancecounter.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1648,10 +1648,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/9.0.2": {
-      "sha512": "+z9JWtU9di45tW/w6zpuJms4SnAAqKY2Usmmxs7MpOhxWoIeR2pKl1vEkaFbEx52ZfrMFcZXsFe+8WERMozzGg==",
+    "System.Security.Cryptography.ProtectedData/9.0.3": {
+      "sha512": "4PAwR9l3rhAESfymptisnO2KWpHmiTnKxovnREqmiY4BEakXD2ahQU4/NO0vzEarMw8RGzwpmWoiHwvL/waHfQ==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/9.0.2",
+      "path": "system.security.cryptography.protecteddata/9.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1677,7 +1677,7 @@
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "system.security.cryptography.protecteddata.9.0.2.nupkg.sha512",
+        "system.security.cryptography.protecteddata.9.0.3.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -1769,7 +1769,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "Microsoft.Data.SqlClient >= 6.0.1",
-      "System.Data.OleDb >= 9.0.2"
+      "System.Data.OleDb >= 9.0.3"
     ]
   },
   "packageFolders": {
@@ -1829,7 +1829,7 @@
           },
           "System.Data.OleDb": {
             "target": "Package",
-            "version": "[9.0.2, )"
+            "version": "[9.0.3, )"
           }
         },
         "imports": [

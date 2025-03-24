@@ -2,6 +2,7 @@
 
 Public Class Attendance
 
+
     ' "Provider=SQLOLEDB.1;workstation Id = commngtcc105.mssql.somee.com;packet size=4096;user id=ublipa_SQLLogin_1;pwd=nktg6ikffl;data source=commngtcc105.mssql.somee.com;persist security info=False;initial catalog=commngtcc105;TrustServerCertificate=True"
     'Public Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -11,7 +12,9 @@ Public Class Attendance
     '    'Method para sa button para mag automatic Time in and Time out
     'End Sub
     Private Sub btnTimeInOut_Click(sender As Object, e As EventArgs) Handles btnTimeInOut.Click
-
+        Dim conn As SqlConnection = New SqlConnection()
+        conn.ConnectionString = "server = commngtcc105.mssql.somee.com;user id=ublipa_SQLLogin_1;pwd=nktg6ikffl;data source=commngtcc105.mssql.somee.com;persist security info=False;initial catalog=commngtcc105;TrustServerCertificate=True" 'myConnectionString
+        'Dim conn As ADODB.Recordset
         Dim empID As String = txtEmployeeID.Text.Trim()
 
         If empID = "" Then
