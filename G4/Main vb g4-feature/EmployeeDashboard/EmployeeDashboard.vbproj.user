@@ -4,10 +4,10 @@
     <Compile Update="Attendance.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.vb">
+    <Compile Update="g4_EmployeeDashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="IDcard.vb">
+    <Compile Update="g4_EmployeeID.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="List.vb">
@@ -16,5 +16,10 @@
     <Compile Update="Schedule.vb">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

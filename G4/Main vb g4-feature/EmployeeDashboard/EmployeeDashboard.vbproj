@@ -17,8 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="AForge.Video" Version="2.2.5" />
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+    <PackageReference Include="ZXing.Net" Version="0.16.10" />
+    <PackageReference Include="ZXing.Net.Bindings.Windows.Compatibility" Version="0.16.13" />
   </ItemGroup>
 
   <ItemGroup>

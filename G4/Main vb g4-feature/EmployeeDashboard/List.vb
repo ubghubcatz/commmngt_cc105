@@ -2,23 +2,23 @@
 Imports System.IO
 
 Public Class List
-    Dim conn As New SqlConnection("Data Source=localhost\SQLEXPRESS;Initial Catalog=employeeSampleData;Integrated Security=True;TrustServerCertificate=True")
+    Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
 
-    Private Sub btnviewID_Click(sender As Object, e As EventArgs) Handles btnviewID.Click
-        ' Get the reference to the main form
-        Dim mainForm As Form1 = Me.ParentForm
+    ' Private Sub btnviewID_Click(sender As Object, e As EventArgs)
+    ' Get the reference to the main form
+    ' Dim mainForm As g4_EmployeeDashboard = ParentForm
 
-        ' Check if mainForm exists and has the childform method
-        If mainForm IsNot Nothing Then
-            mainForm.Childform(New IDcard())
-        End If
-    End Sub
+    ' Check if mainForm exists and has the childform method
+    'If mainForm IsNot Nothing Then
+    '       mainForm.Childform(New IDcard)
+    'End If
+    'End Sub
 
     'method to fetch employee details from database
     Private Sub LoadEmployees()
         Try
             conn.Open()
-            Dim query As String = "SELECT EmployeeID, EmployeeName, Position FROM EmployeeDetails"
+            Dim query As String = "SELECT EmployeeID, EmployeeName, Position FROM g4_EmployeeDetails"
             Dim adapter As New SqlDataAdapter(query, conn)
             Dim table As New DataTable()
 
@@ -51,7 +51,7 @@ Public Class List
     End Sub
 
     ' Load employees when the form opens
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub g4_EmployeeDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadEmployees()
     End Sub
 

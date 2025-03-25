@@ -1,0 +1,145 @@
+Latest SQL Query
+
+------FOR EMPLOYEE INFO
+use commngtcc105;
+
+CREATE TABLE g4_EmployeesInfo (
+    EmployeeID NVARCHAR(20) PRIMARY KEY,  
+    FirstName NVARCHAR(50),
+    MiddleName NVARCHAR(50),
+    LastName NVARCHAR(50),
+	Position NVARCHAR (50),
+    HouseNumber NVARCHAR(10), 
+    StreetAddress NVARCHAR(100),
+	Barangay NVARCHAR(50),
+    City NVARCHAR(50),
+	Province NVARCHAR(50),
+    ContactNumber NVARCHAR(20),
+    PhotoPath NVARCHAR(255)
+);
+
+select * from g4_EmployeesInfo;
+
+INSERT INTO g4_EmployeesInfo (EmployeeID, FirstName, MiddleName, LastName, Position, HouseNumber, StreetAddress, Barangay, City, Province, ContactNumber, PhotoPath)
+VALUES 
+(N'INOS1A3F', N'Don', N'A.', N'Bueno', N'Barangay Kagawad', N'123', N'Segovia St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-345-6789', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\don_bueno.jpg'),
+(N'INOS1A4B', N'Carlos', N'B.', N'Garcia', N'Barangay Captain', N'245', N'Marcos St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-346-7890', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\carlos_garcia.jpg'),
+(N'INOS1A5C', N'Maria', N'C.', N'Ramos', N'Barangay Kagawad', N'345', N'Rizal St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-347-8901', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\maria_ramos.jpg'),
+(N'INOS1A6D', N'Juan', N'D.', N'Martinez', N'Barangay Secretary', N'456', N'Tagumpay St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-348-9012', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\juan_martinez.jpg'),
+(N'INOS1A7E', N'Lucia', N'E.', N'Lopez', N'Barangay Treasurer', N'567', N'Quezon St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-349-0123', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\lucia_lopez.jpg'),
+(N'INOS1A8F', N'Emilio', N'F.', N'Zaragoza', N'Barangay Health Worker', N'678', N'Guerrero St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-350-1234', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\emilio_zaragoza.jpg'),
+(N'INOS1A9G', N'Anna', N'G.', N'Fernandez', N'Barangay Youth Representative', N'789', N'San Jose St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-351-2345', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\anna_fernandez.jpg'),
+(N'INOS1A10H', N'Jose', N'H.', N'Santos', N'Barangay DSWD Worker', N'890', N'Bayanihan St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-352-3456', N'C:\Users\Trisha\Desktop\CC105_grp4\EmployeeDashboard\photos\jose_santos.jpg'),
+(N'INOS1A11I', N'Ana', N'I.', N'Torres', N'Barangay Women’s Representative', N'234', N'Veracruz St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-353-4567', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\ana_torres.jpg'),
+(N'INOS1A12J', N'Raul', N'J.', N'Vargas', N'Barangay Kagawad', N'123', N'Mabini St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-354-5678', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\raul_vargas.jpg'),
+(N'INOS1A13K', N'Rosa', N'K.', N'Cruz', N'Barangay Public Relations Officer', N'345', N'Bucal St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-355-6789', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\rosa_cruz.jpg'),
+
+
+(N'INOS20001', N'Juan', N'C.', N'Santos', N'Barangay Tanod', N'221', N'Mabini St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-111-1111', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_8.jpg'),
+(N'INOS20002', N'Mark', N'D.', N'Garcia', N'Barangay Tanod', N'134', N'Rizal St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-222-2222', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_7.jpg'),
+(N'INOS20003', N'Rico', N'F.', N'Cruz', N'Barangay Tanod', N'156', N'Bonifacio St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-333-3333', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_6.jpg'),
+(N'INOS20004', N'Leo', N'G.', N'Fernandez', N'Barangay Tanod', N'78', N'Magsaysay St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-444-4444', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_5.jpg'),
+(N'INOS20005', N'Danilo', N'H.', N'Reyes', N'Barangay Tanod', N'112', N'Quezon St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-555-5555', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_9.jpg'),
+(N'INOS20006', N'Alfred', N'I.', N'Torres', N'Barangay Tanod', N'189', N'Kalayaan St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-666-6666', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_10.jpg'),
+(N'INOS20007', N'Vicente', N'J.', N'Mendoza', N'Barangay Tanod', N'145', N'Katipunan St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-777-7777', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_5.jpg'),
+(N'INOS20008', N'Ernesto', N'K.', N'Bautista', N'Barangay Tanod', N'132', N'Del Pilar St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-888-8888', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_9.jpg'),
+(N'INOS20009', N'Francisco', N'L.', N'Diaz', N'Barangay Tanod', N'176', N'Luna St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-999-9999', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_3.jpg'),
+(N'INOS20010', N'Benedicto', N'M.', N'Flores', N'Barangay Tanod', N'158', N'Mabini St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-101-1010', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_7.jpg'),
+(N'INOS20011', N'Ramon', N'N.', N'Gonzales', N'Barangay Tanod', N'220', N'Taft St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-102-1020', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_8.jpg'),
+(N'INOS20012', N'Cesar', N'O.', N'Lopez', N'Barangay Tanod', N'141', N'San Juan St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-103-1030', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_10.jpg'),
+(N'INOS20013', N'Ricardo', N'P.', N'Morales', N'Barangay Tanod', N'167', N'Paterno St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-104-1040', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\jose_santos.jpg'),
+(N'INOS20014', N'Mario', N'Q.', N'Valdez', N'Barangay Tanod', N'183', N'Burgos St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-105-1050', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_6.jpg'),
+(N'INOS20015', N'Edgardo', N'R.', N'Castro', N'Barangay Tanod', N'325', N'Osmeña St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-106-1060', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_6.jpg'),
+(N'INOS20016', N'Carlos', N'S.', N'Dela Cruz', N'Barangay Tanod', N'139', N'MacArthur St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-107-1070', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\don_bueno.jpg'),
+(N'INOS20017', N'Roberto', N'T.', N'Mendoza', N'Barangay Tanod', N'350', N'Aguinaldo St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-108-1080', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\don_bueno.jpg'),
+(N'INOS20018', N'Antonio', N'U.', N'Fernandez', N'Barangay Tanod', N'290', N'San Roque St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-109-1090', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\raul_vargas.jpg'),
+(N'INOS20019', N'Gerardo', N'V.', N'Torralba', N'Barangay Tanod', N'317', N'Lapu-Lapu St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-110-1100', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\raul_vargas.jpg'),
+(N'INOS20020', N'Isidro', N'W.', N'Magalona', N'Barangay Tanod', N'263', N'Panganiban St', N'Inosluban', N'Lipa', N'Batangas', N'+63-912-111-1110', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_3.jpg'),
+
+ 
+(N'INOS0A111', N'Maria', N'N.', N'Dela Cruz', N'Barangay Health Worker', N'311', N'Health St', N'Inosluban', N'Lipa', N'Batangas', N'+63-913-111-1111', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_1.jpg'),
+(N'INOS0F112', N'Angela', N'O.', N'Ramos', N'Barangay Health Worker', N'222', N'Wellness St', N'Inosluban', N'Lipa', N'Batangas', N'+63-913-222-2222', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_2.jpg'),
+(N'INOS0B113', N'Patricia', N'P.', N'Lopez', N'Barangay Health Worker', N'133', N'Medical St', N'Inosluban', N'Lipa', N'Batangas', N'+63-913-333-3333', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\lucia_lopez.jpg'),
+(N'INOS0N114', N'Sophia', N'Q.', N'Hernandez', N'Barangay Health Worker', N'144', N'Care St', N'Inosluban', N'Lipa', N'Batangas', N'+63-913-444-4444', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\ana_torres.jpg'),
+(N'INOS0M115', N'Regina', N'R.', N'Fernandez', N'Barangay Health Worker', N'255', N'Clinic St', N'Inosluban', N'Lipa', N'Batangas', N'+63-913-555-5555', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\rosa_cruz.jpg'),
+(N'INOS0Q116', N'Elena', N'S.', N'Castro', N'Barangay Health Worker', N'166', N'Hospital St', N'Inosluban', N'Lipa', N'Batangas', N'+63-913-666-6666', N'C:\Users\Trisha\commmngt_cc105\G4\Main vb g4-feature\EmployeeDashboard\photos\g4_2.jpg');
+
+
+
+
+
+------FOR EMPLOYEE DETAILS CONCATENATE IF COLUMNS FROM EMPLOYEE INFO
+
+use commngtcc105;
+
+CREATE TABLE g4_EmployeeDetails (
+    EmployeeID NVARCHAR(50) PRIMARY KEY, 
+    EmployeeName NVARCHAR(255),
+    FullAddress NVARCHAR(255),
+    Position NVARCHAR(100)
+);
+
+select * from g4_EmployeeDetails;
+
+
+INSERT INTO g4_EmployeeDetails (EmployeeID, EmployeeName, FullAddress, Position)
+SELECT 
+    EmployeeID, 
+    LTRIM(RTRIM(FirstName + ' ' + COALESCE(NULLIF(MiddleName, ''), '') + ' ' + LastName)) AS EmployeeName,
+    COALESCE(HouseNumber, '') + ', ' + 
+    COALESCE(StreetAddress, '') + ', ' + 
+    COALESCE(Barangay, '') + ', ' + 
+    COALESCE(City, '') + ', ' + 
+    COALESCE(Province, '') AS FullAddress,
+    Position
+FROM g4_EmployeesInfo;
+
+
+
+
+-------FOR RECORDING ATTENDANCE
+
+use commngtcc105;
+
+CREATE TABLE g4_EmployeeAttendance (
+    AttendanceID INT IDENTITY(1,1) PRIMARY KEY,
+    EmployeeID NVARCHAR(50) FOREIGN KEY REFERENCES g4_EmployeeDetails(EmployeeID), 
+    ScanTime DATETIME DEFAULT GETDATE(),
+    ScanType NVARCHAR(10) CHECK (ScanType IN ('IN', 'OUT'))
+);
+
+select * from g4_EmployeeAttendance;
+
+
+
+
+-------FOR RECORDING SHIFT / SCHEDULES
+
+use commngtcc105;
+
+CREATE TABLE g4_ShiftSchedule (
+    ShiftID INT PRIMARY KEY IDENTITY (1,1),
+    EmployeeID NVARCHAR(50),
+	EmployeeName NVARCHAR(255),
+    Role VARCHAR(50),
+    ShiftDate DATE,
+    StartTime TIME,
+    EndTime TIME,
+	CONSTRAINT FK_Shift_Employee FOREIGN KEY (EmployeeID)
+	REFERENCES g4_EmployeeDetails(EmployeeID)
+	ON DELETE CASCADE
+);
+
+select * from g4_ShiftSchedule;
+
+UPDATE g4_ShiftSchedule
+SET EmployeeName = (SELECT EmployeeName FROM g4_EmployeeDetails WHERE g4_EmployeeDetails.EmployeeID = g4_ShiftSchedule.EmployeeID);
+
+ALTER TABLE g4_ShiftSchedule
+ALTER COLUMN EmployeeName NVARCHAR(255) NOT NULL;
+
+
+
+
+
+
