@@ -1,11 +1,5 @@
 ﻿Option Explicit On
-Imports System.Data
-Imports System.Data.OleDb
-Imports ADODB
-
-Imports System.IO
-Imports System.Configuration
-Public Class Form1
+Public Class frmLogin
 
 
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load

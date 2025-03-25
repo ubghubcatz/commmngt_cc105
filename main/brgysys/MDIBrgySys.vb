@@ -1,6 +1,4 @@
-﻿Imports System.Windows.Forms
-
-Public Class MDIBrgySys
+﻿Public Class MDIBrgySys
 
     Private Sub ShowNewForm(ByVal sender As Object, ByVal e As EventArgs) Handles NewToolStripMenuItem.Click, NewToolStripButton.Click, NewWindowToolStripMenuItem.Click
         ' Create a new instance of the child form.
@@ -12,8 +10,9 @@ Public Class MDIBrgySys
         'ChildForm.Text = "Window " & m_ChildFormNumber
 
         'ChildForm.Show()
-        Attendance.MdiParent = Me
-        Attendance.Show()
+        '20250325
+        'Attendance.MdiParent = Me
+        'Attendance.Show()
     End Sub
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click

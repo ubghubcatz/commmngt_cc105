@@ -1,6 +1,6 @@
 is_global = true
 build_property.ApplicationManifest = My Project\app.manifest
-build_property.StartupObject = 
+build_property.StartupObject = brgysys.My.MyApplication
 build_property.ApplicationDefaultFont = 
 build_property.ApplicationHighDpiMode = 
 build_property.ApplicationUseCompatibleTextRendering = 

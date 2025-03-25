@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("brgysys"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07099088abcf9fdbf7ca769568308ea635ef3a36"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3fab9f001eab86f61158933e67651a5b5f4f84e"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("brgysys"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("brgysys"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

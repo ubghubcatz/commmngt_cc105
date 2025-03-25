@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <StartupObject>brgysys.My.MyApplication</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

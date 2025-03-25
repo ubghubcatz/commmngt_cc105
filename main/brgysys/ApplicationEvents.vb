@@ -1,5 +1,4 @@
 ﻿Imports Microsoft.VisualBasic.ApplicationServices
-
 Namespace My
     ' The following events are available for MyApplication:
     ' Startup: Raised when the application starts, before the startup form is created.
