@@ -76,3 +76,4 @@ D:\2024_2025UBGHub_2S\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\refin
 D:\2024_2025UBGHub_2S\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.pdb
 D:\2024_2025UBGHub_2S\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.genruntimeconfig.cache
 D:\2024_2025UBGHub_2S\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\ref\brgysys.dll
+D:\2024_2025UBGHub_2S\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.Attendance.resources

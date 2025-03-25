@@ -77,6 +77,8 @@ Partial Class MDIBrgySys
         StatusStrip = New StatusStrip()
         ToolStripStatusLabel = New ToolStripStatusLabel()
         ToolTip = New ToolTip(components)
+        DashboardToolStripMenuItem = New ToolStripMenuItem()
+        AttendanceToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
         StatusStrip.SuspendLayout()
@@ -103,11 +105,12 @@ Partial Class MDIBrgySys
         ' 
         ' NewToolStripMenuItem
         ' 
+        NewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {DashboardToolStripMenuItem, AttendanceToolStripMenuItem})
         NewToolStripMenuItem.Image = CType(resources.GetObject("NewToolStripMenuItem.Image"), Image)
         NewToolStripMenuItem.ImageTransparentColor = Color.Black
         NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         NewToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.N
-        NewToolStripMenuItem.Size = New Size(180, 22)
+        NewToolStripMenuItem.Size = New Size(212, 22)
         NewToolStripMenuItem.Text = "&Employee"
         ' 
         ' OpenToolStripMenuItem
@@ -116,13 +119,13 @@ Partial Class MDIBrgySys
         OpenToolStripMenuItem.ImageTransparentColor = Color.Black
         OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         OpenToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
-        OpenToolStripMenuItem.Size = New Size(180, 22)
-        OpenToolStripMenuItem.Text = "&Open"
+        OpenToolStripMenuItem.Size = New Size(212, 22)
+        OpenToolStripMenuItem.Text = "Command Center"
         ' 
         ' ToolStripSeparator3
         ' 
         ToolStripSeparator3.Name = "ToolStripSeparator3"
-        ToolStripSeparator3.Size = New Size(177, 6)
+        ToolStripSeparator3.Size = New Size(209, 6)
         ' 
         ' SaveToolStripMenuItem
         ' 
@@ -130,19 +133,19 @@ Partial Class MDIBrgySys
         SaveToolStripMenuItem.ImageTransparentColor = Color.Black
         SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
         SaveToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.S
-        SaveToolStripMenuItem.Size = New Size(180, 22)
+        SaveToolStripMenuItem.Size = New Size(212, 22)
         SaveToolStripMenuItem.Text = "&Save"
         ' 
         ' SaveAsToolStripMenuItem
         ' 
         SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        SaveAsToolStripMenuItem.Size = New Size(180, 22)
+        SaveAsToolStripMenuItem.Size = New Size(212, 22)
         SaveAsToolStripMenuItem.Text = "Save &As"
         ' 
         ' ToolStripSeparator4
         ' 
         ToolStripSeparator4.Name = "ToolStripSeparator4"
-        ToolStripSeparator4.Size = New Size(177, 6)
+        ToolStripSeparator4.Size = New Size(209, 6)
         ' 
         ' PrintToolStripMenuItem
         ' 
@@ -150,7 +153,7 @@ Partial Class MDIBrgySys
         PrintToolStripMenuItem.ImageTransparentColor = Color.Black
         PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
         PrintToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.P
-        PrintToolStripMenuItem.Size = New Size(180, 22)
+        PrintToolStripMenuItem.Size = New Size(212, 22)
         PrintToolStripMenuItem.Text = "&Print"
         ' 
         ' PrintPreviewToolStripMenuItem
@@ -158,24 +161,24 @@ Partial Class MDIBrgySys
         PrintPreviewToolStripMenuItem.Image = CType(resources.GetObject("PrintPreviewToolStripMenuItem.Image"), Image)
         PrintPreviewToolStripMenuItem.ImageTransparentColor = Color.Black
         PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
-        PrintPreviewToolStripMenuItem.Size = New Size(180, 22)
+        PrintPreviewToolStripMenuItem.Size = New Size(212, 22)
         PrintPreviewToolStripMenuItem.Text = "Print Pre&view"
         ' 
         ' PrintSetupToolStripMenuItem
         ' 
         PrintSetupToolStripMenuItem.Name = "PrintSetupToolStripMenuItem"
-        PrintSetupToolStripMenuItem.Size = New Size(180, 22)
+        PrintSetupToolStripMenuItem.Size = New Size(212, 22)
         PrintSetupToolStripMenuItem.Text = "Print Setup"
         ' 
         ' ToolStripSeparator5
         ' 
         ToolStripSeparator5.Name = "ToolStripSeparator5"
-        ToolStripSeparator5.Size = New Size(177, 6)
+        ToolStripSeparator5.Size = New Size(209, 6)
         ' 
         ' ExitToolStripMenuItem
         ' 
         ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        ExitToolStripMenuItem.Size = New Size(180, 22)
+        ExitToolStripMenuItem.Size = New Size(212, 22)
         ExitToolStripMenuItem.Text = "E&xit"
         ' 
         ' EditMenu
@@ -458,6 +461,18 @@ Partial Class MDIBrgySys
         ToolStripStatusLabel.Size = New Size(39, 17)
         ToolStripStatusLabel.Text = "Status"
         ' 
+        ' DashboardToolStripMenuItem
+        ' 
+        DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        DashboardToolStripMenuItem.Size = New Size(180, 22)
+        DashboardToolStripMenuItem.Text = "Dashboard"
+        ' 
+        ' AttendanceToolStripMenuItem
+        ' 
+        AttendanceToolStripMenuItem.Name = "AttendanceToolStripMenuItem"
+        AttendanceToolStripMenuItem.Size = New Size(180, 22)
+        AttendanceToolStripMenuItem.Text = "Attendance"
+        ' 
         ' MDIBrgySys
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -534,5 +549,7 @@ Partial Class MDIBrgySys
     Friend WithEvents ToolBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DashboardToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AttendanceToolStripMenuItem As ToolStripMenuItem
 
 End Class
