@@ -105,4 +105,14 @@
         ''Next
 
     End Sub
+
+    Private Sub AttendanceToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AttendanceToolStripMenuItem.Click
+        Attendance.Show()
+    End Sub
+
+    Private Sub SchedulingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SchedulingToolStripMenuItem.Click
+
+        Schedule.MdiParent = Me
+        Schedule.Show()
+    End Sub
 End Class

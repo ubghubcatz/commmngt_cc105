@@ -6,6 +6,36 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
+      "AForge/2.2.5": {
+        "runtime": {
+          "lib/AForge.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
+      "AForge.Video/2.2.5": {
+        "dependencies": {
+          "AForge": "2.2.5"
+        },
+        "runtime": {
+          "lib/AForge.Video.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
+      "AForge.Video.DirectShow/2.2.5": {
+        "dependencies": {
+          "AForge.Video": "2.2.5"
+        },
+        "runtime": {
+          "lib/AForge.Video.DirectShow.dll": {
+            "assemblyVersion": "2.2.5.0",
+            "fileVersion": "2.2.5.0"
+          }
+        }
+      },
       "Azure.Core/1.38.0": {
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
@@ -311,6 +341,22 @@
           }
         }
       },
+      "Microsoft.Win32.SystemEvents/8.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.53103"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "dependencies": {
           "System.Memory.Data": "1.0.2",
@@ -407,6 +453,17 @@
           }
         }
       },
+      "System.Drawing.Common/8.0.12": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.1224.60306"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/7.5.0": {
         "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "7.5.0",
@@ -481,10 +538,51 @@
           }
         }
       },
-      "System.Threading.Tasks.Extensions/4.5.4": {}
+      "System.Threading.Tasks.Extensions/4.5.4": {},
+      "ZXing.Net/0.16.10": {
+        "runtime": {
+          "lib/net8.0/zxing.dll": {
+            "assemblyVersion": "0.16.10.0",
+            "fileVersion": "0.16.10.0"
+          }
+        }
+      },
+      "ZXing.Net.Bindings.Windows.Compatibility/0.16.13": {
+        "dependencies": {
+          "System.Drawing.Common": "8.0.12",
+          "ZXing.Net": "0.16.10"
+        },
+        "runtime": {
+          "lib/net8.0/ZXing.Windows.Compatibility.dll": {
+            "assemblyVersion": "0.16.13.0",
+            "fileVersion": "0.16.13.0"
+          }
+        }
+      }
     }
   },
   "libraries": {
+    "AForge/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-clkumhM9DggqIzEXAHgVLeWO4arG5YfoPr7J4jfjJx35AoeEIJSSm49J25bwp/9mXQYLwi7y1Wunc8qgYJsGxg==",
+      "path": "aforge/2.2.5",
+      "hashPath": "aforge.2.2.5.nupkg.sha512"
+    },
+    "AForge.Video/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XqzcOXtBUagEPRqg/00oayxlCPmxP4284SdM62mVotsNoD03fs19BrzdMBfhUOOYPyd0B/IXH7tEWnSDmc2gxA==",
+      "path": "aforge.video/2.2.5",
+      "hashPath": "aforge.video.2.2.5.nupkg.sha512"
+    },
+    "AForge.Video.DirectShow/2.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pEch6felU/RGAbl0A7yjaQjsGxwiRFU9R+qBqR92wQo++XhzPLeQaZHnAPIBYaG7MfoqtjgCDkK4z3Tra4VQ3w==",
+      "path": "aforge.video.directshow/2.2.5",
+      "hashPath": "aforge.video.directshow.2.2.5.nupkg.sha512"
+    },
     "Azure.Core/1.38.0": {
       "type": "package",
       "serviceable": true,
@@ -632,6 +730,13 @@
       "path": "microsoft.sqlserver.server/1.0.0",
       "hashPath": "microsoft.sqlserver.server.1.0.0.nupkg.sha512"
     },
+    "Microsoft.Win32.SystemEvents/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9opKRyOKMCi2xJ7Bj7kxtZ1r9vbzosMvRrdEhVhDz8j8MoBGgB+WmC94yH839NPH+BclAjtQ/pyagvi/8gDLkw==",
+      "path": "microsoft.win32.systemevents/8.0.0",
+      "hashPath": "microsoft.win32.systemevents.8.0.0.nupkg.sha512"
+    },
     "System.ClientModel/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -673,6 +778,13 @@
       "sha512": "sha512-SpTZ1LgraLWM8sVqpWvyzOJaei1yDsHeDhlV7thxv+vhKNSWJ+Q6jYUs9YHomBd2HPQlthyCm3J5LA+2pbCXew==",
       "path": "system.diagnostics.performancecounter/9.0.3",
       "hashPath": "system.diagnostics.performancecounter.9.0.3.nupkg.sha512"
+    },
+    "System.Drawing.Common/8.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mZrI0KKFAZO8gWaARhdaJblMUNEeHMlPsFa/nRS4j4EenYP/+f8F2bzu4yb0Co7WYuJ/w/D8d/zW4KGCdYJCyQ==",
+      "path": "system.drawing.common/8.0.12",
+      "hashPath": "system.drawing.common.8.0.12.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/7.5.0": {
       "type": "package",
@@ -743,6 +855,20 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "ZXing.Net/0.16.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9avtcn21T7Ndcl8PQ1LHR7/wEoCruX1QKKHvO6zBPTsDW9IdvR5vKOmd618AY+DtDWZz8NaFDTkpbZdgaF4l4w==",
+      "path": "zxing.net/0.16.10",
+      "hashPath": "zxing.net.0.16.10.nupkg.sha512"
+    },
+    "ZXing.Net.Bindings.Windows.Compatibility/0.16.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x6WwaokAqBXhvX/FTYmE+kdKRSYuxCKSN608VbWWlawUq/rXYW/KoDfRpEkpUeYW6qU5hE3eFzWMuG20doLR9A==",
+      "path": "zxing.net.bindings.windows.compatibility/0.16.13",
+      "hashPath": "zxing.net.bindings.windows.compatibility.0.16.13.nupkg.sha512"
     }
   }
 }

@@ -51,6 +51,14 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "AForge.Video": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "AForge.Video.DirectShow": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[6.0.1, )"
@@ -58,6 +66,14 @@
             "System.Data.OleDb": {
               "target": "Package",
               "version": "[9.0.3, )"
+            },
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.10, )"
+            },
+            "ZXing.Net.Bindings.Windows.Compatibility": {
+              "target": "Package",
+              "version": "[0.16.13, )"
             }
           },
           "imports": [

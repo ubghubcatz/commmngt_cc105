@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "SFMQ+StlnYA=",
+  "dgSpecHash": "0O7hnt3m0eQ=",
   "success": true,
   "projectFilePath": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -25,12 +28,14 @@
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.5.0\\microsoft.identitymodel.protocols.openidconnect.7.5.0.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.0\\microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.3\\system.configuration.configurationmanager.9.0.3.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.data.oledb\\9.0.3\\system.data.oledb.9.0.3.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.3\\system.diagnostics.eventlog.9.0.3.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.3\\system.diagnostics.performancecounter.9.0.3.nupkg.sha512",
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.drawing.common\\8.0.12\\system.drawing.common.8.0.12.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.5.0\\system.identitymodel.tokens.jwt.7.5.0.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
@@ -40,7 +45,40 @@
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.3\\system.security.cryptography.protecteddata.9.0.3.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
-    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\zxing.net\\0.16.10\\zxing.net.0.16.10.nupkg.sha512",
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\zxing.net.bindings.windows.compatibility\\0.16.13\\zxing.net.bindings.windows.compatibility.0.16.13.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Video 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Video",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'AForge.Video.DirectShow 2.2.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "AForge.Video.DirectShow",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
 }

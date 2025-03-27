@@ -7,6 +7,9 @@
     <Compile Update="G4\Attendance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="G4\Schedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MDIBrgySys.vb">
       <SubType>Form</SubType>
     </Compile>

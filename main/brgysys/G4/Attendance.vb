@@ -6,38 +6,38 @@ Imports ZXing.Windows.Compatibility
 
 Public Class Attendance
     Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
-    'Dim captureDevice As FilterInfoCollection
-    'Dim videoSource As VideoCaptureDevice
+    Dim captureDevice As FilterInfoCollection
+    Dim videoSource As VideoCaptureDevice
     Private WithEvents scanTimer As New Timer()
 
 
     ' Automatically start scanning when the form loads
     Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'captureDevice = New FilterInfoCollection(FilterCategory.VideoInputDevice)
-        'If captureDevice.Count > 0 Then
-        '    videoSource = New VideoCaptureDevice(captureDevice(0).MonikerString)
-        '    AddHandler videoSource.NewFrame, AddressOf CaptureFrame
-        '    videoSource.Start()
-        '    scanTimer.Start()
-        'Else
-        '    MessageBox.Show("No webcam detected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End If
+        captureDevice = New FilterInfoCollection(FilterCategory.VideoInputDevice)
+        If captureDevice.Count > 0 Then
+            videoSource = New VideoCaptureDevice(captureDevice(0).MonikerString)
+            AddHandler videoSource.NewFrame, AddressOf CaptureFrame
+            videoSource.Start()
+            scanTimer.Start()
+        Else
+            MessageBox.Show("No webcam detected!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
     End Sub
 
     ' Capture and process QR code from the camera feed
-    'Private Sub CaptureFrame(sender As Object, eventArgs As NewFrameEventArgs)
-    '    Try
-    '        Dim frame As Bitmap = DirectCast(eventArgs.Frame.Clone(), Bitmap)
+    Private Sub CaptureFrame(sender As Object, eventArgs As NewFrameEventArgs)
+        Try
+            Dim frame As Bitmap = DirectCast(eventArgs.Frame.Clone(), Bitmap)
 
-    '        ' Flip the image horizontally (mirror effect)
-    '        frame.RotateFlip(RotateFlipType.RotateNoneFlipX)
+            ' Flip the image horizontally (mirror effect)
+            frame.RotateFlip(RotateFlipType.RotateNoneFlipX)
 
-    '        ' Display mirrored image in PictureBox
-    '        pbCamera.Image = frame
-    '    Catch ex As Exception
-    '        MessageBox.Show("Error capturing frame: " & ex.Message, "Camera Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '    End Try
-    'End Sub
+            ' Display mirrored image in PictureBox
+            pbCamera.Image = frame
+        Catch ex As Exception
+            MessageBox.Show("Error capturing frame: " & ex.Message, "Camera Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
 
     ' Timer to check for QR codes
@@ -48,25 +48,25 @@ Public Class Attendance
         End If
 
         Try
-            '' Convert PictureBox image to Bitmap
-            'Dim bitmap As New Bitmap(pbCamera.Image)
+            ' Convert PictureBox image to Bitmap
+            Dim bitmap As New Bitmap(pbCamera.Image)
 
-            '' Flip the image if necessary (mirrored input)
-            'bitmap.RotateFlip(RotateFlipType.RotateNoneFlipX)
+            ' Flip the image if necessary (mirrored input)
+            bitmap.RotateFlip(RotateFlipType.RotateNoneFlipX)
 
-            '' Create a BarcodeReader instance
-            'Dim Reader As New BarcodeReader()
+            ' Create a BarcodeReader instance
+            Dim Reader As New BarcodeReader()
 
-            '' Decode the QR code from the Bitmap
-            'Dim result As Result = Reader.Decode(bitmap)
+            ' Decode the QR code from the Bitmap
+            Dim result As Result = Reader.Decode(bitmap)
 
-            'If result Is Nothing Then
-            '    Exit Sub ' Prevents the error if no QR code is found
-            'End If
+            If result Is Nothing Then
+                Exit Sub ' Prevents the error if no QR code is found
+            End If
 
-            'Dim empID As String = result.Text.Trim()
-            'scanTimer.Stop()
-            'ProcessAttendance(empID)
+            Dim empID As String = result.Text.Trim()
+            scanTimer.Stop()
+            ProcessAttendance(empID)
 
         Catch ex As Exception
             MessageBox.Show("Error decoding QR code: " & ex.Message, "QR Code Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -180,8 +180,8 @@ Public Class Attendance
 
     ' Stop camera when form is closed
     Private Sub Attendance_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        'If videoSource IsNot Nothing AndAlso videoSource.IsRunning Then
-        '    videoSource.SignalToStop()
-        'End If
+        If videoSource IsNot Nothing AndAlso videoSource.IsRunning Then
+            videoSource.SignalToStop()
+        End If
     End Sub
 End Class

@@ -28,6 +28,8 @@ Partial Class MDIBrgySys
         MenuStrip = New MenuStrip()
         FileMenu = New ToolStripMenuItem()
         NewToolStripMenuItem = New ToolStripMenuItem()
+        DashboardToolStripMenuItem = New ToolStripMenuItem()
+        AttendanceToolStripMenuItem = New ToolStripMenuItem()
         OpenToolStripMenuItem = New ToolStripMenuItem()
         ToolStripSeparator3 = New ToolStripSeparator()
         SaveToolStripMenuItem = New ToolStripMenuItem()
@@ -77,8 +79,7 @@ Partial Class MDIBrgySys
         StatusStrip = New StatusStrip()
         ToolStripStatusLabel = New ToolStripStatusLabel()
         ToolTip = New ToolTip(components)
-        DashboardToolStripMenuItem = New ToolStripMenuItem()
-        AttendanceToolStripMenuItem = New ToolStripMenuItem()
+        SchedulingToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
         StatusStrip.SuspendLayout()
@@ -105,13 +106,25 @@ Partial Class MDIBrgySys
         ' 
         ' NewToolStripMenuItem
         ' 
-        NewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {DashboardToolStripMenuItem, AttendanceToolStripMenuItem})
+        NewToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {DashboardToolStripMenuItem, AttendanceToolStripMenuItem, SchedulingToolStripMenuItem})
         NewToolStripMenuItem.Image = CType(resources.GetObject("NewToolStripMenuItem.Image"), Image)
         NewToolStripMenuItem.ImageTransparentColor = Color.Black
         NewToolStripMenuItem.Name = "NewToolStripMenuItem"
         NewToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.N
         NewToolStripMenuItem.Size = New Size(212, 22)
         NewToolStripMenuItem.Text = "&Employee"
+        ' 
+        ' DashboardToolStripMenuItem
+        ' 
+        DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
+        DashboardToolStripMenuItem.Size = New Size(180, 22)
+        DashboardToolStripMenuItem.Text = "Dashboard"
+        ' 
+        ' AttendanceToolStripMenuItem
+        ' 
+        AttendanceToolStripMenuItem.Name = "AttendanceToolStripMenuItem"
+        AttendanceToolStripMenuItem.Size = New Size(180, 22)
+        AttendanceToolStripMenuItem.Text = "Attendance"
         ' 
         ' OpenToolStripMenuItem
         ' 
@@ -461,17 +474,11 @@ Partial Class MDIBrgySys
         ToolStripStatusLabel.Size = New Size(39, 17)
         ToolStripStatusLabel.Text = "Status"
         ' 
-        ' DashboardToolStripMenuItem
+        ' SchedulingToolStripMenuItem
         ' 
-        DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        DashboardToolStripMenuItem.Size = New Size(180, 22)
-        DashboardToolStripMenuItem.Text = "Dashboard"
-        ' 
-        ' AttendanceToolStripMenuItem
-        ' 
-        AttendanceToolStripMenuItem.Name = "AttendanceToolStripMenuItem"
-        AttendanceToolStripMenuItem.Size = New Size(180, 22)
-        AttendanceToolStripMenuItem.Text = "Attendance"
+        SchedulingToolStripMenuItem.Name = "SchedulingToolStripMenuItem"
+        SchedulingToolStripMenuItem.Size = New Size(180, 22)
+        SchedulingToolStripMenuItem.Text = "Scheduling"
         ' 
         ' MDIBrgySys
         ' 
@@ -551,5 +558,6 @@ Partial Class MDIBrgySys
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DashboardToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AttendanceToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SchedulingToolStripMenuItem As ToolStripMenuItem
 
 End Class
