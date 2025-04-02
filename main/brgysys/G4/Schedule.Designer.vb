@@ -36,37 +36,35 @@ Partial Class Schedule
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
-        Label1.Location = New Point(204, 23)
+        Label1.Location = New Point(233, 31)
         Label1.Name = "Label1"
-        Label1.Size = New Size(241, 28)
+        Label1.Size = New Size(298, 35)
         Label1.TabIndex = 1
         Label1.Text = "Shift Scheduling System"
         ' 
         ' DataGridViewShifts
         ' 
         DataGridViewShifts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewShifts.Location = New Point(32, 96)
-        DataGridViewShifts.Margin = New Padding(3, 2, 3, 2)
+        DataGridViewShifts.Location = New Point(37, 128)
         DataGridViewShifts.Name = "DataGridViewShifts"
         DataGridViewShifts.RowHeadersWidth = 51
-        DataGridViewShifts.Size = New Size(637, 236)
+        DataGridViewShifts.Size = New Size(728, 315)
         DataGridViewShifts.TabIndex = 2
         ' 
         ' cboFilter
         ' 
         cboFilter.FormattingEnabled = True
-        cboFilter.Location = New Point(455, 69)
-        cboFilter.Margin = New Padding(3, 2, 3, 2)
+        cboFilter.Location = New Point(520, 92)
         cboFilter.Name = "cboFilter"
-        cboFilter.Size = New Size(133, 23)
+        cboFilter.Size = New Size(151, 28)
         cboFilter.TabIndex = 3
         ' 
         ' Label2
         ' 
         Label2.Font = New Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(326, 69)
+        Label2.Location = New Point(373, 92)
         Label2.Name = "Label2"
-        Label2.Size = New Size(124, 19)
+        Label2.Size = New Size(142, 25)
         Label2.TabIndex = 4
         Label2.Text = "Filter by Position:"
         ' 
@@ -76,10 +74,9 @@ Partial Class Schedule
         btnGenerateShifts.FlatAppearance.BorderSize = 0
         btnGenerateShifts.FlatStyle = FlatStyle.Flat
         btnGenerateShifts.ForeColor = Color.White
-        btnGenerateShifts.Location = New Point(32, 336)
-        btnGenerateShifts.Margin = New Padding(3, 2, 3, 2)
+        btnGenerateShifts.Location = New Point(37, 448)
         btnGenerateShifts.Name = "btnGenerateShifts"
-        btnGenerateShifts.Size = New Size(119, 32)
+        btnGenerateShifts.Size = New Size(136, 43)
         btnGenerateShifts.TabIndex = 6
         btnGenerateShifts.Text = "Generate Shift"
         btnGenerateShifts.UseVisualStyleBackColor = False
@@ -90,10 +87,9 @@ Partial Class Schedule
         btnResetShifts.FlatAppearance.BorderSize = 0
         btnResetShifts.FlatStyle = FlatStyle.Flat
         btnResetShifts.ForeColor = Color.White
-        btnResetShifts.Location = New Point(157, 336)
-        btnResetShifts.Margin = New Padding(3, 2, 3, 2)
+        btnResetShifts.Location = New Point(179, 448)
         btnResetShifts.Name = "btnResetShifts"
-        btnResetShifts.Size = New Size(119, 32)
+        btnResetShifts.Size = New Size(136, 43)
         btnResetShifts.TabIndex = 7
         btnResetShifts.Text = "Reset"
         btnResetShifts.UseVisualStyleBackColor = False
@@ -104,20 +100,19 @@ Partial Class Schedule
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(602, 68)
-        Button1.Margin = New Padding(3, 2, 3, 2)
+        Button1.Location = New Point(688, 91)
         Button1.Name = "Button1"
-        Button1.Size = New Size(67, 23)
+        Button1.Size = New Size(77, 31)
         Button1.TabIndex = 8
         Button1.Text = "Search"
         Button1.UseVisualStyleBackColor = False
         ' 
         ' Schedule
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(725, 392)
+        ClientSize = New Size(829, 523)
         Controls.Add(Button1)
         Controls.Add(btnResetShifts)
         Controls.Add(btnGenerateShifts)
@@ -126,8 +121,8 @@ Partial Class Schedule
         Controls.Add(DataGridViewShifts)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedSingle
-        Margin = New Padding(3, 2, 3, 2)
         Name = "Schedule"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Schedule"
         CType(DataGridViewShifts, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

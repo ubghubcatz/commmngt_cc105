@@ -475,6 +475,18 @@
           }
         }
       },
+      "QRCoder/1.6.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Drawing.Common": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/QRCoder.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/QRCoder.dll": {}
+        }
+      },
       "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -1484,6 +1496,27 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "QRCoder/1.6.0": {
+      "sha512": "XmPA81eo+oRxBuyVdswsSkTGTE1d3thfF11Z1PdD7oB56A6HU4G4AAOdySmGRMb/cljwlFTMWUtosGEnwpS6GA==",
+      "type": "package",
+      "path": "qrcoder/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/QRCoder.dll",
+        "lib/net40/QRCoder.dll",
+        "lib/net5.0-windows7.0/QRCoder.dll",
+        "lib/net5.0/QRCoder.dll",
+        "lib/net6.0-windows7.0/QRCoder.dll",
+        "lib/net6.0/QRCoder.dll",
+        "lib/netstandard1.3/QRCoder.dll",
+        "lib/netstandard2.0/QRCoder.dll",
+        "nuget-icon.png",
+        "nuget-readme.md",
+        "qrcoder.1.6.0.nupkg.sha512",
+        "qrcoder.nuspec"
+      ]
+    },
     "System.ClientModel/1.0.0": {
       "sha512": "I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
       "type": "package",
@@ -2107,29 +2140,30 @@
       "AForge.Video >= 2.2.5",
       "AForge.Video.DirectShow >= 2.2.5",
       "Microsoft.Data.SqlClient >= 6.0.1",
+      "QRCoder >= 1.6.0",
       "System.Data.OleDb >= 9.0.3",
       "ZXing.Net >= 0.16.10",
       "ZXing.Net.Bindings.Windows.Compatibility >= 0.16.13"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\": {},
+    "C:\\Users\\Trisha\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+      "projectUniqueName": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
       "projectName": "brgysys",
-      "projectPath": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
-      "packagesPath": "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\",
-      "outputPath": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\obj\\",
+      "projectPath": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+      "packagesPath": "C:\\Users\\Trisha\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Aizelle Lorein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Trisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2138,7 +2172,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2174,6 +2207,10 @@
           "Microsoft.Data.SqlClient": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "QRCoder": {
+            "target": "Package",
+            "version": "[1.6.0, )"
           },
           "System.Data.OleDb": {
             "target": "Package",
