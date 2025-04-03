@@ -14,19 +14,14 @@ Public Class CaseRecordTable
     Private Sub OpenCaseReportForm()
         ' Check if the form already exists
         If Form2 IsNot Nothing AndAlso Not Form2.IsDisposed Then
-            ' If the form is minimized, restore it
-            If mainFormRef IsNot Nothing Then
-                ' Remove from taskbar if it exists (restoring the form)
-                mainFormRef.RemoveFormFromTaskbarMenuStrip(Form2, mainFormRef.TaskBarMenuStrip)
 
-                ' Re-add if it's minimized and hidden
-                If Form2.WindowState = FormWindowState.Minimized OrElse Not Form2.Visible Then
+            ' Re-add if it's minimized and hidden
+            If Form2.WindowState = FormWindowState.Minimized OrElse Not Form2.Visible Then
 
-                    If Not Form2.Visible Then Form2.Show()
-                    Form2.WindowState = FormWindowState.Normal
-                    Form2.BringToFront()
-                    Form2.Activate()
-                End If
+                If Not Form2.Visible Then Form2.Show()
+                Form2.WindowState = FormWindowState.Normal
+                Form2.BringToFront()
+                Form2.Activate()
             End If
         Else
             ' If the form is not open or was closed, create a new instance
@@ -63,18 +58,13 @@ Public Class CaseRecordTable
                     ' If the case is already open, reload the case data into the form
                     ReloadCaseDataIntoForm(openForm, searchQuery)
 
-                    If mainFormRef IsNot Nothing Then
-                        ' Remove from taskbar if it exists (restoring the form)
-                        mainFormRef.RemoveFormFromTaskbarMenuStrip(crsf, mainFormRef.TaskBarMenuStrip)
+                    ' Re-add if it's minimized and hidden
+                    If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
 
-                        ' Re-add if it's minimized and hidden
-                        If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
-                            
                             If Not crsf.Visible Then crsf.Show()
                             crsf.WindowState = FormWindowState.Normal
                             crsf.BringToFront()
-                            crsf.Activate()
-                        End If
+                        crsf.Activate()
                     End If
 
 

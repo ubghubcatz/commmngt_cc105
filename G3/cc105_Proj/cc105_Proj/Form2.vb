@@ -859,16 +859,6 @@ Public Class CaseRecordForm
         End If
     End Sub
 
-    Private Sub Form2_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        If Me.WindowState = FormWindowState.Minimized Then
-            Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
-
-            If mainFormRef IsNot Nothing Then
-                mainFormRef.MinimizeFormToTaskbar(Me)
-            End If
-        End If
-    End Sub
-
     ' === Helper function for displaying error messages ===
     Private Sub ShowError(msg As String)
         MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)

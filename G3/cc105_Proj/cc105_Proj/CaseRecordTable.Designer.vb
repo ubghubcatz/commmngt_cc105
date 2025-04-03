@@ -108,7 +108,7 @@ Partial Class CaseRecordTable
         Controls.Add(Search_Field)
         Controls.Add(Search_Btn)
         Controls.Add(Panel1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         MaximizeBox = False
         Name = "CaseRecordTable"
         Panel1.ResumeLayout(False)

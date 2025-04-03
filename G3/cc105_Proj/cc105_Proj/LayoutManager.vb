@@ -37,47 +37,6 @@
 
     End Sub
 
-    ' Resize the CaseRecordTable form
-    Public Shared Sub ResizeCaseForm(form As g3CommandCenter_Form, cases As CaseRecordTable)
-        form.MainPanel.Height = form.Panel1.Height * 0.85
-        form.MainPanel.Width = form.Panel1.Width
-        cases.Height = form.MainPanel.Height
-        cases.Width = form.MainPanel.Width
-        cases.AddCaseRecord_Btn.Left = cases.Width * 0.7
-        cases.Panel1.Width = cases.Width
-
-        Dim panelScreenLocation As Point = form.TabPage1.PointToScreen(Point.Empty)
-        cases.Location = panelScreenLocation
-    End Sub
-
-    ' Resize the CallLog_Tables form
-    Public Shared Sub ResizeCallForm(form As g3CommandCenter_Form, calls As CallLog_Tables)
-        form.MainPanel.Height = form.Panel1.Height * 0.85
-        form.MainPanel.Width = form.Panel1.Width
-        calls.Height = form.MainPanel.Height
-        calls.Width = form.MainPanel.Width
-        calls.CallLog_Table.Height = form.MainPanel.Height * 0.7
-        calls.CallLog_Table.Width = form.MainPanel.Width * 0.88
-        calls.Panel1.Width = form.MainPanel.Width
-        calls.AddCallLog_Btn.Left = form.MainPanel.Width * 0.7
-        ' Reset the position of the Call Log form (top-left of Panel1)
-        Dim panelScreenLocation As Point = form.TabPage1.PointToScreen(Point.Empty)
-        calls.Location = panelScreenLocation
-    End Sub
-
-    ' Resize the OfficersAvailabiltyForm
-    Public Shared Sub ResizeOfficersAvailabilityForm(form As g3CommandCenter_Form, officersAvailability As OfficersAvailabiltyForm)
-        form.MainPanel.Height = form.Panel1.Height * 0.85
-        form.MainPanel.Width = form.Panel1.Width
-        officersAvailability.Height = form.MainPanel.Height
-        officersAvailability.Width = form.MainPanel.Width
-        officersAvailability.Panel1.Width = form.MainPanel.Width
-        officersAvailability.OfficersCases_DataGridView.Height = form.MainPanel.Height * 0.55
-        officersAvailability.OfficersCases_DataGridView.Width = form.MainPanel.Width * 0.88
-        Dim panelScreenLocation As Point = form.TabPage1.PointToScreen(Point.Empty)
-        officersAvailability.Location = panelScreenLocation
-    End Sub
-
     Public Shared Sub ResizeImageViewerForm(viewer As ImageViewer)
         viewer.Image_Panel.Left = viewer.Width * 0.13
         viewer.Image_Panel.Top = viewer.Height * 0.07

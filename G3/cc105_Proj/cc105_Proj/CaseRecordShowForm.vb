@@ -98,18 +98,13 @@ Public Class CaseRecordShowForm
             If TypeOf openForm Is CaseRecordForm Then
                 Dim crsf As CaseRecordForm = DirectCast(openForm, CaseRecordForm)
                 If crsf.LoadedCaseID = caseID Then
-                    If mainFormRef IsNot Nothing Then
-                        ' Remove from taskbar if it exists (restoring the form)
-                        mainFormRef.RemoveFormFromTaskbarMenuStrip(crsf, mainFormRef.TaskBarMenuStrip)
+                    ' Re-add if it's minimized and hidden
+                    If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
 
-                        ' Re-add if it's minimized and hidden
-                        If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
-
-                            If Not crsf.Visible Then crsf.Show()
-                            crsf.WindowState = FormWindowState.Normal
-                            crsf.BringToFront()
-                            crsf.Activate()
-                        End If
+                        If Not crsf.Visible Then crsf.Show()
+                        crsf.WindowState = FormWindowState.Normal
+                        crsf.BringToFront()
+                        crsf.Activate()
                     End If
                     Return True
                 End If
@@ -355,16 +350,5 @@ Public Class CaseRecordShowForm
 
         Return locations
     End Function
-
-
-    Private Sub Form2_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        If Me.WindowState = FormWindowState.Minimized Then
-            Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
-
-            If mainFormRef IsNot Nothing Then
-                mainFormRef.MinimizeFormToTaskbar(Me)
-            End If
-        End If
-    End Sub
 
 End Class

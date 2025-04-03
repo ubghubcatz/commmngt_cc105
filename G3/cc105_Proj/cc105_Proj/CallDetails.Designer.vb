@@ -55,7 +55,7 @@ Partial Class CallDetails
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Green
-        Label1.Location = New Point(115, 66)
+        Label1.Location = New Point(57, 11)
         Label1.Name = "Label1"
         Label1.Size = New Size(101, 28)
         Label1.TabIndex = 0
@@ -66,7 +66,7 @@ Partial Class CallDetails
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Green
-        Label2.Location = New Point(113, 128)
+        Label2.Location = New Point(55, 73)
         Label2.Name = "Label2"
         Label2.Size = New Size(103, 28)
         Label2.TabIndex = 1
@@ -78,7 +78,7 @@ Partial Class CallDetails
         Number_TxtBox.Enabled = False
         Number_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Number_TxtBox.ForeColor = Color.Green
-        Number_TxtBox.Location = New Point(222, 60)
+        Number_TxtBox.Location = New Point(164, 5)
         Number_TxtBox.Name = "Number_TxtBox"
         Number_TxtBox.Size = New Size(271, 34)
         Number_TxtBox.TabIndex = 2
@@ -89,7 +89,7 @@ Partial Class CallDetails
         CallDate_TxtBox.Enabled = False
         CallDate_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         CallDate_TxtBox.ForeColor = Color.Green
-        CallDate_TxtBox.Location = New Point(222, 128)
+        CallDate_TxtBox.Location = New Point(164, 73)
         CallDate_TxtBox.Multiline = True
         CallDate_TxtBox.Name = "CallDate_TxtBox"
         CallDate_TxtBox.Size = New Size(271, 34)
@@ -100,7 +100,7 @@ Partial Class CallDetails
         Purpose_Txbox.BackColor = Color.Honeydew
         Purpose_Txbox.Enabled = False
         Purpose_Txbox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Purpose_Txbox.Location = New Point(222, 258)
+        Purpose_Txbox.Location = New Point(164, 203)
         Purpose_Txbox.Multiline = True
         Purpose_Txbox.Name = "Purpose_Txbox"
         Purpose_Txbox.Size = New Size(357, 82)
@@ -111,7 +111,7 @@ Partial Class CallDetails
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Green
-        Label3.Location = New Point(82, 254)
+        Label3.Location = New Point(24, 199)
         Label3.Name = "Label3"
         Label3.Size = New Size(134, 28)
         Label3.TabIndex = 4
@@ -122,7 +122,7 @@ Partial Class CallDetails
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Green
-        Label4.Location = New Point(89, 361)
+        Label4.Location = New Point(38, 309)
         Label4.Name = "Label4"
         Label4.Size = New Size(114, 28)
         Label4.TabIndex = 6
@@ -135,12 +135,12 @@ Partial Class CallDetails
         CallNotes_Table.AllowUserToResizeColumns = False
         CallNotes_Table.AllowUserToResizeRows = False
         CallNotes_Table.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        CallNotes_Table.Location = New Point(89, 392)
+        CallNotes_Table.Location = New Point(38, 340)
         CallNotes_Table.Name = "CallNotes_Table"
         CallNotes_Table.RowHeadersWidth = 51
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         CallNotes_Table.RowsDefaultCellStyle = DataGridViewCellStyle1
-        CallNotes_Table.Size = New Size(922, 221)
+        CallNotes_Table.Size = New Size(922, 187)
         CallNotes_Table.TabIndex = 7
         ' 
         ' AddNotes_Btn
@@ -148,9 +148,9 @@ Partial Class CallDetails
         AddNotes_Btn.BackColor = Color.Green
         AddNotes_Btn.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddNotes_Btn.ForeColor = Color.White
-        AddNotes_Btn.Location = New Point(917, 357)
+        AddNotes_Btn.Location = New Point(866, 305)
         AddNotes_Btn.Name = "AddNotes_Btn"
-        AddNotes_Btn.Size = New Size(94, 29)
+        AddNotes_Btn.Size = New Size(94, 30)
         AddNotes_Btn.TabIndex = 8
         AddNotes_Btn.Text = "Add Note"
         AddNotes_Btn.UseVisualStyleBackColor = False
@@ -160,7 +160,7 @@ Partial Class CallDetails
         Panel1.BackColor = Color.Green
         Panel1.Location = New Point(1088, -6)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(165, 632)
+        Panel1.Size = New Size(89, 593)
         Panel1.TabIndex = 9
         ' 
         ' CallTime_TxtBox
@@ -169,7 +169,7 @@ Partial Class CallDetails
         CallTime_TxtBox.Enabled = False
         CallTime_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         CallTime_TxtBox.ForeColor = Color.Green
-        CallTime_TxtBox.Location = New Point(222, 192)
+        CallTime_TxtBox.Location = New Point(164, 137)
         CallTime_TxtBox.Multiline = True
         CallTime_TxtBox.Name = "CallTime_TxtBox"
         CallTime_TxtBox.Size = New Size(271, 39)
@@ -180,7 +180,7 @@ Partial Class CallDetails
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Green
-        Label5.Location = New Point(111, 192)
+        Label5.Location = New Point(53, 137)
         Label5.Name = "Label5"
         Label5.Size = New Size(105, 28)
         Label5.TabIndex = 10
@@ -192,7 +192,7 @@ Partial Class CallDetails
         Status_TxtBox.Enabled = False
         Status_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         Status_TxtBox.ForeColor = Color.Green
-        Status_TxtBox.Location = New Point(777, 254)
+        Status_TxtBox.Location = New Point(770, 229)
         Status_TxtBox.Multiline = True
         Status_TxtBox.Name = "Status_TxtBox"
         Status_TxtBox.Size = New Size(190, 42)
@@ -203,7 +203,7 @@ Partial Class CallDetails
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Green
-        Label6.Location = New Point(654, 254)
+        Label6.Location = New Point(647, 229)
         Label6.Name = "Label6"
         Label6.Size = New Size(117, 28)
         Label6.TabIndex = 16
@@ -215,7 +215,7 @@ Partial Class CallDetails
         CallType_TxtBox.Enabled = False
         CallType_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         CallType_TxtBox.ForeColor = Color.Green
-        CallType_TxtBox.Location = New Point(777, 189)
+        CallType_TxtBox.Location = New Point(770, 164)
         CallType_TxtBox.Multiline = True
         CallType_TxtBox.Name = "CallType_TxtBox"
         CallType_TxtBox.Size = New Size(190, 42)
@@ -227,9 +227,9 @@ Partial Class CallDetails
         Handler_TxtBox.Enabled = False
         Handler_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Handler_TxtBox.ForeColor = Color.Green
-        Handler_TxtBox.Location = New Point(777, 128)
+        Handler_TxtBox.Location = New Point(770, 103)
         Handler_TxtBox.Name = "Handler_TxtBox"
-        Handler_TxtBox.Size = New Size(271, 34)
+        Handler_TxtBox.Size = New Size(244, 34)
         Handler_TxtBox.TabIndex = 14
         ' 
         ' Label7
@@ -237,7 +237,7 @@ Partial Class CallDetails
         Label7.AutoSize = True
         Label7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Green
-        Label7.Location = New Point(668, 196)
+        Label7.Location = New Point(661, 171)
         Label7.Name = "Label7"
         Label7.Size = New Size(103, 28)
         Label7.TabIndex = 13
@@ -248,7 +248,7 @@ Partial Class CallDetails
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Green
-        Label8.Location = New Point(617, 126)
+        Label8.Location = New Point(610, 101)
         Label8.Name = "Label8"
         Label8.Size = New Size(154, 28)
         Label8.TabIndex = 12
@@ -258,9 +258,9 @@ Partial Class CallDetails
         ' 
         Panel2.BackColor = Color.Green
         Panel2.Controls.Add(Label9)
-        Panel2.Location = New Point(951, -3)
+        Panel2.Location = New Point(878, 0)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(299, 97)
+        Panel2.Size = New Size(299, 76)
         Panel2.TabIndex = 18
         ' 
         ' Label9
@@ -269,7 +269,7 @@ Partial Class CallDetails
         Label9.BackColor = Color.Green
         Label9.Font = New Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.White
-        Label9.Location = New Point(29, 21)
+        Label9.Location = New Point(17, 14)
         Label9.Name = "Label9"
         Label9.Size = New Size(233, 54)
         Label9.TabIndex = 19
@@ -291,7 +291,7 @@ Partial Class CallDetails
         CallZone_TxtBox.Enabled = False
         CallZone_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         CallZone_TxtBox.ForeColor = Color.Green
-        CallZone_TxtBox.Location = New Point(668, 35)
+        CallZone_TxtBox.Location = New Point(661, 10)
         CallZone_TxtBox.Multiline = True
         CallZone_TxtBox.Name = "CallZone_TxtBox"
         CallZone_TxtBox.Size = New Size(185, 42)
@@ -302,7 +302,7 @@ Partial Class CallDetails
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Green
-        Label10.Location = New Point(545, 35)
+        Label10.Location = New Point(538, 10)
         Label10.Name = "Label10"
         Label10.Size = New Size(105, 28)
         Label10.TabIndex = 20
@@ -313,7 +313,7 @@ Partial Class CallDetails
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Honeydew
-        ClientSize = New Size(1241, 625)
+        ClientSize = New Size(1155, 553)
         Controls.Add(CallZone_TxtBox)
         Controls.Add(Label10)
         Controls.Add(CallId_Label)
