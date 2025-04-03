@@ -1,0 +1,370 @@
+﻿Imports System.Data.Common
+Imports System.IO
+Imports Microsoft.Data.SqlClient
+Imports Windows.Win32.UI.Input
+
+Public Class CaseRecordShowForm
+
+    Dim caseUpdateData As CaseRecordForm = Nothing
+
+    Private connectionString As String = "Server=commngtcc105.mssql.somee.com;Database=commngtcc105;
+                                     User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
+
+
+    Dim viewer As ImageViewer = Nothing
+    Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
+
+    Public Property LoadedCaseID As String
+    Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        initiateTables()
+    End Sub
+
+    Private Sub initiateTables()
+
+        StyleDataGridView(CasePeople_DataGridView1)
+        StyleDataGridView(OfficersSent_DataGridView)
+
+        If CaseType_TxtBox.Text = "Theft" Then
+            StyleDataGridView(ItemDescription_DataGridView)
+        End If
+
+
+    End Sub
+
+    Private Sub StyleDataGridView(ByRef dgv As DataGridView)
+        With dgv
+            .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill ' Fill empty space
+            .ReadOnly = True
+            .EnableHeadersVisualStyles = False
+            .AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
+            .DefaultCellStyle.WrapMode = DataGridViewTriState.True
+            .DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter ' Center text
+            .RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing ' Disable row header resizing
+        End With
+        dgv.AllowUserToAddRows = False
+        ' Style column headers
+        With dgv.ColumnHeadersDefaultCellStyle
+            .BackColor = Color.DarkGreen
+            .ForeColor = Color.White
+            .Font = New Font(dgv.Font.FontFamily, dgv.Font.Size, FontStyle.Bold)
+            .Alignment = DataGridViewContentAlignment.MiddleCenter ' Center headers
+        End With
+
+        ' Prevent column resizing
+        For Each col As DataGridViewColumn In dgv.Columns
+            col.Resizable = DataGridViewTriState.False
+        Next
+    End Sub
+
+    ' Handles click on "Update Case Data" button
+    Private Sub UpdateCaseData_Btn_Click(sender As Object, e As EventArgs) Handles UpdateCaseData_Btn.Click
+        ' Check if the form for this case ID is already open
+        If BringExistingCaseFormToFront(HiddenCaseID.Text) Then Return
+
+        ' Create and display a new form for editing case data
+        Dim caseUpdateData As New CaseRecordForm()
+
+        caseUpdateData.WindowState = FormWindowState.Normal
+        caseUpdateData.BringToFront()
+        caseUpdateData.Activate()
+        caseUpdateData.TopMost = True
+        caseUpdateData.caseID_Label.Text = HiddenCaseID.Text
+        caseUpdateData.Show()
+        ' Extract case ID and retrieve location details
+        Dim caseID As Integer
+        Integer.TryParse(HiddenCaseID.Text, caseID)
+        Dim details() As String = ReturnLocation(caseID).Split("|"c)
+
+        ' Copy shared data grid views
+        InitiateCommonDataGridView(caseUpdateData)
+
+        ' Fill in general fields like time, status, and additional info
+        PopulateCommonFields(caseUpdateData)
+
+        ' Fill in fields specific to the case type
+        PopulateByCaseType(caseUpdateData, details)
+
+        ' Transfer additional images
+        TransferAdditionalPhotos(caseUpdateData)
+        SetEnabled(caseUpdateData)
+
+        ' Set loaded case ID on the form
+        caseUpdateData.LoadedCaseID = LoadedCaseID
+    End Sub
+
+    ' Checks if the CaseRecordForm for the same case ID is already open and brings it to front
+    Private Function BringExistingCaseFormToFront(caseID As String) As Boolean
+        For Each openForm As Form In Application.OpenForms
+            If TypeOf openForm Is CaseRecordForm Then
+                Dim crsf As CaseRecordForm = DirectCast(openForm, CaseRecordForm)
+                If crsf.LoadedCaseID = caseID Then
+                    If mainFormRef IsNot Nothing Then
+                        ' Remove from taskbar if it exists (restoring the form)
+                        mainFormRef.RemoveFormFromTaskbarMenuStrip(crsf, mainFormRef.TaskBarMenuStrip)
+
+                        ' Re-add if it's minimized and hidden
+                        If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
+
+                            If Not crsf.Visible Then crsf.Show()
+                            crsf.WindowState = FormWindowState.Normal
+                            crsf.BringToFront()
+                            crsf.Activate()
+                        End If
+                    End If
+                    Return True
+                End If
+            End If
+        Next
+        Return False
+    End Function
+
+    ' Copies shared DataGridView content from main form to the target form
+    Private Sub InitiateCommonDataGridView(targetForm As CaseRecordForm)
+        ' Copy CasePeople columns and rows
+        If targetForm.CasePeople_DataGridView1.Columns.Count = 0 Then
+            For Each col As DataGridViewColumn In CasePeople_DataGridView1.Columns
+                targetForm.CasePeople_DataGridView1.Columns.Add(DirectCast(col.Clone(), DataGridViewColumn))
+            Next
+        End If
+        For Each row As DataGridViewRow In CasePeople_DataGridView1.Rows
+            If Not row.IsNewRow Then
+                Dim index = targetForm.CasePeople_DataGridView1.Rows.Add()
+                For i = 0 To row.Cells.Count - 1
+                    targetForm.CasePeople_DataGridView1.Rows(index).Cells(i).Value = row.Cells(i).Value
+                Next
+            End If
+        Next
+
+        ' Copy OfficersSent columns and rows
+        If targetForm.OfficersSent_DataGridView.Columns.Count = 0 Then
+            For Each col As DataGridViewColumn In OfficersSent_DataGridView.Columns
+                targetForm.OfficersSent_DataGridView.Columns.Add(DirectCast(col.Clone(), DataGridViewColumn))
+            Next
+        End If
+        For Each row As DataGridViewRow In OfficersSent_DataGridView.Rows
+            If Not row.IsNewRow Then
+                Dim index = targetForm.OfficersSent_DataGridView.Rows.Add()
+                For i = 0 To row.Cells.Count - 1
+                    targetForm.OfficersSent_DataGridView.Rows(index).Cells(i).Value = row.Cells(i).Value
+                Next
+            End If
+        Next
+    End Sub
+
+    ' Populates general case info into the new form
+    Private Sub PopulateCommonFields(targetForm As CaseRecordForm)
+        targetForm.DateAndimeReported_DateTimePicker.Value = Convert.ToDateTime(DateAndTimeReported_TxtBox.Text)
+        targetForm.AdditionalInfo_TxtBox.Text = AdditionalInfo_TxtBox.Text
+        targetForm.Original_CaseStatusLabel.Text = CaseStatus_TxtBox.Text
+        targetForm.ProcedureTaken_Label.Text = Procedure_TextBox.Text
+
+        targetForm.Text = Me.Text + " - Update |"
+        ' Select the appropriate value in the combo box if available
+        Dim index = targetForm.Procedure_ComboBox.FindStringExact(Procedure_TextBox.Text)
+        If index >= 0 Then targetForm.Procedure_ComboBox.SelectedIndex = index
+    End Sub
+
+    ' Populates fields that depend on the case type
+    Private Sub PopulateByCaseType(targetForm As CaseRecordForm, details() As String)
+        Select Case CaseType_TxtBox.Text
+            Case "Theft"
+                targetForm.CaseType_ComboBox.SelectedIndex = 0
+
+                ' Copy ItemDescription grid if needed
+                If targetForm.ItemDescription_DataGridView.Columns.Count = 0 Then
+                    For Each col As DataGridViewColumn In ItemDescription_DataGridView.Columns
+                        targetForm.ItemDescription_DataGridView.Columns.Add(DirectCast(col.Clone(), DataGridViewColumn))
+                    Next
+                End If
+                For Each row As DataGridViewRow In ItemDescription_DataGridView.Rows
+                    If Not row.IsNewRow Then
+                        Dim index = targetForm.ItemDescription_DataGridView.Rows.Add()
+                        For i = 0 To row.Cells.Count - 1
+                            targetForm.ItemDescription_DataGridView.Rows(index).Cells(i).Value = row.Cells(i).Value
+                        Next
+                    End If
+                Next
+
+            Case "Missing Person"
+                targetForm.CaseType_ComboBox.SelectedIndex = 1
+                targetForm.CaseName_Txt.Text = Label12.Text
+                targetForm.MissingPersonAge_TxtBox.Text = MissingPersonAge_TxtBox.Text
+                targetForm.MissingPersonName_TxtBox.Text = MissingPersonName_TxtBox.Text
+                targetForm.MissingPersonHeight_TxtBox.Text = MissingPersonHeight_TxtBox.Text
+                targetForm.MissingPersonPhysicalDesc_TxtBox.Text = MissingPersonPhysicalDesc_TxtBox.Text
+
+                ' Split location into components
+                Dim loc() As String = details(4).Split("^"c)
+                targetForm.MissingPersonLastSeenStreet_TxtBox.Text = loc(0)
+                targetForm.MissingPersonLastSeenBrgy_TxtBox.Text = loc(1)
+                targetForm.MissingPersonLastSeenCity_TxtBox.Text = loc(2)
+
+                ' Set case status in dropdown
+                Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)
+                If index >= 0 Then targetForm.CaseStatus_ComboBox.SelectedIndex = index
+
+                ' Transfer image if present
+                If MissingPerson_PicBox.Image IsNot Nothing Then
+                    targetForm.MissingPerson_PicBox.Image = CType(MissingPerson_PicBox.Image.Clone(), Image)
+                End If
+
+            Case Else
+                targetForm.CaseType_ComboBox.SelectedIndex = 2
+
+                Dim index = targetForm.SpecificCaseType_ComboBox.FindStringExact(SpecificCaseType_ComboBox.Text)
+                If index >= 0 Then targetForm.SpecificCaseType_ComboBox.SelectedIndex = index
+
+                ' Split location into components
+                Dim loc() As String = details(2).Split("^"c)
+                targetForm.GeneralCasesStreet_TextBox.Text = loc(0)
+                targetForm.GeneralCasesBrgy_TextBox.Text = loc(1)
+                targetForm.GeneralCasesBrgy_TextBox.Text = loc(2)
+
+                ' Transfer image if present
+                If GeneralCases_PicBox.Image IsNot Nothing Then
+                    targetForm.generalCases_PicBox.Image = CType(GeneralCases_PicBox.Image.Clone(), Image)
+                End If
+
+                targetForm.WhatHappened_TextBox.Text = WhatHappened_TextBox.Text
+        End Select
+    End Sub
+
+    ' Transfers all additional photos from the flow panel to the new form
+    Private Sub TransferAdditionalPhotos(targetForm As CaseRecordForm)
+        For Each ctrl As Control In AdditionalPhotos_FlowLayoutPanel.Controls
+            If TypeOf ctrl Is PictureBox Then
+                Dim pb As PictureBox = DirectCast(ctrl, PictureBox)
+                If TypeOf pb.Tag Is Tuple(Of Image, String, Integer) Then
+                    ' Retrieve image and metadata from the Tag
+                    Dim tag = DirectCast(pb.Tag, Tuple(Of Image, String, Integer))
+                    LoadPhoto(tag.Item1, tag.Item2, tag.Item3, targetForm)
+                End If
+            End If
+        Next
+    End Sub
+
+    ' Method to load photos onto the next form's FlowLayoutPanel (without description)
+    Private Sub LoadPhoto(photo As Image, desc As String, photoID As Integer, caseUpdateData As CaseRecordForm)
+        ' Ensure that the FlowLayoutPanel on the next form is properly initialized
+        If caseUpdateData.AdditionalPhotos_FlowLayoutPanel Is Nothing Then
+            MessageBox.Show("The FlowLayoutPanel on the next form is not initialized.")
+            Return
+        End If
+
+        ' Create a new PictureBox for the next form and set its properties
+        Dim picBox As New PictureBox With {
+        .Image = photo,  ' Set image directly
+        .SizeMode = PictureBoxSizeMode.StretchImage,  ' Adjust the size mode as necessary
+        .Size = New Size(149, 129)  ' Set an appropriate size for the next form
+}
+        picBox.Tag = New Tuple(Of Image, String, Integer)(photo, desc, photoID)
+        ' Add the picture box to the next form's FlowLayoutPanel
+        AddHandler picBox.DoubleClick, AddressOf AdditionalPhoto_DoubleClick
+        caseUpdateData.AdditionalPhotos_FlowLayoutPanel.Controls.Add(picBox)
+    End Sub
+
+    Private Sub SetEnabled(targetForm As CaseRecordForm)
+        targetForm.CaseType_ComboBox.Enabled = False
+        targetForm.DateAndimeReported_DateTimePicker.Enabled = False
+        targetForm.CaseName_Txt.Enabled = False
+        targetForm.SpecificCaseType_ComboBox.Enabled = False
+        targetForm.MissingPersonName_TxtBox.ReadOnly = True
+        targetForm.MissingPersonAge_TxtBox.ReadOnly = True
+        targetForm.MissingPersonHeight_TxtBox.ReadOnly = True
+        targetForm.SpecificCaseType_ComboBox.Enabled = False
+    End Sub
+
+    Public Sub AdditionalPhoto_DoubleClick(sender As Object, e As EventArgs)
+        Dim picBox As PictureBox = TryCast(sender, PictureBox)
+        If picBox IsNot Nothing AndAlso picBox.Tag IsNot Nothing Then
+            ' Retrieve the stored data from Tag
+            Dim photoData = TryCast(picBox.Tag, Tuple(Of Image, String, Integer))
+            If photoData IsNot Nothing Then
+                Dim desc As String = photoData.Item2
+                Dim photoID As Integer = photoData.Item3
+
+                ' Ask user if they want to delete
+                Dim result = MessageBox.Show($"Double-clicked PhotoID: {photoID}" & vbCrLf & $"Description: {desc}" &
+                                         vbCrLf & vbCrLf & "Do you want to delete this photo?",
+                                         "Photo Info", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+                If result = DialogResult.Yes Then
+                    If picBox IsNot Nothing AndAlso photoID < 0 Then
+                        picBox.Dispose() ' Completely removes the PictureBox and frees its resources
+                    ElseIf picBox IsNot Nothing AndAlso photoID >= 0 Then
+                        DeleteAdditionalPhotoFromDB(photoID)
+                        picBox.Dispose()
+                    End If
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub DeleteAdditionalPhotoFromDB(photoID As Integer)
+        Using con As New SqlConnection(connectionString)
+            con.Open()
+            Dim query As String = "DELETE FROM g3_AdditionalPhotos WHERE PhotoID = @PhotoID"
+            Using deleteCmmand As New SqlCommand(query, con)
+                deleteCmmand.Parameters.AddWithValue("@PhotoID", photoID)
+                deleteCmmand.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    Public Sub AdditionalPhoto_Click(sender As Object, e As EventArgs)
+        Dim picBox As PictureBox = CType(sender, PictureBox)
+        If picBox.Tag IsNot Nothing Then
+            Dim data = CType(picBox.Tag, Tuple(Of Image, String, Integer))
+            Dim img As Image = data.Item1
+            Dim desc As String = data.Item2
+            Dim photoID As Integer = data.Item3
+
+            ' Show ImageViewer form
+            Dim viewer As New ImageViewer()
+            viewer.Fromwhere_Label.Text = "Source : " + Me.Text
+            viewer.LoadImageAndDescription(img, desc)
+            viewer.TopMost = True
+            LayoutManager.ResizeImageViewerForm(viewer)
+            viewer.ShowDialog()
+        End If
+    End Sub
+    Private Function ReturnLocation(caseid As Integer) As String
+        Dim locations As String = ""
+
+        Dim query As String = "SELECT sd.specificdetails " &
+                              "FROM g3_SpecificCaseDetails sd " &
+                              "JOIN g3_CaseRecords cr ON sd.CaseID = cr.CaseID " &
+                              "WHERE sd.CaseID = @caseid"
+
+        Using conn As New SqlConnection(connectionString)
+            Using cmd As New SqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@caseid", caseid)
+                Try
+                    conn.Open()
+                    Using reader As SqlDataReader = cmd.ExecuteReader()
+                        While reader.Read()
+                            Dim specificDetails As String = reader("specificdetails").ToString()
+                            locations = specificDetails
+                        End While
+                    End Using
+                Catch ex As Exception
+                    MessageBox.Show("Error: " & ex.Message)
+                End Try
+            End Using
+        End Using
+
+        Return locations
+    End Function
+
+
+    Private Sub Form2_Resize(sender As Object, e As EventArgs) Handles Me.Resize
+        If Me.WindowState = FormWindowState.Minimized Then
+            Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
+
+            If mainFormRef IsNot Nothing Then
+                mainFormRef.MinimizeFormToTaskbar(Me)
+            End If
+        End If
+    End Sub
+
+End Class
