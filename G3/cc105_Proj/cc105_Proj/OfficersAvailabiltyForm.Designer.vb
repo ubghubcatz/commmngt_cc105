@@ -85,6 +85,7 @@ Partial Class OfficersAvailabiltyForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.Honeydew
         ClientSize = New Size(1554, 685)
         Controls.Add(Refresh_Btn)
         Controls.Add(SearchOfficers_TextBox)

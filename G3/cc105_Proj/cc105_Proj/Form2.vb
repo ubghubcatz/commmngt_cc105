@@ -1,5 +1,4 @@
-﻿Imports System.Configuration
-Imports System.IO
+﻿Imports System.IO
 Imports Microsoft.Data.SqlClient
 Imports System.Drawing.Imaging
 
@@ -511,7 +510,7 @@ Public Class CaseRecordForm
     ''' Saves the additional photos from the PictureBoxes in the flow layout panel to the database.
     ''' It checks if the photo already exists for the given case ID and inserts it if not.
     ''' </summary>
-    ''' <param name="caseId">The ID of the case to which the photos belong.</param>
+    ''' <param name="caseId"The ID of the case to which the photos belong.</param>
 ' === Save Additional Photos to Database ===
     Private Sub SaveAdditionalPhotos(caseId As Integer)
         Using con As New SqlConnection(connectionString)
