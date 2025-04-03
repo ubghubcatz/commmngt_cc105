@@ -21,7 +21,7 @@
         form.TabControl1.Height = form.Panel1.Height * 0.85
         form.TabControl1.Width = form.Panel1.Width
         form.TabControl1.Top = form.Panel1.Height * 0.15
-
+        form.Label2.Left = form.TabControl1.Width * 0.75
         form.TabControl1.Left = (form.Panel1.Left - form.FlowLayoutPanel1.Width) * 0.05
 
         ' Side bar
@@ -30,11 +30,7 @@
         form.OfficersAvailability_Btn.Width = form.FlowLayoutPanel1.Width * 0.95
         form.CaseRecords_Btn.Height = form.FlowLayoutPanel1.Width * 0.6
         form.CallLogging_Btn.Height = form.FlowLayoutPanel1.Width * 0.6
-        form.ActiveCases_Btn.Height = form.CallLogging_Btn.Height
-        form.ActiveCases_Btn.Width = form.CallLogging_Btn.Width
         form.OfficersAvailability_Btn.Height = form.FlowLayoutPanel1.Width * 0.6
-
-
     End Sub
 
     Public Shared Sub ResizeImageViewerForm(viewer As ImageViewer)

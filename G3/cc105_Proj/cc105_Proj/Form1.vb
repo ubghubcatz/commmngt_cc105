@@ -202,9 +202,5 @@ Public Class g3CommandCenter_Form
 
     End Sub
 
-    Private Sub ActiveCases_Btn_Click(sender As Object, e As EventArgs) Handles ActiveCases_Btn.Click
-        Label2.Visible = True
-        ActiveCases_DataGridView.Visible = True
-    End Sub
 End Class
 

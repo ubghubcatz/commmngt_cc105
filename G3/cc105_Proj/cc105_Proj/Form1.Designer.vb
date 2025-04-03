@@ -25,7 +25,6 @@ Partial Class g3CommandCenter_Form
         components = New ComponentModel.Container()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
-        ActiveCases_Btn = New Button()
         OfficersAvailability_Btn = New Button()
         CaseRecords_Btn = New Button()
         CallLogging_Btn = New Button()
@@ -61,7 +60,6 @@ Partial Class g3CommandCenter_Form
         TableLayoutPanel1.BackColor = Color.SeaGreen
         TableLayoutPanel1.ColumnCount = 1
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
-        TableLayoutPanel1.Controls.Add(ActiveCases_Btn, 0, 4)
         TableLayoutPanel1.Controls.Add(OfficersAvailability_Btn, 0, 3)
         TableLayoutPanel1.Controls.Add(CaseRecords_Btn, 0, 1)
         TableLayoutPanel1.Controls.Add(CallLogging_Btn, 0, 2)
@@ -75,23 +73,6 @@ Partial Class g3CommandCenter_Form
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
         TableLayoutPanel1.Size = New Size(221, 746)
         TableLayoutPanel1.TabIndex = 0
-        ' 
-        ' ActiveCases_Btn
-        ' 
-        ActiveCases_Btn.BackColor = Color.SeaGreen
-        ActiveCases_Btn.BackgroundImage = My.Resources.Resources.CaseRecord_Close
-        ActiveCases_Btn.BackgroundImageLayout = ImageLayout.Zoom
-        ActiveCases_Btn.FlatStyle = FlatStyle.Flat
-        ActiveCases_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        ActiveCases_Btn.ForeColor = Color.White
-        ActiveCases_Btn.ImageAlign = ContentAlignment.BottomCenter
-        ActiveCases_Btn.Location = New Point(3, 605)
-        ActiveCases_Btn.Name = "ActiveCases_Btn"
-        ActiveCases_Btn.Size = New Size(215, 110)
-        ActiveCases_Btn.TabIndex = 4
-        ActiveCases_Btn.Text = "Active Cases"
-        ActiveCases_Btn.TextAlign = ContentAlignment.BottomCenter
-        ActiveCases_Btn.UseVisualStyleBackColor = False
         ' 
         ' OfficersAvailability_Btn
         ' 
@@ -274,7 +255,6 @@ Partial Class g3CommandCenter_Form
     Friend WithEvents MainPanel As Panel
     Friend WithEvents TaskBarMenuStrip As MenuStrip
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ActiveCases_Btn As Button
     Friend Protected WithEvents Label2 As Label
 
 End Class
