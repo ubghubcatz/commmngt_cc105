@@ -62,6 +62,7 @@ Public Class frmLogin
                 'MDIParent1.Show()
 
                 '
+                gs_User = li_DBUser
                 SplashScreen1.Show()
                 Me.Visible = False
             Else

@@ -4,6 +4,48 @@
     <Compile Update="frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="G3\AdditionalPhotoForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\AddNoteForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\AddOfficersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\AddPersonInvolvedFormvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\AddStolenItemsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\Call _Log.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\CallDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\CallLog_Tables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\CaseRecordShowForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\CaseRecordTable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\ImageViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\OfficersAvailabiltyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="G4\Attendance.vb">
       <SubType>Form</SubType>
     </Compile>

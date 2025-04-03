@@ -48,7 +48,7 @@ Partial Class Attendance
         Label1.ForeColor = Color.Transparent
         Label1.Location = New Point(82, 37)
         Label1.Name = "Label1"
-        Label1.Size = New Size(272, 35)
+        Label1.Size = New Size(219, 28)
         Label1.TabIndex = 1
         Label1.Text = "Employee Attendance"
         ' 
@@ -100,7 +100,7 @@ Partial Class Attendance
         Label2.ForeColor = Color.White
         Label2.Location = New Point(56, 341)
         Label2.Name = "Label2"
-        Label2.Size = New Size(93, 20)
+        Label2.Size = New Size(71, 15)
         Label2.TabIndex = 12
         Label2.Text = "FULL NAME"
         ' 
@@ -112,7 +112,7 @@ Partial Class Attendance
         Label3.ForeColor = Color.White
         Label3.Location = New Point(57, 411)
         Label3.Name = "Label3"
-        Label3.Size = New Size(79, 20)
+        Label3.Size = New Size(63, 15)
         Label3.TabIndex = 13
         Label3.Text = "POSITION"
         ' 
@@ -124,7 +124,7 @@ Partial Class Attendance
         Label4.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
         Label4.Location = New Point(415, 74)
         Label4.Name = "Label4"
-        Label4.Size = New Size(94, 20)
+        Label4.Size = New Size(74, 15)
         Label4.TabIndex = 14
         Label4.Text = "ID NUMBER"
         ' 
@@ -136,7 +136,7 @@ Partial Class Attendance
         Label5.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
         Label5.Location = New Point(416, 166)
         Label5.Name = "Label5"
-        Label5.Size = New Size(66, 20)
+        Label5.Size = New Size(51, 15)
         Label5.TabIndex = 15
         Label5.Text = "TIME IN"
         ' 
@@ -148,7 +148,7 @@ Partial Class Attendance
         Label6.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
         Label6.Location = New Point(416, 254)
         Label6.Name = "Label6"
-        Label6.Size = New Size(80, 20)
+        Label6.Size = New Size(63, 15)
         Label6.TabIndex = 16
         Label6.Text = "TIME OUT"
         ' 
@@ -186,7 +186,7 @@ Partial Class Attendance
         ' 
         ' Attendance
         ' 
-        AutoScaleDimensions = New SizeF(9F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)

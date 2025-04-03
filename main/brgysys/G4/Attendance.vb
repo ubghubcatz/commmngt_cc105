@@ -184,4 +184,8 @@ Public Class Attendance
             videoSource.SignalToStop()
         End If
     End Sub
+
+    Private Sub pbCamera_Click(sender As Object, e As EventArgs) Handles pbCamera.Click
+
+    End Sub
 End Class
