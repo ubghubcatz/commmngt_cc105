@@ -22,6 +22,7 @@ Partial Class Schedule
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Schedule))
         Label1 = New Label()
         DataGridViewShifts = New DataGridView()
         cboFilter = New ComboBox()
@@ -35,8 +36,10 @@ Partial Class Schedule
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
-        Label1.Location = New Point(233, 31)
+        Label1.ForeColor = Color.Black
+        Label1.Location = New Point(257, 26)
         Label1.Name = "Label1"
         Label1.Size = New Size(298, 35)
         Label1.TabIndex = 1
@@ -44,8 +47,9 @@ Partial Class Schedule
         ' 
         ' DataGridViewShifts
         ' 
+        DataGridViewShifts.BackgroundColor = Color.White
         DataGridViewShifts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewShifts.Location = New Point(37, 128)
+        DataGridViewShifts.Location = New Point(51, 121)
         DataGridViewShifts.Name = "DataGridViewShifts"
         DataGridViewShifts.RowHeadersWidth = 51
         DataGridViewShifts.Size = New Size(728, 315)
@@ -54,15 +58,17 @@ Partial Class Schedule
         ' cboFilter
         ' 
         cboFilter.FormattingEnabled = True
-        cboFilter.Location = New Point(520, 92)
+        cboFilter.Location = New Point(534, 85)
         cboFilter.Name = "cboFilter"
-        cboFilter.Size = New Size(151, 28)
+        cboFilter.Size = New Size(162, 28)
         cboFilter.TabIndex = 3
         ' 
         ' Label2
         ' 
-        Label2.Font = New Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(373, 92)
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI Variable Display Semib", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.Black
+        Label2.Location = New Point(387, 85)
         Label2.Name = "Label2"
         Label2.Size = New Size(142, 25)
         Label2.TabIndex = 4
@@ -70,11 +76,11 @@ Partial Class Schedule
         ' 
         ' btnGenerateShifts
         ' 
-        btnGenerateShifts.BackColor = Color.Blue
+        btnGenerateShifts.BackColor = Color.FromArgb(CByte(52), CByte(205), CByte(28))
         btnGenerateShifts.FlatAppearance.BorderSize = 0
-        btnGenerateShifts.FlatStyle = FlatStyle.Flat
+        btnGenerateShifts.FlatStyle = FlatStyle.Popup
         btnGenerateShifts.ForeColor = Color.White
-        btnGenerateShifts.Location = New Point(37, 448)
+        btnGenerateShifts.Location = New Point(51, 442)
         btnGenerateShifts.Name = "btnGenerateShifts"
         btnGenerateShifts.Size = New Size(136, 43)
         btnGenerateShifts.TabIndex = 6
@@ -83,11 +89,11 @@ Partial Class Schedule
         ' 
         ' btnResetShifts
         ' 
-        btnResetShifts.BackColor = Color.Blue
+        btnResetShifts.BackColor = Color.FromArgb(CByte(52), CByte(205), CByte(28))
         btnResetShifts.FlatAppearance.BorderSize = 0
-        btnResetShifts.FlatStyle = FlatStyle.Flat
+        btnResetShifts.FlatStyle = FlatStyle.Popup
         btnResetShifts.ForeColor = Color.White
-        btnResetShifts.Location = New Point(179, 448)
+        btnResetShifts.Location = New Point(193, 442)
         btnResetShifts.Name = "btnResetShifts"
         btnResetShifts.Size = New Size(136, 43)
         btnResetShifts.TabIndex = 7
@@ -96,11 +102,11 @@ Partial Class Schedule
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.Blue
+        Button1.BackColor = Color.FromArgb(CByte(52), CByte(205), CByte(28))
         Button1.FlatAppearance.BorderSize = 0
-        Button1.FlatStyle = FlatStyle.Flat
+        Button1.FlatStyle = FlatStyle.Popup
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(688, 91)
+        Button1.Location = New Point(702, 84)
         Button1.Name = "Button1"
         Button1.Size = New Size(77, 31)
         Button1.TabIndex = 8
@@ -111,7 +117,9 @@ Partial Class Schedule
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
+        BackColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(829, 523)
         Controls.Add(Button1)
         Controls.Add(btnResetShifts)
@@ -120,6 +128,7 @@ Partial Class Schedule
         Controls.Add(cboFilter)
         Controls.Add(DataGridViewShifts)
         Controls.Add(Label1)
+        DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "Schedule"
         StartPosition = FormStartPosition.CenterScreen

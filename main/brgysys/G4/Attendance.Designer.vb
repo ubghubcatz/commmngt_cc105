@@ -22,7 +22,6 @@ Partial Class Attendance
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Attendance))
         Label1 = New Label()
         lblName = New Label()
         lblID = New Label()
@@ -46,7 +45,7 @@ Partial Class Attendance
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
         Label1.ForeColor = Color.Transparent
-        Label1.Location = New Point(82, 37)
+        Label1.Location = New Point(103, 37)
         Label1.Name = "Label1"
         Label1.Size = New Size(272, 35)
         Label1.TabIndex = 1
@@ -56,7 +55,7 @@ Partial Class Attendance
         ' 
         lblName.BackColor = Color.White
         lblName.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblName.Location = New Point(61, 364)
+        lblName.Location = New Point(82, 364)
         lblName.Name = "lblName"
         lblName.Padding = New Padding(5)
         lblName.Size = New Size(313, 35)
@@ -67,7 +66,7 @@ Partial Class Attendance
         lblID.BackColor = Color.White
         lblID.FlatStyle = FlatStyle.Flat
         lblID.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblID.Location = New Point(417, 104)
+        lblID.Location = New Point(556, 275)
         lblID.Name = "lblID"
         lblID.Padding = New Padding(5)
         lblID.Size = New Size(199, 35)
@@ -77,7 +76,7 @@ Partial Class Attendance
         ' 
         lblPosition.BackColor = Color.White
         lblPosition.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblPosition.Location = New Point(61, 433)
+        lblPosition.Location = New Point(82, 433)
         lblPosition.Name = "lblPosition"
         lblPosition.Padding = New Padding(5)
         lblPosition.Size = New Size(313, 35)
@@ -86,7 +85,7 @@ Partial Class Attendance
         ' pbEmployeePhoto
         ' 
         pbEmployeePhoto.BackColor = SystemColors.Control
-        pbEmployeePhoto.Location = New Point(112, 102)
+        pbEmployeePhoto.Location = New Point(133, 102)
         pbEmployeePhoto.Name = "pbEmployeePhoto"
         pbEmployeePhoto.Size = New Size(215, 215)
         pbEmployeePhoto.TabIndex = 11
@@ -98,7 +97,7 @@ Partial Class Attendance
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(56, 341)
+        Label2.Location = New Point(77, 341)
         Label2.Name = "Label2"
         Label2.Size = New Size(93, 20)
         Label2.TabIndex = 12
@@ -110,7 +109,7 @@ Partial Class Attendance
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label3.ForeColor = Color.White
-        Label3.Location = New Point(57, 411)
+        Label3.Location = New Point(78, 411)
         Label3.Name = "Label3"
         Label3.Size = New Size(79, 20)
         Label3.TabIndex = 13
@@ -122,7 +121,7 @@ Partial Class Attendance
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label4.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label4.Location = New Point(415, 74)
+        Label4.Location = New Point(454, 282)
         Label4.Name = "Label4"
         Label4.Size = New Size(94, 20)
         Label4.TabIndex = 14
@@ -134,7 +133,7 @@ Partial Class Attendance
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label5.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label5.Location = New Point(416, 166)
+        Label5.Location = New Point(454, 366)
         Label5.Name = "Label5"
         Label5.Size = New Size(66, 20)
         Label5.TabIndex = 15
@@ -146,7 +145,7 @@ Partial Class Attendance
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Label6.ForeColor = Color.FromArgb(CByte(24), CByte(106), CByte(59))
-        Label6.Location = New Point(416, 254)
+        Label6.Location = New Point(454, 454)
         Label6.Name = "Label6"
         Label6.Size = New Size(80, 20)
         Label6.TabIndex = 16
@@ -157,7 +156,7 @@ Partial Class Attendance
         lblTimeIn.BackColor = Color.White
         lblTimeIn.FlatStyle = FlatStyle.Flat
         lblTimeIn.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblTimeIn.Location = New Point(418, 195)
+        lblTimeIn.Location = New Point(556, 360)
         lblTimeIn.Name = "lblTimeIn"
         lblTimeIn.Padding = New Padding(5)
         lblTimeIn.Size = New Size(198, 35)
@@ -168,7 +167,7 @@ Partial Class Attendance
         lblTimeOut.BackColor = Color.White
         lblTimeOut.FlatStyle = FlatStyle.Flat
         lblTimeOut.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
-        lblTimeOut.Location = New Point(418, 282)
+        lblTimeOut.Location = New Point(555, 446)
         lblTimeOut.Name = "lblTimeOut"
         lblTimeOut.Padding = New Padding(5)
         lblTimeOut.Size = New Size(196, 35)
@@ -178,7 +177,7 @@ Partial Class Attendance
         ' 
         pbCamera.BackColor = SystemColors.Control
         pbCamera.BackgroundImageLayout = ImageLayout.Center
-        pbCamera.Location = New Point(595, 296)
+        pbCamera.Location = New Point(492, 23)
         pbCamera.Name = "pbCamera"
         pbCamera.Size = New Size(222, 222)
         pbCamera.TabIndex = 19
@@ -189,7 +188,7 @@ Partial Class Attendance
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        BackgroundImage = My.Resources.Resources.newattendance
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(829, 522)
         Controls.Add(pbCamera)

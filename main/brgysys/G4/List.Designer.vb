@@ -29,10 +29,10 @@ Partial Class List
         ' DataGridView1
         ' 
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(12, 12)
+        DataGridView1.Location = New Point(1, 2)
         DataGridView1.Name = "DataGridView1"
         DataGridView1.RowHeadersWidth = 51
-        DataGridView1.Size = New Size(776, 426)
+        DataGridView1.Size = New Size(798, 446)
         DataGridView1.TabIndex = 10
         ' 
         ' List
@@ -42,7 +42,7 @@ Partial Class List
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
         ClientSize = New Size(800, 450)
         Controls.Add(DataGridView1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "List"
         Text = "List"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()

@@ -89,5 +89,35 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property IDBG() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("IDBG", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property newattendance() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("newattendance", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property schedBG() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("schedBG", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace
