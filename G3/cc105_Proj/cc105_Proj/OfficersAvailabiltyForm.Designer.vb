@@ -62,6 +62,7 @@ Partial Class OfficersAvailabiltyForm
         ' 
         ' SearchOfficers_TextBox
         ' 
+        SearchOfficers_TextBox.BorderStyle = BorderStyle.FixedSingle
         SearchOfficers_TextBox.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         SearchOfficers_TextBox.Location = New Point(12, 114)
         SearchOfficers_TextBox.Name = "SearchOfficers_TextBox"

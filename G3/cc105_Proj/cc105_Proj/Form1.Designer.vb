@@ -32,9 +32,9 @@ Partial Class g3CommandCenter_Form
         Label1 = New Label()
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
+        MainPanel = New Panel()
         Label2 = New Label()
         ActiveCases_DataGridView = New DataGridView()
-        MainPanel = New Panel()
         Timer1 = New Timer(components)
         MenuStrip1 = New MenuStrip()
         FlowLayoutPanel1.SuspendLayout()
@@ -42,8 +42,8 @@ Partial Class g3CommandCenter_Form
         Panel1.SuspendLayout()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
-        CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).BeginInit()
         MainPanel.SuspendLayout()
+        CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' FlowLayoutPanel1
@@ -65,12 +65,12 @@ Partial Class g3CommandCenter_Form
         TableLayoutPanel1.Controls.Add(CallLogging_Btn, 0, 2)
         TableLayoutPanel1.Location = New Point(3, 3)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 5
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 24F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
-        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 19F))
+        TableLayoutPanel1.RowCount = 4
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 29.62963F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.45679F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.45679F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.45679F))
+        TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
         TableLayoutPanel1.Size = New Size(221, 746)
         TableLayoutPanel1.TabIndex = 0
         ' 
@@ -82,7 +82,7 @@ Partial Class g3CommandCenter_Form
         OfficersAvailability_Btn.FlatStyle = FlatStyle.Flat
         OfficersAvailability_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         OfficersAvailability_Btn.ForeColor = Color.White
-        OfficersAvailability_Btn.Location = New Point(3, 464)
+        OfficersAvailability_Btn.Location = New Point(3, 572)
         OfficersAvailability_Btn.Name = "OfficersAvailability_Btn"
         OfficersAvailability_Btn.Size = New Size(212, 114)
         OfficersAvailability_Btn.TabIndex = 3
@@ -99,7 +99,7 @@ Partial Class g3CommandCenter_Form
         CaseRecords_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         CaseRecords_Btn.ForeColor = Color.White
         CaseRecords_Btn.ImageAlign = ContentAlignment.BottomCenter
-        CaseRecords_Btn.Location = New Point(3, 182)
+        CaseRecords_Btn.Location = New Point(3, 224)
         CaseRecords_Btn.Name = "CaseRecords_Btn"
         CaseRecords_Btn.Size = New Size(215, 110)
         CaseRecords_Btn.TabIndex = 1
@@ -115,7 +115,7 @@ Partial Class g3CommandCenter_Form
         CallLogging_Btn.FlatStyle = FlatStyle.Flat
         CallLogging_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CallLogging_Btn.ForeColor = Color.White
-        CallLogging_Btn.Location = New Point(3, 323)
+        CallLogging_Btn.Location = New Point(3, 398)
         CallLogging_Btn.Name = "CallLogging_Btn"
         CallLogging_Btn.Size = New Size(212, 114)
         CallLogging_Btn.TabIndex = 2
@@ -164,6 +164,16 @@ Partial Class g3CommandCenter_Form
         TabPage1.TabIndex = 0
         TabPage1.Text = "TabPage1"
         ' 
+        ' MainPanel
+        ' 
+        MainPanel.AutoScroll = True
+        MainPanel.Controls.Add(Label2)
+        MainPanel.Controls.Add(ActiveCases_DataGridView)
+        MainPanel.Location = New Point(0, 0)
+        MainPanel.Name = "MainPanel"
+        MainPanel.Size = New Size(1425, 659)
+        MainPanel.TabIndex = 6
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -184,16 +194,6 @@ Partial Class g3CommandCenter_Form
         ActiveCases_DataGridView.RowHeadersWidth = 51
         ActiveCases_DataGridView.Size = New Size(1400, 575)
         ActiveCases_DataGridView.TabIndex = 13
-        ' 
-        ' MainPanel
-        ' 
-        MainPanel.AutoScroll = True
-        MainPanel.Controls.Add(Label2)
-        MainPanel.Controls.Add(ActiveCases_DataGridView)
-        MainPanel.Location = New Point(0, 0)
-        MainPanel.Name = "MainPanel"
-        MainPanel.Size = New Size(1425, 659)
-        MainPanel.TabIndex = 6
         ' 
         ' MenuStrip1
         ' 
@@ -224,9 +224,9 @@ Partial Class g3CommandCenter_Form
         Panel1.PerformLayout()
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
-        CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).EndInit()
         MainPanel.ResumeLayout(False)
         MainPanel.PerformLayout()
+        CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub

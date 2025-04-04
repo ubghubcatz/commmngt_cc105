@@ -9,6 +9,7 @@
     Public Property caseID As String
     ' Form Load - sets up basic layout
     Private Sub ImageViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set the form state to maximized
         Me.WindowState = FormWindowState.Maximized
     End Sub
 

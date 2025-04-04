@@ -19,20 +19,32 @@ Public Class g3CommandCenter_Form
 
     ' Form Load event: Sets up initial settings when the form is loaded
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized ' Maximize the window
-        TabControl1.Appearance = TabAppearance.Normal ' Set tab appearance
-        TabControl1.ItemSize = New Size(0, 1) ' Shrinks tabs to 1 pixel
-        TabControl1.SizeMode = TabSizeMode.Fixed ' Fix tab size
+        ' Set the form to maximized window state
+        Me.WindowState = FormWindowState.Maximized
+
+        ' Dynamically set the form size to fit within the available screen space (excluding taskbar)
+        Dim workingArea As Rectangle = Screen.PrimaryScreen.WorkingArea
+        Me.Width = workingArea.Width
+        Me.Height = workingArea.Height
+
+        ' Set tab control appearance and size as needed
+        TabControl1.Appearance = TabAppearance.Normal
+        TabControl1.ItemSize = New Size(0, 1) ' Shrink tabs to 1 pixel
+        TabControl1.SizeMode = TabSizeMode.Fixed
         TabControl1.DrawMode = TabDrawMode.OwnerDrawFixed ' Enable custom drawing for tabs
+
+        ' Ensure the form stays on top
         Me.TopMost = True
 
+        ' Maintain maximize and minimize options
         With Me
-            .TopMost = True
             .MaximizeBox = True
-            .MinimizeBox = True  ' Optionally keep minimize enabled
+            .MinimizeBox = True ' Optionally keep minimize enabled
         End With
+
         ' Initialize the table with data
         InsertTable()
+
         ' Test the database connection
         Try
             con.Open()
@@ -41,10 +53,12 @@ Public Class g3CommandCenter_Form
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message) ' Display error if connection fails
         End Try
-        Timer1.Interval = 10000 ' Refresh every 5 seconds
+
+        ' Set up the timer to refresh every 10 seconds
+        Timer1.Interval = 10000 ' Refresh every 10 seconds
         Timer1.Enabled = True
-        TaskBarMenuStrip.Visible = False
     End Sub
+
 
     ' Timer tick event to refresh the table
     Private Sub Timer1_Tick(sender As Object, e As EventArgs)
@@ -183,12 +197,6 @@ Public Class g3CommandCenter_Form
             .RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing ' Disable resizing row headers
             .AllowUserToResizeRows = False ' Prevent row resizing
             .AllowUserToResizeColumns = False ' Prevent column resizing
-
-            ' Set the flat style for the cells
-            .DefaultCellStyle.BackColor = Color.White ' Set background color to white for a flat appearance
-            .DefaultCellStyle.SelectionBackColor = Color.LightGray ' Flat style selection color
-            .DefaultCellStyle.SelectionForeColor = Color.Black ' Text color when selected
-            .DefaultCellStyle.Padding = New Padding(5) ' Add padding for a more spaced look
         End With
         ' Style column headers
         With dgv.ColumnHeadersDefaultCellStyle
