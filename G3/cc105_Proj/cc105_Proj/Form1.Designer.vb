@@ -25,6 +25,9 @@ Partial Class g3CommandCenter_Form
         components = New ComponentModel.Container()
         FlowLayoutPanel1 = New FlowLayoutPanel()
         TableLayoutPanel1 = New TableLayoutPanel()
+        TableLayoutPanel2 = New TableLayoutPanel()
+        PictureBox2 = New PictureBox()
+        PictureBox1 = New PictureBox()
         OfficersAvailability_Btn = New Button()
         CaseRecords_Btn = New Button()
         CallLogging_Btn = New Button()
@@ -39,6 +42,9 @@ Partial Class g3CommandCenter_Form
         MenuStrip1 = New MenuStrip()
         FlowLayoutPanel1.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
+        TableLayoutPanel2.SuspendLayout()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
@@ -60,12 +66,13 @@ Partial Class g3CommandCenter_Form
         TableLayoutPanel1.BackColor = Color.SeaGreen
         TableLayoutPanel1.ColumnCount = 1
         TableLayoutPanel1.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 100F))
+        TableLayoutPanel1.Controls.Add(TableLayoutPanel2, 0, 0)
         TableLayoutPanel1.Controls.Add(OfficersAvailability_Btn, 0, 3)
         TableLayoutPanel1.Controls.Add(CaseRecords_Btn, 0, 1)
         TableLayoutPanel1.Controls.Add(CallLogging_Btn, 0, 2)
         TableLayoutPanel1.Location = New Point(3, 3)
         TableLayoutPanel1.Name = "TableLayoutPanel1"
-        TableLayoutPanel1.RowCount = 4
+        TableLayoutPanel1.RowCount = 5
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 29.62963F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.45679F))
         TableLayoutPanel1.RowStyles.Add(New RowStyle(SizeType.Percent, 23.45679F))
@@ -74,17 +81,52 @@ Partial Class g3CommandCenter_Form
         TableLayoutPanel1.Size = New Size(221, 746)
         TableLayoutPanel1.TabIndex = 0
         ' 
+        ' TableLayoutPanel2
+        ' 
+        TableLayoutPanel2.ColumnCount = 2
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 50.23256F))
+        TableLayoutPanel2.ColumnStyles.Add(New ColumnStyle(SizeType.Percent, 49.76744F))
+        TableLayoutPanel2.Controls.Add(PictureBox2, 1, 0)
+        TableLayoutPanel2.Controls.Add(PictureBox1, 0, 0)
+        TableLayoutPanel2.Location = New Point(3, 3)
+        TableLayoutPanel2.Name = "TableLayoutPanel2"
+        TableLayoutPanel2.RowCount = 1
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Percent, 100F))
+        TableLayoutPanel2.RowStyles.Add(New RowStyle(SizeType.Absolute, 20F))
+        TableLayoutPanel2.Size = New Size(215, 134)
+        TableLayoutPanel2.TabIndex = 5
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Image = My.Resources.Resources._482404742_1844290563062342_2384674934892593673_n
+        PictureBox2.Location = New Point(111, 3)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(101, 127)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 7
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources._482585122_1176975447200876_593564339372044358_n
+        PictureBox1.Location = New Point(3, 3)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(102, 127)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 6
+        PictureBox1.TabStop = False
+        ' 
         ' OfficersAvailability_Btn
         ' 
         OfficersAvailability_Btn.BackColor = Color.SeaGreen
-        OfficersAvailability_Btn.BackgroundImage = My.Resources.Resources.CallLogs_Open__1_
+        OfficersAvailability_Btn.BackgroundImage = My.Resources.Resources.Officers__1_
         OfficersAvailability_Btn.BackgroundImageLayout = ImageLayout.Zoom
         OfficersAvailability_Btn.FlatStyle = FlatStyle.Flat
         OfficersAvailability_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         OfficersAvailability_Btn.ForeColor = Color.White
-        OfficersAvailability_Btn.Location = New Point(3, 572)
+        OfficersAvailability_Btn.Location = New Point(3, 558)
         OfficersAvailability_Btn.Name = "OfficersAvailability_Btn"
-        OfficersAvailability_Btn.Size = New Size(212, 114)
+        OfficersAvailability_Btn.Size = New Size(212, 117)
         OfficersAvailability_Btn.TabIndex = 3
         OfficersAvailability_Btn.Text = "Officers"
         OfficersAvailability_Btn.TextAlign = ContentAlignment.BottomCenter
@@ -99,7 +141,7 @@ Partial Class g3CommandCenter_Form
         CaseRecords_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         CaseRecords_Btn.ForeColor = Color.White
         CaseRecords_Btn.ImageAlign = ContentAlignment.BottomCenter
-        CaseRecords_Btn.Location = New Point(3, 224)
+        CaseRecords_Btn.Location = New Point(3, 218)
         CaseRecords_Btn.Name = "CaseRecords_Btn"
         CaseRecords_Btn.Size = New Size(215, 110)
         CaseRecords_Btn.TabIndex = 1
@@ -115,7 +157,7 @@ Partial Class g3CommandCenter_Form
         CallLogging_Btn.FlatStyle = FlatStyle.Flat
         CallLogging_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CallLogging_Btn.ForeColor = Color.White
-        CallLogging_Btn.Location = New Point(3, 398)
+        CallLogging_Btn.Location = New Point(3, 388)
         CallLogging_Btn.Name = "CallLogging_Btn"
         CallLogging_Btn.Size = New Size(212, 114)
         CallLogging_Btn.TabIndex = 2
@@ -138,7 +180,7 @@ Partial Class g3CommandCenter_Form
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(146, 3)
+        Label1.Location = New Point(89, 8)
         Label1.Name = "Label1"
         Label1.Size = New Size(722, 60)
         Label1.TabIndex = 4
@@ -220,6 +262,9 @@ Partial Class g3CommandCenter_Form
         Name = "g3CommandCenter_Form"
         FlowLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
+        TableLayoutPanel2.ResumeLayout(False)
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         TabControl1.ResumeLayout(False)
@@ -244,5 +289,8 @@ Partial Class g3CommandCenter_Form
     Friend WithEvents MainPanel As Panel
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend Protected WithEvents Label2 As Label
+    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox1 As PictureBox
 
 End Class

@@ -118,25 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CallLogs (Closed)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CallLogs (Closed).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CaseRecord_Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CaseRecord_Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DashBoard_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DashBoard_Open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CaseRecord_Open" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CaseRecord_Open1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CallLogs_Open_(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CallLogs_Open_(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DashBoard_Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DashBoard_Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CallLogs (Closed)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CallLogs (Closed).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="480852903_503096309505352_6435663401700552754_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\480852903_503096309505352_6435663401700552754_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="482585122_1176975447200876_593564339372044358_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\482585122_1176975447200876_593564339372044358_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Officers (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Officers (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="482404742_1844290563062342_2384674934892593673_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\482404742_1844290563062342_2384674934892593673_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -27,13 +27,16 @@ Partial Class OfficersAvailabiltyForm
         OfficersCases_DataGridView = New DataGridView()
         SearchOfficers_TextBox = New TextBox()
         Refresh_Btn = New Button()
+        PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
         CType(OfficersCases_DataGridView, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Panel1
         ' 
         Panel1.BackColor = Color.SeaGreen
+        Panel1.Controls.Add(PictureBox1)
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(-2, 0)
         Panel1.Name = "Panel1"
@@ -45,7 +48,7 @@ Partial Class OfficersAvailabiltyForm
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(94, 19)
+        Label1.Location = New Point(133, 21)
         Label1.Name = "Label1"
         Label1.Size = New Size(420, 60)
         Label1.TabIndex = 9
@@ -82,6 +85,17 @@ Partial Class OfficersAvailabiltyForm
         Refresh_Btn.Text = "Refresh"
         Refresh_Btn.UseVisualStyleBackColor = False
         ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackColor = Color.Transparent
+        PictureBox1.Image = My.Resources.Resources.Officers__1_
+        PictureBox1.Location = New Point(14, 3)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(125, 115)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 12
+        PictureBox1.TabStop = False
+        ' 
         ' OfficersAvailabiltyForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -99,6 +113,7 @@ Partial Class OfficersAvailabiltyForm
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(OfficersCases_DataGridView, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -108,4 +123,5 @@ Partial Class OfficersAvailabiltyForm
     Friend WithEvents OfficersCases_DataGridView As DataGridView
     Friend WithEvents SearchOfficers_TextBox As TextBox
     Friend WithEvents Refresh_Btn As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
