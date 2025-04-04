@@ -183,8 +183,13 @@ Public Class g3CommandCenter_Form
             .RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing ' Disable resizing row headers
             .AllowUserToResizeRows = False ' Prevent row resizing
             .AllowUserToResizeColumns = False ' Prevent column resizing
-        End With
 
+            ' Set the flat style for the cells
+            .DefaultCellStyle.BackColor = Color.White ' Set background color to white for a flat appearance
+            .DefaultCellStyle.SelectionBackColor = Color.LightGray ' Flat style selection color
+            .DefaultCellStyle.SelectionForeColor = Color.Black ' Text color when selected
+            .DefaultCellStyle.Padding = New Padding(5) ' Add padding for a more spaced look
+        End With
         ' Style column headers
         With dgv.ColumnHeadersDefaultCellStyle
             .BackColor = Color.DarkGreen ' Set background color for headers

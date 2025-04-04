@@ -37,7 +37,7 @@ Partial Class OfficersAvailabiltyForm
         Panel1.Controls.Add(Label1)
         Panel1.Location = New Point(-2, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1561, 93)
+        Panel1.Size = New Size(1456, 93)
         Panel1.TabIndex = 7
         ' 
         ' Label1
@@ -54,7 +54,7 @@ Partial Class OfficersAvailabiltyForm
         ' OfficersCases_DataGridView
         ' 
         OfficersCases_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        OfficersCases_DataGridView.Location = New Point(92, 204)
+        OfficersCases_DataGridView.Location = New Point(12, 159)
         OfficersCases_DataGridView.Name = "OfficersCases_DataGridView"
         OfficersCases_DataGridView.RowHeadersWidth = 51
         OfficersCases_DataGridView.Size = New Size(1409, 469)
@@ -63,7 +63,7 @@ Partial Class OfficersAvailabiltyForm
         ' SearchOfficers_TextBox
         ' 
         SearchOfficers_TextBox.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        SearchOfficers_TextBox.Location = New Point(107, 145)
+        SearchOfficers_TextBox.Location = New Point(12, 114)
         SearchOfficers_TextBox.Name = "SearchOfficers_TextBox"
         SearchOfficers_TextBox.PlaceholderText = "Search by officer name, position, or officer id"
         SearchOfficers_TextBox.Size = New Size(604, 34)
@@ -74,7 +74,7 @@ Partial Class OfficersAvailabiltyForm
         Refresh_Btn.BackColor = Color.SeaGreen
         Refresh_Btn.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold)
         Refresh_Btn.ForeColor = Color.White
-        Refresh_Btn.Location = New Point(1364, 139)
+        Refresh_Btn.Location = New Point(1269, 108)
         Refresh_Btn.Name = "Refresh_Btn"
         Refresh_Btn.Size = New Size(137, 45)
         Refresh_Btn.TabIndex = 11
@@ -86,7 +86,7 @@ Partial Class OfficersAvailabiltyForm
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Honeydew
-        ClientSize = New Size(1554, 685)
+        ClientSize = New Size(1455, 640)
         Controls.Add(Refresh_Btn)
         Controls.Add(SearchOfficers_TextBox)
         Controls.Add(OfficersCases_DataGridView)

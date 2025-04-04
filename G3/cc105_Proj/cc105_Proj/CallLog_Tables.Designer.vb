@@ -38,26 +38,26 @@ Partial Class CallLog_Tables
         ' CallLog_Table
         ' 
         CallLog_Table.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        CallLog_Table.Location = New Point(42, 166)
+        CallLog_Table.Location = New Point(42, 160)
         CallLog_Table.Name = "CallLog_Table"
         CallLog_Table.ReadOnly = True
         DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = Color.Honeydew
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F)
         DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
         DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
         CallLog_Table.RowHeadersDefaultCellStyle = DataGridViewCellStyle1
         CallLog_Table.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
-        CallLog_Table.Size = New Size(1363, 495)
+        CallLog_Table.Size = New Size(1359, 481)
         CallLog_Table.TabIndex = 1
         ' 
         ' AddCallLog_Btn
         ' 
         AddCallLog_Btn.BackColor = Color.DarkSeaGreen
         AddCallLog_Btn.FlatStyle = FlatStyle.Flat
-        AddCallLog_Btn.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        AddCallLog_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddCallLog_Btn.ForeColor = Color.White
         AddCallLog_Btn.Location = New Point(1137, 116)
         AddCallLog_Btn.Name = "AddCallLog_Btn"
@@ -68,10 +68,12 @@ Partial Class CallLog_Tables
         ' 
         ' SearchCallLog_TxtField
         ' 
+        SearchCallLog_TxtField.BorderStyle = BorderStyle.FixedSingle
+        SearchCallLog_TxtField.Font = New Font("Segoe UI", 12F)
         SearchCallLog_TxtField.Location = New Point(42, 116)
         SearchCallLog_TxtField.Name = "SearchCallLog_TxtField"
         SearchCallLog_TxtField.PlaceholderText = "Search by phone number, call date, zone name, or handler."
-        SearchCallLog_TxtField.Size = New Size(507, 27)
+        SearchCallLog_TxtField.Size = New Size(572, 34)
         SearchCallLog_TxtField.TabIndex = 4
         ' 
         ' Panel1
@@ -107,10 +109,10 @@ Partial Class CallLog_Tables
         ' 
         ' CallLog_Tables
         ' 
-        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
+        AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Honeydew
-        ClientSize = New Size(1428, 706)
+        ClientSize = New Size(1428, 653)
         Controls.Add(Panel1)
         Controls.Add(SearchCallLog_TxtField)
         Controls.Add(AddCallLog_Btn)

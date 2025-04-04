@@ -34,7 +34,6 @@ Partial Class CaseRecordShowForm
         SpecificCaseType_ComboBox = New TextBox()
         GeneralCasesLocation_TextBox = New TextBox()
         Label33 = New Label()
-        Label34 = New Label()
         TheftMethod_TxtBox = New TextBox()
         Suspect_Physical_Desc = New Label()
         SuspectDesc_TxtBox = New TextBox()
@@ -107,7 +106,7 @@ Partial Class CaseRecordShowForm
         MissingPerson_GroupBox.Controls.Add(Label2)
         MissingPerson_GroupBox.Location = New Point(0, 1)
         MissingPerson_GroupBox.Name = "MissingPerson_GroupBox"
-        MissingPerson_GroupBox.Size = New Size(739, 704)
+        MissingPerson_GroupBox.Size = New Size(739, 619)
         MissingPerson_GroupBox.TabIndex = 39
         MissingPerson_GroupBox.TabStop = False
         ' 
@@ -127,7 +126,7 @@ Partial Class CaseRecordShowForm
         StolenItems_GroupBox.Controls.Add(Label23)
         StolenItems_GroupBox.Location = New Point(0, 0)
         StolenItems_GroupBox.Name = "StolenItems_GroupBox"
-        StolenItems_GroupBox.Size = New Size(748, 704)
+        StolenItems_GroupBox.Size = New Size(748, 603)
         StolenItems_GroupBox.TabIndex = 40
         StolenItems_GroupBox.TabStop = False
         ' 
@@ -142,10 +141,9 @@ Partial Class CaseRecordShowForm
         GroupBox2.Controls.Add(SpecificCaseType_ComboBox)
         GroupBox2.Controls.Add(GeneralCasesLocation_TextBox)
         GroupBox2.Controls.Add(Label33)
-        GroupBox2.Controls.Add(Label34)
         GroupBox2.Location = New Point(0, 0)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(748, 661)
+        GroupBox2.Size = New Size(748, 637)
         GroupBox2.TabIndex = 41
         GroupBox2.TabStop = False
         ' 
@@ -162,7 +160,7 @@ Partial Class CaseRecordShowForm
         Label28.AutoSize = True
         Label28.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.Green
-        Label28.Location = New Point(390, 181)
+        Label28.Location = New Point(393, 151)
         Label28.Name = "Label28"
         Label28.Size = New Size(167, 28)
         Label28.TabIndex = 30
@@ -170,8 +168,9 @@ Partial Class CaseRecordShowForm
         ' 
         ' WhatHappened_TextBox
         ' 
+        WhatHappened_TextBox.BorderStyle = BorderStyle.FixedSingle
         WhatHappened_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        WhatHappened_TextBox.Location = New Point(389, 212)
+        WhatHappened_TextBox.Location = New Point(392, 182)
         WhatHappened_TextBox.Multiline = True
         WhatHappened_TextBox.Name = "WhatHappened_TextBox"
         WhatHappened_TextBox.ReadOnly = True
@@ -206,7 +205,7 @@ Partial Class CaseRecordShowForm
         Label31.AutoSize = True
         Label31.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label31.ForeColor = Color.Green
-        Label31.Location = New Point(16, 18)
+        Label31.Location = New Point(12, 25)
         Label31.Name = "Label31"
         Label31.Size = New Size(211, 41)
         Label31.TabIndex = 19
@@ -214,6 +213,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' SpecificCaseType_ComboBox
         ' 
+        SpecificCaseType_ComboBox.BorderStyle = BorderStyle.FixedSingle
         SpecificCaseType_ComboBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         SpecificCaseType_ComboBox.Location = New Point(14, 417)
         SpecificCaseType_ComboBox.Name = "SpecificCaseType_ComboBox"
@@ -223,8 +223,9 @@ Partial Class CaseRecordShowForm
         ' 
         ' GeneralCasesLocation_TextBox
         ' 
+        GeneralCasesLocation_TextBox.BorderStyle = BorderStyle.FixedSingle
         GeneralCasesLocation_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        GeneralCasesLocation_TextBox.Location = New Point(392, 112)
+        GeneralCasesLocation_TextBox.Location = New Point(395, 82)
         GeneralCasesLocation_TextBox.Name = "GeneralCasesLocation_TextBox"
         GeneralCasesLocation_TextBox.ReadOnly = True
         GeneralCasesLocation_TextBox.Size = New Size(297, 34)
@@ -241,19 +242,9 @@ Partial Class CaseRecordShowForm
         Label33.TabIndex = 7
         Label33.Text = "Location"
         ' 
-        ' Label34
-        ' 
-        Label34.AutoSize = True
-        Label34.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label34.ForeColor = Color.Green
-        Label34.Location = New Point(389, 82)
-        Label34.Name = "Label34"
-        Label34.Size = New Size(101, 28)
-        Label34.TabIndex = 8
-        Label34.Text = "Barangay"
-        ' 
         ' TheftMethod_TxtBox
         ' 
+        TheftMethod_TxtBox.BorderStyle = BorderStyle.FixedSingle
         TheftMethod_TxtBox.Enabled = False
         TheftMethod_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         TheftMethod_TxtBox.Location = New Point(9, 365)
@@ -275,6 +266,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' SuspectDesc_TxtBox
         ' 
+        SuspectDesc_TxtBox.BorderStyle = BorderStyle.FixedSingle
         SuspectDesc_TxtBox.Enabled = False
         SuspectDesc_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         SuspectDesc_TxtBox.Location = New Point(383, 320)
@@ -340,6 +332,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' PropertyDamage_TextBox
         ' 
+        PropertyDamage_TextBox.BorderStyle = BorderStyle.FixedSingle
         PropertyDamage_TextBox.Enabled = False
         PropertyDamage_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         PropertyDamage_TextBox.Location = New Point(10, 449)
@@ -352,6 +345,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' TheftLocation_TxtBox
         ' 
+        TheftLocation_TxtBox.BorderStyle = BorderStyle.FixedSingle
         TheftLocation_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         TheftLocation_TxtBox.Location = New Point(386, 172)
         TheftLocation_TxtBox.Name = "TheftLocation_TxtBox"
@@ -394,6 +388,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' MissingPersonName_TxtBox
         ' 
+        MissingPersonName_TxtBox.BorderStyle = BorderStyle.FixedSingle
         MissingPersonName_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonName_TxtBox.Location = New Point(15, 396)
         MissingPersonName_TxtBox.Name = "MissingPersonName_TxtBox"
@@ -414,6 +409,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' MissingPersonAge_TxtBox
         ' 
+        MissingPersonAge_TxtBox.BorderStyle = BorderStyle.FixedSingle
         MissingPersonAge_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonAge_TxtBox.Location = New Point(15, 487)
         MissingPersonAge_TxtBox.Name = "MissingPersonAge_TxtBox"
@@ -423,6 +419,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' MissingPersonHeight_TxtBox
         ' 
+        MissingPersonHeight_TxtBox.BorderStyle = BorderStyle.FixedSingle
         MissingPersonHeight_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonHeight_TxtBox.Location = New Point(15, 569)
         MissingPersonHeight_TxtBox.Name = "MissingPersonHeight_TxtBox"
@@ -465,6 +462,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' MissingPersonPhysicalDesc_TxtBox
         ' 
+        MissingPersonPhysicalDesc_TxtBox.BorderStyle = BorderStyle.FixedSingle
         MissingPersonPhysicalDesc_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonPhysicalDesc_TxtBox.Location = New Point(372, 271)
         MissingPersonPhysicalDesc_TxtBox.Multiline = True
@@ -476,6 +474,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' MissingPersonLastSeenLocation_TxtBox
         ' 
+        MissingPersonLastSeenLocation_TxtBox.BorderStyle = BorderStyle.FixedSingle
         MissingPersonLastSeenLocation_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonLastSeenLocation_TxtBox.Location = New Point(372, 142)
         MissingPersonLastSeenLocation_TxtBox.Name = "MissingPersonLastSeenLocation_TxtBox"
@@ -600,6 +599,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' AdditionalInfo_TxtBox
         ' 
+        AdditionalInfo_TxtBox.BorderStyle = BorderStyle.FixedSingle
         AdditionalInfo_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AdditionalInfo_TxtBox.Location = New Point(796, 521)
         AdditionalInfo_TxtBox.Multiline = True
@@ -611,6 +611,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' CaseType_TxtBox
         ' 
+        CaseType_TxtBox.BorderStyle = BorderStyle.FixedSingle
         CaseType_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CaseType_TxtBox.Location = New Point(799, 70)
         CaseType_TxtBox.Name = "CaseType_TxtBox"
@@ -620,6 +621,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' DateAndTimeReported_TxtBox
         ' 
+        DateAndTimeReported_TxtBox.BorderStyle = BorderStyle.FixedSingle
         DateAndTimeReported_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DateAndTimeReported_TxtBox.Location = New Point(799, 158)
         DateAndTimeReported_TxtBox.Name = "DateAndTimeReported_TxtBox"
@@ -629,6 +631,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' CaseStatus_TxtBox
         ' 
+        CaseStatus_TxtBox.BorderStyle = BorderStyle.FixedSingle
         CaseStatus_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CaseStatus_TxtBox.Location = New Point(799, 252)
         CaseStatus_TxtBox.Name = "CaseStatus_TxtBox"
@@ -673,6 +676,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' Procedure_TextBox
         ' 
+        Procedure_TextBox.BorderStyle = BorderStyle.FixedSingle
         Procedure_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Procedure_TextBox.Location = New Point(6, 51)
         Procedure_TextBox.Name = "Procedure_TextBox"
@@ -682,6 +686,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' Remarks_TextBox
         ' 
+        Remarks_TextBox.BorderStyle = BorderStyle.FixedSingle
         Remarks_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Remarks_TextBox.Location = New Point(4, 113)
         Remarks_TextBox.Multiline = True
@@ -817,5 +822,4 @@ Partial Class CaseRecordShowForm
     Friend WithEvents SpecificCaseType_ComboBox As TextBox
     Friend WithEvents GeneralCasesLocation_TextBox As TextBox
     Friend WithEvents Label33 As Label
-    Friend WithEvents Label34 As Label
 End Class

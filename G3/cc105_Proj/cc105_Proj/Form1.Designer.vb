@@ -29,7 +29,6 @@ Partial Class g3CommandCenter_Form
         CaseRecords_Btn = New Button()
         CallLogging_Btn = New Button()
         Panel1 = New Panel()
-        TaskBarMenuStrip = New MenuStrip()
         Label1 = New Label()
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
@@ -44,6 +43,7 @@ Partial Class g3CommandCenter_Form
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).BeginInit()
+        MainPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' FlowLayoutPanel1
@@ -126,7 +126,6 @@ Partial Class g3CommandCenter_Form
         ' Panel1
         ' 
         Panel1.BackColor = Color.SeaGreen
-        Panel1.Controls.Add(TaskBarMenuStrip)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(TabControl1)
         Panel1.Location = New Point(225, 1)
@@ -134,23 +133,12 @@ Partial Class g3CommandCenter_Form
         Panel1.Size = New Size(1436, 749)
         Panel1.TabIndex = 8
         ' 
-        ' TaskBarMenuStrip
-        ' 
-        TaskBarMenuStrip.BackColor = Color.SeaGreen
-        TaskBarMenuStrip.Font = New Font("Segoe UI", 9F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        TaskBarMenuStrip.ImageScalingSize = New Size(20, 20)
-        TaskBarMenuStrip.Location = New Point(0, 0)
-        TaskBarMenuStrip.Name = "TaskBarMenuStrip"
-        TaskBarMenuStrip.Size = New Size(1436, 24)
-        TaskBarMenuStrip.TabIndex = 5
-        TaskBarMenuStrip.Text = "MenuStrip2"
-        ' 
         ' Label1
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(99, 23)
+        Label1.Location = New Point(146, 3)
         Label1.Name = "Label1"
         Label1.Size = New Size(722, 60)
         Label1.TabIndex = 4
@@ -168,8 +156,6 @@ Partial Class g3CommandCenter_Form
         ' TabPage1
         ' 
         TabPage1.BackColor = Color.Honeydew
-        TabPage1.Controls.Add(Label2)
-        TabPage1.Controls.Add(ActiveCases_DataGridView)
         TabPage1.Controls.Add(MainPanel)
         TabPage1.Location = New Point(4, 29)
         TabPage1.Name = "TabPage1"
@@ -184,7 +170,7 @@ Partial Class g3CommandCenter_Form
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.SeaGreen
-        Label2.Location = New Point(1170, 22)
+        Label2.Location = New Point(1170, 15)
         Label2.Name = "Label2"
         Label2.Size = New Size(236, 50)
         Label2.TabIndex = 14
@@ -193,7 +179,7 @@ Partial Class g3CommandCenter_Form
         ' ActiveCases_DataGridView
         ' 
         ActiveCases_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        ActiveCases_DataGridView.Location = New Point(6, 75)
+        ActiveCases_DataGridView.Location = New Point(3, 78)
         ActiveCases_DataGridView.Name = "ActiveCases_DataGridView"
         ActiveCases_DataGridView.RowHeadersWidth = 51
         ActiveCases_DataGridView.Size = New Size(1400, 575)
@@ -202,9 +188,11 @@ Partial Class g3CommandCenter_Form
         ' MainPanel
         ' 
         MainPanel.AutoScroll = True
+        MainPanel.Controls.Add(Label2)
+        MainPanel.Controls.Add(ActiveCases_DataGridView)
         MainPanel.Location = New Point(0, 0)
         MainPanel.Name = "MainPanel"
-        MainPanel.Size = New Size(460, 321)
+        MainPanel.Size = New Size(1425, 659)
         MainPanel.TabIndex = 6
         ' 
         ' MenuStrip1
@@ -236,8 +224,9 @@ Partial Class g3CommandCenter_Form
         Panel1.PerformLayout()
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
-        TabPage1.PerformLayout()
         CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).EndInit()
+        MainPanel.ResumeLayout(False)
+        MainPanel.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -253,7 +242,6 @@ Partial Class g3CommandCenter_Form
     Friend WithEvents ActiveCases_DataGridView As DataGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents MainPanel As Panel
-    Friend WithEvents TaskBarMenuStrip As MenuStrip
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend Protected WithEvents Label2 As Label
 

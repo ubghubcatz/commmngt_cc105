@@ -46,6 +46,7 @@ Partial Class CaseRecordTable
         ' 
         ' Search_Field
         ' 
+        Search_Field.BorderStyle = BorderStyle.FixedSingle
         Search_Field.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
         Search_Field.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
         Search_Field.Location = New Point(103, 130)
