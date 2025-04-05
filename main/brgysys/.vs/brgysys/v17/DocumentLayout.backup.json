@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\attendance.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -80,7 +88,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -88,70 +96,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "List.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
+              "RelativeDocumentMoniker": "G4\\List.Designer.vb",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
+              "RelativeToolTip": "G4\\List.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-05T14:06:59.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "g4_EmployeeID.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb*",
+              "RelativeToolTip": "G4\\g4_EmployeeID.vb*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-05T13:50:41.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "g4_EmployeeID.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb [Design]",
-              "RelativeToolTip": "G4\\g4_EmployeeID.vb [Design]",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb [Design]*",
+              "RelativeToolTip": "G4\\g4_EmployeeID.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-02T13:11:45.069Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Attendance.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.Designer.vb",
-              "RelativeDocumentMoniker": "G4\\Attendance.Designer.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.Designer.vb",
-              "RelativeToolTip": "G4\\Attendance.Designer.vb",
-              "ViewState": "AgIAALcAAAAAAAAAAAAYwL8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "MDIBrgySys.vb",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeDocumentMoniker": "MDIBrgySys.vb",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeToolTip": "MDIBrgySys.vb",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAvwH0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-02T12:55:30.664Z",
+              "WhenOpened": "2025-04-05T13:28:39.226Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "g4_EmployeeID.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.Designer.vb",
-              "RelativeDocumentMoniker": "G4\\g4_EmployeeID.Designer.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.Designer.vb",
-              "RelativeToolTip": "G4\\g4_EmployeeID.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-02T12:49:32.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "g4_EmployeeID.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
-              "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
-              "RelativeToolTip": "G4\\g4_EmployeeID.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-02T12:48:55.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Attendance.vb [Design]",
+              "DocumentIndex": 8,
+              "Title": "Attendance.vb",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb [Design]",
-              "RelativeToolTip": "G4\\Attendance.vb [Design]",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "RelativeToolTip": "G4\\Attendance.vb",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAawLsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-02T12:45:13.827Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-03T01:34:24.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Schedule.vb",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
@@ -159,36 +167,11 @@
               "RelativeToolTip": "G4\\Schedule.vb",
               "ViewState": "AgIAAK0AAAAAAAAAAAAiwMwAAACBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-27T00:31:54.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T00:31:54.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Schedule.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
-              "RelativeDocumentMoniker": "G4\\Schedule.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb [Design]",
-              "RelativeToolTip": "G4\\Schedule.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-27T00:34:56.55Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "brgysys",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
-              "RelativeDocumentMoniker": "brgysys.vbproj",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
-              "RelativeToolTip": "brgysys.vbproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
-              "WhenOpened": "2025-03-25T00:49:57.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "MDIBrgySys.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
@@ -200,7 +183,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 5,
+              "Title": "List.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "RelativeDocumentMoniker": "G4\\List.vb",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
+              "RelativeToolTip": "G4\\List.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-03T01:35:30.927Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Schedule.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "RelativeDocumentMoniker": "G4\\Schedule.vb",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb [Design]",
+              "RelativeToolTip": "G4\\Schedule.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-27T00:34:56.55Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Attendance.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "RelativeDocumentMoniker": "G4\\Attendance.vb",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb [Design]",
+              "RelativeToolTip": "G4\\Attendance.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-02T12:45:13.827Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "brgysys",
+              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "RelativeDocumentMoniker": "brgysys.vbproj",
+              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "RelativeToolTip": "brgysys.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-03-25T00:49:57.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -208,12 +238,11 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAGENAAAAAAAAAAAhwGYNAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-03-25T00:21:35.747Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T00:21:35.747Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "app.manifest",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
               "RelativeDocumentMoniker": "My Project\\app.manifest",
@@ -221,12 +250,11 @@
               "RelativeToolTip": "My Project\\app.manifest",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
-              "WhenOpened": "2025-03-25T00:50:28.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T00:50:28.012Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "WindowsFormsApplicationBase.cs",
               "DocumentMoniker": "C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
@@ -237,7 +265,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SplashScreen1.vb",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
               "RelativeDocumentMoniker": "SplashScreen1.vb",
@@ -245,12 +273,11 @@
               "RelativeToolTip": "SplashScreen1.vb",
               "ViewState": "AgIAACgAAAAAAAAAAAAowDMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-05T13:58:07.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T13:58:07.196Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "frmLogin.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
               "RelativeDocumentMoniker": "frmLogin.Designer.vb",
@@ -258,12 +285,11 @@
               "RelativeToolTip": "frmLogin.Designer.vb",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-05T13:23:25.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T13:23:25.369Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "frmLogin.vb",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
@@ -271,12 +297,11 @@
               "RelativeToolTip": "frmLogin.vb",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowBYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-05T12:44:12.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T12:44:12.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "frmLogin.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
@@ -288,27 +313,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "frmLogin.resx",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
               "RelativeDocumentMoniker": "frmLogin.resx",
               "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
               "RelativeToolTip": "frmLogin.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-03-05T12:43:28.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T12:43:28.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "SplashScreen1.resx",
               "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
               "RelativeDocumentMoniker": "SplashScreen1.resx",
               "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
               "RelativeToolTip": "SplashScreen1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-03-05T13:58:14.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-05T13:58:14.924Z"
             }
           ]
         }

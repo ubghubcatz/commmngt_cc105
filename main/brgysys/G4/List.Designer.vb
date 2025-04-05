@@ -37,13 +37,14 @@ Partial Class List
         ' 
         ' List
         ' 
+        AllowDrop = True
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
         ClientSize = New Size(800, 450)
         Controls.Add(DataGridView1)
-        FormBorderStyle = FormBorderStyle.FixedSingle
         Name = "List"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "List"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

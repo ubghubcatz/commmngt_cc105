@@ -79,6 +79,7 @@ Partial Class Schedule
         btnGenerateShifts.BackColor = Color.FromArgb(CByte(52), CByte(205), CByte(28))
         btnGenerateShifts.FlatAppearance.BorderSize = 0
         btnGenerateShifts.FlatStyle = FlatStyle.Popup
+        btnGenerateShifts.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnGenerateShifts.ForeColor = Color.White
         btnGenerateShifts.Location = New Point(51, 442)
         btnGenerateShifts.Name = "btnGenerateShifts"
@@ -92,6 +93,7 @@ Partial Class Schedule
         btnResetShifts.BackColor = Color.FromArgb(CByte(52), CByte(205), CByte(28))
         btnResetShifts.FlatAppearance.BorderSize = 0
         btnResetShifts.FlatStyle = FlatStyle.Popup
+        btnResetShifts.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         btnResetShifts.ForeColor = Color.White
         btnResetShifts.Location = New Point(193, 442)
         btnResetShifts.Name = "btnResetShifts"
@@ -105,6 +107,7 @@ Partial Class Schedule
         Button1.BackColor = Color.FromArgb(CByte(52), CByte(205), CByte(28))
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Popup
+        Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button1.ForeColor = Color.White
         Button1.Location = New Point(702, 84)
         Button1.Name = "Button1"

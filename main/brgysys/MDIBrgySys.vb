@@ -115,4 +115,14 @@
         Schedule.MdiParent = Me
         Schedule.Show()
     End Sub
+
+    Private Sub EmployeeIDToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeeIDToolStripMenuItem.Click
+        g4_EmployeeID.MdiParent = Me
+        g4_EmployeeID.Show()
+    End Sub
+
+    Private Sub EmployeeListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeeListToolStripMenuItem.Click
+        List.MdiParent = Me
+        List.Show()
+    End Sub
 End Class
