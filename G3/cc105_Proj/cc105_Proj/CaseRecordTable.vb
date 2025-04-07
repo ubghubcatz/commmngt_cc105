@@ -126,6 +126,8 @@ Public Class CaseRecordTable
 
     ' This function reloads case data into the form based on a search query.
     Private Sub ReloadCaseDataIntoForm(caseShow As CaseRecordShowForm, searchQuery As String)
+        Dim caseDetails As String = ""
+        Dim officers As String = ""
         Dim query As String =
         "SELECT sd.specificdetails, sd.caseimage, sd.casetype, sd.CaseID, sd.casename, sd.Remarks, sd.ActionTaken, " &
         "cr.casestatus, cr.datetimereported, ap.Photo, ap.Description, ap.PhotoID " &
@@ -159,17 +161,24 @@ Public Class CaseRecordTable
                     If reader("casetype") = "Theft" Or reader("casetype") = "Missing Person" Then
                         caseShow.Text = $"| Case Name: {reader("casename")} | {reader("casetype")} |"
                     End If
-                    Dim specificDetails As String() = reader("specificdetails").ToString().Split("|"c)
+                    caseDetails = reader("specificdetails").ToString()
+                    Dim specificDetails As String() = caseDetails.Split("|"c)
                     Select Case reader("casetype").ToString()
-                        Case "Theft" : LoadTheftCase(caseShow, specificDetails, reader("casename").ToString())
-                        Case "Missing Person" : LoadMissingPersonCase(caseShow, specificDetails, reader("caseimage"))
+                        Case "Theft"
+                            LoadTheftCase(caseShow, specificDetails, reader("casename").ToString())
+                            specificDetails(3).Replace(", ", "^")
+                        Case "Missing Person"
+                            LoadMissingPersonCase(caseShow, specificDetails, reader("caseimage"))
+                            specificDetails(4).Replace(", ", "^")
                         Case "Others (Please Specify)"
                             LoadOtherCase(caseShow, specificDetails, reader("caseimage"))
                             If caseShow.CaseType_TxtBox.Text = "Others (Please Specify)" Then
                                 caseShow.SpecificCaseType_ComboBox.Text = specificDetails(0)
-                                caseShow.CaseType_TxtBox.Text = specificDetails(0)
                             End If
+                            specificDetails(2).Replace(", ", "^")
                     End Select
+                    ' Combine the array back into a string
+                    caseDetails = String.Join("|", specificDetails)
 
 
                     If Not IsDBNull(reader("Photo")) Then
@@ -223,9 +232,15 @@ Public Class CaseRecordTable
                             .DataPropertyName = "Position"
                         })
                     End With
+                    officers = String.Join("", caseShow.OfficersSent_DataGridView.Rows.
+Cast(Of DataGridViewRow)().
+Where(Function(r) Not r.IsNewRow).
+Select(Function(r) $"{r.Cells(0).Value}^{r.Cells(1).Value}^{r.Cells(2).Value}^"))
                 End Using
             End Using
         End If
+
+        caseShow.oldcaseDetails = JoinAllDetails(caseDetails, caseShow.CaseStatus_TxtBox.Text, officers, caseShow.Procedure_TextBox.Text, caseShow.Remarks_TextBox.Text)
     End Sub
 
     Private Sub LoadTheftCase(caseShow As CaseRecordShowForm, details As String(), caseName As String)
@@ -307,6 +322,16 @@ Public Class CaseRecordTable
         Next
     End Sub
 
+    Private Function JoinAllDetails(caseDetails As String, caseStatus As String, officers As String, procedure As String, remarks As String) As String
+        ' Replace empty or whitespace values with " "
+        caseDetails = If(String.IsNullOrWhiteSpace(caseDetails), " ", caseDetails)
+        caseStatus = If(String.IsNullOrWhiteSpace(caseStatus), " ", caseStatus)
+        officers = If(String.IsNullOrWhiteSpace(officers), " ", officers)
+        procedure = If(String.IsNullOrWhiteSpace(procedure), " ", procedure)
+        remarks = If(String.IsNullOrWhiteSpace(remarks), " ", remarks)
+
+        Return String.Join("|", {caseDetails, officers, procedure, remarks, caseStatus})
+    End Function
     Private Sub AddPhotoToPanel(caseShow As CaseRecordShowForm, reader As SqlDataReader)
         Dim bytes As Byte() = DirectCast(reader("Photo"), Byte())
         If bytes.Length = 0 Then Exit Sub

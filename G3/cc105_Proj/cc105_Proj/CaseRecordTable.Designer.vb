@@ -37,9 +37,9 @@ Partial Class CaseRecordTable
         AddCaseRecord_Btn.FlatStyle = FlatStyle.Flat
         AddCaseRecord_Btn.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddCaseRecord_Btn.ForeColor = Color.White
-        AddCaseRecord_Btn.Location = New Point(1168, 130)
+        AddCaseRecord_Btn.Location = New Point(1166, 133)
         AddCaseRecord_Btn.Name = "AddCaseRecord_Btn"
-        AddCaseRecord_Btn.Size = New Size(182, 56)
+        AddCaseRecord_Btn.Size = New Size(182, 52)
         AddCaseRecord_Btn.TabIndex = 6
         AddCaseRecord_Btn.Text = "ADD CASE"
         AddCaseRecord_Btn.UseVisualStyleBackColor = False
@@ -49,10 +49,9 @@ Partial Class CaseRecordTable
         Search_Field.BorderStyle = BorderStyle.FixedSingle
         Search_Field.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
         Search_Field.ForeColor = Color.FromArgb(CByte(0), CByte(64), CByte(0))
-        Search_Field.Location = New Point(103, 130)
-        Search_Field.Multiline = True
+        Search_Field.Location = New Point(103, 134)
         Search_Field.Name = "Search_Field"
-        Search_Field.Size = New Size(706, 56)
+        Search_Field.Size = New Size(706, 52)
         Search_Field.TabIndex = 7
         ' 
         ' Search_Btn
@@ -61,10 +60,10 @@ Partial Class CaseRecordTable
         Search_Btn.FlatStyle = FlatStyle.Flat
         Search_Btn.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Search_Btn.ForeColor = Color.White
-        Search_Btn.Location = New Point(815, 130)
+        Search_Btn.Location = New Point(815, 134)
         Search_Btn.Name = "Search_Btn"
         Search_Btn.RightToLeft = RightToLeft.No
-        Search_Btn.Size = New Size(176, 56)
+        Search_Btn.Size = New Size(176, 52)
         Search_Btn.TabIndex = 5
         Search_Btn.Text = "SEARCH"
         Search_Btn.UseVisualStyleBackColor = False

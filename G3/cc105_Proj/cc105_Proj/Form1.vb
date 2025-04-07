@@ -66,7 +66,7 @@ Public Class g3CommandCenter_Form
     End Sub
 
     ' Inserts case data into DataGridView (ActiveCases_DataGridView)
-    Private Sub InsertTable()
+    Public Sub InsertTable()
 
         ' Define SQL query to fetch case data
         Dim query As String = "
@@ -102,7 +102,7 @@ Public Class g3CommandCenter_Form
     End Sub
 
     ' Handle double-click on DataGridView row to open case details
-    Private Sub YourDataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ActiveCases_DataGridView.CellDoubleClick
+    Private Sub DataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ActiveCases_DataGridView.CellDoubleClick
         Dim caseShow As New CaseRecordTable
         Dim caseName As String = ""
 
@@ -139,7 +139,7 @@ Public Class g3CommandCenter_Form
             End If
         End If
     End Sub
-    Private Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
+    Public Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
         ' Check if the form instance already exists and is not disposed
         If formInstance IsNot Nothing AndAlso Not formInstance.IsDisposed Then
             ' Restore if minimized and bring to front

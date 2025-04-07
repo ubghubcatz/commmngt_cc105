@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 Imports Microsoft.Data.SqlClient
 Imports System.Drawing.Imaging
+Imports System.ComponentModel
+Imports System.DirectoryServices
 
 Public Class CaseRecordForm
     ' Connection string for the database
@@ -12,6 +14,8 @@ Public Class CaseRecordForm
     Dim imageBytes As Byte() = Nothing
     Dim hiddenLabel As New Label
 
+    Dim mainForm As g3CommandCenter_Form = Nothing
+
     ' Boolean variable to track validation status
     Dim isValid As Boolean = True
 
@@ -21,8 +25,22 @@ Public Class CaseRecordForm
 
     ' Property to store the loaded case ID
     Public Property LoadedCaseID As String
+    Dim caseId As Integer = -1 ' Initialize case ID to -1, which indicates a new case
+    Public Property oldCaseData As String = ""
+    Public Property newCaswData As String = ""
 
-    ' Event handler for form load
+    ' Use List(Of String) instead of arrays
+    Public Property removedOfficers As New List(Of String)()
+    Public Property AddedOfficers As New List(Of String)()
+    Public Property removedPeopleInvolved As New List(Of String)()
+    Public Property AddedPeopleInvolved As New List(Of String)()
+
+
+    'Store old case data and compare it to new case data if there is any
+    Public Property oldCaseDataParts As String()
+    Public Property newCaswDataParts As String()
+    Dim updateStringList As New List(Of String)()
+
     ' This method applies styles to DataGridViews, defines columns, and initializes UI elements
     Private Sub CaseRecordForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Apply styling to both DataGridViews
@@ -92,8 +110,19 @@ Public Class CaseRecordForm
         If isValidSpecificDetails Then
 
             If isValid Then
+                For Each f As Form In Application.OpenForms
+                    If TypeOf f Is g3CommandCenter_Form Then
+                        mainForm = CType(f, g3CommandCenter_Form) ' Assign the already open form to the mainForm variable
+                        Exit For
+                    End If
+                Next
+                PermanentlyDeleteMarkedAssignments()
                 SaveToCaseRecords()
+                newCaswData = CreateDetails()
+                UpdateCaseHistory()
                 caseRecordTable.loadCaseData(CaseName_Txt.Text)
+                updateStringList.Clear()
+                SaveToMainFormIfExists(mainForm)
                 Me.Close()
             End If
 
@@ -110,8 +139,6 @@ Public Class CaseRecordForm
     End Sub
 
     Private Sub SaveToCaseRecords()
-        Dim caseId As Integer = -1 ' Initialize case ID to -1, which indicates a new case
-
         ' Open a connection to the database
         Using con As New SqlConnection(connectionString)
             con.Open()
@@ -175,6 +202,13 @@ Public Class CaseRecordForm
                 MessageBox.Show("Failed to retrieve or insert case. No actions were saved.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         End Using
+    End Sub
+
+    Public Sub SaveToMainFormIfExists(mainForm As g3CommandCenter_Form)
+        ' Check if the form instance already exists and is not disposed
+        If mainForm IsNot Nothing AndAlso Not mainForm.IsDisposed Then
+            mainForm.InsertTable()
+        End If
     End Sub
 
     Private Sub SaveSpecificCaseDetails(caseId As Integer)
@@ -296,6 +330,19 @@ Public Class CaseRecordForm
         Return ""
     End Function
 
+    Private Function CreateDetails() As String
+        Dim details As String = BuildSpecificCaseDetails()
+        Dim officers As String = OfficerString()
+        Dim remarks As String = If(String.IsNullOrWhiteSpace(Remarks_TextBox.Text), " ", Remarks_TextBox.Text)
+
+        Return String.Join("|", {
+        details,
+        officers,
+        Procedure_ComboBox.SelectedItem.ToString(),
+        remarks,
+        CaseStatus_ComboBox.SelectedItem.ToString()
+    })
+    End Function
     Private Function VerifySpecificDetails() As Boolean
         ' Gather people-related information
         Dim people As String = String.Join("", CasePeople_DataGridView1.Rows.
@@ -352,48 +399,138 @@ Public Class CaseRecordForm
         Return Not ContainsInvalidCharacters(concatenatedString)
     End Function
 
-    ''' <summary>
-    ''' Retrieves people-related details from the DataGridView.
-    ''' </summary>
-    ''' <returns>Formatted string of people details</returns>
-    Private Function GetPeopleDetails() As String
-        Return String.Join("", CasePeople_DataGridView1.Rows.
-        Cast(Of DataGridViewRow)().
-        Where(Function(r) Not r.IsNewRow).
-        Select(Function(r) $"{r.Cells("NameColumn").Value}^{r.Cells("PhoneColumn").Value}^{r.Cells("TypeColumn").Value}^"))
+    Private Function OfficerString() As String
+        Dim people As String = String.Join("", OfficersSent_DataGridView.Rows.
+Cast(Of DataGridViewRow)().
+Where(Function(r) Not r.IsNewRow).
+Select(Function(r) $"{r.Cells(0).Value}^{r.Cells(1).Value}^{r.Cells(2).Value}^"))
+        Return people
     End Function
 
-    ''' <summary>
-    ''' Retrieves item details for a theft case.
-    ''' </summary>
-    ''' <returns>Formatted string of item details</returns>
-    Private Function GetItemDetails() As String
-        Return String.Join("", ItemDescription_DataGridView.Rows.
-        Cast(Of DataGridViewRow)().
-        Where(Function(r) Not r.IsNewRow).
-        Select(Function(r) $"{r.Cells("StolenItemName").Value}^{r.Cells("ItemDesc").Value}^{r.Cells("Price").Value}^"))
-    End Function
+    Private Sub UpdateCaseHistory()
+        SetCaseHistoryBasedOnCaseType()
+        If updateStringList.Count > 0 Then
+            Using con As New SqlConnection(connectionString)
+                con.Open()
+                For Each updateDesc As String In updateStringList
+                    Using cmd As New SqlCommand("INSERT INTO g3_CaseHistory (caseid, updateDateTime, UpdateDescription) VALUES (@caseid, @datetimenow, @desc)", con)
+                        cmd.Parameters.AddWithValue("@caseid", Convert.ToInt32(LoadedCaseID))
+                        cmd.Parameters.AddWithValue("@desc", updateDesc)
+                        cmd.Parameters.AddWithValue("@datetimenow", DateTime.Now)
+                        cmd.ExecuteNonQuery()
+                    End Using
+                Next
+            End Using
+        End If
+    End Sub
 
-    ''' <summary>
-    ''' Formats an address string with separators.
-    ''' </summary>
-    ''' <param name="street">Street name</param>
-    ''' <param name="brgy">Barangay name</param>
-    ''' <param name="city">City name</param>
-    ''' <returns>Formatted address string</returns>
-    Private Function FormatAddress(street As String, brgy As String, city As String) As String
-        Return $"{street.Trim()}^{brgy.Trim()}^{city.Trim()}"
-    End Function
+    Private Sub SetCaseHistoryBasedOnCaseType()
+        If caseId <> -1 Then
+            oldCaseDataParts = oldCaseData.Split("|")
+            newCaswDataParts = newCaswData.Split("|")
 
-    ''' <summary>
-    ''' Formats case details, replacing empty values with a space.
-    ''' </summary>
-    ''' <param name="details">Array of details to format</param>
-    ''' <returns>Formatted case details string</returns>
-    Private Function FormatCaseDetails(details As String()) As String
-        Return String.Join("|", details.Select(Function(d) If(String.IsNullOrEmpty(d), " ", d.Trim())))
-    End Function
+            ' Show in message box for debugging
+            MessageBox.Show("Old Case Data: " & Environment.NewLine & oldCaseData & Environment.NewLine & "New Case Data: " & Environment.NewLine & newCaswData, "Case Data Comparison")
+            Select Case CaseType_ComboBox.SelectedIndex
+                Case 0 'Theft Data
+                    If oldCaseDataParts(1) <> newCaswDataParts(1) Then
+                        updateStringList.Add("Updated Suspect Information.")
+                    End If
+                    If oldCaseDataParts(2) <> newCaswDataParts(2) Then
+                        updateStringList.Add("Updated Stolen Item Info.")
+                    End If
+                    If oldCaseDataParts(4) <> newCaswDataParts(4) Then
+                        updateStringList.Add("Updated Additional Info for the case.")
+                    End If
+                    If oldCaseDataParts(5) <> newCaswDataParts(5) Then
+                        updateStringList.Add("Updated People Involved.")
+                    End If
+                    If oldCaseDataParts(6) <> newCaswDataParts(6) Or newCaswDataParts(6) = "" Or oldCaseDataParts(6) = "" Or
+                        newCaswDataParts(6) = " " Or oldCaseDataParts(6) = " " Then
+                        If AddedOfficers IsNot Nothing AndAlso AddedOfficers.Count > 0 Then
+                            updateStringList.Add("Updated Officers Involved. Added: " & String.Join(", ", AddedOfficers))
+                        End If
+                        If removedOfficers IsNot Nothing AndAlso removedOfficers.Count > 0 Then
+                            updateStringList.Add("Updated Officers Involved. Removed: " & String.Join(", ", removedOfficers))
+                        End If
+                    End If
+                    If oldCaseDataParts(7) <> newCaswDataParts(7) Then
+                        updateStringList.Add("Updated Procedure Taken, from: " & oldCaseDataParts(6) & " to " & newCaswDataParts(6))
+                    End If
+                    If oldCaseDataParts(8) <> newCaswDataParts(8) Then
+                        updateStringList.Add("Updated Remarks.")
+                    End If
+                    If oldCaseDataParts(9) <> newCaswDataParts(9) Then
+                        updateStringList.Add("Updated Case Status, from: " & oldCaseDataParts(8) & " to " & newCaswDataParts(8))
+                    End If
 
+                Case 1 'mmissing Person Data
+                    If oldCaseDataParts(3) <> newCaswDataParts(3) Then
+                        updateStringList.Add("Updated Victim's Physical Description.")
+                    End If
+                    If oldCaseDataParts(4) <> newCaswDataParts(4) Then
+                        Dim oldValue As String = oldCaseDataParts(4).Replace("^", ", ")
+                        Dim newValue As String = newCaswDataParts(4).Replace("^", ", ")
+                        updateStringList.Add("Updated Location Last Seen: " & oldValue & " -> " & newValue)
+                    End If
+                    If oldCaseDataParts(5) <> newCaswDataParts(5) Then
+                        updateStringList.Add("Updated Additional Info for the case.")
+                    End If
+
+                    If oldCaseDataParts(7) <> newCaswDataParts(7) Then
+                        If AddedOfficers IsNot Nothing AndAlso AddedOfficers.Count > 0 Then
+                            updateStringList.Add("Updated Officers Involved. Added: " & String.Join(", ", AddedOfficers))
+                        End If
+                        If removedOfficers IsNot Nothing AndAlso removedOfficers.Count > 0 Then
+                            updateStringList.Add("Updated Officers Involved. Removed: " & String.Join(", ", removedOfficers))
+                        End If
+                    End If
+
+                    If oldCaseDataParts(8) <> newCaswDataParts(8) Then
+                        updateStringList.Add("Updated Action Taken From: " & oldCaseDataParts(8) & " to " & newCaswDataParts(8))
+                    End If
+                    If oldCaseDataParts(9) <> newCaswDataParts(9) Then
+                        updateStringList.Add("Updated Remarks.")
+                    End If
+
+                    If oldCaseDataParts(10) <> newCaswDataParts(10) Then
+                        updateStringList.Add("Updated Case Status." & oldCaseDataParts(10) & " to " & newCaswDataParts(10))
+                    End If
+
+                Case 2 'Other cases
+                    If oldCaseDataParts(1) <> newCaswDataParts(1) Then
+                        updateStringList.Add("Updated Case Information.")
+                    End If
+                    If oldCaseDataParts(3) <> newCaswDataParts(3) Then
+                        updateStringList.Add("Updated Case Additional Information.")
+                    End If
+                    If oldCaseDataParts(4) <> newCaswDataParts(4) Then
+                        updateStringList.Add("Updated People Involved.")
+                    End If
+                    If oldCaseDataParts(5) <> newCaswDataParts(5) Then
+                        If AddedOfficers IsNot Nothing AndAlso AddedOfficers.Count > 0 Then
+                            updateStringList.Add("Updated Officers Involved. Added: " & String.Join(", ", AddedOfficers))
+                        End If
+                        If removedOfficers IsNot Nothing AndAlso removedOfficers.Count > 0 Then
+                            updateStringList.Add("Updated Officers Involved. Removed: " & String.Join(", ", removedOfficers))
+                        End If
+                    End If
+                    If oldCaseDataParts(6) <> newCaswDataParts(6) Then
+                        updateStringList.Add("Updated Procedure Taken, from: " & oldCaseDataParts(6) & " to " & newCaswDataParts(6))
+                    End If
+                    If oldCaseDataParts(7) <> newCaswDataParts(7) Then
+                        updateStringList.Add("Updated Remarks.")
+                    End If
+                    If oldCaseDataParts(8) <> newCaswDataParts(8) Then
+                        updateStringList.Add("Updated Case Status, from: " & oldCaseDataParts(8) & " to " & newCaswDataParts(8))
+                    End If
+
+            End Select
+
+        Else
+            updateStringList.Add("Created Case: " & CaseName_Txt.Text)
+        End If
+    End Sub
 
     ' === Method to Assign an Officer to a Case ===
     ' This method inserts an officer assignment into the database if the officer is not already assigned.
@@ -405,31 +542,16 @@ Public Class CaseRecordForm
     Private Sub InsertOfficerAssignment(officerId As String, caseId As Integer)
         ' Check if the officer is already assigned to this case
         If OfficerAlreadyAssigned(officerId, caseId) Then Exit Sub
-
-        Dim isActive As Boolean = False ' Default to inactive
-
         Using con As New SqlConnection(connectionString)
             con.Open()
 
-            ' === Retrieve Case Status ===
-            ' Determines if the case is currently "In Progress" to set IsActive flag.
-            Dim queryStatus As String = "SELECT casestatus FROM g3_CaseRecords WHERE caseid = @caseid"
-            Using statusCmd As New SqlCommand(queryStatus, con)
-                statusCmd.Parameters.AddWithValue("@caseid", caseId)
-                Dim statusObj As Object = statusCmd.ExecuteScalar()
-
-                ' Check if status is "In Progress"
-                isActive = (statusObj IsNot Nothing AndAlso statusObj.ToString().Trim().ToLower() = "in progress")
-            End Using
-
             ' === Insert Officer Assignment into Database ===
-            Dim queryInsert As String = "INSERT INTO g3_OfficerCaseAssignments (officerid, caseid, IsActive, assigneddatetime)
-                                     VALUES (@officerid, @caseid, @IsActive, @assigneddatetime)"
+            Dim queryInsert As String = "INSERT INTO g3_OfficerCaseAssignments (officerid, caseid, assigneddatetime)
+                                     VALUES (@officerid, @caseid, @assigneddatetime)"
             Using insertCmd As New SqlCommand(queryInsert, con)
                 ' Add parameters to prevent SQL injection
                 insertCmd.Parameters.AddWithValue("@officerid", officerId)
                 insertCmd.Parameters.AddWithValue("@caseid", caseId)
-                insertCmd.Parameters.AddWithValue("@IsActive", isActive)
                 insertCmd.Parameters.AddWithValue("@assigneddatetime", DateTime.Now)
 
                 insertCmd.ExecuteNonQuery()
@@ -484,24 +606,36 @@ Public Class CaseRecordForm
         Return count > 0
     End Function
 
-    ' === Delete an Officer's Assignment from a Case ===
-    ' Removes an officer from an assigned case in the database.
-    '
-    ' Parameters:
-    '   officerId (String) - The ID of the officer to be removed.
-    '   caseId (Integer) - The ID of the case from which the officer will be unassigned.
-    Private Sub DeleteOfficerAssignment(officerId As String, caseId As Integer)
-        Dim query As String = "DELETE FROM g3_OfficerCaseAssignments WHERE officerid = @officerid AND caseid = @caseid"
+
+    Public Sub DeleteOfficerAssignment(officerId As String, caseId As Integer)
+        Dim query As String = "UPDATE g3_OfficerCaseAssignments SET IsDeleted = 1 WHERE officerid = @officerid AND caseid = @caseid"
 
         Using con As New SqlConnection(connectionString),
           cmd As New SqlCommand(query, con)
 
-            ' Add parameters to avoid SQL injection
             cmd.Parameters.AddWithValue("@officerid", officerId)
             cmd.Parameters.AddWithValue("@caseid", caseId)
 
             con.Open()
             cmd.ExecuteNonQuery()
+        End Using
+    End Sub
+
+    Private Sub PermanentlyDeleteMarkedAssignments()
+        Dim query As String = "DELETE FROM g3_OfficerCaseAssignments WHERE IsDeleted = 1"
+
+        Using con As New SqlConnection(connectionString),
+          cmd As New SqlCommand(query, con)
+
+            con.Open()
+            cmd.ExecuteNonQuery()
+            ' Step 2: Remove rows from the DataGridView that are marked (e.g., light red background)
+            For i As Integer = OfficersSent_DataGridView.Rows.Count - 1 To 0 Step -1
+                Dim row As DataGridViewRow = OfficersSent_DataGridView.Rows(i)
+                If row.DefaultCellStyle.BackColor = Color.LightCoral Then
+                    OfficersSent_DataGridView.Rows.RemoveAt(i)
+                End If
+            Next
         End Using
     End Sub
 
@@ -542,8 +676,6 @@ Public Class CaseRecordForm
         End Using
     End Sub
 
-
-
     ' === Officer Removal from DataGridView ===
     ''' <summary>
     ''' Handles the double-click event on the OfficersSent DataGridView.
@@ -566,14 +698,29 @@ Public Class CaseRecordForm
             If result = DialogResult.Yes Then
                 ' If caseID_Label is empty, just remove the officer from the grid
                 If String.IsNullOrEmpty(caseID_Label.Text) Then
+                    ' Find the index of the officer to remove
                     OfficersSent_DataGridView.Rows.RemoveAt(e.RowIndex)
+
+                    ' If the officer is in AddedOfficers list, remove it
+                    For i As Integer = 0 To AddedOfficers.Count - 1
+                        ' Check if the officerId matches the one in the AddedOfficers list
+                        If AddedOfficers(i).StartsWith(officerId & " |") Then
+                            ' Remove the officer from the list
+                            AddedOfficers.RemoveAt(i)
+                            Exit For ' Exit once the officer is removed
+                        End If
+                    Next
                 Else
                     ' If case ID exists, check if the officer is assigned to the case and delete from the database
                     If OfficerAlreadyAssigned(officerId, caseID_Label.Text) Then
+                        ' Mark the row with a light red background instead of removing it
+                        selectedRow.DefaultCellStyle.BackColor = Color.LightCoral
+                        removedOfficers.Add(officerId & " | " & officerName)
+                        MessageBox.Show(String.Join(Environment.NewLine, removedOfficers), "Confirm Deletion")
+
                         DeleteOfficerAssignment(officerId, caseID_Label.Text)
                     End If
-                    ' Remove from grid either way
-                    OfficersSent_DataGridView.Rows.RemoveAt(e.RowIndex)
+
                 End If
             End If
         End If
@@ -847,14 +994,6 @@ Public Class CaseRecordForm
                 e.Cancel = True ' This stops the form from closing
                 Return
             End If
-        End If
-    End Sub
-
-    Private Sub CaseRecordForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
-        Dim existingForm = Application.OpenForms.OfType(Of AdditionalPhotoForm)().FirstOrDefault()
-        If existingForm IsNot Nothing AndAlso Not existingForm.IsDisposed Then
-            existingForm.Close()
-            existingForm = Nothing
         End If
     End Sub
 

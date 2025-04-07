@@ -103,6 +103,7 @@ Partial Class CaseRecordForm
         Label13 = New Label()
         Label10 = New Label()
         AdditionalInfo_TxtBox = New TextBox()
+        OldCaseDetails_Label = New Label()
         CaseFormTabs.SuspendLayout()
         MissingPersonFormTab.SuspendLayout()
         GroupBox1.SuspendLayout()
@@ -131,6 +132,7 @@ Partial Class CaseRecordForm
         ' MissingPersonFormTab
         ' 
         MissingPersonFormTab.BackColor = Color.Honeydew
+        MissingPersonFormTab.Controls.Add(OldCaseDetails_Label)
         MissingPersonFormTab.Controls.Add(ProcedureTaken_Label)
         MissingPersonFormTab.Controls.Add(Original_CaseStatusLabel)
         MissingPersonFormTab.Controls.Add(GroupBox1)
@@ -190,7 +192,7 @@ Partial Class CaseRecordForm
         GroupBox1.Controls.Add(Label17)
         GroupBox1.Controls.Add(Label27)
         GroupBox1.Controls.Add(Procedure_ComboBox)
-        GroupBox1.Location = New Point(818, 310)
+        GroupBox1.Location = New Point(759, 310)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(343, 186)
         GroupBox1.TabIndex = 50
@@ -244,7 +246,7 @@ Partial Class CaseRecordForm
         caseID_Label.AutoSize = True
         caseID_Label.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         caseID_Label.ForeColor = Color.Honeydew
-        caseID_Label.Location = New Point(1044, 12)
+        caseID_Label.Location = New Point(985, 12)
         caseID_Label.Name = "caseID_Label"
         caseID_Label.Size = New Size(0, 28)
         caseID_Label.TabIndex = 45
@@ -254,7 +256,7 @@ Partial Class CaseRecordForm
         Label16.AutoSize = True
         Label16.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.Green
-        Label16.Location = New Point(1210, 198)
+        Label16.Location = New Point(1113, 204)
         Label16.Name = "Label16"
         Label16.Size = New Size(152, 31)
         Label16.TabIndex = 44
@@ -263,7 +265,7 @@ Partial Class CaseRecordForm
         ' OfficersSent_DataGridView
         ' 
         OfficersSent_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        OfficersSent_DataGridView.Location = New Point(1210, 232)
+        OfficersSent_DataGridView.Location = New Point(1113, 238)
         OfficersSent_DataGridView.Name = "OfficersSent_DataGridView"
         OfficersSent_DataGridView.RowHeadersWidth = 51
         OfficersSent_DataGridView.Size = New Size(459, 135)
@@ -274,7 +276,7 @@ Partial Class CaseRecordForm
         Button1.BackColor = Color.Green
         Button1.Font = New Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
-        Button1.Location = New Point(1567, 196)
+        Button1.Location = New Point(1470, 202)
         Button1.Name = "Button1"
         Button1.Size = New Size(102, 30)
         Button1.TabIndex = 42
@@ -286,7 +288,7 @@ Partial Class CaseRecordForm
         Label21.AutoSize = True
         Label21.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.Green
-        Label21.Location = New Point(1210, 10)
+        Label21.Location = New Point(1113, 16)
         Label21.Name = "Label21"
         Label21.Size = New Size(184, 31)
         Label21.TabIndex = 41
@@ -334,9 +336,9 @@ Partial Class CaseRecordForm
         GroupBox2.Controls.Add(Label34)
         GroupBox2.Controls.Add(Label35)
         GroupBox2.Controls.Add(Label36)
-        GroupBox2.Location = New Point(0, 6)
+        GroupBox2.Location = New Point(7, 0)
         GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(748, 652)
+        GroupBox2.Size = New Size(746, 652)
         GroupBox2.TabIndex = 40
         GroupBox2.TabStop = False
         ' 
@@ -667,7 +669,7 @@ Partial Class CaseRecordForm
         CaseType_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         CaseType_ComboBox.FormattingEnabled = True
         CaseType_ComboBox.Items.AddRange(New Object() {"Theft", "Missing Person", "Others (Please Specify)"})
-        CaseType_ComboBox.Location = New Point(822, 137)
+        CaseType_ComboBox.Location = New Point(763, 137)
         CaseType_ComboBox.Name = "CaseType_ComboBox"
         CaseType_ComboBox.Size = New Size(253, 28)
         CaseType_ComboBox.TabIndex = 40
@@ -677,7 +679,7 @@ Partial Class CaseRecordForm
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Green
-        Label11.Location = New Point(822, 106)
+        Label11.Location = New Point(763, 106)
         Label11.Name = "Label11"
         Label11.Size = New Size(106, 28)
         Label11.TabIndex = 39
@@ -885,7 +887,7 @@ Partial Class CaseRecordForm
         ' CasePeople_DataGridView1
         ' 
         CasePeople_DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        CasePeople_DataGridView1.Location = New Point(1210, 46)
+        CasePeople_DataGridView1.Location = New Point(1113, 52)
         CasePeople_DataGridView1.Name = "CasePeople_DataGridView1"
         CasePeople_DataGridView1.RowHeadersWidth = 51
         CasePeople_DataGridView1.Size = New Size(459, 149)
@@ -896,7 +898,7 @@ Partial Class CaseRecordForm
         AddPerson_Btn.BackColor = Color.Green
         AddPerson_Btn.Font = New Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddPerson_Btn.ForeColor = Color.White
-        AddPerson_Btn.Location = New Point(1567, 10)
+        AddPerson_Btn.Location = New Point(1470, 16)
         AddPerson_Btn.Name = "AddPerson_Btn"
         AddPerson_Btn.Size = New Size(102, 30)
         AddPerson_Btn.TabIndex = 36
@@ -908,7 +910,7 @@ Partial Class CaseRecordForm
         Label8.AutoSize = True
         Label8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Green
-        Label8.Location = New Point(822, 30)
+        Label8.Location = New Point(763, 30)
         Label8.Name = "Label8"
         Label8.Size = New Size(117, 28)
         Label8.TabIndex = 34
@@ -918,7 +920,7 @@ Partial Class CaseRecordForm
         ' 
         CaseName_Txt.BorderStyle = BorderStyle.FixedSingle
         CaseName_Txt.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CaseName_Txt.Location = New Point(822, 65)
+        CaseName_Txt.Location = New Point(763, 65)
         CaseName_Txt.Name = "CaseName_Txt"
         CaseName_Txt.Size = New Size(250, 34)
         CaseName_Txt.TabIndex = 33
@@ -927,7 +929,7 @@ Partial Class CaseRecordForm
         ' 
         DateAndimeReported_DateTimePicker.CustomFormat = "MM-dd-yyyy HH:mm"
         DateAndimeReported_DateTimePicker.Format = DateTimePickerFormat.Custom
-        DateAndimeReported_DateTimePicker.Location = New Point(822, 206)
+        DateAndimeReported_DateTimePicker.Location = New Point(763, 206)
         DateAndimeReported_DateTimePicker.Name = "DateAndimeReported_DateTimePicker"
         DateAndimeReported_DateTimePicker.ShowUpDown = True
         DateAndimeReported_DateTimePicker.Size = New Size(250, 27)
@@ -938,7 +940,7 @@ Partial Class CaseRecordForm
         Label18.AutoSize = True
         Label18.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.Green
-        Label18.Location = New Point(818, 175)
+        Label18.Location = New Point(759, 175)
         Label18.Name = "Label18"
         Label18.Size = New Size(339, 28)
         Label18.TabIndex = 31
@@ -949,7 +951,7 @@ Partial Class CaseRecordForm
         SaveMissingPerson_Btn.BackColor = Color.Green
         SaveMissingPerson_Btn.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         SaveMissingPerson_Btn.ForeColor = Color.White
-        SaveMissingPerson_Btn.Location = New Point(1544, 663)
+        SaveMissingPerson_Btn.Location = New Point(1447, 669)
         SaveMissingPerson_Btn.Name = "SaveMissingPerson_Btn"
         SaveMissingPerson_Btn.Size = New Size(128, 52)
         SaveMissingPerson_Btn.TabIndex = 1
@@ -961,7 +963,7 @@ Partial Class CaseRecordForm
         AddAdditionalPhoto_Btn.BackColor = Color.Green
         AddAdditionalPhoto_Btn.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddAdditionalPhoto_Btn.ForeColor = Color.White
-        AddAdditionalPhoto_Btn.Location = New Point(1555, 370)
+        AddAdditionalPhoto_Btn.Location = New Point(1458, 376)
         AddAdditionalPhoto_Btn.Name = "AddAdditionalPhoto_Btn"
         AddAdditionalPhoto_Btn.Size = New Size(120, 29)
         AddAdditionalPhoto_Btn.TabIndex = 28
@@ -973,7 +975,7 @@ Partial Class CaseRecordForm
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Green
-        Label14.Location = New Point(1210, 370)
+        Label14.Location = New Point(1113, 376)
         Label14.Name = "Label14"
         Label14.Size = New Size(209, 31)
         Label14.TabIndex = 27
@@ -982,7 +984,7 @@ Partial Class CaseRecordForm
         ' AdditionalPhotos_FlowLayoutPanel
         ' 
         AdditionalPhotos_FlowLayoutPanel.BackColor = Color.Green
-        AdditionalPhotos_FlowLayoutPanel.Location = New Point(1210, 401)
+        AdditionalPhotos_FlowLayoutPanel.Location = New Point(1113, 407)
         AdditionalPhotos_FlowLayoutPanel.Name = "AdditionalPhotos_FlowLayoutPanel"
         AdditionalPhotos_FlowLayoutPanel.Size = New Size(465, 261)
         AdditionalPhotos_FlowLayoutPanel.TabIndex = 26
@@ -992,7 +994,7 @@ Partial Class CaseRecordForm
         CaseStatus_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         CaseStatus_ComboBox.FormattingEnabled = True
         CaseStatus_ComboBox.Items.AddRange(New Object() {"Open", "In Progress", "Pending", "Resolved"})
-        CaseStatus_ComboBox.Location = New Point(818, 267)
+        CaseStatus_ComboBox.Location = New Point(759, 267)
         CaseStatus_ComboBox.Name = "CaseStatus_ComboBox"
         CaseStatus_ComboBox.Size = New Size(257, 28)
         CaseStatus_ComboBox.TabIndex = 25
@@ -1002,7 +1004,7 @@ Partial Class CaseRecordForm
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.Green
-        Label13.Location = New Point(818, 236)
+        Label13.Location = New Point(759, 236)
         Label13.Name = "Label13"
         Label13.Size = New Size(120, 28)
         Label13.TabIndex = 24
@@ -1013,7 +1015,7 @@ Partial Class CaseRecordForm
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Green
-        Label10.Location = New Point(818, 498)
+        Label10.Location = New Point(759, 498)
         Label10.Name = "Label10"
         Label10.Size = New Size(155, 28)
         Label10.TabIndex = 19
@@ -1023,12 +1025,23 @@ Partial Class CaseRecordForm
         ' 
         AdditionalInfo_TxtBox.BorderStyle = BorderStyle.FixedSingle
         AdditionalInfo_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        AdditionalInfo_TxtBox.Location = New Point(822, 529)
+        AdditionalInfo_TxtBox.Location = New Point(763, 529)
         AdditionalInfo_TxtBox.Multiline = True
         AdditionalInfo_TxtBox.Name = "AdditionalInfo_TxtBox"
         AdditionalInfo_TxtBox.ScrollBars = ScrollBars.Vertical
         AdditionalInfo_TxtBox.Size = New Size(310, 144)
         AdditionalInfo_TxtBox.TabIndex = 17
+        ' 
+        ' OldCaseDetails_Label
+        ' 
+        OldCaseDetails_Label.AutoSize = True
+        OldCaseDetails_Label.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        OldCaseDetails_Label.ForeColor = Color.Honeydew
+        OldCaseDetails_Label.Location = New Point(106, 678)
+        OldCaseDetails_Label.Name = "OldCaseDetails_Label"
+        OldCaseDetails_Label.Size = New Size(0, 38)
+        OldCaseDetails_Label.TabIndex = 53
+        OldCaseDetails_Label.Visible = False
         ' 
         ' CaseRecordForm
         ' 
@@ -1036,7 +1049,7 @@ Partial Class CaseRecordForm
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.Honeydew
-        ClientSize = New Size(1723, 725)
+        ClientSize = New Size(1602, 730)
         Controls.Add(CaseFormTabs)
         MaximizeBox = False
         MaximumSize = New Size(1741, 812)
@@ -1147,4 +1160,5 @@ Partial Class CaseRecordForm
     Friend WithEvents Label36 As Label
     Friend WithEvents generalCases_PicBox As PictureBox
     Friend WithEvents SpecificCaseType_ComboBox As ComboBox
+    Friend WithEvents OldCaseDetails_Label As Label
 End Class

@@ -78,6 +78,12 @@ Partial Class CaseRecordShowForm
         Remarks_TextBox = New TextBox()
         Label17 = New Label()
         Label27 = New Label()
+        ViewcaseHistory_Btn = New Button()
+        Panel1 = New Panel()
+        CaseUpdate_ListView = New ListView()
+        Panel2 = New Panel()
+        CloseCaseHistory_Btn = New Button()
+        Label3 = New Label()
         MissingPerson_GroupBox.SuspendLayout()
         StolenItems_GroupBox.SuspendLayout()
         GroupBox2.SuspendLayout()
@@ -87,6 +93,8 @@ Partial Class CaseRecordShowForm
         CType(OfficersSent_DataGridView, ComponentModel.ISupportInitialize).BeginInit()
         CType(CasePeople_DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
         SuspendLayout()
         ' 
         ' MissingPerson_GroupBox
@@ -499,7 +507,7 @@ Partial Class CaseRecordShowForm
         Label16.AutoSize = True
         Label16.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label16.ForeColor = Color.Green
-        Label16.Location = New Point(1212, 229)
+        Label16.Location = New Point(1146, 215)
         Label16.Name = "Label16"
         Label16.Size = New Size(152, 31)
         Label16.TabIndex = 50
@@ -508,7 +516,7 @@ Partial Class CaseRecordShowForm
         ' OfficersSent_DataGridView
         ' 
         OfficersSent_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        OfficersSent_DataGridView.Location = New Point(1212, 263)
+        OfficersSent_DataGridView.Location = New Point(1146, 249)
         OfficersSent_DataGridView.Name = "OfficersSent_DataGridView"
         OfficersSent_DataGridView.RowHeadersWidth = 51
         OfficersSent_DataGridView.Size = New Size(459, 114)
@@ -519,7 +527,7 @@ Partial Class CaseRecordShowForm
         Label21.AutoSize = True
         Label21.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label21.ForeColor = Color.Green
-        Label21.Location = New Point(1212, 34)
+        Label21.Location = New Point(1146, 21)
         Label21.Name = "Label21"
         Label21.Size = New Size(184, 31)
         Label21.TabIndex = 48
@@ -528,7 +536,7 @@ Partial Class CaseRecordShowForm
         ' CasePeople_DataGridView1
         ' 
         CasePeople_DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        CasePeople_DataGridView1.Location = New Point(1212, 70)
+        CasePeople_DataGridView1.Location = New Point(1146, 57)
         CasePeople_DataGridView1.Name = "CasePeople_DataGridView1"
         CasePeople_DataGridView1.RowHeadersWidth = 51
         CasePeople_DataGridView1.Size = New Size(459, 147)
@@ -539,7 +547,7 @@ Partial Class CaseRecordShowForm
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label14.ForeColor = Color.Green
-        Label14.Location = New Point(1212, 380)
+        Label14.Location = New Point(1146, 367)
         Label14.Name = "Label14"
         Label14.Size = New Size(209, 31)
         Label14.TabIndex = 46
@@ -548,7 +556,7 @@ Partial Class CaseRecordShowForm
         ' AdditionalPhotos_FlowLayoutPanel
         ' 
         AdditionalPhotos_FlowLayoutPanel.BackColor = Color.Green
-        AdditionalPhotos_FlowLayoutPanel.Location = New Point(1212, 411)
+        AdditionalPhotos_FlowLayoutPanel.Location = New Point(1146, 398)
         AdditionalPhotos_FlowLayoutPanel.Name = "AdditionalPhotos_FlowLayoutPanel"
         AdditionalPhotos_FlowLayoutPanel.Size = New Size(465, 261)
         AdditionalPhotos_FlowLayoutPanel.TabIndex = 45
@@ -558,7 +566,7 @@ Partial Class CaseRecordShowForm
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Green
-        Label11.Location = New Point(799, 39)
+        Label11.Location = New Point(800, 6)
         Label11.Name = "Label11"
         Label11.Size = New Size(106, 28)
         Label11.TabIndex = 57
@@ -569,7 +577,7 @@ Partial Class CaseRecordShowForm
         Label18.AutoSize = True
         Label18.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.Green
-        Label18.Location = New Point(799, 127)
+        Label18.Location = New Point(800, 94)
         Label18.Name = "Label18"
         Label18.Size = New Size(245, 28)
         Label18.TabIndex = 55
@@ -580,7 +588,7 @@ Partial Class CaseRecordShowForm
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.Green
-        Label13.Location = New Point(796, 221)
+        Label13.Location = New Point(797, 188)
         Label13.Name = "Label13"
         Label13.Size = New Size(120, 28)
         Label13.TabIndex = 53
@@ -591,7 +599,7 @@ Partial Class CaseRecordShowForm
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Green
-        Label10.Location = New Point(796, 490)
+        Label10.Location = New Point(797, 457)
         Label10.Name = "Label10"
         Label10.Size = New Size(155, 28)
         Label10.TabIndex = 52
@@ -601,7 +609,7 @@ Partial Class CaseRecordShowForm
         ' 
         AdditionalInfo_TxtBox.BorderStyle = BorderStyle.FixedSingle
         AdditionalInfo_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        AdditionalInfo_TxtBox.Location = New Point(796, 521)
+        AdditionalInfo_TxtBox.Location = New Point(797, 488)
         AdditionalInfo_TxtBox.Multiline = True
         AdditionalInfo_TxtBox.Name = "AdditionalInfo_TxtBox"
         AdditionalInfo_TxtBox.ReadOnly = True
@@ -613,7 +621,7 @@ Partial Class CaseRecordShowForm
         ' 
         CaseType_TxtBox.BorderStyle = BorderStyle.FixedSingle
         CaseType_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CaseType_TxtBox.Location = New Point(799, 70)
+        CaseType_TxtBox.Location = New Point(800, 37)
         CaseType_TxtBox.Name = "CaseType_TxtBox"
         CaseType_TxtBox.ReadOnly = True
         CaseType_TxtBox.Size = New Size(173, 34)
@@ -623,7 +631,7 @@ Partial Class CaseRecordShowForm
         ' 
         DateAndTimeReported_TxtBox.BorderStyle = BorderStyle.FixedSingle
         DateAndTimeReported_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        DateAndTimeReported_TxtBox.Location = New Point(799, 158)
+        DateAndTimeReported_TxtBox.Location = New Point(800, 125)
         DateAndTimeReported_TxtBox.Name = "DateAndTimeReported_TxtBox"
         DateAndTimeReported_TxtBox.ReadOnly = True
         DateAndTimeReported_TxtBox.Size = New Size(253, 34)
@@ -633,7 +641,7 @@ Partial Class CaseRecordShowForm
         ' 
         CaseStatus_TxtBox.BorderStyle = BorderStyle.FixedSingle
         CaseStatus_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CaseStatus_TxtBox.Location = New Point(799, 252)
+        CaseStatus_TxtBox.Location = New Point(800, 219)
         CaseStatus_TxtBox.Name = "CaseStatus_TxtBox"
         CaseStatus_TxtBox.ReadOnly = True
         CaseStatus_TxtBox.Size = New Size(173, 34)
@@ -644,7 +652,7 @@ Partial Class CaseRecordShowForm
         UpdateCaseData_Btn.BackColor = Color.Green
         UpdateCaseData_Btn.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         UpdateCaseData_Btn.ForeColor = Color.White
-        UpdateCaseData_Btn.Location = New Point(799, 639)
+        UpdateCaseData_Btn.Location = New Point(800, 606)
         UpdateCaseData_Btn.Name = "UpdateCaseData_Btn"
         UpdateCaseData_Btn.Size = New Size(128, 52)
         UpdateCaseData_Btn.TabIndex = 61
@@ -667,7 +675,7 @@ Partial Class CaseRecordShowForm
         GroupBox1.Controls.Add(Remarks_TextBox)
         GroupBox1.Controls.Add(Label17)
         GroupBox1.Controls.Add(Label27)
-        GroupBox1.Location = New Point(796, 299)
+        GroupBox1.Location = New Point(797, 266)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(343, 186)
         GroupBox1.TabIndex = 63
@@ -718,13 +726,79 @@ Partial Class CaseRecordShowForm
         Label27.TabIndex = 48
         Label27.Text = "Additional Procedure"
         ' 
+        ' ViewcaseHistory_Btn
+        ' 
+        ViewcaseHistory_Btn.BackColor = Color.Green
+        ViewcaseHistory_Btn.FlatStyle = FlatStyle.Flat
+        ViewcaseHistory_Btn.Font = New Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ViewcaseHistory_Btn.ForeColor = Color.White
+        ViewcaseHistory_Btn.Location = New Point(1472, 6)
+        ViewcaseHistory_Btn.Name = "ViewcaseHistory_Btn"
+        ViewcaseHistory_Btn.Size = New Size(153, 40)
+        ViewcaseHistory_Btn.TabIndex = 64
+        ViewcaseHistory_Btn.Text = "View Update History"
+        ViewcaseHistory_Btn.UseVisualStyleBackColor = False
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Controls.Add(CaseUpdate_ListView)
+        Panel1.Controls.Add(Panel2)
+        Panel1.Location = New Point(0, 6)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(1625, 662)
+        Panel1.TabIndex = 65
+        Panel1.Visible = False
+        ' 
+        ' CaseUpdate_ListView
+        ' 
+        CaseUpdate_ListView.Location = New Point(323, 146)
+        CaseUpdate_ListView.Name = "CaseUpdate_ListView"
+        CaseUpdate_ListView.Size = New Size(1050, 486)
+        CaseUpdate_ListView.TabIndex = 1
+        CaseUpdate_ListView.UseCompatibleStateImageBehavior = False
+        CaseUpdate_ListView.View = View.Details
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.SeaGreen
+        Panel2.Controls.Add(CloseCaseHistory_Btn)
+        Panel2.Controls.Add(Label3)
+        Panel2.ForeColor = SystemColors.ControlLight
+        Panel2.Location = New Point(0, 1)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(1644, 125)
+        Panel2.TabIndex = 1
+        ' 
+        ' CloseCaseHistory_Btn
+        ' 
+        CloseCaseHistory_Btn.BackColor = Color.SeaGreen
+        CloseCaseHistory_Btn.FlatStyle = FlatStyle.Flat
+        CloseCaseHistory_Btn.Location = New Point(1517, 11)
+        CloseCaseHistory_Btn.Name = "CloseCaseHistory_Btn"
+        CloseCaseHistory_Btn.Size = New Size(79, 66)
+        CloseCaseHistory_Btn.TabIndex = 2
+        CloseCaseHistory_Btn.UseVisualStyleBackColor = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(31, 34)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(249, 50)
+        Label3.TabIndex = 0
+        Label3.Text = "Case History:"
+        ' 
         ' CaseRecordShowForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.Honeydew
-        ClientSize = New Size(1700, 703)
+        ClientSize = New Size(1637, 668)
+        Controls.Add(Panel1)
+        Controls.Add(ViewcaseHistory_Btn)
         Controls.Add(GroupBox1)
         Controls.Add(HiddenCaseID)
         Controls.Add(UpdateCaseData_Btn)
@@ -762,6 +836,9 @@ Partial Class CaseRecordShowForm
         CType(CasePeople_DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -822,4 +899,10 @@ Partial Class CaseRecordShowForm
     Friend WithEvents SpecificCaseType_ComboBox As TextBox
     Friend WithEvents GeneralCasesLocation_TextBox As TextBox
     Friend WithEvents Label33 As Label
+    Friend WithEvents ViewcaseHistory_Btn As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents CaseUpdate_ListView As ListView
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents CloseCaseHistory_Btn As Button
 End Class
