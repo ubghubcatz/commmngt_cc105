@@ -36,7 +36,7 @@ Public Class List
             With DataGridView1.ColumnHeadersDefaultCellStyle
                 .Font = New Font("Calibri", 12, FontStyle.Bold)
                 .ForeColor = Color.White
-                .BackColor = Color.DarkBlue
+                .BackColor = Color.Green
                 .Alignment = DataGridViewContentAlignment.MiddleCenter
             End With
 
@@ -54,5 +54,6 @@ Public Class List
     Private Sub g4_EmployeeDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadEmployees()
     End Sub
+
 
 End Class
