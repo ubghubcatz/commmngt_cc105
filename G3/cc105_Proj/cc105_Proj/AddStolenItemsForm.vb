@@ -1,5 +1,6 @@
 ﻿Public Class AddStolenItemsForm
     Private Sub SaveItem_Btn_Click(sender As Object, e As EventArgs) Handles SaveItem_Btn.Click
+
         Dim caseForm As CaseRecordForm = Application.OpenForms.OfType(Of CaseRecordForm)().FirstOrDefault()
 
         ' Validate input fields
@@ -25,7 +26,5 @@
         ItemDesc_TextBox.Text = ""
         Price_TextBox.Text = ""
     End Sub
-
-
 
 End Class

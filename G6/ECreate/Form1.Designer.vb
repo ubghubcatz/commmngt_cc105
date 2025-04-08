@@ -77,6 +77,7 @@ Partial Class Form1
         ' 
         ' Panel1
         ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         Panel1.AutoSize = True
         Panel1.BackColor = Color.FromArgb(CByte(0), CByte(120), CByte(62))
         Panel1.Controls.Add(PictureBox1)
@@ -90,9 +91,10 @@ Partial Class Form1
         PictureBox1.BackgroundImage = My.Resources.Resources.EcreateLogo
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.BorderStyle = BorderStyle.FixedSingle
-        PictureBox1.Location = New Point(3, 3)
+        PictureBox1.Location = New Point(0, 0)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(935, 718)
+        PictureBox1.Size = New Size(938, 721)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
@@ -131,6 +133,7 @@ Partial Class Form1
         ' 
         ' PictureBox5
         ' 
+        PictureBox5.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         PictureBox5.BackColor = Color.Transparent
         PictureBox5.BackgroundImage = My.Resources.Resources.logoLipa
         PictureBox5.BackgroundImageLayout = ImageLayout.Stretch
@@ -142,6 +145,7 @@ Partial Class Form1
         ' 
         ' PictureBox6
         ' 
+        PictureBox6.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
         PictureBox6.BackColor = Color.Transparent
         PictureBox6.BackgroundImage = My.Resources.Resources.logoInos
         PictureBox6.BackgroundImageLayout = ImageLayout.Stretch
@@ -167,7 +171,8 @@ Partial Class Form1
         Controls.Add(Button3)
         Controls.Add(Button2)
         Controls.Add(Button1)
-        FormBorderStyle = FormBorderStyle.FixedToolWindow
+        MaximumSize = New Size(1920, 1080)
+        MinimumSize = New Size(1182, 789)
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Event Creation"

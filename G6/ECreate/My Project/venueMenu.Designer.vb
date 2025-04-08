@@ -181,6 +181,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackgroundImage = My.Resources.Resources.bottomLeft
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox1.Location = New Point(12, 103)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(70, 70)
@@ -189,6 +191,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.BackgroundImage = My.Resources.Resources.bottomRight
+        PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox2.Location = New Point(853, 103)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(70, 70)
@@ -197,6 +201,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox3
         ' 
+        PictureBox3.BackgroundImage = My.Resources.Resources.topLeft
+        PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox3.Location = New Point(12, 5)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(70, 70)
@@ -205,6 +211,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox4
         ' 
+        PictureBox4.BackgroundImage = My.Resources.Resources.topRight
+        PictureBox4.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox4.Location = New Point(853, 9)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(70, 70)
@@ -213,6 +221,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox5
         ' 
+        PictureBox5.BackgroundImage = My.Resources.Resources.topRight
+        PictureBox5.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox5.Location = New Point(238, 5)
         PictureBox5.Name = "PictureBox5"
         PictureBox5.Size = New Size(70, 70)
@@ -221,6 +231,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox6
         ' 
+        PictureBox6.BackgroundImage = My.Resources.Resources.bottomRight
+        PictureBox6.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox6.Location = New Point(238, 103)
         PictureBox6.Name = "PictureBox6"
         PictureBox6.Size = New Size(70, 70)
@@ -229,6 +241,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox7
         ' 
+        PictureBox7.BackgroundImage = My.Resources.Resources.topLeft
+        PictureBox7.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox7.Location = New Point(366, 5)
         PictureBox7.Name = "PictureBox7"
         PictureBox7.Size = New Size(70, 70)
@@ -237,6 +251,8 @@ Partial Class venueMenu
         ' 
         ' PictureBox8
         ' 
+        PictureBox8.BackgroundImage = My.Resources.Resources.bottomLeft
+        PictureBox8.BackgroundImageLayout = ImageLayout.Stretch
         PictureBox8.Location = New Point(366, 103)
         PictureBox8.Name = "PictureBox8"
         PictureBox8.Size = New Size(70, 70)

@@ -91,6 +91,7 @@ Public Class AddOfficersForm
         Else
             saveOfficersToDataGridView(extractedOfficerName, extractedPosition)
             Officer_TextBox.Text = ""
+
         End If
     End Sub
 
@@ -129,6 +130,7 @@ Public Class AddOfficersForm
 
         ' If the officer ID is not found, add it to the DataGridView
         caseForm.OfficersSent_DataGridView.Rows.Add(officerId_Label.Text.Trim(), name.Trim(), position.Trim())
+        caseForm.AddedOfficers.Add(officerId_Label.Text.Trim() & " | " & name.Trim())
         MessageBox.Show("Officer Added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Class

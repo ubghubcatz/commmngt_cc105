@@ -82,7 +82,6 @@ Public Class CallLog_Tables
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             column.DefaultCellStyle.Font = semiBoldFont
         Next
-
         dgv.AllowUserToAddRows = False ' Prevent adding rows manually
     End Sub
 

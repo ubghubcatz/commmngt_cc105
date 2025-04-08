@@ -38,21 +38,5 @@
     End Sub
 
     Private Sub venueMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        PictureBox1.Image = Image.FromFile("bottomLeft.png")
-        PictureBox2.Image = Image.FromFile("bottomRight.png")
-        PictureBox3.Image = Image.FromFile("topLeft.png")
-        PictureBox4.Image = Image.FromFile("topRight.png")
-        PictureBox5.Image = Image.FromFile("topright.png")
-        PictureBox6.Image = Image.FromFile("bottomRight.png")
-        PictureBox7.Image = Image.FromFile("topLeft.png")
-        PictureBox8.Image = Image.FromFile("bottomLeft.png")
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox5.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox6.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox8.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
 End Class

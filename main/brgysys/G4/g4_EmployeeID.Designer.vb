@@ -24,13 +24,13 @@ Partial Class g4_EmployeeID
     Private Sub InitializeComponent()
         idPic = New PictureBox()
         lblFullName = New Label()
-        lblPosition = New Label()
         IDNumberlbl = New Label()
         backPanel = New Panel()
         QRpbox = New PictureBox()
         lblFullAddress = New Label()
         lblContactNo = New Label()
         frontPanel = New Panel()
+        lblPosition = New Label()
         lblIDnumber = New Label()
         idNumber = New TextBox()
         btnloadDetails = New Button()
@@ -44,6 +44,7 @@ Partial Class g4_EmployeeID
         ' 
         ' idPic
         ' 
+        idPic.Anchor = AnchorStyles.None
         idPic.BackColor = Color.Transparent
         idPic.BackgroundImageLayout = ImageLayout.Center
         idPic.Location = New Point(64, 61)
@@ -54,6 +55,7 @@ Partial Class g4_EmployeeID
         ' 
         ' lblFullName
         ' 
+        lblFullName.Anchor = AnchorStyles.None
         lblFullName.BackColor = Color.Transparent
         lblFullName.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
         lblFullName.ForeColor = Color.FromArgb(CByte(0), CByte(120), CByte(62))
@@ -64,24 +66,11 @@ Partial Class g4_EmployeeID
         lblFullName.Text = "Employee Full Name"
         lblFullName.TextAlign = ContentAlignment.TopCenter
         ' 
-        ' lblPosition
-        ' 
-        lblPosition.Anchor = AnchorStyles.Top
-        lblPosition.BackColor = Color.Transparent
-        lblPosition.Font = New Font("Segoe UI", 9F)
-        lblPosition.ForeColor = Color.White
-        lblPosition.Location = New Point(15, 279)
-        lblPosition.MaximumSize = New Size(250, 0)
-        lblPosition.Name = "lblPosition"
-        lblPosition.Size = New Size(245, 35)
-        lblPosition.TabIndex = 4
-        lblPosition.Text = "Position"
-        lblPosition.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' IDNumberlbl
         ' 
+        IDNumberlbl.Anchor = AnchorStyles.None
         IDNumberlbl.BackColor = Color.Transparent
-        IDNumberlbl.Font = New Font("Calibri", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        IDNumberlbl.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
         IDNumberlbl.ForeColor = Color.White
         IDNumberlbl.Location = New Point(38, 324)
         IDNumberlbl.Name = "IDNumberlbl"
@@ -92,18 +81,21 @@ Partial Class g4_EmployeeID
         ' 
         ' backPanel
         ' 
+        backPanel.Anchor = AnchorStyles.None
+        backPanel.BackColor = Color.Transparent
         backPanel.BackgroundImage = My.Resources.Resources.ID_F1
         backPanel.BackgroundImageLayout = ImageLayout.Zoom
         backPanel.Controls.Add(QRpbox)
         backPanel.Controls.Add(lblFullAddress)
         backPanel.Controls.Add(lblContactNo)
-        backPanel.Location = New Point(344, 45)
+        backPanel.Location = New Point(346, 62)
         backPanel.Name = "backPanel"
         backPanel.Size = New Size(277, 394)
         backPanel.TabIndex = 14
         ' 
         ' QRpbox
         ' 
+        QRpbox.Anchor = AnchorStyles.None
         QRpbox.BackColor = Color.Transparent
         QRpbox.BackgroundImageLayout = ImageLayout.Center
         QRpbox.Location = New Point(38, 57)
@@ -116,8 +108,9 @@ Partial Class g4_EmployeeID
         ' lblFullAddress
         ' 
         lblFullAddress.AllowDrop = True
+        lblFullAddress.Anchor = AnchorStyles.None
         lblFullAddress.BackColor = Color.Transparent
-        lblFullAddress.Font = New Font("Calibri", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lblFullAddress.Font = New Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lblFullAddress.ForeColor = Color.Black
         lblFullAddress.Location = New Point(17, 304)
         lblFullAddress.Name = "lblFullAddress"
@@ -129,8 +122,9 @@ Partial Class g4_EmployeeID
         ' 
         ' lblContactNo
         ' 
+        lblContactNo.Anchor = AnchorStyles.None
         lblContactNo.BackColor = Color.Transparent
-        lblContactNo.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
+        lblContactNo.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         lblContactNo.ForeColor = Color.Black
         lblContactNo.Location = New Point(17, 279)
         lblContactNo.Name = "lblContactNo"
@@ -141,23 +135,40 @@ Partial Class g4_EmployeeID
         ' 
         ' frontPanel
         ' 
+        frontPanel.Anchor = AnchorStyles.None
+        frontPanel.BackColor = Color.Transparent
         frontPanel.BackgroundImage = My.Resources.Resources.ID_F__1_
         frontPanel.BackgroundImageLayout = ImageLayout.Zoom
+        frontPanel.Controls.Add(lblPosition)
         frontPanel.Controls.Add(idPic)
         frontPanel.Controls.Add(lblFullName)
-        frontPanel.Controls.Add(lblPosition)
         frontPanel.Controls.Add(IDNumberlbl)
-        frontPanel.Location = New Point(56, 45)
+        frontPanel.Location = New Point(58, 62)
         frontPanel.Name = "frontPanel"
         frontPanel.Size = New Size(277, 394)
         frontPanel.TabIndex = 13
         ' 
+        ' lblPosition
+        ' 
+        lblPosition.AllowDrop = True
+        lblPosition.Anchor = AnchorStyles.None
+        lblPosition.BackColor = Color.Transparent
+        lblPosition.Font = New Font("Segoe UI", 9F)
+        lblPosition.ForeColor = Color.White
+        lblPosition.Location = New Point(15, 278)
+        lblPosition.Name = "lblPosition"
+        lblPosition.Size = New Size(245, 35)
+        lblPosition.TabIndex = 5
+        lblPosition.Text = "Position"
+        lblPosition.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' lblIDnumber
         ' 
+        lblIDnumber.Anchor = AnchorStyles.None
         lblIDnumber.AutoSize = True
         lblIDnumber.BackColor = Color.Transparent
         lblIDnumber.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
-        lblIDnumber.Location = New Point(630, 340)
+        lblIDnumber.Location = New Point(632, 357)
         lblIDnumber.Name = "lblIDnumber"
         lblIDnumber.Size = New Size(145, 20)
         lblIDnumber.TabIndex = 12
@@ -165,7 +176,8 @@ Partial Class g4_EmployeeID
         ' 
         ' idNumber
         ' 
-        idNumber.Location = New Point(635, 363)
+        idNumber.Anchor = AnchorStyles.None
+        idNumber.Location = New Point(637, 380)
         idNumber.Name = "idNumber"
         idNumber.Size = New Size(136, 27)
         idNumber.TabIndex = 11
@@ -173,11 +185,13 @@ Partial Class g4_EmployeeID
         ' 
         ' btnloadDetails
         ' 
-        btnloadDetails.BackColor = Color.Blue
-        btnloadDetails.FlatAppearance.BorderSize = 0
-        btnloadDetails.FlatStyle = FlatStyle.Flat
-        btnloadDetails.ForeColor = Color.White
-        btnloadDetails.Location = New Point(635, 396)
+        btnloadDetails.Anchor = AnchorStyles.None
+        btnloadDetails.BackColor = Color.White
+        btnloadDetails.FlatAppearance.BorderColor = Color.Green
+        btnloadDetails.FlatAppearance.BorderSize = 3
+        btnloadDetails.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnloadDetails.ForeColor = Color.Green
+        btnloadDetails.Location = New Point(637, 413)
         btnloadDetails.Name = "btnloadDetails"
         btnloadDetails.Size = New Size(136, 43)
         btnloadDetails.TabIndex = 10
@@ -186,11 +200,13 @@ Partial Class g4_EmployeeID
         ' 
         ' btnSaveQR
         ' 
-        btnSaveQR.BackColor = Color.Blue
-        btnSaveQR.FlatAppearance.BorderSize = 0
-        btnSaveQR.FlatStyle = FlatStyle.Flat
-        btnSaveQR.ForeColor = Color.White
-        btnSaveQR.Location = New Point(635, 94)
+        btnSaveQR.Anchor = AnchorStyles.None
+        btnSaveQR.BackColor = Color.White
+        btnSaveQR.FlatAppearance.BorderColor = Color.Green
+        btnSaveQR.FlatAppearance.BorderSize = 3
+        btnSaveQR.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnSaveQR.ForeColor = Color.Green
+        btnSaveQR.Location = New Point(637, 111)
         btnSaveQR.Name = "btnSaveQR"
         btnSaveQR.Size = New Size(136, 43)
         btnSaveQR.TabIndex = 15
@@ -199,11 +215,13 @@ Partial Class g4_EmployeeID
         ' 
         ' btnPrint
         ' 
-        btnPrint.BackColor = Color.Blue
-        btnPrint.FlatAppearance.BorderSize = 0
-        btnPrint.FlatStyle = FlatStyle.Flat
-        btnPrint.ForeColor = Color.White
-        btnPrint.Location = New Point(635, 45)
+        btnPrint.Anchor = AnchorStyles.None
+        btnPrint.BackColor = Color.White
+        btnPrint.FlatAppearance.BorderColor = Color.Green
+        btnPrint.FlatAppearance.BorderSize = 3
+        btnPrint.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
+        btnPrint.ForeColor = Color.Green
+        btnPrint.Location = New Point(637, 62)
         btnPrint.Name = "btnPrint"
         btnPrint.Size = New Size(136, 43)
         btnPrint.TabIndex = 16
@@ -214,17 +232,19 @@ Partial Class g4_EmployeeID
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
+        BackColor = Color.White
+        BackgroundImage = My.Resources.Resources.IDBG
+        BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(829, 522)
         Controls.Add(btnPrint)
         Controls.Add(btnSaveQR)
-        Controls.Add(backPanel)
         Controls.Add(frontPanel)
+        Controls.Add(backPanel)
         Controls.Add(lblIDnumber)
         Controls.Add(idNumber)
         Controls.Add(btnloadDetails)
-        FormBorderStyle = FormBorderStyle.None
         Name = "g4_EmployeeID"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "g4_EmployeeID"
         CType(idPic, ComponentModel.ISupportInitialize).EndInit()
         backPanel.ResumeLayout(False)
@@ -236,7 +256,6 @@ Partial Class g4_EmployeeID
 
     Friend WithEvents idPic As PictureBox
     Friend WithEvents lblFullName As Label
-    Friend WithEvents lblPosition As Label
     Friend WithEvents IDNumberlbl As Label
     Friend WithEvents backPanel As Panel
     Friend WithEvents lblFullAddress As Label
@@ -248,4 +267,5 @@ Partial Class g4_EmployeeID
     Friend WithEvents QRpbox As PictureBox
     Friend WithEvents btnSaveQR As Button
     Friend WithEvents btnPrint As Button
+    Friend WithEvents lblPosition As Label
 End Class

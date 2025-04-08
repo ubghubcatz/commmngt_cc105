@@ -409,6 +409,8 @@ Partial Class formMenu
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        AutoSize = True
+        AutoSizeMode = AutoSizeMode.GrowAndShrink
         BackColor = Color.FromArgb(CByte(71), CByte(184), CByte(129))
         ClientSize = New Size(935, 718)
         Controls.Add(Button2)

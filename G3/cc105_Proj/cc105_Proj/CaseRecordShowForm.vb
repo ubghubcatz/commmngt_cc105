@@ -1,7 +1,5 @@
-﻿Imports System.Data.Common
-Imports System.IO
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Data.SqlClient
-Imports Windows.Win32.UI.Input
 
 Public Class CaseRecordShowForm
 
@@ -15,6 +13,7 @@ Public Class CaseRecordShowForm
     Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
 
     Public Property LoadedCaseID As String
+    Public Property oldcaseDetails As String
     Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initiateTables()
     End Sub
@@ -62,18 +61,18 @@ Public Class CaseRecordShowForm
         If BringExistingCaseFormToFront(HiddenCaseID.Text) Then Return
 
         ' Create and display a new form for editing case data
-        Dim caseUpdateData As New CaseRecordForm()
+        Dim caseUpdateData As New CaseRecordForm
 
         caseUpdateData.WindowState = FormWindowState.Normal
-        caseUpdateData.BringToFront()
-        caseUpdateData.Activate()
+        caseUpdateData.BringToFront
+        caseUpdateData.Activate
         caseUpdateData.TopMost = True
         caseUpdateData.caseID_Label.Text = HiddenCaseID.Text
-        caseUpdateData.Show()
+        caseUpdateData.Show
         ' Extract case ID and retrieve location details
         Dim caseID As Integer
         Integer.TryParse(HiddenCaseID.Text, caseID)
-        Dim details() As String = ReturnLocation(caseID).Split("|"c)
+        Dim details = ReturnLocation(caseID).Split("|"c)
 
         ' Copy shared data grid views
         InitiateCommonDataGridView(caseUpdateData)
@@ -90,6 +89,8 @@ Public Class CaseRecordShowForm
 
         ' Set loaded case ID on the form
         caseUpdateData.LoadedCaseID = LoadedCaseID
+        caseUpdateData.oldCaseData = oldcaseDetails
+
     End Sub
 
     ' Checks if the CaseRecordForm for the same case ID is already open and brings it to front
@@ -98,18 +99,13 @@ Public Class CaseRecordShowForm
             If TypeOf openForm Is CaseRecordForm Then
                 Dim crsf As CaseRecordForm = DirectCast(openForm, CaseRecordForm)
                 If crsf.LoadedCaseID = caseID Then
-                    If mainFormRef IsNot Nothing Then
-                        ' Remove from taskbar if it exists (restoring the form)
-                        mainFormRef.RemoveFormFromTaskbarMenuStrip(crsf, mainFormRef.TaskBarMenuStrip)
+                    ' Re-add if it's minimized and hidden
+                    If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
 
-                        ' Re-add if it's minimized and hidden
-                        If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
-
-                            If Not crsf.Visible Then crsf.Show()
-                            crsf.WindowState = FormWindowState.Normal
-                            crsf.BringToFront()
-                            crsf.Activate()
-                        End If
+                        If Not crsf.Visible Then crsf.Show()
+                        crsf.WindowState = FormWindowState.Normal
+                        crsf.BringToFront()
+                        crsf.Activate()
                     End If
                     Return True
                 End If
@@ -141,15 +137,43 @@ Public Class CaseRecordShowForm
                 targetForm.OfficersSent_DataGridView.Columns.Add(DirectCast(col.Clone(), DataGridViewColumn))
             Next
         End If
+
         For Each row As DataGridViewRow In OfficersSent_DataGridView.Rows
             If Not row.IsNewRow Then
                 Dim index = targetForm.OfficersSent_DataGridView.Rows.Add()
+
+                ' Copy cell values
                 For i = 0 To row.Cells.Count - 1
                     targetForm.OfficersSent_DataGridView.Rows(index).Cells(i).Value = row.Cells(i).Value
                 Next
+
+                ' Get officerID from the first column and check if soft deleted
+                Dim officerID As String = row.Cells(0).Value.ToString()
+                CheckIfSoftDeleted(officerID, targetForm)
             End If
         Next
     End Sub
+
+    Private Sub CheckIfSoftDeleted(officerID As String, targetForm As CaseRecordForm)
+        Dim query As String = "SELECT 1 FROM g3_OfficerCaseAssignments WHERE officerID = @officerid AND IsDeleted = 1;"
+
+        Using conn As New SqlConnection(connectionString), cmd As New SqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@officerid", officerID)
+
+            conn.Open()
+            Dim result = cmd.ExecuteScalar()
+
+            If result IsNot Nothing Then
+                ' Officer has soft-deleted assignments, now find and highlight rows
+                For Each row As DataGridViewRow In targetForm.OfficersSent_DataGridView.Rows
+                    If Not row.IsNewRow AndAlso row.Cells(0).Value.ToString() = officerID Then
+                        row.DefaultCellStyle.BackColor = Color.LightCoral
+                    End If
+                Next
+            End If
+        End Using
+    End Sub
+
 
     ' Populates general case info into the new form
     Private Sub PopulateCommonFields(targetForm As CaseRecordForm)
@@ -157,7 +181,7 @@ Public Class CaseRecordShowForm
         targetForm.AdditionalInfo_TxtBox.Text = AdditionalInfo_TxtBox.Text
         targetForm.Original_CaseStatusLabel.Text = CaseStatus_TxtBox.Text
         targetForm.ProcedureTaken_Label.Text = Procedure_TextBox.Text
-
+        targetForm.Remarks_TextBox.Text = Remarks_TextBox.Text
         targetForm.Text = Me.Text + " - Update |"
         ' Select the appropriate value in the combo box if available
         Dim index = targetForm.Procedure_ComboBox.FindStringExact(Procedure_TextBox.Text)
@@ -356,15 +380,68 @@ Public Class CaseRecordShowForm
         Return locations
     End Function
 
+    Private Function OfficerString() As String
+        Dim people As String = String.Join("", OfficersSent_DataGridView.Rows.
+Cast(Of DataGridViewRow)().
+Where(Function(r) Not r.IsNewRow).
+Select(Function(r) $"{r.Cells(0).Value}^{r.Cells(1).Value}^{r.Cells(2).Value}^"))
+        Return people
+    End Function
 
-    Private Sub Form2_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        If Me.WindowState = FormWindowState.Minimized Then
-            Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ViewcaseHistory_Btn.Click
+        Panel1.Visible = True
+        CaseUpdate_ListView.Visible = True
+        CaseUpdate_ListView.BringToFront()
 
-            If mainFormRef IsNot Nothing Then
-                mainFormRef.MinimizeFormToTaskbar(Me)
-            End If
-        End If
+        ' Setup ListView
+        CaseUpdate_ListView.View = View.Details
+        CaseUpdate_ListView.FullRowSelect = True
+        CaseUpdate_ListView.Columns.Clear()
+        CaseUpdate_ListView.Items.Clear()
+        ' Calculate column widths dynamically (40% and 60%)
+        Dim totalWidth As Integer = CaseUpdate_ListView.ClientSize.Width
+        Dim col1Width As Integer = CInt(totalWidth * 0.4)
+        Dim col2Width As Integer = totalWidth - col1Width  ' Ensures it always adds up
+
+        CaseUpdate_ListView.Columns.Add("Date/Time", col1Width)
+        CaseUpdate_ListView.Columns.Add("Description", col2Width)
+        ' Center align the column headers
+        CaseUpdate_ListView.Columns(0).TextAlign = HorizontalAlignment.Center
+        CaseUpdate_ListView.Columns(1).TextAlign = HorizontalAlignment.Center
+
+        ' SQL with WHERE clause to filter by CaseID and order by HistoryID (latest first)
+        Dim query As String = "SELECT updateDateTime, UpdateDescription, historyid FROM dbo.g3_CaseHistory WHERE caseid = @CaseID ORDER BY historyid DESC"
+
+        Using conn As New SqlConnection(connectionString)
+            Using cmd As New SqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@CaseID", CInt(LoadedCaseID))
+                conn.Open()
+
+                Using reader As SqlDataReader = cmd.ExecuteReader()
+                    While reader.Read()
+                        Dim dateTimeStr As String = reader("updateDateTime").ToString()
+                        Dim description As String = reader("UpdateDescription").ToString()
+                        ' Add to ListView
+                        Dim item As New ListViewItem(dateTimeStr)
+                        item.SubItems.Add(description)
+                        ' Add rows and bold them
+
+                        item.Font = New Font(item.Font, FontStyle.Bold)
+
+                        ' Add to ListView
+                        CaseUpdate_ListView.Items.Add(item)
+
+                    End While
+                End Using
+            End Using
+        End Using
+
     End Sub
+
+
+    Private Sub CloseCaseHistory_Btn_Click(sender As Object, e As EventArgs) Handles CloseCaseHistory_Btn.Click
+        Panel1.Visible = False
+    End Sub
+
 
 End Class
