@@ -155,8 +155,7 @@ Partial Class g4_EmployeeID
         lblPosition.BackColor = Color.Transparent
         lblPosition.Font = New Font("Segoe UI", 9F)
         lblPosition.ForeColor = Color.White
-        lblPosition.Location = New Point(15, 280)
-        lblPosition.MaximumSize = New Size(250, 0)
+        lblPosition.Location = New Point(15, 278)
         lblPosition.Name = "lblPosition"
         lblPosition.Size = New Size(245, 35)
         lblPosition.TabIndex = 5
