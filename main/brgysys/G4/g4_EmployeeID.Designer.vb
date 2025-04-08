@@ -70,7 +70,7 @@ Partial Class g4_EmployeeID
         ' 
         IDNumberlbl.Anchor = AnchorStyles.None
         IDNumberlbl.BackColor = Color.Transparent
-        IDNumberlbl.Font = New Font("Calibri", 13.2000008F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        IDNumberlbl.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
         IDNumberlbl.ForeColor = Color.White
         IDNumberlbl.Location = New Point(38, 324)
         IDNumberlbl.Name = "IDNumberlbl"

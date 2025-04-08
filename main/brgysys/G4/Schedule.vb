@@ -192,6 +192,7 @@ Public Class Schedule
     End Sub
 
     Private Sub LoadShiftsII()
+        cboFilter.Items.Clear()
         cboFilter.Items.Add("All")
         cboFilter.Items.Add("Barangay Tanod")
         cboFilter.Items.Add("Barangay Health Worker")
@@ -208,38 +209,38 @@ Public Class Schedule
                 Case "Barangay Health Worker"
                     query = "SELECT ShiftID, EmployeeName, EmployeeID, Role, ShiftDate, StartTime, EndTime FROM g4_ShiftSchedule where Role='Barangay Health Worker'"
             End Select
-         
+
         End If
 
         'Dim query As String = "SELECT ShiftID, EmployeeName, EmployeeID, Role, ShiftDate, StartTime, EndTime FROM g4_ShiftSchedule where employeeid='" & cboFilter.Text & "'"
 
         Using conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
-                conn.Open()
+            conn.Open()
 
-                Using cmd As New SqlCommand(query, conn)
-                    Dim adapter As New SqlDataAdapter(cmd)
-                    Dim dt As New DataTable()
-                    adapter.Fill(dt)
+            Using cmd As New SqlCommand(query, conn)
+                Dim adapter As New SqlDataAdapter(cmd)
+                Dim dt As New DataTable()
+                adapter.Fill(dt)
 
-                    ' Add formatted columns for display
-                    dt.Columns.Add("Start Time", GetType(String))
-                    dt.Columns.Add("End Time", GetType(String))
+                ' Add formatted columns for display
+                dt.Columns.Add("Start Time", GetType(String))
+                dt.Columns.Add("End Time", GetType(String))
 
-                    For Each row As DataRow In dt.Rows
-                        ' Convert TimeSpan to DateTime for AM/PM formatting
-                        Dim startTime As TimeSpan = CType(row("StartTime"), TimeSpan)
-                        Dim endTime As TimeSpan = CType(row("EndTime"), TimeSpan)
+                For Each row As DataRow In dt.Rows
+                    ' Convert TimeSpan to DateTime for AM/PM formatting
+                    Dim startTime As TimeSpan = CType(row("StartTime"), TimeSpan)
+                    Dim endTime As TimeSpan = CType(row("EndTime"), TimeSpan)
 
-                        row("Start Time") = New DateTime(1, 1, 1, startTime.Hours, startTime.Minutes, 0).ToString("h:mm tt")
-                        row("End Time") = New DateTime(1, 1, 1, endTime.Hours, endTime.Minutes, 0).ToString("h:mm tt")
-                    Next
+                    row("Start Time") = New DateTime(1, 1, 1, startTime.Hours, startTime.Minutes, 0).ToString("h:mm tt")
+                    row("End Time") = New DateTime(1, 1, 1, endTime.Hours, endTime.Minutes, 0).ToString("h:mm tt")
+                Next
 
-                    ' Bind only the formatted time columns
-                    DataGridViewShifts.DataSource = dt
-                    DataGridViewShifts.Columns("StartTime").Visible = False
-                    DataGridViewShifts.Columns("EndTime").Visible = False
-                End Using
+                ' Bind only the formatted time columns
+                DataGridViewShifts.DataSource = dt
+                DataGridViewShifts.Columns("StartTime").Visible = False
+                DataGridViewShifts.Columns("EndTime").Visible = False
             End Using
+        End Using
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

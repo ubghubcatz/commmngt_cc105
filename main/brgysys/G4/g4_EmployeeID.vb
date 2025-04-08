@@ -153,5 +153,7 @@ Public Class g4_EmployeeID
         Return bmp
     End Function
 
+    Private Sub g4_EmployeeID_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

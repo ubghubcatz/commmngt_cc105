@@ -8,8 +8,9 @@ Public Class Attendance
     Dim conn As New SqlConnection("Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True")
     Dim captureDevice As FilterInfoCollection
     Dim videoSource As VideoCaptureDevice
-    Private WithEvents scanTimer As New Timer()
 
+    Private WithEvents scanTimer As New Timer()
+    Private WithEvents clearTimer As New Timer() ' ✅ Added this
 
     ' Automatically start scanning when the form loads
     Private Sub Attendance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,41 +29,24 @@ Public Class Attendance
     Private Sub CaptureFrame(sender As Object, eventArgs As NewFrameEventArgs)
         Try
             Dim frame As Bitmap = DirectCast(eventArgs.Frame.Clone(), Bitmap)
-
-            ' Flip the image horizontally (mirror effect)
             frame.RotateFlip(RotateFlipType.RotateNoneFlipX)
-
-            ' Display mirrored image in PictureBox
             pbCamera.Image = frame
         Catch ex As Exception
             MessageBox.Show("Error capturing frame: " & ex.Message, "Camera Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 
-
     ' Timer to check for QR codes
     Sub scanTimer_Tick(sender As Object, e As EventArgs) Handles scanTimer.Tick
-        ' Check if the PictureBox contains an image
-        If pbCamera.Image Is Nothing Then
-            Exit Sub ' Exit if there's no image
-        End If
+        If pbCamera.Image Is Nothing Then Exit Sub
 
         Try
-            ' Convert PictureBox image to Bitmap
             Dim bitmap As New Bitmap(pbCamera.Image)
-
-            ' Flip the image if necessary (mirrored input)
             bitmap.RotateFlip(RotateFlipType.RotateNoneFlipX)
-
-            ' Create a BarcodeReader instance
             Dim Reader As New BarcodeReader()
-
-            ' Decode the QR code from the Bitmap
             Dim result As Result = Reader.Decode(bitmap)
 
-            If result Is Nothing Then
-                Exit Sub ' Prevents the error if no QR code is found
-            End If
+            If result Is Nothing Then Exit Sub
 
             Dim empID As String = result.Text.Trim()
             scanTimer.Stop()
@@ -73,13 +57,11 @@ Public Class Attendance
         End Try
     End Sub
 
-
     ' Process Attendance based on Employee ID from QR
     Private Sub ProcessAttendance(empID As String)
         Try
             conn.Open()
 
-            ' Retrieve employee details
             Dim query As String = "SELECT e.PhotoPath, ed.EmployeeName, ed.Position, ed.EmployeeID 
                                    FROM g4_EmployeeDetails ed 
                                    INNER JOIN g4_EmployeesInfo e ON ed.EmployeeID = e.EmployeeID 
@@ -120,7 +102,6 @@ Public Class Attendance
             End If
             reader.Close()
 
-            ' Retrieve last Time In and Time Out
             Dim timeQuery As String = "SELECT ScanTime, ScanType FROM g4_EmployeeAttendance WHERE EmployeeID = @empID ORDER BY ScanTime DESC"
             Dim timeCmd As New SqlCommand(timeQuery, conn)
             timeCmd.Parameters.AddWithValue("@empID", empID)
@@ -146,21 +127,17 @@ Public Class Attendance
             End While
             timeReader.Close()
 
-            ' Display last recorded Time In and Time Out
             lblTimeIn.Text = lastTimeIn
             lblTimeOut.Text = lastTimeOut
 
-            ' Determine next scan type (toggle between IN and OUT)
             Dim newScanType As String = If(lastScanType = "IN", "OUT", "IN")
 
-            ' Insert new time record
             Dim insertQuery As String = "INSERT INTO g4_EmployeeAttendance (EmployeeID, ScanTime, ScanType) VALUES (@empID, GETDATE(), @scanType)"
             Dim insertCmd As New SqlCommand(insertQuery, conn)
             insertCmd.Parameters.AddWithValue("@empID", empID)
             insertCmd.Parameters.AddWithValue("@scanType", newScanType)
             insertCmd.ExecuteNonQuery()
 
-            ' Update labels with new scan time
             If newScanType = "IN" Then
                 lblTimeIn.Text = DateTime.Now.ToString("hh:mm:ss tt")
                 lblTimeOut.Text = "N/A"
@@ -170,6 +147,10 @@ Public Class Attendance
                 MessageBox.Show("Time Out recorded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
+            ' ✅ Start the clear timer after success
+            clearTimer.Interval = 5000 ' 5 seconds
+            clearTimer.Start()
+
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         Finally
@@ -178,12 +159,21 @@ Public Class Attendance
         End Try
     End Sub
 
+    ' ✅ Auto-clear fields after delay
+    Private Sub clearTimer_Tick(sender As Object, e As EventArgs) Handles clearTimer.Tick
+        lblName.Text = ""
+        lblPosition.Text = ""
+        lblID.Text = ""
+        lblTimeIn.Text = ""
+        lblTimeOut.Text = ""
+        pbEmployeePhoto.Image = Nothing
+        clearTimer.Stop()
+    End Sub
+
     ' Stop camera when form is closed
     Private Sub Attendance_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         If videoSource IsNot Nothing AndAlso videoSource.IsRunning Then
             videoSource.SignalToStop()
         End If
     End Sub
-
-
 End Class
