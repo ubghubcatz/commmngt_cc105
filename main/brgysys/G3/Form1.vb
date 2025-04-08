@@ -28,7 +28,7 @@ Public Class g3CommandCenter_Form
         Me.TopMost = True
         ' Set background images for buttons
         CallLogging_Btn.BackgroundImage = My.Resources.ResourceManager.GetObject("CallLogs_Open(1)") 'G3.brgysys.Resources.CallLogs_Open__1_
-        CaseRecords_Btn.BackgroundImage = My.Resources.ResourceManager.GetObject("CaseRecord_Close") 'G3.brgysys.CaseRecord_Close 'My.Resources.CaseRecord_Close
+        CaseRecords_Btn.BackgroundImage = My.Resources.CaseRecord_Close '.Resources.ResourceManager.GetObject("CaseRecord_Close") 'G3.brgysys.CaseRecord_Close 'My.Resources.CaseRecord_Close
 
         ' Initialize the table with data
         InsertTable()
