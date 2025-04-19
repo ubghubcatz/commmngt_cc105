@@ -40,9 +40,10 @@ Partial Class privateVENUE
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(511, 52)
+        Label14.Location = New Point(639, 65)
+        Label14.Margin = New Padding(4, 0, 4, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(170, 46)
+        Label14.Size = New Size(207, 60)
         Label14.TabIndex = 33
         Label14.Text = "Lipa City, Batangas, " & vbCrLf & "Philippines, 4217" & vbCrLf
         ' 
@@ -50,9 +51,10 @@ Partial Class privateVENUE
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(511, 27)
+        Label13.Location = New Point(639, 34)
+        Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(87, 28)
+        Label13.Size = New Size(106, 32)
         Label13.TabIndex = 32
         Label13.Text = "Address"
         ' 
@@ -60,9 +62,10 @@ Partial Class privateVENUE
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label10.Location = New Point(511, 285)
+        Label10.Location = New Point(639, 371)
+        Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(135, 92)
+        Label10.Size = New Size(169, 120)
         Label10.TabIndex = 26
         Label10.Text = "Contact Person: " & vbCrLf & "Led Tron Mark" & vbCrLf & "Phone: " & vbCrLf & "0955 063 9822"
         ' 
@@ -70,10 +73,11 @@ Partial Class privateVENUE
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(511, 257)
+        Label6.Location = New Point(639, 339)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.RightToLeft = RightToLeft.Yes
-        Label6.Size = New Size(210, 28)
+        Label6.Size = New Size(254, 32)
         Label6.TabIndex = 25
         Label6.Text = " Contact Information"
         ' 
@@ -81,9 +85,10 @@ Partial Class privateVENUE
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(511, 117)
+        Label5.Location = New Point(639, 146)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(94, 28)
+        Label5.Size = New Size(111, 32)
         Label5.TabIndex = 24
         Label5.Text = "Facilities"
         ' 
@@ -91,19 +96,21 @@ Partial Class privateVENUE
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label1.Location = New Point(511, 142)
+        Label1.Location = New Point(639, 178)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(306, 92)
+        Label1.Size = New Size(385, 150)
         Label1.TabIndex = 20
-        Label1.Text = "•Modern interiors and exteriors, " & vbCrLf & "perfect for all kinds of celebrations, " & vbCrLf & "especially pool parties; " & vbCrLf & "capacity details available upon inquiry." & vbCrLf
+        Label1.Text = "•Modern interiors and exteriors, " & vbCrLf & "perfect for all kinds of celebrations, " & vbCrLf & "especially pool parties." & vbCrLf & vbCrLf & "Capacity details available upon inquiry." & vbCrLf
         ' 
         ' PictureBox3
         ' 
         PictureBox3.BackgroundImage = My.Resources.Resources.private3
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(8, 352)
+        PictureBox3.Location = New Point(10, 440)
+        PictureBox3.Margin = New Padding(4, 4, 4, 4)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(497, 163)
+        PictureBox3.Size = New Size(621, 204)
         PictureBox3.TabIndex = 39
         PictureBox3.TabStop = False
         ' 
@@ -111,9 +118,10 @@ Partial Class privateVENUE
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.private2
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(8, 12)
+        PictureBox2.Location = New Point(10, 15)
+        PictureBox2.Margin = New Padding(4, 4, 4, 4)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(497, 163)
+        PictureBox2.Size = New Size(621, 204)
         PictureBox2.TabIndex = 38
         PictureBox2.TabStop = False
         ' 
@@ -121,19 +129,20 @@ Partial Class privateVENUE
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.private1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(8, 181)
+        PictureBox1.Location = New Point(10, 226)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(497, 165)
+        PictureBox1.Size = New Size(621, 206)
         PictureBox1.TabIndex = 37
         PictureBox1.TabStop = False
         ' 
         ' privateVENUE
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(911, 527)
+        ClientSize = New Size(1139, 659)
         Controls.Add(PictureBox3)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
@@ -144,6 +153,7 @@ Partial Class privateVENUE
         Controls.Add(Label5)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "privateVENUE"
         Text = "privateVENUE"
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()

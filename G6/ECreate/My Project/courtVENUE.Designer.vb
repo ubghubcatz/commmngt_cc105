@@ -38,9 +38,10 @@ Partial Class courtVENUE
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(511, 52)
+        Label14.Location = New Point(639, 65)
+        Label14.Margin = New Padding(4, 0, 4, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(175, 46)
+        Label14.Size = New Size(215, 60)
         Label14.TabIndex = 33
         Label14.Text = "Barangay Inosluban, " & vbCrLf & "Lipa City, Batangas"
         ' 
@@ -48,9 +49,10 @@ Partial Class courtVENUE
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(511, 27)
+        Label13.Location = New Point(639, 34)
+        Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(87, 28)
+        Label13.Size = New Size(106, 32)
         Label13.TabIndex = 32
         Label13.Text = "Address"
         ' 
@@ -58,9 +60,10 @@ Partial Class courtVENUE
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label10.Location = New Point(511, 259)
+        Label10.Location = New Point(639, 324)
+        Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(180, 46)
+        Label10.Size = New Size(222, 60)
         Label10.TabIndex = 26
         Label10.Text = "Barangay Hall Phone: " & vbCrLf & "+63 (43) 404-3035" & vbCrLf
         ' 
@@ -68,10 +71,11 @@ Partial Class courtVENUE
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(511, 231)
+        Label6.Location = New Point(639, 289)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.RightToLeft = RightToLeft.Yes
-        Label6.Size = New Size(210, 28)
+        Label6.Size = New Size(254, 32)
         Label6.TabIndex = 25
         Label6.Text = " Contact Information"
         ' 
@@ -79,9 +83,10 @@ Partial Class courtVENUE
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(511, 113)
+        Label5.Location = New Point(639, 141)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(94, 28)
+        Label5.Size = New Size(111, 32)
         Label5.TabIndex = 24
         Label5.Text = "Facilities"
         ' 
@@ -89,19 +94,21 @@ Partial Class courtVENUE
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label1.Location = New Point(511, 141)
+        Label1.Location = New Point(639, 176)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(371, 92)
+        Label1.Size = New Size(468, 120)
         Label1.TabIndex = 20
-        Label1.Text = "•Covered Court" & vbCrLf & "capacity details can be obtained by contacting " & vbCrLf & "the Barangay Hall" & vbCrLf & vbCrLf
+        Label1.Text = "•Covered Court" & vbCrLf & "Capacity details can be obtained by contacting " & vbCrLf & "the Barangay Hall." & vbCrLf & vbCrLf
         ' 
         ' PictureBox2
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.court2
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(8, 266)
+        PictureBox2.Location = New Point(10, 332)
+        PictureBox2.Margin = New Padding(4, 4, 4, 4)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(497, 249)
+        PictureBox2.Size = New Size(621, 311)
         PictureBox2.TabIndex = 18
         PictureBox2.TabStop = False
         ' 
@@ -109,19 +116,20 @@ Partial Class courtVENUE
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.court1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(8, 11)
+        PictureBox1.Location = New Point(10, 14)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(497, 249)
+        PictureBox1.Size = New Size(621, 311)
         PictureBox1.TabIndex = 17
         PictureBox1.TabStop = False
         ' 
         ' courtVENUE
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(911, 527)
+        ClientSize = New Size(1139, 659)
         Controls.Add(Label14)
         Controls.Add(Label13)
         Controls.Add(Label10)
@@ -131,6 +139,7 @@ Partial Class courtVENUE
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "courtVENUE"
         Text = "courtVENUE"
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()

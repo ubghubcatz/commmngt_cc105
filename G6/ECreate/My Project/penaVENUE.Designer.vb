@@ -40,9 +40,10 @@ Partial Class penaVENUE
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(511, 52)
+        Label14.Location = New Point(639, 65)
+        Label14.Margin = New Padding(4, 0, 4, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(183, 46)
+        Label14.Size = New Size(229, 60)
         Label14.TabIndex = 33
         Label14.Text = "Purok 1, Brgy. Talisay, " & vbCrLf & "Lipa City, Batangas"
         ' 
@@ -50,9 +51,10 @@ Partial Class penaVENUE
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(511, 27)
+        Label13.Location = New Point(639, 34)
+        Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(87, 28)
+        Label13.Size = New Size(106, 32)
         Label13.TabIndex = 32
         Label13.Text = "Address"
         ' 
@@ -60,9 +62,10 @@ Partial Class penaVENUE
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label11.Location = New Point(511, 219)
+        Label11.Location = New Point(639, 274)
+        Label11.Margin = New Padding(4, 0, 4, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(285, 92)
+        Label11.Size = New Size(356, 120)
         Label11.TabIndex = 30
         Label11.Text = "Email: " & vbCrLf & "penafranciaeventsplace@gmail.com" & vbCrLf & "Website: " & vbCrLf & "Peñafrancia Events Place"
         ' 
@@ -70,10 +73,11 @@ Partial Class penaVENUE
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(511, 191)
+        Label6.Location = New Point(639, 239)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.RightToLeft = RightToLeft.Yes
-        Label6.Size = New Size(210, 28)
+        Label6.Size = New Size(254, 32)
         Label6.TabIndex = 25
         Label6.Text = " Contact Information"
         ' 
@@ -81,9 +85,10 @@ Partial Class penaVENUE
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(511, 108)
+        Label5.Location = New Point(639, 135)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(94, 28)
+        Label5.Size = New Size(111, 32)
         Label5.TabIndex = 24
         Label5.Text = "Facilities"
         ' 
@@ -91,19 +96,21 @@ Partial Class penaVENUE
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label1.Location = New Point(511, 133)
+        Label1.Location = New Point(639, 166)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(306, 46)
+        Label1.Size = New Size(385, 60)
         Label1.TabIndex = 20
-        Label1.Text = "Suitable for various events; " & vbCrLf & "capacity details available upon inquiry." & vbCrLf
+        Label1.Text = "Suitable for various events; " & vbCrLf & "Capacity details available upon inquiry." & vbCrLf
         ' 
         ' PictureBox3
         ' 
         PictureBox3.BackgroundImage = My.Resources.Resources.pena3
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(8, 352)
+        PictureBox3.Location = New Point(10, 440)
+        PictureBox3.Margin = New Padding(4, 4, 4, 4)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(497, 163)
+        PictureBox3.Size = New Size(621, 204)
         PictureBox3.TabIndex = 36
         PictureBox3.TabStop = False
         ' 
@@ -111,9 +118,10 @@ Partial Class penaVENUE
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.pena2
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(8, 12)
+        PictureBox2.Location = New Point(10, 15)
+        PictureBox2.Margin = New Padding(4, 4, 4, 4)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(497, 163)
+        PictureBox2.Size = New Size(621, 204)
         PictureBox2.TabIndex = 35
         PictureBox2.TabStop = False
         ' 
@@ -121,19 +129,20 @@ Partial Class penaVENUE
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.pena1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(8, 181)
+        PictureBox1.Location = New Point(10, 226)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(497, 165)
+        PictureBox1.Size = New Size(621, 206)
         PictureBox1.TabIndex = 34
         PictureBox1.TabStop = False
         ' 
         ' penaVENUE
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(911, 527)
+        ClientSize = New Size(1139, 659)
         Controls.Add(PictureBox3)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
@@ -144,6 +153,7 @@ Partial Class penaVENUE
         Controls.Add(Label5)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "penaVENUE"
         Text = "penaVENUE"
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
