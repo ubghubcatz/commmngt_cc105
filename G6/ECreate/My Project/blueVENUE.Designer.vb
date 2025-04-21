@@ -40,19 +40,21 @@ Partial Class blueVENUE
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(511, 55)
+        Label14.Location = New Point(639, 69)
+        Label14.Margin = New Padding(4, 0, 4, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(355, 69)
+        Label14.Size = New Size(439, 90)
         Label14.TabIndex = 33
-        Label14.Text = "Purok 5, Barangay Sico, " & vbCrLf & "Lipa City, Batangas " & vbCrLf & "(across the main gate of Fernando Air Base) "
+        Label14.Text = "Purok 5, Barangay Sico, " & vbCrLf & "Lipa City, Batangas " & vbCrLf & "(Across the main gate of Fernando Air Base) "
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(511, 27)
+        Label13.Location = New Point(639, 34)
+        Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(87, 28)
+        Label13.Size = New Size(106, 32)
         Label13.TabIndex = 32
         Label13.Text = "Address"
         ' 
@@ -60,9 +62,10 @@ Partial Class blueVENUE
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label10.Location = New Point(511, 251)
+        Label10.Location = New Point(639, 314)
+        Label10.Margin = New Padding(4, 0, 4, 0)
         Label10.Name = "Label10"
-        Label10.Size = New Size(260, 46)
+        Label10.Size = New Size(330, 60)
         Label10.TabIndex = 26
         Label10.Text = "Phone: " & vbCrLf & "(043) 774 2245 or 0915 445 5225"
         ' 
@@ -70,10 +73,11 @@ Partial Class blueVENUE
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(511, 223)
+        Label6.Location = New Point(639, 279)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.RightToLeft = RightToLeft.Yes
-        Label6.Size = New Size(210, 28)
+        Label6.Size = New Size(254, 32)
         Label6.TabIndex = 25
         Label6.Text = " Contact Information"
         ' 
@@ -81,9 +85,10 @@ Partial Class blueVENUE
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(511, 138)
+        Label5.Location = New Point(639, 172)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(94, 28)
+        Label5.Size = New Size(111, 32)
         Label5.TabIndex = 24
         Label5.Text = "Facilities"
         ' 
@@ -91,9 +96,10 @@ Partial Class blueVENUE
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label1.Location = New Point(511, 163)
+        Label1.Location = New Point(639, 204)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(376, 46)
+        Label1.Size = New Size(469, 60)
         Label1.TabIndex = 20
         Label1.Text = "Offers party venues suitable for various events; " & vbCrLf & "capacity details available upon inquiry." & vbCrLf
         ' 
@@ -101,9 +107,10 @@ Partial Class blueVENUE
         ' 
         PictureBox3.BackgroundImage = My.Resources.Resources.blue3
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(8, 282)
+        PictureBox3.Location = New Point(10, 352)
+        PictureBox3.Margin = New Padding(4, 4, 4, 4)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(231, 231)
+        PictureBox3.Size = New Size(289, 289)
         PictureBox3.TabIndex = 19
         PictureBox3.TabStop = False
         ' 
@@ -111,9 +118,10 @@ Partial Class blueVENUE
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.blue2
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(245, 282)
+        PictureBox2.Location = New Point(306, 352)
+        PictureBox2.Margin = New Padding(4, 4, 4, 4)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(260, 231)
+        PictureBox2.Size = New Size(325, 289)
         PictureBox2.TabIndex = 18
         PictureBox2.TabStop = False
         ' 
@@ -121,19 +129,20 @@ Partial Class blueVENUE
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.blue1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(8, 16)
+        PictureBox1.Location = New Point(10, 20)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(497, 261)
+        PictureBox1.Size = New Size(621, 326)
         PictureBox1.TabIndex = 17
         PictureBox1.TabStop = False
         ' 
         ' blueVENUE
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(911, 527)
+        ClientSize = New Size(1139, 659)
         Controls.Add(Label14)
         Controls.Add(Label13)
         Controls.Add(Label10)
@@ -144,6 +153,7 @@ Partial Class blueVENUE
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "blueVENUE"
         Text = "blueVENUE"
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()

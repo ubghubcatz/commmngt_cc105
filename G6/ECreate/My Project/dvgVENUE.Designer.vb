@@ -44,9 +44,10 @@ Partial Class dvgVENUE
         ' 
         Label14.AutoSize = True
         Label14.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold Or FontStyle.Italic, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(511, 52)
+        Label14.Location = New Point(639, 65)
+        Label14.Margin = New Padding(4, 0, 4, 0)
         Label14.Name = "Label14"
-        Label14.Size = New Size(170, 46)
+        Label14.Size = New Size(207, 60)
         Label14.TabIndex = 33
         Label14.Text = "Lipa City, Batangas, " & vbCrLf & "Philippines, 4217" & vbCrLf
         ' 
@@ -54,9 +55,10 @@ Partial Class dvgVENUE
         ' 
         Label13.AutoSize = True
         Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.Location = New Point(511, 27)
+        Label13.Location = New Point(639, 34)
+        Label13.Margin = New Padding(4, 0, 4, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(87, 28)
+        Label13.Size = New Size(106, 32)
         Label13.TabIndex = 32
         Label13.Text = "Address"
         ' 
@@ -64,9 +66,10 @@ Partial Class dvgVENUE
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label12.Location = New Point(511, 319)
+        Label12.Location = New Point(639, 399)
+        Label12.Margin = New Padding(4, 0, 4, 0)
         Label12.Name = "Label12"
-        Label12.Size = New Size(204, 69)
+        Label12.Size = New Size(252, 90)
         Label12.TabIndex = 31
         Label12.Text = "Website: " & vbCrLf & "Divine Grace Leisure Park" & vbCrLf & vbCrLf
         ' 
@@ -74,9 +77,10 @@ Partial Class dvgVENUE
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label11.Location = New Point(511, 273)
+        Label11.Location = New Point(639, 341)
+        Label11.Margin = New Padding(4, 0, 4, 0)
         Label11.Name = "Label11"
-        Label11.Size = New Size(289, 46)
+        Label11.Size = New Size(362, 60)
         Label11.TabIndex = 30
         Label11.Text = "Email: " & vbCrLf & "inquiry@divinegraceleisurepark.com" & vbCrLf
         ' 
@@ -84,10 +88,11 @@ Partial Class dvgVENUE
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label6.Location = New Point(511, 245)
+        Label6.Location = New Point(639, 306)
+        Label6.Margin = New Padding(4, 0, 4, 0)
         Label6.Name = "Label6"
         Label6.RightToLeft = RightToLeft.Yes
-        Label6.Size = New Size(210, 28)
+        Label6.Size = New Size(254, 32)
         Label6.TabIndex = 25
         Label6.Text = " Contact Information"
         ' 
@@ -95,9 +100,10 @@ Partial Class dvgVENUE
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(511, 115)
+        Label5.Location = New Point(639, 144)
+        Label5.Margin = New Padding(4, 0, 4, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(94, 28)
+        Label5.Size = New Size(111, 32)
         Label5.TabIndex = 24
         Label5.Text = "Facilities"
         ' 
@@ -105,9 +111,10 @@ Partial Class dvgVENUE
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label3.Location = New Point(511, 180)
+        Label3.Location = New Point(639, 225)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(145, 23)
+        Label3.Size = New Size(184, 30)
         Label3.TabIndex = 22
         Label3.Text = "•Outdoor Gazebo" & vbCrLf
         ' 
@@ -115,9 +122,10 @@ Partial Class dvgVENUE
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label2.Location = New Point(511, 160)
+        Label2.Location = New Point(639, 200)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(137, 23)
+        Label2.Size = New Size(171, 30)
         Label2.TabIndex = 21
         Label2.Text = "•Seminar Rooms"
         ' 
@@ -125,9 +133,10 @@ Partial Class dvgVENUE
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label1.Location = New Point(511, 140)
+        Label1.Location = New Point(639, 175)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(98, 23)
+        Label1.Size = New Size(122, 30)
         Label1.TabIndex = 20
         Label1.Text = "•Clubhouse" & vbCrLf
         ' 
@@ -135,9 +144,10 @@ Partial Class dvgVENUE
         ' 
         PictureBox3.BackgroundImage = My.Resources.Resources.dvg3
         PictureBox3.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox3.Location = New Point(8, 352)
+        PictureBox3.Location = New Point(10, 440)
+        PictureBox3.Margin = New Padding(4, 4, 4, 4)
         PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(497, 163)
+        PictureBox3.Size = New Size(621, 204)
         PictureBox3.TabIndex = 19
         PictureBox3.TabStop = False
         ' 
@@ -145,9 +155,10 @@ Partial Class dvgVENUE
         ' 
         PictureBox2.BackgroundImage = My.Resources.Resources.dvg2
         PictureBox2.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox2.Location = New Point(8, 12)
+        PictureBox2.Location = New Point(10, 15)
+        PictureBox2.Margin = New Padding(4, 4, 4, 4)
         PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(497, 163)
+        PictureBox2.Size = New Size(621, 204)
         PictureBox2.TabIndex = 18
         PictureBox2.TabStop = False
         ' 
@@ -155,9 +166,10 @@ Partial Class dvgVENUE
         ' 
         PictureBox1.BackgroundImage = My.Resources.Resources.dvg1
         PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
-        PictureBox1.Location = New Point(8, 181)
+        PictureBox1.Location = New Point(10, 226)
+        PictureBox1.Margin = New Padding(4, 4, 4, 4)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(497, 165)
+        PictureBox1.Size = New Size(621, 206)
         PictureBox1.TabIndex = 17
         PictureBox1.TabStop = False
         ' 
@@ -165,19 +177,20 @@ Partial Class dvgVENUE
         ' 
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold)
-        Label4.Location = New Point(511, 222)
+        Label4.Location = New Point(639, 278)
+        Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(315, 23)
+        Label4.Size = New Size(395, 30)
         Label4.TabIndex = 34
-        Label4.Text = "(capacity details available upon inquiry)" & vbCrLf
+        Label4.Text = "(Capacity details available upon inquiry)" & vbCrLf
         ' 
         ' dvgVENUE
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.FromArgb(CByte(212), CByte(238), CByte(226))
-        ClientSize = New Size(911, 527)
+        ClientSize = New Size(1139, 659)
         Controls.Add(Label4)
         Controls.Add(Label14)
         Controls.Add(Label13)
@@ -192,6 +205,7 @@ Partial Class dvgVENUE
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         FormBorderStyle = FormBorderStyle.None
+        Margin = New Padding(4, 4, 4, 4)
         Name = "dvgVENUE"
         Text = "dvgVENUE"
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
