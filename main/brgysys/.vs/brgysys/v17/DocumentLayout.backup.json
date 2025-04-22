@@ -1,87 +1,87 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\",
+  "WorkspaceRootPath": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\trisha\\commmngt_cc105\\main\\brgysys\\splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\mendo\\onedrive\\documents\\github\\commmngt_cc105\\main\\brgysys\\splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     }
   ],
@@ -92,19 +92,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "g4_EmployeeID.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb [Design]",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb [Design]",
               "RelativeToolTip": "G4\\g4_EmployeeID.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-02T13:11:45.069Z",
@@ -112,24 +108,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Attendance.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeToolTip": "G4\\Attendance.vb",
-              "ViewState": "AgIAABwAAAAAAAAAAAA8wCsAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAA8wD4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-03T01:34:24.588Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-03T01:34:24.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "List.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
               "RelativeDocumentMoniker": "G4\\List.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
               "RelativeToolTip": "G4\\List.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-03T01:35:30.927Z",
@@ -137,76 +132,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "List.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
               "RelativeDocumentMoniker": "G4\\List.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
               "RelativeToolTip": "G4\\List.vb",
               "ViewState": "AgIAABcAAAAAAAAAAAASwDYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-07T23:49:00.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T23:49:00.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Schedule.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeToolTip": "G4\\Schedule.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-27T00:31:54.807Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-27T00:31:54.807Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "g4_EmployeeID.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeToolTip": "G4\\g4_EmployeeID.vb",
               "ViewState": "AgIAAGcAAAAAAAAAAAAkwG4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T13:50:41.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:50:41.359Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "MDIBrgySys.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeToolTip": "MDIBrgySys.vb",
               "ViewState": "AgIAAGUAAAAAAAAAAAAvwH0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T13:28:39.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:28:39.226Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "List.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
               "RelativeDocumentMoniker": "G4\\List.Designer.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
               "RelativeToolTip": "G4\\List.Designer.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T14:06:59.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T14:06:59.728Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "MDIBrgySys.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb [Design]",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb [Design]",
               "RelativeToolTip": "MDIBrgySys.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-05T12:42:28.493Z",
@@ -216,9 +206,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Schedule.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb [Design]",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb [Design]",
               "RelativeToolTip": "G4\\Schedule.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-27T00:34:56.55Z",
@@ -228,9 +218,9 @@
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Attendance.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb [Design]",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb [Design]",
               "RelativeToolTip": "G4\\Attendance.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-02T12:45:13.827Z",
@@ -240,9 +230,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "brgysys",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
               "RelativeDocumentMoniker": "brgysys.vbproj",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
               "RelativeToolTip": "brgysys.vbproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
               "WhenOpened": "2025-03-25T00:49:57.346Z"
@@ -252,9 +242,9 @@
               "DocumentIndex": 14,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ViewState": "AgIAAGENAAAAAAAAAAAhwGYNAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-03-25T00:21:35.747Z"
@@ -263,9 +253,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "app.manifest",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
               "RelativeDocumentMoniker": "My Project\\app.manifest",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
               "RelativeToolTip": "My Project\\app.manifest",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
@@ -276,9 +266,9 @@
               "DocumentIndex": 12,
               "Title": "WindowsFormsApplicationBase.cs",
               "DocumentMoniker": "C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
               "ToolTip": "C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T00:51:50.925Z"
             },
@@ -286,9 +276,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "SplashScreen1.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
               "RelativeDocumentMoniker": "SplashScreen1.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
               "RelativeToolTip": "SplashScreen1.vb",
               "ViewState": "AgIAACgAAAAAAAAAAAAowDMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -298,9 +288,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "frmLogin.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
               "RelativeDocumentMoniker": "frmLogin.Designer.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
               "RelativeToolTip": "frmLogin.Designer.vb",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -310,9 +300,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "frmLogin.vb",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeToolTip": "frmLogin.vb",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowBYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -322,9 +312,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "frmLogin.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.vb [Design]",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb [Design]",
               "RelativeToolTip": "frmLogin.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-05T12:35:06.954Z",
@@ -334,9 +324,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "frmLogin.resx",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
               "RelativeDocumentMoniker": "frmLogin.resx",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
               "RelativeToolTip": "frmLogin.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-03-05T12:43:28.184Z"
@@ -345,9 +335,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "SplashScreen1.resx",
-              "DocumentMoniker": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
+              "DocumentMoniker": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
               "RelativeDocumentMoniker": "SplashScreen1.resx",
-              "ToolTip": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
+              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
               "RelativeToolTip": "SplashScreen1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-03-05T13:58:14.924Z"

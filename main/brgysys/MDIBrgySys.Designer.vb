@@ -32,6 +32,7 @@ Partial Class MDIBrgySys
         AttendanceToolStripMenuItem = New ToolStripMenuItem()
         SchedulingToolStripMenuItem = New ToolStripMenuItem()
         EmployeeIDToolStripMenuItem = New ToolStripMenuItem()
+        EmployeeListToolStripMenuItem = New ToolStripMenuItem()
         OpenToolStripMenuItem = New ToolStripMenuItem()
         ToolStripSeparator3 = New ToolStripSeparator()
         SaveToolStripMenuItem = New ToolStripMenuItem()
@@ -81,7 +82,10 @@ Partial Class MDIBrgySys
         StatusStrip = New StatusStrip()
         ToolStripStatusLabel = New ToolStripStatusLabel()
         ToolTip = New ToolTip(components)
-        EmployeeListToolStripMenuItem = New ToolStripMenuItem()
+        ToolStripMenuItem1 = New ToolStripMenuItem()
+        ToolStripMenuItem2 = New ToolStripMenuItem()
+        ToolStripMenuItem3 = New ToolStripMenuItem()
+        History = New ToolStripMenuItem()
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
         StatusStrip.SuspendLayout()
@@ -101,7 +105,7 @@ Partial Class MDIBrgySys
         ' 
         ' FileMenu
         ' 
-        FileMenu.DropDownItems.AddRange(New ToolStripItem() {NewToolStripMenuItem, OpenToolStripMenuItem, ToolStripSeparator3, SaveToolStripMenuItem, SaveAsToolStripMenuItem, ToolStripSeparator4, PrintToolStripMenuItem, PrintPreviewToolStripMenuItem, PrintSetupToolStripMenuItem, ToolStripSeparator5, ExitToolStripMenuItem})
+        FileMenu.DropDownItems.AddRange(New ToolStripItem() {NewToolStripMenuItem, OpenToolStripMenuItem, ToolStripMenuItem1, ToolStripSeparator3, SaveToolStripMenuItem, SaveAsToolStripMenuItem, ToolStripSeparator4, PrintToolStripMenuItem, PrintPreviewToolStripMenuItem, PrintSetupToolStripMenuItem, ToolStripSeparator5, ExitToolStripMenuItem})
         FileMenu.ImageTransparentColor = SystemColors.ActiveBorder
         FileMenu.Name = "FileMenu"
         FileMenu.Size = New Size(78, 24)
@@ -140,6 +144,12 @@ Partial Class MDIBrgySys
         EmployeeIDToolStripMenuItem.Name = "EmployeeIDToolStripMenuItem"
         EmployeeIDToolStripMenuItem.Size = New Size(224, 26)
         EmployeeIDToolStripMenuItem.Text = "Employee ID "
+        ' 
+        ' EmployeeListToolStripMenuItem
+        ' 
+        EmployeeListToolStripMenuItem.Name = "EmployeeListToolStripMenuItem"
+        EmployeeListToolStripMenuItem.Size = New Size(224, 26)
+        EmployeeListToolStripMenuItem.Text = "Employee List"
         ' 
         ' OpenToolStripMenuItem
         ' 
@@ -491,11 +501,30 @@ Partial Class MDIBrgySys
         ToolStripStatusLabel.Size = New Size(49, 20)
         ToolStripStatusLabel.Text = "Status"
         ' 
-        ' EmployeeListToolStripMenuItem
+        ' ToolStripMenuItem1
         ' 
-        EmployeeListToolStripMenuItem.Name = "EmployeeListToolStripMenuItem"
-        EmployeeListToolStripMenuItem.Size = New Size(224, 26)
-        EmployeeListToolStripMenuItem.Text = "Employee List"
+        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, History})
+        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        ToolStripMenuItem1.Size = New Size(261, 26)
+        ToolStripMenuItem1.Text = "Event Creation"
+        ' 
+        ' ToolStripMenuItem2
+        ' 
+        ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        ToolStripMenuItem2.Size = New Size(224, 26)
+        ToolStripMenuItem2.Text = "Form"
+        ' 
+        ' ToolStripMenuItem3
+        ' 
+        ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        ToolStripMenuItem3.Size = New Size(224, 26)
+        ToolStripMenuItem3.Text = "Venue"
+        ' 
+        ' History
+        ' 
+        History.Name = "History"
+        History.Size = New Size(224, 26)
+        History.Text = "History"
         ' 
         ' MDIBrgySys
         ' 
@@ -578,5 +607,10 @@ Partial Class MDIBrgySys
     Friend WithEvents SchedulingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeIDToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeeListToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents History As ToolStripMenuItem
 
 End Class
