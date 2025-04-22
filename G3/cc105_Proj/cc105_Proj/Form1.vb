@@ -19,18 +19,32 @@ Public Class g3CommandCenter_Form
 
     ' Form Load event: Sets up initial settings when the form is loaded
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.WindowState = FormWindowState.Maximized ' Maximize the window
-        TabControl1.Appearance = TabAppearance.Normal ' Set tab appearance
-        TabControl1.ItemSize = New Size(0, 1) ' Shrinks tabs to 1 pixel
-        TabControl1.SizeMode = TabSizeMode.Fixed ' Fix tab size
+        ' Set the form to maximized window state
+        Me.WindowState = FormWindowState.Maximized
+
+        ' Dynamically set the form size to fit within the available screen space (excluding taskbar)
+        Dim workingArea As Rectangle = Screen.PrimaryScreen.WorkingArea
+        Me.Width = workingArea.Width
+        Me.Height = workingArea.Height
+
+        ' Set tab control appearance and size as needed
+        TabControl1.Appearance = TabAppearance.Normal
+        TabControl1.ItemSize = New Size(0, 1) ' Shrink tabs to 1 pixel
+        TabControl1.SizeMode = TabSizeMode.Fixed
         TabControl1.DrawMode = TabDrawMode.OwnerDrawFixed ' Enable custom drawing for tabs
+
+        ' Ensure the form stays on top
         Me.TopMost = True
-        ' Set background images for buttons
-        CallLogging_Btn.BackgroundImage = My.Resources.CallLogs_Open__1_
-        CaseRecords_Btn.BackgroundImage = My.Resources.CaseRecord_Close
+
+        ' Maintain maximize and minimize options
+        With Me
+            .MaximizeBox = True
+            .MinimizeBox = True ' Optionally keep minimize enabled
+        End With
 
         ' Initialize the table with data
         InsertTable()
+
         ' Test the database connection
         Try
             con.Open()
@@ -39,10 +53,12 @@ Public Class g3CommandCenter_Form
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message) ' Display error if connection fails
         End Try
-        Timer1.Interval = 10000 ' Refresh every 5 seconds
+
+        ' Set up the timer to refresh every 10 seconds
+        Timer1.Interval = 10000 ' Refresh every 10 seconds
         Timer1.Enabled = True
-        TaskBarMenuStrip.Visible = False
     End Sub
+
 
     ' Timer tick event to refresh the table
     Private Sub Timer1_Tick(sender As Object, e As EventArgs)
@@ -50,7 +66,7 @@ Public Class g3CommandCenter_Form
     End Sub
 
     ' Inserts case data into DataGridView (ActiveCases_DataGridView)
-    Private Sub InsertTable()
+    Public Sub InsertTable()
 
         ' Define SQL query to fetch case data
         Dim query As String = "
@@ -86,7 +102,7 @@ Public Class g3CommandCenter_Form
     End Sub
 
     ' Handle double-click on DataGridView row to open case details
-    Private Sub YourDataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ActiveCases_DataGridView.CellDoubleClick
+    Private Sub DataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ActiveCases_DataGridView.CellDoubleClick
         Dim caseShow As New CaseRecordTable
         Dim caseName As String = ""
 
@@ -106,17 +122,6 @@ Public Class g3CommandCenter_Form
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         LayoutManager.ResizeFormLayout(Me) ' Adjust layout on form resize
         ' Resize logic and visibility
-        If CaseRecordForm IsNot Nothing Then
-            LayoutManager.ResizeCaseForm(Me, CaseRecordForm)
-        End If
-
-        If CallLogForm IsNot Nothing Then
-            LayoutManager.ResizeCallForm(Me, CallLogForm)
-        End If
-
-        If OfficersForm IsNot Nothing Then
-            LayoutManager.ResizeOfficersAvailabilityForm(Me, OfficersForm)
-        End If
         If Me.WindowState = FormWindowState.Minimized Then
             If CallLogForm IsNot Nothing AndAlso Not CallLogForm.IsDisposed Then
                 CallLogForm.Close()
@@ -134,45 +139,44 @@ Public Class g3CommandCenter_Form
             End If
         End If
     End Sub
-    Private Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
+    Public Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
+        ' Check if the form instance already exists and is not disposed
         If formInstance IsNot Nothing AndAlso Not formInstance.IsDisposed Then
+            ' Restore if minimized and bring to front
             If formInstance.WindowState = FormWindowState.Minimized Then
                 formInstance.WindowState = FormWindowState.Normal
             End If
             formInstance.BringToFront()
             formInstance.Activate()
         Else
+            ' Create new instance and ensure it's fixed single form
             formInstance = CType(Activator.CreateInstance(formType), Form)
             With formInstance
-                .TopLevel = False
-                .FormBorderStyle = FormBorderStyle.None
-                .Dock = DockStyle.Fill
+                .TopMost = True
+                .FormBorderStyle = FormBorderStyle.FixedSingle
+                .MaximizeBox = False ' Disable maximize button
+                .MinimizeBox = True  ' Optionally keep minimize enabled
             End With
-            MainPanel.Controls.Add(formInstance)
             formInstance.Show()
         End If
-        ActiveCases_DataGridView.Visible = False
-        Label2.Visible = False
     End Sub
+
 
     Private Sub CaseRecords_Btn_Click(sender As Object, e As EventArgs) Handles CaseRecords_Btn.Click
         OpenOrRestoreForm(CaseRecordForm, GetType(CaseRecordTable))
-        LayoutManager.ResizeCaseForm(Me, CaseRecordForm)
     End Sub
 
     Private Sub CallLogging_Btn_Click(sender As Object, e As EventArgs) Handles CallLogging_Btn.Click
         OpenOrRestoreForm(CallLogForm, GetType(CallLog_Tables))
-        LayoutManager.ResizeCallForm(Me, CallLogForm)
     End Sub
 
     Private Sub OfficersAvailability_Btn_Click(sender As Object, e As EventArgs) Handles OfficersAvailability_Btn.Click
         OpenOrRestoreForm(OfficersForm, GetType(OfficersAvailabiltyForm))
-        LayoutManager.ResizeOfficersAvailabilityForm(Me, OfficersForm)
     End Sub
 
 
     ' Format the Call Log DataGridView cells to improve appearance
-    Private Sub CallLog_Table_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles ActiveCases_DataGridView.CellFormatting
+    Private Sub ActiveCases_DataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles ActiveCases_DataGridView.CellFormatting
         If e.RowIndex < 0 Then Exit Sub ' Skip header row
 
         ' Set the background color for data rows
@@ -194,7 +198,6 @@ Public Class g3CommandCenter_Form
             .AllowUserToResizeRows = False ' Prevent row resizing
             .AllowUserToResizeColumns = False ' Prevent column resizing
         End With
-
         ' Style column headers
         With dgv.ColumnHeadersDefaultCellStyle
             .BackColor = Color.DarkGreen ' Set background color for headers
@@ -212,73 +215,5 @@ Public Class g3CommandCenter_Form
 
     End Sub
 
-    Public Sub MinimizeFormToTaskbar(formToMinimize As Form)
-        ' Avoid duplicate taskbar items
-        For Each item As ToolStripMenuItem In TaskBarMenuStrip.Items
-            If item.Tag Is formToMinimize Then Exit Sub
-        Next
-
-        formToMinimize.Hide()
-
-        Dim taskItem As New ToolStripMenuItem()
-        taskItem.Text = formToMinimize.Text
-        taskItem.Tag = formToMinimize
-        taskItem.ForeColor = Color.White
-        taskItem.BackColor = Color.DarkGreen
-
-        AddHandler taskItem.Click, AddressOf TaskbarMenuItem_Click
-
-        TaskBarMenuStrip.Items.Add(taskItem)
-        TaskBarMenuStrip.Visible = True
-    End Sub
-    Private Sub TaskbarMenuItem_Click(sender As Object, e As EventArgs)
-        Dim item As ToolStripMenuItem = DirectCast(sender, ToolStripMenuItem)
-        Dim formToRestore As Form = DirectCast(item.Tag, Form)
-
-        formToRestore.Show()
-        formToRestore.WindowState = FormWindowState.Normal
-        formToRestore.BringToFront()
-
-        TaskBarMenuStrip.Items.Remove(item)
-
-        If TaskBarMenuStrip.Items.Count = 0 Then
-            TaskBarMenuStrip.Visible = False
-        End If
-    End Sub
-
-    Public Sub RemoveFormFromTaskbarMenuStrip(form As Form, taskbarMenu As MenuStrip)
-        For Each item As ToolStripMenuItem In taskbarMenu.Items
-            If item.Tag Is form Then
-                taskbarMenu.Items.Remove(item)
-                Exit For
-            End If
-        Next
-
-        If taskbarMenu.Items.Count = 0 Then
-            taskbarMenu.Visible = False
-        End If
-    End Sub
-
-    Private Sub ActiveCases_Btn_Click(sender As Object, e As EventArgs) Handles ActiveCases_Btn.Click
-        ' Close the forms if they are open
-        If CaseRecordForm IsNot Nothing Then
-            CaseRecordForm.Close()
-            CaseRecordForm = Nothing
-        End If
-
-        If CallLogForm IsNot Nothing Then
-            CallLogForm.Close()
-            CallLogForm = Nothing
-        End If
-
-        If OfficersForm IsNot Nothing Then
-            OfficersForm.Close()
-            OfficersForm = Nothing
-        End If
-
-        ' Show Active Cases section
-        Label2.Visible = True
-        ActiveCases_DataGridView.Visible = True
-    End Sub
 End Class
 

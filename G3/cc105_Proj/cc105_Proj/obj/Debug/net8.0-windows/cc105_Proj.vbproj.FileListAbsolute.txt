@@ -3,6 +3,7 @@ C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Pro
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\cc105_Proj.runtimeconfig.json
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\cc105_Proj.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\cc105_Proj.pdb
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\aa-DJ\cc105_Proj.resources.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\Azure.Core.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\Azure.Identity.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
@@ -55,6 +56,7 @@ C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Pro
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddNoteForm.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddOfficersForm.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddPersonInvolvedFormvb.resources
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddStolenItemsForm.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.Call_Log.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.CallDetails.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.CallLog_Tables.resources
@@ -65,18 +67,16 @@ C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Pro
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.ImageViewer.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.Resources.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.OfficersAvailabiltyForm.resources
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddStolenItemsForm.aa-DJ.resources
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.vbproj.GenerateResource.cache
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AssemblyInfoInputs.cache
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AssemblyInfo.vb
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.vbproj.CoreCompileInputs.cache
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\aa-DJ\cc105_Proj.resources.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.vbproj.Up2Date
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\refint\cc105_Proj.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.pdb
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.genruntimeconfig.cache
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\ref\cc105_Proj.dll
-C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\aa-DJ\cc105_Proj.resources.dll
-C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddStolenItemsForm.resources
-C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddStolenItemsForm.aa-DJ.resources
-C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\aa-DJ\cc105_Proj.resources.dll

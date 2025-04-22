@@ -170,3 +170,6 @@ C:\Users\Trisha\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\refint\brgy
 C:\Users\Trisha\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.pdb
 C:\Users\Trisha\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.genruntimeconfig.cache
 C:\Users\Trisha\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\ref\brgysys.dll
+C:\Users\Trisha\commmngt_cc105\main\brgysys\bin\Debug\net8.0-windows\QRCoder.dll
+C:\Users\Trisha\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.g4_EmployeeID.resources
+C:\Users\Trisha\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.List.resources

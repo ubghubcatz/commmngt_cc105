@@ -65,7 +65,7 @@ Partial Class Call_Log
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.Green
-        Label2.Location = New Point(134, 122)
+        Label2.Location = New Point(142, 124)
         Label2.Name = "Label2"
         Label2.Size = New Size(127, 28)
         Label2.TabIndex = 1
@@ -76,7 +76,7 @@ Partial Class Call_Log
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Green
-        Label3.Location = New Point(11, 192)
+        Label3.Location = New Point(11, 157)
         Label3.Name = "Label3"
         Label3.Size = New Size(260, 28)
         Label3.TabIndex = 2
@@ -87,7 +87,7 @@ Partial Class Call_Log
         Label4.AutoSize = True
         Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Green
-        Label4.Location = New Point(26, 260)
+        Label4.Location = New Point(26, 188)
         Label4.Name = "Label4"
         Label4.Size = New Size(245, 28)
         Label4.TabIndex = 3
@@ -95,6 +95,7 @@ Partial Class Call_Log
         ' 
         ' PhoneNum_TxtBox
         ' 
+        PhoneNum_TxtBox.BorderStyle = BorderStyle.FixedSingle
         PhoneNum_TxtBox.Location = New Point(277, 49)
         PhoneNum_TxtBox.Name = "PhoneNum_TxtBox"
         PhoneNum_TxtBox.Size = New Size(267, 27)
@@ -114,7 +115,7 @@ Partial Class Call_Log
         ' 
         CallStart_TimePicker.CustomFormat = "HH:mm"
         CallStart_TimePicker.Format = DateTimePickerFormat.Custom
-        CallStart_TimePicker.Location = New Point(277, 192)
+        CallStart_TimePicker.Location = New Point(277, 157)
         CallStart_TimePicker.Name = "CallStart_TimePicker"
         CallStart_TimePicker.ShowUpDown = True
         CallStart_TimePicker.Size = New Size(267, 27)
@@ -125,7 +126,7 @@ Partial Class Call_Log
         CancelCallLog_Btn.BackColor = Color.Maroon
         CancelCallLog_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CancelCallLog_Btn.ForeColor = Color.White
-        CancelCallLog_Btn.Location = New Point(835, 526)
+        CancelCallLog_Btn.Location = New Point(838, 376)
         CancelCallLog_Btn.Name = "CancelCallLog_Btn"
         CancelCallLog_Btn.Size = New Size(110, 43)
         CancelCallLog_Btn.TabIndex = 9
@@ -137,7 +138,7 @@ Partial Class Call_Log
         ConfirnCallLog_Btn.BackColor = Color.DarkGreen
         ConfirnCallLog_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         ConfirnCallLog_Btn.ForeColor = Color.White
-        ConfirnCallLog_Btn.Location = New Point(951, 526)
+        ConfirnCallLog_Btn.Location = New Point(954, 376)
         ConfirnCallLog_Btn.Name = "ConfirnCallLog_Btn"
         ConfirnCallLog_Btn.Size = New Size(110, 43)
         ConfirnCallLog_Btn.TabIndex = 10
@@ -147,7 +148,7 @@ Partial Class Call_Log
         ' Panel1
         ' 
         Panel1.BackColor = Color.DarkGreen
-        Panel1.Location = New Point(12, 510)
+        Panel1.Location = New Point(15, 360)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(1049, 10)
         Panel1.TabIndex = 11
@@ -157,7 +158,7 @@ Partial Class Call_Log
         Label5.AutoSize = True
         Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.Green
-        Label5.Location = New Point(163, 328)
+        Label5.Location = New Point(171, 223)
         Label5.Name = "Label5"
         Label5.Size = New Size(98, 28)
         Label5.TabIndex = 12
@@ -168,7 +169,7 @@ Partial Class Call_Log
         CallType_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         CallType_ComboBox.FormattingEnabled = True
         CallType_ComboBox.Items.AddRange(New Object() {"Outgoing", "Incoming"})
-        CallType_ComboBox.Location = New Point(277, 328)
+        CallType_ComboBox.Location = New Point(277, 223)
         CallType_ComboBox.Name = "CallType_ComboBox"
         CallType_ComboBox.Size = New Size(267, 28)
         CallType_ComboBox.TabIndex = 13
@@ -178,7 +179,7 @@ Partial Class Call_Log
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Green
-        Label6.Location = New Point(190, 390)
+        Label6.Location = New Point(200, 257)
         Label6.Name = "Label6"
         Label6.Size = New Size(71, 28)
         Label6.TabIndex = 14
@@ -189,13 +190,14 @@ Partial Class Call_Log
         Status_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         Status_ComboBox.FormattingEnabled = True
         Status_ComboBox.Items.AddRange(New Object() {"Missed", "Answered", "Declined"})
-        Status_ComboBox.Location = New Point(277, 390)
+        Status_ComboBox.Location = New Point(277, 257)
         Status_ComboBox.Name = "Status_ComboBox"
         Status_ComboBox.Size = New Size(267, 28)
         Status_ComboBox.TabIndex = 15
         ' 
         ' Handled_TxtBox
         ' 
+        Handled_TxtBox.BorderStyle = BorderStyle.FixedSingle
         Handled_TxtBox.Location = New Point(794, 49)
         Handled_TxtBox.Name = "Handled_TxtBox"
         Handled_TxtBox.Size = New Size(267, 27)
@@ -214,6 +216,7 @@ Partial Class Call_Log
         ' 
         ' Purpose_TxtBox
         ' 
+        Purpose_TxtBox.BorderStyle = BorderStyle.FixedSingle
         Purpose_TxtBox.Location = New Point(794, 122)
         Purpose_TxtBox.Multiline = True
         Purpose_TxtBox.Name = "Purpose_TxtBox"
@@ -235,7 +238,7 @@ Partial Class Call_Log
         ' 
         CallDuration_TimePicker.CustomFormat = "HH:mm:ss"
         CallDuration_TimePicker.Format = DateTimePickerFormat.Custom
-        CallDuration_TimePicker.Location = New Point(277, 262)
+        CallDuration_TimePicker.Location = New Point(277, 190)
         CallDuration_TimePicker.Name = "CallDuration_TimePicker"
         CallDuration_TimePicker.ShowUpDown = True
         CallDuration_TimePicker.Size = New Size(267, 27)
@@ -244,7 +247,7 @@ Partial Class Call_Log
         ' HandlerResultsListBox
         ' 
         HandlerResultsListBox.FormattingEnabled = True
-        HandlerResultsListBox.Location = New Point(794, 72)
+        HandlerResultsListBox.Location = New Point(793, 72)
         HandlerResultsListBox.Name = "HandlerResultsListBox"
         HandlerResultsListBox.Size = New Size(268, 164)
         HandlerResultsListBox.TabIndex = 21
@@ -262,7 +265,7 @@ Partial Class Call_Log
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Green
-        Label9.Location = New Point(711, 260)
+        Label9.Location = New Point(711, 242)
         Label9.Name = "Label9"
         Label9.Size = New Size(68, 28)
         Label9.TabIndex = 23
@@ -270,10 +273,11 @@ Partial Class Call_Log
         ' 
         ' NotesTxtox
         ' 
-        NotesTxtox.Location = New Point(794, 260)
+        NotesTxtox.BorderStyle = BorderStyle.FixedSingle
+        NotesTxtox.Location = New Point(794, 242)
         NotesTxtox.Multiline = True
         NotesTxtox.Name = "NotesTxtox"
-        NotesTxtox.Size = New Size(267, 158)
+        NotesTxtox.Size = New Size(267, 107)
         NotesTxtox.TabIndex = 24
         ' 
         ' Label10
@@ -281,7 +285,7 @@ Partial Class Call_Log
         Label10.AutoSize = True
         Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Green
-        Label10.Location = New Point(171, 446)
+        Label10.Location = New Point(171, 291)
         Label10.Name = "Label10"
         Label10.Size = New Size(100, 28)
         Label10.TabIndex = 25
@@ -292,7 +296,7 @@ Partial Class Call_Log
         Purok_Picker.DropDownStyle = ComboBoxStyle.DropDownList
         Purok_Picker.FormattingEnabled = True
         Purok_Picker.Items.AddRange(New Object() {"Purok 1", "Purok 2", "Purok 3", "Purok 4", "Purok 5", "Purok 6", "Purok 7"})
-        Purok_Picker.Location = New Point(277, 446)
+        Purok_Picker.Location = New Point(277, 291)
         Purok_Picker.Name = "Purok_Picker"
         Purok_Picker.Size = New Size(267, 28)
         Purok_Picker.TabIndex = 26
@@ -302,7 +306,7 @@ Partial Class Call_Log
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Honeydew
-        ClientSize = New Size(1076, 581)
+        ClientSize = New Size(1076, 427)
         Controls.Add(Purok_Picker)
         Controls.Add(Label10)
         Controls.Add(NotesTxtox)

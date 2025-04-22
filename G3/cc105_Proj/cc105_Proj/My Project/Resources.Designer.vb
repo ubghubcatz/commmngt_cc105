@@ -63,9 +63,19 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property _480852903_503096309505352_6435663401700552754_n() As System.Drawing.Bitmap
+        Friend ReadOnly Property _482404742_1844290563062342_2384674934892593673_n() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("480852903_503096309505352_6435663401700552754_n", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("482404742_1844290563062342_2384674934892593673_n", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _482585122_1176975447200876_593564339372044358_n() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("482585122_1176975447200876_593564339372044358_n", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -103,29 +113,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property CaseRecord_Open() As System.Drawing.Bitmap
+        Friend ReadOnly Property Officers__1_() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("CaseRecord_Open", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property DashBoard_Close() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("DashBoard_Close", resourceCulture)
-                Return CType(obj,System.Drawing.Bitmap)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized resource of type System.Drawing.Bitmap.
-        '''</summary>
-        Friend ReadOnly Property DashBoard_Open() As System.Drawing.Bitmap
-            Get
-                Dim obj As Object = ResourceManager.GetObject("DashBoard_Open", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Officers (1)", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

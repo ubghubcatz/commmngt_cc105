@@ -37,7 +37,7 @@ Partial Class AddNoteForm
         Panel1.BackColor = Color.Green
         Panel1.Location = New Point(511, -1)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(54, 326)
+        Panel1.Size = New Size(54, 269)
         Panel1.TabIndex = 0
         ' 
         ' ConfirmNotes_Btn
@@ -45,7 +45,7 @@ Partial Class AddNoteForm
         ConfirmNotes_Btn.BackColor = Color.Green
         ConfirmNotes_Btn.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ConfirmNotes_Btn.ForeColor = Color.White
-        ConfirmNotes_Btn.Location = New Point(343, 263)
+        ConfirmNotes_Btn.Location = New Point(343, 205)
         ConfirmNotes_Btn.Name = "ConfirmNotes_Btn"
         ConfirmNotes_Btn.Size = New Size(151, 54)
         ConfirmNotes_Btn.TabIndex = 0
@@ -54,6 +54,7 @@ Partial Class AddNoteForm
         ' 
         ' AddedByTxtBox
         ' 
+        AddedByTxtBox.BorderStyle = BorderStyle.FixedSingle
         AddedByTxtBox.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddedByTxtBox.Location = New Point(140, 30)
         AddedByTxtBox.Name = "AddedByTxtBox"
@@ -62,11 +63,12 @@ Partial Class AddNoteForm
         ' 
         ' Note_TextBox
         ' 
+        Note_TextBox.BorderStyle = BorderStyle.FixedSingle
         Note_TextBox.Font = New Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Note_TextBox.Location = New Point(140, 102)
         Note_TextBox.Multiline = True
         Note_TextBox.Name = "Note_TextBox"
-        Note_TextBox.Size = New Size(354, 155)
+        Note_TextBox.Size = New Size(354, 97)
         Note_TextBox.TabIndex = 2
         ' 
         ' Label1
@@ -96,7 +98,7 @@ Partial Class AddNoteForm
         HandlerResultsListBox.FormattingEnabled = True
         HandlerResultsListBox.Location = New Point(140, 55)
         HandlerResultsListBox.Name = "HandlerResultsListBox"
-        HandlerResultsListBox.Size = New Size(354, 124)
+        HandlerResultsListBox.Size = New Size(354, 104)
         HandlerResultsListBox.TabIndex = 5
         ' 
         ' CallId_Label
@@ -114,7 +116,7 @@ Partial Class AddNoteForm
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Honeydew
-        ClientSize = New Size(561, 325)
+        ClientSize = New Size(561, 265)
         Controls.Add(CallId_Label)
         Controls.Add(HandlerResultsListBox)
         Controls.Add(Label2)

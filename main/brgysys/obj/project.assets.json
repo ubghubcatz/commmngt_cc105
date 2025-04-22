@@ -2147,23 +2147,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Trisha\\.nuget\\packages\\": {},
+    "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+      "projectUniqueName": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
       "projectName": "brgysys",
-      "projectPath": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
-      "packagesPath": "C:\\Users\\Trisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Trisha\\commmngt_cc105\\main\\brgysys\\obj\\",
+      "projectPath": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+      "packagesPath": "C:\\Users\\Aizelle Lorein\\.nuget\\packages\\",
+      "outputPath": "D:\\2024_2025UBGHub_2S\\commmngt_cc105\\main\\brgysys\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Trisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aizelle Lorein\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2172,6 +2172,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

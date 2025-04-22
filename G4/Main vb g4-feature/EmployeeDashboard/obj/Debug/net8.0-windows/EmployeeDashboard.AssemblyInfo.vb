@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("EmployeeDashboard"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f27a10930b61955ae9a1e93e97b89bfe99798627"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38a170f7944e4b4136d8f5aee9d71b6853daba40"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("EmployeeDashboard"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("EmployeeDashboard"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

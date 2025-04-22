@@ -66,6 +66,7 @@ Partial Class AddPersonInvolvedFormvb
         ' 
         ' Name_TxtBox
         ' 
+        Name_TxtBox.BorderStyle = BorderStyle.FixedSingle
         Name_TxtBox.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold)
         Name_TxtBox.Location = New Point(198, 24)
         Name_TxtBox.Name = "Name_TxtBox"
@@ -74,6 +75,7 @@ Partial Class AddPersonInvolvedFormvb
         ' 
         ' num
         ' 
+        num.BorderStyle = BorderStyle.FixedSingle
         num.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         num.Location = New Point(198, 68)
         num.Name = "num"
@@ -118,7 +120,6 @@ Partial Class AddPersonInvolvedFormvb
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "AddPersonInvolvedFormvb"
-        Text = "AddPersonInvolvedFormvb"
         ResumeLayout(False)
         PerformLayout()
     End Sub
