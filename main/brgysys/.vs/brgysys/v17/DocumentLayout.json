@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\g3\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\g3\\printoptions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\printoptions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -10,7 +22,7 @@
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -24,10 +36,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -92,7 +100,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -104,30 +112,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "List.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
-              "RelativeDocumentMoniker": "G4\\List.vb",
-              "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
+              "DocumentIndex": 0,
+              "Title": "CaseRecordForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb",
+              "RelativeDocumentMoniker": "G3\\CaseRecordForm.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb [Design]",
+              "RelativeToolTip": "G3\\CaseRecordForm.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-03T01:35:30.927Z"
+              "WhenOpened": "2025-04-24T02:14:03.984Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "PrintOptions.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\PrintOptions.vb",
+              "RelativeDocumentMoniker": "G3\\PrintOptions.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\PrintOptions.vb",
+              "RelativeToolTip": "G3\\PrintOptions.vb",
+              "ViewState": "AQIAAIoAAAAAAAAAAADwv5oAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-24T02:08:37.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "List.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "RelativeDocumentMoniker": "G4\\List.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
+              "RelativeToolTip": "G4\\List.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-03T01:35:30.927Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "List.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
               "RelativeDocumentMoniker": "G4\\List.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
               "RelativeToolTip": "G4\\List.vb",
-              "ViewState": "AgIAABcAAAAAAAAAAAASwDYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-07T23:49:00.164Z"
+              "WhenOpened": "2025-04-07T23:49:00.164Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Schedule.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
@@ -139,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "g4_EmployeeID.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
@@ -151,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MDIBrgySys.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
@@ -159,36 +193,34 @@
               "RelativeToolTip": "MDIBrgySys.vb",
               "ViewState": "AQIAABEAAAAAAAAAAAAAwBcAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T13:28:39.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-05T13:28:39.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "List.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
               "RelativeDocumentMoniker": "G4\\List.Designer.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
               "RelativeToolTip": "G4\\List.Designer.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T14:06:59.728Z"
+              "WhenOpened": "2025-04-05T14:06:59.728Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MDIBrgySys.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb [Design]",
               "RelativeToolTip": "MDIBrgySys.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-03-05T12:42:28.493Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-05T12:42:28.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Schedule.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
@@ -199,20 +231,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAADINAAAAAAAAAAAAwDkNAAAEAAAA",
+              "ViewState": "AQIAAD4NAAAAAAAAAAAAwDkNAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2025-03-25T00:21:35.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "brgysys",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
               "RelativeDocumentMoniker": "brgysys.vbproj",
@@ -224,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "Attendance.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
@@ -236,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "g4_EmployeeID.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
@@ -247,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Attendance.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
@@ -258,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "app.manifest",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
               "RelativeDocumentMoniker": "My Project\\app.manifest",
@@ -270,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "WindowsFormsApplicationBase.cs",
               "DocumentMoniker": "C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
@@ -281,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "SplashScreen1.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
               "RelativeDocumentMoniker": "SplashScreen1.vb",
@@ -293,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "frmLogin.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
               "RelativeDocumentMoniker": "frmLogin.Designer.vb",
@@ -305,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "frmLogin.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
@@ -317,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "frmLogin.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
@@ -328,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "frmLogin.resx",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
               "RelativeDocumentMoniker": "frmLogin.resx",
@@ -339,7 +371,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "SplashScreen1.resx",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
               "RelativeDocumentMoniker": "SplashScreen1.resx",

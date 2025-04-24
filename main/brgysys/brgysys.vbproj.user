@@ -16,6 +16,9 @@
     <Compile Update="G3\AddPersonInvolvedFormvb.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="G3\AddProcedure.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="G3\AddStolenItemsForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -34,16 +37,19 @@
     <Compile Update="G3\CaseRecordTable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="G3\Form1.vb">
+    <Compile Update="G3\g3_CommandCenter.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="G3\Form2.vb">
+    <Compile Update="G3\CaseRecordForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G3\ImageViewer.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G3\OfficersAvailabiltyForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G3\PrintOptions.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G4\Attendance.vb">

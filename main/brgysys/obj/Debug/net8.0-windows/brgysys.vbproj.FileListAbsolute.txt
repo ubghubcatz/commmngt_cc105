@@ -284,6 +284,3 @@ C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\De
 C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\Interop.ADODB.dll
 C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\Interop.stdole.dll
 C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.vbproj.ResolveComReference.cache
-C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.dll
-C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\refint\brgysys.dll
-C:\Users\Kean Jiro Trillanes\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.pdb
