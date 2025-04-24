@@ -1,7 +1,5 @@
-﻿Imports System.Data.Common
-Imports System.IO
+﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Data.SqlClient
-Imports Windows.Win32.UI.Input
 
 Public Class CaseRecordShowForm
 
@@ -17,6 +15,47 @@ Public Class CaseRecordShowForm
     Public Property LoadedCaseID As String
     Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initiateTables()
+        HideTabSelector()
+        Procedure_ListView.OwnerDraw = True
+        Procedure_ListView.Columns(2).Width = 0
+        Procedure_ListView.Columns(3).Width = 0
+
+    End Sub
+
+    Private Sub Procedure_ListView_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles Procedure_ListView.ColumnWidthChanging
+        ' Lock all columns to their current widths
+        e.NewWidth = Procedure_ListView.Columns(e.ColumnIndex).Width
+        e.Cancel = True
+    End Sub
+
+    Private Sub Procedures_ListView_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles Procedure_ListView.DrawColumnHeader
+        Using headerFont As New Font("Segoe UI", 10, FontStyle.Bold)
+            e.Graphics.FillRectangle(Brushes.DarkGreen, e.Bounds)
+
+            Dim flags As TextFormatFlags = TextFormatFlags.Left Or TextFormatFlags.VerticalCenter Or TextFormatFlags.EndEllipsis
+
+            TextRenderer.DrawText(e.Graphics, e.Header.Text, headerFont, e.Bounds, Color.White, flags)
+        End Using
+    End Sub
+
+
+    Private Sub Procedures_ListView_DrawItem(sender As Object, e As DrawListViewItemEventArgs) Handles Procedure_ListView.DrawItem
+        e.DrawDefault = True
+    End Sub
+
+    Private Sub Procedures_ListView_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles Procedure_ListView.DrawSubItem
+        e.DrawDefault = True
+    End Sub
+
+
+    Private Sub HideTabSelector()
+        ' Hide the tab page selector
+        TabControl1.Appearance = TabAppearance.FlatButtons
+        TabControl1.ItemSize = New Size(0, 1) ' Sets the tab headers to zero height
+        TabControl1.SizeMode = TabSizeMode.Fixed ' Ensure the tab size is fixed
+        TabControl2.Appearance = TabAppearance.FlatButtons
+        TabControl2.ItemSize = New Size(0, 1) ' Sets the tab headers to zero height
+        TabControl2.SizeMode = TabSizeMode.Fixed ' Ensure the tab size is fixed
     End Sub
 
     Private Sub initiateTables()
@@ -26,6 +65,7 @@ Public Class CaseRecordShowForm
 
         If CaseType_TxtBox.Text = "Theft" Then
             StyleDataGridView(ItemDescription_DataGridView)
+
         End If
 
 
@@ -62,18 +102,18 @@ Public Class CaseRecordShowForm
         If BringExistingCaseFormToFront(HiddenCaseID.Text) Then Return
 
         ' Create and display a new form for editing case data
-        Dim caseUpdateData As New CaseRecordForm()
+        Dim caseUpdateData As New CaseRecordForm
 
         caseUpdateData.WindowState = FormWindowState.Normal
-        caseUpdateData.BringToFront()
-        caseUpdateData.Activate()
+        caseUpdateData.BringToFront
+        caseUpdateData.Activate
         caseUpdateData.TopMost = True
         caseUpdateData.caseID_Label.Text = HiddenCaseID.Text
-        caseUpdateData.Show()
+        caseUpdateData.Show
         ' Extract case ID and retrieve location details
         Dim caseID As Integer
         Integer.TryParse(HiddenCaseID.Text, caseID)
-        Dim details() As String = ReturnLocation(caseID).Split("|"c)
+        Dim details = ReturnLocation(caseID).Split("|"c)
 
         ' Copy shared data grid views
         InitiateCommonDataGridView(caseUpdateData)
@@ -90,6 +130,7 @@ Public Class CaseRecordShowForm
 
         ' Set loaded case ID on the form
         caseUpdateData.LoadedCaseID = LoadedCaseID
+        Panel3.Visible = True
     End Sub
 
     ' Checks if the CaseRecordForm for the same case ID is already open and brings it to front
@@ -98,18 +139,13 @@ Public Class CaseRecordShowForm
             If TypeOf openForm Is CaseRecordForm Then
                 Dim crsf As CaseRecordForm = DirectCast(openForm, CaseRecordForm)
                 If crsf.LoadedCaseID = caseID Then
-                    If mainFormRef IsNot Nothing Then
-                        ' Remove from taskbar if it exists (restoring the form)
-                        mainFormRef.RemoveFormFromTaskbarMenuStrip(crsf, mainFormRef.TaskBarMenuStrip)
+                    ' Re-add if it's minimized and hidden
+                    If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
 
-                        ' Re-add if it's minimized and hidden
-                        If crsf.WindowState = FormWindowState.Minimized OrElse Not crsf.Visible Then
-
-                            If Not crsf.Visible Then crsf.Show()
-                            crsf.WindowState = FormWindowState.Normal
-                            crsf.BringToFront()
-                            crsf.Activate()
-                        End If
+                        If Not crsf.Visible Then crsf.Show()
+                        crsf.WindowState = FormWindowState.Normal
+                        crsf.BringToFront()
+                        crsf.Activate()
                     End If
                     Return True
                 End If
@@ -141,27 +177,62 @@ Public Class CaseRecordShowForm
                 targetForm.OfficersSent_DataGridView.Columns.Add(DirectCast(col.Clone(), DataGridViewColumn))
             Next
         End If
+
         For Each row As DataGridViewRow In OfficersSent_DataGridView.Rows
             If Not row.IsNewRow Then
                 Dim index = targetForm.OfficersSent_DataGridView.Rows.Add()
+
+                ' Copy cell values
                 For i = 0 To row.Cells.Count - 1
                     targetForm.OfficersSent_DataGridView.Rows(index).Cells(i).Value = row.Cells(i).Value
                 Next
+
+                ' Get officerID from the first column and check if soft deleted
+                Dim officerID As String = row.Cells(0).Value.ToString()
+                CheckIfSoftDeleted(officerID, targetForm)
             End If
         Next
     End Sub
+
+    Private Sub CheckIfSoftDeleted(officerID As String, targetForm As CaseRecordForm)
+        Dim query As String = "SELECT 1 FROM g3_OfficerCaseAssignments WHERE officerID = @officerid AND IsDeleted = 1;"
+
+        Using conn As New SqlConnection(connectionString), cmd As New SqlCommand(query, conn)
+            cmd.Parameters.AddWithValue("@officerid", officerID)
+
+            conn.Open()
+            Dim result = cmd.ExecuteScalar()
+
+            If result IsNot Nothing Then
+                ' Officer has soft-deleted assignments, now find and highlight rows
+                For Each row As DataGridViewRow In targetForm.OfficersSent_DataGridView.Rows
+                    If Not row.IsNewRow AndAlso row.Cells(0).Value.ToString() = officerID Then
+                        row.DefaultCellStyle.BackColor = Color.LightCoral
+                    End If
+                Next
+            End If
+        End Using
+    End Sub
+
 
     ' Populates general case info into the new form
     Private Sub PopulateCommonFields(targetForm As CaseRecordForm)
         targetForm.DateAndimeReported_DateTimePicker.Value = Convert.ToDateTime(DateAndTimeReported_TxtBox.Text)
         targetForm.AdditionalInfo_TxtBox.Text = AdditionalInfo_TxtBox.Text
-        targetForm.Original_CaseStatusLabel.Text = CaseStatus_TxtBox.Text
-        targetForm.ProcedureTaken_Label.Text = Procedure_TextBox.Text
-
         targetForm.Text = Me.Text + " - Update |"
-        ' Select the appropriate value in the combo box if available
-        Dim index = targetForm.Procedure_ComboBox.FindStringExact(Procedure_TextBox.Text)
-        If index >= 0 Then targetForm.Procedure_ComboBox.SelectedIndex = index
+        targetForm.ReportedBy_TabControl.SelectedIndex = 1
+        targetForm.FullName_TxtBox.Text = FullName_TxtBox.Text
+        targetForm.CaseIDString_TextBox.Text = CaseIDString_TextBox.Text
+        targetForm.PhoneNumReadnly_TxtBox.Text = PhoneNum_TxtBox.Text
+        targetForm.EmailReadnly_TxtBox.Text = Email_textbox.Text
+        targetForm.ZoneName_TxtBox.Text = ZoneName_TxtBox.Text
+        targetForm.ExpectedFinish_DateTimePicker.Value = Convert.ToDateTime(ExpectedResolveDare_TextBox.Text)
+        CaseRecordTable.GetProcedures(targetForm.Procedure_ListView, CaseIDString_TextBox.Text)
+        ' Set case status in dropdown 
+        Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)
+        If index >= 0 Then targetForm.CaseStatus_ComboBox.SelectedIndex = index
+
+        targetForm.originalCaseStatus = CaseStatus_TxtBox.Text
     End Sub
 
     ' Populates fields that depend on the case type
@@ -184,24 +255,32 @@ Public Class CaseRecordShowForm
                         Next
                     End If
                 Next
+                targetForm.CaseName_Txt.Text = StolenItemsCaseName_Label.Text
+                targetForm.SuspectDesc_TxtBox.Text = SuspectDesc_TxtBox.Text
+                targetForm.PropertyDamage_TextBox.Text = PropertyDamage_TextBox.Text
+                Dim theftLoc As String() = details(3).Split("^"c)
+                targetForm.BrgyTheftLocation_TxtBox.Text = theftLoc(1)
+                targetForm.CityTheftLocation_TxtBox.Text = theftLoc(2)
+                targetForm.StreetTheftLocation_TxtBox.Text = theftLoc(0)
 
             Case "Missing Person"
                 targetForm.CaseType_ComboBox.SelectedIndex = 1
-                targetForm.CaseName_Txt.Text = Label12.Text
-                targetForm.MissingPersonAge_TxtBox.Text = MissingPersonAge_TxtBox.Text
-                targetForm.MissingPersonName_TxtBox.Text = MissingPersonName_TxtBox.Text
+                targetForm.CaseName_Txt.Text = MissingPersonCaseName_Label.Text
+                Dim nameParts As String() = details(0).Split("^")
+                targetForm.MissingPersonFirstName_TxtBox.Text = nameParts(0)
+                targetForm.MissingPersonLastName_TxtBox.Text = nameParts(1)
+                targetForm.MissingPersonNo_TxtBox.Text = MissingPersonNo_TxtBox.Text
+                targetForm.MissingPersonEmail_TxtBox.Text = MissingPersonEmail_TxtBox.Text
                 targetForm.MissingPersonHeight_TxtBox.Text = MissingPersonHeight_TxtBox.Text
                 targetForm.MissingPersonPhysicalDesc_TxtBox.Text = MissingPersonPhysicalDesc_TxtBox.Text
 
                 ' Split location into components
-                Dim loc() As String = details(4).Split("^"c)
+                Dim loc() As String = details(6).Split("^"c)
                 targetForm.MissingPersonLastSeenStreet_TxtBox.Text = loc(0)
                 targetForm.MissingPersonLastSeenBrgy_TxtBox.Text = loc(1)
                 targetForm.MissingPersonLastSeenCity_TxtBox.Text = loc(2)
 
-                ' Set case status in dropdown
-                Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)
-                If index >= 0 Then targetForm.CaseStatus_ComboBox.SelectedIndex = index
+
 
                 ' Transfer image if present
                 If MissingPerson_PicBox.Image IsNot Nothing Then
@@ -218,7 +297,8 @@ Public Class CaseRecordShowForm
                 Dim loc() As String = details(2).Split("^"c)
                 targetForm.GeneralCasesStreet_TextBox.Text = loc(0)
                 targetForm.GeneralCasesBrgy_TextBox.Text = loc(1)
-                targetForm.GeneralCasesBrgy_TextBox.Text = loc(2)
+                targetForm.GeneralCasesCity_TextBox.Text = loc(2)
+                targetForm.CaseName_Txt.Text = GeneralCaseName_Label.Text
 
                 ' Transfer image if present
                 If GeneralCases_PicBox.Image IsNot Nothing Then
@@ -268,8 +348,9 @@ Public Class CaseRecordShowForm
         targetForm.DateAndimeReported_DateTimePicker.Enabled = False
         targetForm.CaseName_Txt.Enabled = False
         targetForm.SpecificCaseType_ComboBox.Enabled = False
-        targetForm.MissingPersonName_TxtBox.ReadOnly = True
-        targetForm.MissingPersonAge_TxtBox.ReadOnly = True
+        targetForm.BrthDay_DateTimePicker.Value = BrthDay_DateTimePicker.Value
+        targetForm.MissingPersonFirstName_TxtBox.ReadOnly = True
+        targetForm.BrthDay_DateTimePicker.Enabled = False
         targetForm.MissingPersonHeight_TxtBox.ReadOnly = True
         targetForm.SpecificCaseType_ComboBox.Enabled = False
     End Sub
@@ -356,15 +437,14 @@ Public Class CaseRecordShowForm
         Return locations
     End Function
 
-
-    Private Sub Form2_Resize(sender As Object, e As EventArgs) Handles Me.Resize
-        If Me.WindowState = FormWindowState.Minimized Then
-            Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
-
-            If mainFormRef IsNot Nothing Then
-                mainFormRef.MinimizeFormToTaskbar(Me)
-            End If
-        End If
+    Private Sub CloseCaseHistory_Btn_Click_1(sender As Object, e As EventArgs)
+        TabControl2.SelectedIndex = 0
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        PrintOptions.TopMost = True
+        PrintOptions.BringToFront()
+        PrintOptions.Activate()
+        PrintOptions.ShowDialog()
+    End Sub
 End Class
