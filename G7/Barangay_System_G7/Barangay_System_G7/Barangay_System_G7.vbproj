@@ -79,6 +79,18 @@
     <Compile Include="AssistanceForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="BurialRequirementsForm.Designer.vb">
+      <DependentUpon>BurialRequirementsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BurialRequirementsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EducationalRequirementsForm.Designer.vb">
+      <DependentUpon>EducationalRequirementsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EducationalRequirementsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +130,12 @@
     <EmbeddedResource Include="AssistanceForm.resx">
       <DependentUpon>AssistanceForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BurialRequirementsForm.resx">
+      <DependentUpon>BurialRequirementsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EducationalRequirementsForm.resx">
+      <DependentUpon>EducationalRequirementsForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +144,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayoutForm.resx">
+      <DependentUpon>PayoutForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeminarForm.resx">
       <DependentUpon>SeminarForm.vb</DependentUpon>

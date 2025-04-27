@@ -61,12 +61,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightGreen
         Me.ClientSize = New System.Drawing.Size(379, 440)
         Me.Controls.Add(Me.btnPayout)
         Me.Controls.Add(Me.btnAssistance)
         Me.Controls.Add(Me.btnSeminar)
         Me.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
         Me.Name = "Form1"
         Me.ShowIcon = False
         Me.Text = "BARANGAY SYSTEM (G7)"
