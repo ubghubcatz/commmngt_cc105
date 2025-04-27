@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Drawing.Printing
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Data.SqlClient
 
 Public Class CaseRecordShowForm
@@ -53,9 +54,6 @@ Public Class CaseRecordShowForm
         TabControl1.Appearance = TabAppearance.FlatButtons
         TabControl1.ItemSize = New Size(0, 1) ' Sets the tab headers to zero height
         TabControl1.SizeMode = TabSizeMode.Fixed ' Ensure the tab size is fixed
-        TabControl2.Appearance = TabAppearance.FlatButtons
-        TabControl2.ItemSize = New Size(0, 1) ' Sets the tab headers to zero height
-        TabControl2.SizeMode = TabSizeMode.Fixed ' Ensure the tab size is fixed
     End Sub
 
     Private Sub initiateTables()
@@ -437,14 +435,78 @@ Public Class CaseRecordShowForm
         Return locations
     End Function
 
-    Private Sub CloseCaseHistory_Btn_Click_1(sender As Object, e As EventArgs)
-        TabControl2.SelectedIndex = 0
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Static intStart As Integer = 0
+        Static currentSection As Integer = 0
+        Static intPhotoIndex As Integer = 0
+        Static caseImageIndex As Integer = 0
+        Static intValIndex As Integer = 0
+        Static procedureCount As Integer = 0
+        Static peopleCount As Integer = 0
+        Static officersCount As Integer = 0
+        Static numbers As Integer() = {0, 0, 0}
+
+        PrintClass.caseID = CaseIDString_TextBox.Text
+        PrintClass.FindMatchingCase(CaseIDString_TextBox.Text)
+
+        PrintClass.RenderCasePage(e, intStart, currentSection, intPhotoIndex, caseImageIndex, intValIndex, procedureCount, peopleCount, officersCount, numbers)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        PrintOptions.TopMost = True
-        PrintOptions.BringToFront()
-        PrintOptions.Activate()
-        PrintOptions.ShowDialog()
+    Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
+        ' Link the document to PageSetupDialog and PrintDialog
+        PageSetupDialog1.Document = PrintDocument1
+        PrintDialog1.Document = PrintDocument1
+
+        ' Show Page Setup dialog first
+        If PageSetupDialog1.ShowDialog() = DialogResult.OK Then
+            Dim pageSetup As New PageSettings
+            With pageSetup
+                .Margins.Left = 50
+                .Margins.Right = 50
+                .Margins.Top = 50
+                .Margins.Bottom = 50
+                .Landscape = False
+            End With
+            PrintDocument1.DefaultPageSettings = pageSetup
+
+            ' Show print preview
+            If PrintDocument1.DefaultPageSettings Is Nothing Then
+                PrintDocument1.DefaultPageSettings = New Printing.PageSettings()
+            End If
+            PrintDocument1.PrintController = New StandardPrintController()
+            PrintPreviewDialog1.Document = PrintDocument1
+            PrintPreviewDialog1.TopMost = True
+            PrintPreviewDialog1.ShowDialog()
+        End If
+    End Sub
+
+    Private Sub PrintPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintPreviewToolStripMenuItem.Click
+        ' If PrintDocument1.DefaultPageSettings Is Nothing Then
+        'PrintDocument1.DefaultPageSettings = New Printing.PageSettings()
+        'End If
+        PrintDocument1.PrintController = New StandardPrintController()
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.TopMost = True
+        PrintPreviewDialog1.ShowDialog()
+    End Sub
+
+
+
+    Private Sub PageSetupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageSetupToolStripMenuItem.Click
+        ' Attach the PrintDocument to the dialog
+        PageSetupDialog1.Document = PrintDocument1
+
+        ' Show the dialog and wait for confirmation
+        If PageSetupDialog1.ShowDialog() = DialogResult.OK Then
+            ' Apply the selected page settings from the dialog
+            PrintDocument1.DefaultPageSettings = PageSetupDialog1.PageSettings
+
+            ' Optionally override some values (like margins or orientation)
+            With PrintDocument1.DefaultPageSettings
+                .Margins = New Margins(50, 50, 50, 50)
+                .Landscape = False
+                .Color = False
+            End With
+        End If
     End Sub
 End Class

@@ -153,10 +153,17 @@ Public Class CaseRecordForm
                         Exit For
                     End If
                 Next
+                mainForm.CountCases()
                 PermanentlyDeleteMarkedAssignments()
                 SaveToCaseRecords()
                 caseRecordTable.loadCaseData(CaseName_Txt.Text)
-                SaveToMainFormIfExists(caseRecordTable)
+                For Each frm As Form In Application.OpenForms
+                    If TypeOf frm Is CaseRecordTable Then
+                        Dim openForm As CaseRecordTable = CType(frm, CaseRecordTable)
+                        openForm.InsertTable()
+                        Exit For ' Done! No need to keep looping
+                    End If
+                Next
                 Me.Close()
             End If
 

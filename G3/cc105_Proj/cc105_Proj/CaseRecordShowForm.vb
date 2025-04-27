@@ -1,4 +1,5 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+﻿Imports System.Drawing.Printing
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Data.SqlClient
 
 Public Class CaseRecordShowForm
@@ -13,9 +14,46 @@ Public Class CaseRecordShowForm
     Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
 
     Public Property LoadedCaseID As String
-    Public Property oldcaseDetails As String
     Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initiateTables()
+        HideTabSelector()
+        Procedure_ListView.OwnerDraw = True
+        Procedure_ListView.Columns(2).Width = 0
+        Procedure_ListView.Columns(3).Width = 0
+
+    End Sub
+
+    Private Sub Procedure_ListView_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles Procedure_ListView.ColumnWidthChanging
+        ' Lock all columns to their current widths
+        e.NewWidth = Procedure_ListView.Columns(e.ColumnIndex).Width
+        e.Cancel = True
+    End Sub
+
+    Private Sub Procedures_ListView_DrawColumnHeader(sender As Object, e As DrawListViewColumnHeaderEventArgs) Handles Procedure_ListView.DrawColumnHeader
+        Using headerFont As New Font("Segoe UI", 10, FontStyle.Bold)
+            e.Graphics.FillRectangle(Brushes.DarkGreen, e.Bounds)
+
+            Dim flags As TextFormatFlags = TextFormatFlags.Left Or TextFormatFlags.VerticalCenter Or TextFormatFlags.EndEllipsis
+
+            TextRenderer.DrawText(e.Graphics, e.Header.Text, headerFont, e.Bounds, Color.White, flags)
+        End Using
+    End Sub
+
+
+    Private Sub Procedures_ListView_DrawItem(sender As Object, e As DrawListViewItemEventArgs) Handles Procedure_ListView.DrawItem
+        e.DrawDefault = True
+    End Sub
+
+    Private Sub Procedures_ListView_DrawSubItem(sender As Object, e As DrawListViewSubItemEventArgs) Handles Procedure_ListView.DrawSubItem
+        e.DrawDefault = True
+    End Sub
+
+
+    Private Sub HideTabSelector()
+        ' Hide the tab page selector
+        TabControl1.Appearance = TabAppearance.FlatButtons
+        TabControl1.ItemSize = New Size(0, 1) ' Sets the tab headers to zero height
+        TabControl1.SizeMode = TabSizeMode.Fixed ' Ensure the tab size is fixed
     End Sub
 
     Private Sub initiateTables()
@@ -25,6 +63,7 @@ Public Class CaseRecordShowForm
 
         If CaseType_TxtBox.Text = "Theft" Then
             StyleDataGridView(ItemDescription_DataGridView)
+
         End If
 
 
@@ -89,8 +128,7 @@ Public Class CaseRecordShowForm
 
         ' Set loaded case ID on the form
         caseUpdateData.LoadedCaseID = LoadedCaseID
-        caseUpdateData.oldCaseData = oldcaseDetails
-
+        Panel3.Visible = True
     End Sub
 
     ' Checks if the CaseRecordForm for the same case ID is already open and brings it to front
@@ -179,13 +217,20 @@ Public Class CaseRecordShowForm
     Private Sub PopulateCommonFields(targetForm As CaseRecordForm)
         targetForm.DateAndimeReported_DateTimePicker.Value = Convert.ToDateTime(DateAndTimeReported_TxtBox.Text)
         targetForm.AdditionalInfo_TxtBox.Text = AdditionalInfo_TxtBox.Text
-        targetForm.Original_CaseStatusLabel.Text = CaseStatus_TxtBox.Text
-        targetForm.ProcedureTaken_Label.Text = Procedure_TextBox.Text
-        targetForm.Remarks_TextBox.Text = Remarks_TextBox.Text
         targetForm.Text = Me.Text + " - Update |"
-        ' Select the appropriate value in the combo box if available
-        Dim index = targetForm.Procedure_ComboBox.FindStringExact(Procedure_TextBox.Text)
-        If index >= 0 Then targetForm.Procedure_ComboBox.SelectedIndex = index
+        targetForm.ReportedBy_TabControl.SelectedIndex = 1
+        targetForm.FullName_TxtBox.Text = FullName_TxtBox.Text
+        targetForm.CaseIDString_TextBox.Text = CaseIDString_TextBox.Text
+        targetForm.PhoneNumReadnly_TxtBox.Text = PhoneNum_TxtBox.Text
+        targetForm.EmailReadnly_TxtBox.Text = Email_textbox.Text
+        targetForm.ZoneName_TxtBox.Text = ZoneName_TxtBox.Text
+        targetForm.ExpectedFinish_DateTimePicker.Value = Convert.ToDateTime(ExpectedResolveDare_TextBox.Text)
+        CaseRecordTable.GetProcedures(targetForm.Procedure_ListView, CaseIDString_TextBox.Text)
+        ' Set case status in dropdown 
+        Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)
+        If index >= 0 Then targetForm.CaseStatus_ComboBox.SelectedIndex = index
+
+        targetForm.originalCaseStatus = CaseStatus_TxtBox.Text
     End Sub
 
     ' Populates fields that depend on the case type
@@ -208,24 +253,32 @@ Public Class CaseRecordShowForm
                         Next
                     End If
                 Next
+                targetForm.CaseName_Txt.Text = StolenItemsCaseName_Label.Text
+                targetForm.SuspectDesc_TxtBox.Text = SuspectDesc_TxtBox.Text
+                targetForm.PropertyDamage_TextBox.Text = PropertyDamage_TextBox.Text
+                Dim theftLoc As String() = details(3).Split("^"c)
+                targetForm.BrgyTheftLocation_TxtBox.Text = theftLoc(1)
+                targetForm.CityTheftLocation_TxtBox.Text = theftLoc(2)
+                targetForm.StreetTheftLocation_TxtBox.Text = theftLoc(0)
 
             Case "Missing Person"
                 targetForm.CaseType_ComboBox.SelectedIndex = 1
-                targetForm.CaseName_Txt.Text = Label12.Text
-                targetForm.MissingPersonAge_TxtBox.Text = MissingPersonAge_TxtBox.Text
-                targetForm.MissingPersonName_TxtBox.Text = MissingPersonName_TxtBox.Text
+                targetForm.CaseName_Txt.Text = MissingPersonCaseName_Label.Text
+                Dim nameParts As String() = details(0).Split("^")
+                targetForm.MissingPersonFirstName_TxtBox.Text = nameParts(0)
+                targetForm.MissingPersonLastName_TxtBox.Text = nameParts(1)
+                targetForm.MissingPersonNo_TxtBox.Text = MissingPersonNo_TxtBox.Text
+                targetForm.MissingPersonEmail_TxtBox.Text = MissingPersonEmail_TxtBox.Text
                 targetForm.MissingPersonHeight_TxtBox.Text = MissingPersonHeight_TxtBox.Text
                 targetForm.MissingPersonPhysicalDesc_TxtBox.Text = MissingPersonPhysicalDesc_TxtBox.Text
 
                 ' Split location into components
-                Dim loc() As String = details(4).Split("^"c)
+                Dim loc() As String = details(6).Split("^"c)
                 targetForm.MissingPersonLastSeenStreet_TxtBox.Text = loc(0)
                 targetForm.MissingPersonLastSeenBrgy_TxtBox.Text = loc(1)
                 targetForm.MissingPersonLastSeenCity_TxtBox.Text = loc(2)
 
-                ' Set case status in dropdown
-                Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)
-                If index >= 0 Then targetForm.CaseStatus_ComboBox.SelectedIndex = index
+
 
                 ' Transfer image if present
                 If MissingPerson_PicBox.Image IsNot Nothing Then
@@ -242,7 +295,8 @@ Public Class CaseRecordShowForm
                 Dim loc() As String = details(2).Split("^"c)
                 targetForm.GeneralCasesStreet_TextBox.Text = loc(0)
                 targetForm.GeneralCasesBrgy_TextBox.Text = loc(1)
-                targetForm.GeneralCasesBrgy_TextBox.Text = loc(2)
+                targetForm.GeneralCasesCity_TextBox.Text = loc(2)
+                targetForm.CaseName_Txt.Text = GeneralCaseName_Label.Text
 
                 ' Transfer image if present
                 If GeneralCases_PicBox.Image IsNot Nothing Then
@@ -292,8 +346,9 @@ Public Class CaseRecordShowForm
         targetForm.DateAndimeReported_DateTimePicker.Enabled = False
         targetForm.CaseName_Txt.Enabled = False
         targetForm.SpecificCaseType_ComboBox.Enabled = False
-        targetForm.MissingPersonName_TxtBox.ReadOnly = True
-        targetForm.MissingPersonAge_TxtBox.ReadOnly = True
+        targetForm.BrthDay_DateTimePicker.Value = BrthDay_DateTimePicker.Value
+        targetForm.MissingPersonFirstName_TxtBox.ReadOnly = True
+        targetForm.BrthDay_DateTimePicker.Enabled = False
         targetForm.MissingPersonHeight_TxtBox.ReadOnly = True
         targetForm.SpecificCaseType_ComboBox.Enabled = False
     End Sub
@@ -380,68 +435,78 @@ Public Class CaseRecordShowForm
         Return locations
     End Function
 
-    Private Function OfficerString() As String
-        Dim people As String = String.Join("", OfficersSent_DataGridView.Rows.
-Cast(Of DataGridViewRow)().
-Where(Function(r) Not r.IsNewRow).
-Select(Function(r) $"{r.Cells(0).Value}^{r.Cells(1).Value}^{r.Cells(2).Value}^"))
-        Return people
-    End Function
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Static intStart As Integer = 0
+        Static currentSection As Integer = 0
+        Static intPhotoIndex As Integer = 0
+        Static caseImageIndex As Integer = 0
+        Static intValIndex As Integer = 0
+        Static procedureCount As Integer = 0
+        Static peopleCount As Integer = 0
+        Static officersCount As Integer = 0
+        Static numbers As Integer() = {0, 0, 0}
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ViewcaseHistory_Btn.Click
-        Panel1.Visible = True
-        CaseUpdate_ListView.Visible = True
-        CaseUpdate_ListView.BringToFront()
+        PrintClass.caseID = CaseIDString_TextBox.Text
+        PrintClass.FindMatchingCase(CaseIDString_TextBox.Text)
 
-        ' Setup ListView
-        CaseUpdate_ListView.View = View.Details
-        CaseUpdate_ListView.FullRowSelect = True
-        CaseUpdate_ListView.Columns.Clear()
-        CaseUpdate_ListView.Items.Clear()
-        ' Calculate column widths dynamically (40% and 60%)
-        Dim totalWidth As Integer = CaseUpdate_ListView.ClientSize.Width
-        Dim col1Width As Integer = CInt(totalWidth * 0.4)
-        Dim col2Width As Integer = totalWidth - col1Width  ' Ensures it always adds up
+        PrintClass.RenderCasePage(e, intStart, currentSection, intPhotoIndex, caseImageIndex, intValIndex, procedureCount, peopleCount, officersCount, numbers)
+    End Sub
 
-        CaseUpdate_ListView.Columns.Add("Date/Time", col1Width)
-        CaseUpdate_ListView.Columns.Add("Description", col2Width)
-        ' Center align the column headers
-        CaseUpdate_ListView.Columns(0).TextAlign = HorizontalAlignment.Center
-        CaseUpdate_ListView.Columns(1).TextAlign = HorizontalAlignment.Center
+    Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
+        ' Link the document to PageSetupDialog and PrintDialog
+        PageSetupDialog1.Document = PrintDocument1
+        PrintDialog1.Document = PrintDocument1
 
-        ' SQL with WHERE clause to filter by CaseID and order by HistoryID (latest first)
-        Dim query As String = "SELECT updateDateTime, UpdateDescription, historyid FROM dbo.g3_CaseHistory WHERE caseid = @CaseID ORDER BY historyid DESC"
+        ' Show Page Setup dialog first
+        If PageSetupDialog1.ShowDialog() = DialogResult.OK Then
+            Dim pageSetup As New PageSettings
+            With pageSetup
+                .Margins.Left = 50
+                .Margins.Right = 50
+                .Margins.Top = 50
+                .Margins.Bottom = 50
+                .Landscape = False
+            End With
+            PrintDocument1.DefaultPageSettings = pageSetup
 
-        Using conn As New SqlConnection(connectionString)
-            Using cmd As New SqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@CaseID", CInt(LoadedCaseID))
-                conn.Open()
+            ' Show print preview
+            If PrintDocument1.DefaultPageSettings Is Nothing Then
+                PrintDocument1.DefaultPageSettings = New Printing.PageSettings()
+            End If
+            PrintDocument1.PrintController = New StandardPrintController()
+            PrintPreviewDialog1.Document = PrintDocument1
+            PrintPreviewDialog1.TopMost = True
+            PrintPreviewDialog1.ShowDialog()
+        End If
+    End Sub
 
-                Using reader As SqlDataReader = cmd.ExecuteReader()
-                    While reader.Read()
-                        Dim dateTimeStr As String = reader("updateDateTime").ToString()
-                        Dim description As String = reader("UpdateDescription").ToString()
-                        ' Add to ListView
-                        Dim item As New ListViewItem(dateTimeStr)
-                        item.SubItems.Add(description)
-                        ' Add rows and bold them
-
-                        item.Font = New Font(item.Font, FontStyle.Bold)
-
-                        ' Add to ListView
-                        CaseUpdate_ListView.Items.Add(item)
-
-                    End While
-                End Using
-            End Using
-        End Using
-
+    Private Sub PrintPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintPreviewToolStripMenuItem.Click
+        ' If PrintDocument1.DefaultPageSettings Is Nothing Then
+        'PrintDocument1.DefaultPageSettings = New Printing.PageSettings()
+        'End If
+        PrintDocument1.PrintController = New StandardPrintController()
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.TopMost = True
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 
 
-    Private Sub CloseCaseHistory_Btn_Click(sender As Object, e As EventArgs) Handles CloseCaseHistory_Btn.Click
-        Panel1.Visible = False
+
+    Private Sub PageSetupToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PageSetupToolStripMenuItem.Click
+        ' Attach the PrintDocument to the dialog
+        PageSetupDialog1.Document = PrintDocument1
+
+        ' Show the dialog and wait for confirmation
+        If PageSetupDialog1.ShowDialog() = DialogResult.OK Then
+            ' Apply the selected page settings from the dialog
+            PrintDocument1.DefaultPageSettings = PageSetupDialog1.PageSettings
+
+            ' Optionally override some values (like margins or orientation)
+            With PrintDocument1.DefaultPageSettings
+                .Margins = New Margins(50, 50, 50, 50)
+                .Landscape = False
+                .Color = False
+            End With
+        End If
     End Sub
-
-
 End Class

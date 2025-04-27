@@ -57,4 +57,10 @@ Public Class CallDetails
         addNoteForm.Show() ' Show the form
     End Sub
 
+    Private Sub ConnectedCase_Label_Click(sender As Object, e As EventArgs) Handles ConnectedCase_Label.Click
+        If ConnectedCase_Label.Text <> "N/A" Then
+            CaseRecordTable.loadCaseData(ConnectedCase_Label.Text.Trim())
+        End If
+
+    End Sub
 End Class

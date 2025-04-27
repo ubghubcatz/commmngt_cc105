@@ -80,3 +80,4 @@ C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Pro
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.pdb
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.genruntimeconfig.cache
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\ref\cc105_Proj.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddProcedure.resources

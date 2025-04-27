@@ -26,14 +26,7 @@
     End Sub
 
     Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
-        Dim SaveFileDialog As New SaveFileDialog
-        SaveFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
-        SaveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
-
-        If (SaveFileDialog.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK) Then
-            Dim FileName As String = SaveFileDialog.FileName
-            ' TODO: Add code here to save the current contents of the form to a file.
-        End If
+        g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
     End Sub
 
 

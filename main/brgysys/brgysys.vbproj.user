@@ -37,7 +37,7 @@
     <Compile Update="G3\CaseRecordTable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="G3\g3_CommandCenter.vb">
+    <Compile Update="G3\g3CommandCenter_Form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G3\CaseRecordForm.vb">
@@ -47,9 +47,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G3\OfficersAvailabiltyForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G3\PrintOptions.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G4\Attendance.vb">

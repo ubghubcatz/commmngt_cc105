@@ -9,8 +9,6 @@
         form.Panel1.Width = form.ClientSize.Width - form.FlowLayoutPanel1.Width
         form.Panel1.Height = form.ClientSize.Height
         form.Panel1.Left = form.FlowLayoutPanel1.Width
-        form.ActiveCases_DataGridView.Width = form.Panel1.Width * 0.95
-        form.ActiveCases_DataGridView.Height = form.Panel1.Height * 0.7
         form.MainPanel.Height = form.Panel1.Height * 0.85
         form.MainPanel.Width = form.Panel1.Width
         ' Adjust all other elements when fullscreen
@@ -26,7 +24,6 @@
         form.TabControl1.Height = form.Panel1.Height * 0.85
         form.TabControl1.Width = form.Panel1.Width
         form.TabControl1.Top = form.Panel1.Height * 0.15
-        form.Label2.Left = form.TabControl1.Width * 0.75
         form.TabControl1.Left = (form.Panel1.Left - form.FlowLayoutPanel1.Width) * 0.05
         form.Label1.Top = form.Panel1.Height * 0.04
 

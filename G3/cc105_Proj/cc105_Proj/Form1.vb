@@ -19,13 +19,12 @@ Public Class g3CommandCenter_Form
 
     ' Form Load event: Sets up initial settings when the form is loaded
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Set the form to maximized window state
-        Me.WindowState = FormWindowState.Maximized
 
         ' Dynamically set the form size to fit within the available screen space (excluding taskbar)
         Dim workingArea As Rectangle = Screen.PrimaryScreen.WorkingArea
         Me.Width = workingArea.Width
         Me.Height = workingArea.Height
+        Me.Size = Me.MinimumSize
 
         ' Set tab control appearance and size as needed
         TabControl1.Appearance = TabAppearance.Normal
@@ -42,9 +41,6 @@ Public Class g3CommandCenter_Form
             .MinimizeBox = True ' Optionally keep minimize enabled
         End With
 
-        ' Initialize the table with data
-        InsertTable()
-
         ' Test the database connection
         Try
             con.Open()
@@ -59,59 +55,6 @@ Public Class g3CommandCenter_Form
         Timer1.Enabled = True
     End Sub
 
-
-    ' Timer tick event to refresh the table
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs)
-        InsertTable() ' Reload the data
-    End Sub
-
-    ' Inserts case data into DataGridView (ActiveCases_DataGridView)
-    Public Sub InsertTable()
-
-        ' Define SQL query to fetch case data
-        Dim query As String = "
-                               SELECT 
-                                   sd.caseid,
-                                   sd.casename,
-                                   sd.casetype,
-                                   cr.casestatus,
-                                   STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
-                                   sd.ActionTaken,
-                                   sd.Remarks
-                              FROM g3_SpecificCaseDetails sd
-                              INNER JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
-                              INNER JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
-                              INNER JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
-                              WHERE cr.casestatus IN ('In Progress', 'Resolved', 'Pending')
-                              GROUP BY sd.caseid, sd.casename, sd.casetype, sd.ActionTaken, sd.Remarks, cr.casestatus
-                               "
-
-        ' Execute the query and load data into DataGridView
-        Using conn As New SqlConnection(connectionString)
-            Using cmd As New SqlCommand(query, conn)
-                Dim adapter As New SqlDataAdapter(cmd)
-                Dim table As New DataTable()
-                adapter.Fill(table) ' Fill data table with results
-                ActiveCases_DataGridView.DataSource = table ' Bind the results to DataGridView
-            End Using
-        End Using
-
-        ' Style the DataGridView for better readability
-        StyleDataGridView(ActiveCases_DataGridView)
-
-    End Sub
-
-    ' Handle double-click on DataGridView row to open case details
-    Private Sub DataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ActiveCases_DataGridView.CellDoubleClick
-        Dim caseShow As New CaseRecordTable
-        Dim caseName As String = ""
-
-        If ActiveCases_DataGridView.CurrentRow IsNot Nothing Then
-            caseName = ActiveCases_DataGridView.CurrentRow.Cells(1).Value.ToString() ' Get case name from clicked row
-            caseShow.loadCaseData(caseName) ' Load the case data into the new form
-        End If
-    End Sub
-
     ' Custom draw tab items to hide borders and make them look clean
     Private Sub TabControl1_DrawItem(sender As Object, e As DrawItemEventArgs) Handles TabControl1.DrawItem
         ' Hide borders by drawing a blank background
@@ -121,23 +64,7 @@ Public Class g3CommandCenter_Form
     ' Resize event to handle form resizing
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles Me.Resize
         LayoutManager.ResizeFormLayout(Me) ' Adjust layout on form resize
-        ' Resize logic and visibility
-        If Me.WindowState = FormWindowState.Minimized Then
-            If CallLogForm IsNot Nothing AndAlso Not CallLogForm.IsDisposed Then
-                CallLogForm.Close()
-                CallLogForm = Nothing
-            End If
-
-            If CaseRecordForm IsNot Nothing AndAlso Not CaseRecordForm.IsDisposed Then
-                CaseRecordForm.Close()
-                CaseRecordForm = Nothing
-            End If
-
-            If OfficersForm IsNot Nothing AndAlso Not OfficersForm.IsDisposed Then
-                OfficersForm.Close()
-                OfficersForm = Nothing
-            End If
-        End If
+        CountCases()
     End Sub
     Public Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
         ' Check if the form instance already exists and is not disposed
@@ -161,6 +88,37 @@ Public Class g3CommandCenter_Form
         End If
     End Sub
 
+    Public Sub CountCases()
+        Dim query As String = "SELECT casestatus, COUNT(*) AS StatusCount
+FROM g3_CaseRecords
+GROUP BY casestatus;"
+
+        Using conn As New SqlConnection(connectionString)
+            Using cmd As New SqlCommand(query, conn)
+                conn.Open()
+                Dim reader As SqlDataReader = cmd.ExecuteReader()
+
+                While reader.Read()
+                    Dim status As String = reader("CaseStatus").ToString()
+                    Dim count As Integer = Convert.ToInt32(reader("StatusCount"))
+
+                    ' Assign count to appropriate label
+                    Select Case status
+                        Case "Open"
+                            OpenCasesCount_Label.Text = count.ToString()
+                        Case "Resolved"
+                            ResolvedCasesCount_Label.Text = count.ToString()
+                        Case "Pending"
+                            PendingCasesCount_Label.Text = count.ToString()
+                        Case "In Progress"
+                            InProgressCasesCount_Label.Text = count.ToString()
+                    End Select
+                End While
+
+                reader.Close()
+            End Using
+        End Using
+    End Sub
 
     Private Sub CaseRecords_Btn_Click(sender As Object, e As EventArgs) Handles CaseRecords_Btn.Click
         OpenOrRestoreForm(CaseRecordForm, GetType(CaseRecordTable))
@@ -176,7 +134,7 @@ Public Class g3CommandCenter_Form
 
 
     ' Format the Call Log DataGridView cells to improve appearance
-    Private Sub ActiveCases_DataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs) Handles ActiveCases_DataGridView.CellFormatting
+    Private Sub ActiveCases_DataGridView_CellFormatting(sender As Object, e As DataGridViewCellFormattingEventArgs)
         If e.RowIndex < 0 Then Exit Sub ' Skip header row
 
         ' Set the background color for data rows
@@ -184,7 +142,7 @@ Public Class g3CommandCenter_Form
     End Sub
 
     ' Style the DataGridView (called by InsertTable) for better readability
-    Private Sub StyleDataGridView(ByRef dgv As DataGridView)
+    Public Sub StyleDataGridView(ByRef dgv As DataGridView)
         dgv.Columns(0).Visible = False ' Hide the first column (CaseID)
         With dgv
             .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill ' Auto size columns to fill the available width
@@ -211,7 +169,7 @@ Public Class g3CommandCenter_Form
             col.Resizable = DataGridViewTriState.False ' Disable column resizing
             col.SortMode = DataGridViewColumnSortMode.NotSortable ' Disable sorting on columns
         Next
-        ActiveCases_DataGridView.AllowUserToAddRows = False ' Prevent adding rows manually
+        dgv.AllowUserToAddRows = False ' Prevent adding rows manually
 
     End Sub
 

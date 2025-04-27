@@ -34,7 +34,7 @@ Partial Class AdditionalPhotoForm
         ' PictureBox1
         ' 
         PictureBox1.BackColor = Color.Honeydew
-        PictureBox1.Location = New Point(15, 16)
+        PictureBox1.Location = New Point(16, 18)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(669, 341)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
@@ -46,7 +46,7 @@ Partial Class AdditionalPhotoForm
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Green
-        Label1.Location = New Point(34, 396)
+        Label1.Location = New Point(4, 393)
         Label1.Name = "Label1"
         Label1.Size = New Size(126, 28)
         Label1.TabIndex = 1
@@ -54,11 +54,12 @@ Partial Class AdditionalPhotoForm
         ' 
         ' PhotoDescription_TxtBox
         ' 
+        PhotoDescription_TxtBox.BorderStyle = BorderStyle.FixedSingle
         PhotoDescription_TxtBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        PhotoDescription_TxtBox.Location = New Point(166, 396)
+        PhotoDescription_TxtBox.Location = New Point(136, 393)
         PhotoDescription_TxtBox.Multiline = True
         PhotoDescription_TxtBox.Name = "PhotoDescription_TxtBox"
-        PhotoDescription_TxtBox.Size = New Size(463, 62)
+        PhotoDescription_TxtBox.Size = New Size(463, 70)
         PhotoDescription_TxtBox.TabIndex = 2
         ' 
         ' Panel1
@@ -66,7 +67,7 @@ Partial Class AdditionalPhotoForm
         Panel1.BackColor = Color.Green
         Panel1.Controls.Add(PictureBox1)
         Panel1.ForeColor = SystemColors.ControlLightLight
-        Panel1.Location = New Point(39, 12)
+        Panel1.Location = New Point(9, 9)
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(702, 378)
         Panel1.TabIndex = 3
@@ -76,7 +77,7 @@ Partial Class AdditionalPhotoForm
         AddPic_Btn.BackColor = Color.Green
         AddPic_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddPic_Btn.ForeColor = Color.White
-        AddPic_Btn.Location = New Point(635, 411)
+        AddPic_Btn.Location = New Point(605, 416)
         AddPic_Btn.Name = "AddPic_Btn"
         AddPic_Btn.Size = New Size(106, 47)
         AddPic_Btn.TabIndex = 4
@@ -88,7 +89,7 @@ Partial Class AdditionalPhotoForm
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Honeydew
-        ClientSize = New Size(763, 480)
+        ClientSize = New Size(721, 475)
         Controls.Add(AddPic_Btn)
         Controls.Add(PhotoDescription_TxtBox)
         Controls.Add(Label1)

@@ -91,6 +91,7 @@ Public Class AddOfficersForm
         Else
             saveOfficersToDataGridView(extractedOfficerName, extractedPosition)
             Officer_TextBox.Text = ""
+
         End If
     End Sub
 

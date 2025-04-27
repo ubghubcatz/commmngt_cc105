@@ -18,13 +18,23 @@ Public Class CallLog_Tables
     Private Sub LoadCallLogData()
         Try
             con.Open()
-            Dim query As String = "SELECT l.CallID, c.CallerNumber, l.CallDate, l.CallTime, l.Duration, l.Purpose, l.ZoneName,
-                                      d.CallType, s.Status, h.HandlerName
-                               FROM g3_BrgyCallLogs l
-                               INNER JOIN g3_CallStatuses s ON l.StatusID = s.StatusID
-                               INNER JOIN g3_Callers c ON l.CallerID = c.CallerID
-                               INNER JOIN g3_CallTypes d ON l.CallTypeID = d.CallTypeID
-                               INNER JOIN g3_Handlers h ON l.HandledByID = h.HandlerID"
+            Dim query As String = "
+    SELECT l.CallID, 
+           CONCAT(c.CallerFirstName, ' ', c.CallerLastName) AS FullName,  -- Combine first and last name
+           c.CallerEmail, 
+           c.CallerNumber, 
+            FORMAT(l.DateAndTime, 'MM/dd/yyyy hh:mm tt') AS FormattedCallDate,
+           l.Purpose, 
+           l.ZoneName,
+           l.CommStatus,
+           l.caseIDString,
+           l.CallType,
+           l.CommType,
+           e.EmployeeName
+    FROM g3_BrgyCallLogs l
+    INNER JOIN g3_Callers c ON l.CallerID = c.CallerID
+    INNER JOIN g4_EmployeeDetails e ON l.HandlerID = e.EmployeeID"
+
 
             Dim adapter As New SqlDataAdapter(New SqlCommand(query, con))
             Dim table As New DataTable()
@@ -32,19 +42,12 @@ Public Class CallLog_Tables
             CallLog_Table.DataSource = table
             For Each row As DataGridViewRow In CallLog_Table.Rows
                 If Not row.IsNewRow Then
-                    ' Format CallTime to hh:mm
-                    Dim timeSpanValue As TimeSpan
-                    If TimeSpan.TryParse(row.Cells("CallTime").Value?.ToString(), timeSpanValue) Then
-                        row.Cells("CallTime").Value = timeSpanValue.ToString("hh\:mm")
-                    End If
-
                     CallLog_Table.Columns("CallID").Visible = False
+                    CallLog_Table.Columns("caseIDString").Visible = False
+                    CallLog_Table.Columns("CallType").Visible = False
+                    CallLog_Table.Columns("EmployeeName").Visible = False
+                    CallLog_Table.Columns("Purpose").Visible = False
 
-                    ' Format Duration for display using DataGridView CellFormatting event
-                    Dim durationSeconds As Integer
-                    If Integer.TryParse(row.Cells("Duration").Value?.ToString(), durationSeconds) Then
-                        row.Cells("Duration").Tag = durationSeconds ' Store original integer value
-                    End If
                 End If
             Next
             StyleDataGridView(CallLog_Table)
@@ -86,53 +89,22 @@ Public Class CallLog_Tables
     End Sub
 
     Private Sub CallLogsGrid_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles CallLog_Table.CellDoubleClick
-        ' Ensure the user double-clicked a valid row (not the header)
         If e.RowIndex >= 0 Then
-            ' Retrieve CallID from the selected row
-            Dim selectedCallID As Integer = Convert.ToInt32(CallLog_Table.Rows(e.RowIndex).Cells("CallID").Value)
+            Dim row As DataGridViewRow = CallLog_Table.Rows(e.RowIndex)
+            Dim selectedCallID As Integer = Convert.ToInt32(row.Cells("CallID").Value)
 
-            ' Load call details using the CallID
-            LoadCallDetails(selectedCallID)
+            ' Pass the row and ID to the detail loader
+            LoadCallDetails(selectedCallID, row)
         End If
     End Sub
 
-    Private Sub LoadCallDetails(callID As Integer)
+    Private Sub LoadCallDetails(callID As Integer, row As DataGridViewRow)
         Dim detailsForm As New CallDetails()
         Try
             Using con As New SqlConnection(connectionString)
                 con.Open()
 
-                ' Query to fetch call details
-                Dim query As String = "SELECT l.CallID, c.CallerNumber, l.CallDate, l.CallTime, l.Purpose, l.ZoneName,
-                                          d.CallType, s.Status, h.HandlerName
-                                   FROM g3_BrgyCallLogs l
-                                   INNER JOIN g3_CallStatuses s ON l.StatusID = s.StatusID
-                                   INNER JOIN g3_Callers c ON l.CallerID = c.CallerID
-                                   INNER JOIN g3_CallTypes d ON l.CallTypeID = d.CallTypeID
-                                   INNER JOIN g3_Handlers h ON l.HandledByID = h.HandlerID
-                                   WHERE l.CallID = @CallID"
-
-                Using cmd As New SqlCommand(query, con)
-                    cmd.Parameters.AddWithValue("@CallID", callID)
-                    Using reader As SqlDataReader = cmd.ExecuteReader()
-                        If reader.Read() Then ' Ensure only one matching record is loaded
-                            detailsForm.Number_TxtBox.Text = reader("CallerNumber").ToString()
-                            detailsForm.CallDate_TxtBox.Text = Convert.ToDateTime(reader("CallDate")).ToString("yyyy-MM-dd")
-                            detailsForm.CallTime_TxtBox.Text = TimeSpan.Parse(reader("CallTime").ToString()).ToString("hh\:mm")
-                            detailsForm.Status_TxtBox.Text = reader("Status").ToString()
-                            detailsForm.CallType_TxtBox.Text = reader("CallType").ToString()
-                            detailsForm.Handler_TxtBox.Text = reader("HandlerName").ToString()
-                            detailsForm.Purpose_Txbox.Text = reader("Purpose").ToString()
-                            detailsForm.CallId_Label.Text = reader("CallID").ToString()
-                            detailsForm.CallZone_TxtBox.Text = reader("ZoneName").ToString()
-                        Else
-                            MessageBox.Show("No matching call details found for CallID: " & callID)
-                            Exit Sub
-                        End If
-                    End Using
-                End Using
-
-                ' Load Call Notes into DataGridView **AFTER** fetching call details
+                ' Load call notes
                 Dim notesQuery As String = "SELECT CallID, NoteID, NoteText, AddedBy, TimeStamp 
                                         FROM g3_CallNotes 
                                         WHERE CallID = @CallID"
@@ -144,19 +116,31 @@ Public Class CallLog_Tables
                     Dim notesTable As New DataTable()
                     notesAdapter.Fill(notesTable)
 
-                    ' Assign data to DataGridView
                     detailsForm.CallNotes_Table.DataSource = notesTable
                     detailsForm.CallNotes_Table.Refresh()
                 End Using
-
-                ' Show the form after all data is loaded
-                detailsForm.TopLevel = False ' Set the form as non-top level
-                detailsForm.Location = New Point(0, 0) ' Position at the top-left corner
-                Me.Controls.Add(detailsForm) ' Add directly to the parent form
-                detailsForm.BringToFront() ' Ensure it overlaps everything
-                detailsForm.Show() ' Show the form
-
             End Using
+
+            ' Now fill in call details from the clicked row
+            detailsForm.Number_TxtBox.Text = row.Cells("CallerNumber").Value.ToString()
+            detailsForm.Name_Text.Text = row.Cells("FullName").Value.ToString()
+            detailsForm.Email_TextBox.Text = row.Cells("CallerEmail").Value.ToString()
+            detailsForm.CallDate_TxtBox.Text = Convert.ToDateTime(row.Cells("DateAndTime").Value).ToString("yyyy-MM-dd HH:mm")
+            detailsForm.Status_TxtBox.Text = row.Cells("CommStatus").Value.ToString()
+            detailsForm.CallType_TxtBox.Text = row.Cells("CallType").Value.ToString()
+            detailsForm.Handler_TxtBox.Text = row.Cells("EmployeeName").Value.ToString()
+            detailsForm.Purpose_Txbox.Text = row.Cells("Purpose").Value.ToString()
+            detailsForm.CallId_Label.Text = row.Cells("CallID").Value.ToString()
+            detailsForm.CallZone_TxtBox.Text = row.Cells("ZoneName").Value.ToString()
+            detailsForm.ConnectedCase_Label.Text = row.Cells("caseIDString").Value.ToString()
+
+            ' Show the form embedded in the parent
+            detailsForm.TopLevel = False
+            detailsForm.Location = New Point(0, 0)
+            Me.Controls.Add(detailsForm)
+            detailsForm.BringToFront()
+            detailsForm.Show()
+
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
@@ -169,11 +153,17 @@ Public Class CallLog_Tables
 
         e.CellStyle.BackColor = Color.Honeydew
         Select Case CallLog_Table.Rows(e.RowIndex).Cells(e.ColumnIndex).Value?.ToString()
-            Case "Answered" : e.CellStyle.ForeColor = Color.Green
+            Case "Responded" : e.CellStyle.ForeColor = Color.Green
             Case "Missed" : e.CellStyle.ForeColor = Color.Red
             Case "Declined" : e.CellStyle.ForeColor = Color.Orange
+            Case "Queued" : e.CellStyle.ForeColor = Color.Yellow
             Case "Incoming" : e.CellStyle.ForeColor = Color.DarkGreen
             Case "Outcoming" : e.CellStyle.ForeColor = Color.DarkBlue
+            Case "Through Call" : e.CellStyle.ForeColor = Color.Maroon
+            Case "Through Text" : e.CellStyle.ForeColor = Color.DarkGoldenrod
+            Case "Through Email" : e.CellStyle.ForeColor = Color.DarkSalmon
+            Case "Through Social Media" : e.CellStyle.ForeColor = Color.DarkOrange
+            Case "Walk-in" : e.CellStyle.ForeColor = Color.BlueViolet
             Case Else : e.CellStyle.ForeColor = Color.Black
         End Select
 

@@ -22,20 +22,22 @@ Partial Class CaseRecordShowForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CaseRecordShowForm))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         CaseID_Label = New Label()
         HiddenCaseID = New Label()
-        TabControl2 = New TabControl()
-        TabPage4 = New TabPage()
+        PrintDocument1 = New Printing.PrintDocument()
+        PrintPreviewDialog1 = New PrintPreviewDialog()
+        PrintDialog1 = New PrintDialog()
+        PageSetupDialog1 = New PageSetupDialog()
         Panel3 = New Panel()
         ExpectedResolveDare_TextBox = New TextBox()
         Label3 = New Label()
-        Button1 = New Button()
         OfficersSent_DataGridView = New DataGridView()
         Label11 = New Label()
         Label16 = New Label()
@@ -107,9 +109,13 @@ Partial Class CaseRecordShowForm
         Label5 = New Label()
         CaseIDString_TextBox = New TextBox()
         Label8 = New Label()
-        Panel1 = New Panel()
-        TabControl2.SuspendLayout()
-        TabPage4.SuspendLayout()
+        MenuStrip1 = New MenuStrip()
+        OptionsToolStripMenuItem = New ToolStripMenuItem()
+        PrintOptionsToolStripMenuItem = New ToolStripMenuItem()
+        PrintToolStripMenuItem = New ToolStripMenuItem()
+        PrintPreviewToolStripMenuItem = New ToolStripMenuItem()
+        PageSetupToolStripMenuItem = New ToolStripMenuItem()
+        SaveAsPDFToolStripMenuItem = New ToolStripMenuItem()
         Panel3.SuspendLayout()
         CType(OfficersSent_DataGridView, ComponentModel.ISupportInitialize).BeginInit()
         CType(CasePeople_DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -125,6 +131,7 @@ Partial Class CaseRecordShowForm
         CType(GeneralCases_PicBox, ComponentModel.ISupportInitialize).BeginInit()
         GroupBox1.SuspendLayout()
         GroupBox3.SuspendLayout()
+        MenuStrip1.SuspendLayout()
         SuspendLayout()
         ' 
         ' CaseID_Label
@@ -147,32 +154,28 @@ Partial Class CaseRecordShowForm
         HiddenCaseID.Size = New Size(0, 38)
         HiddenCaseID.TabIndex = 78
         ' 
-        ' TabControl2
+        ' PrintDocument1
         ' 
-        TabControl2.Controls.Add(TabPage4)
-        TabControl2.Location = New Point(3, 1)
-        TabControl2.Name = "TabControl2"
-        TabControl2.SelectedIndex = 0
-        TabControl2.Size = New Size(1618, 700)
-        TabControl2.TabIndex = 113
         ' 
-        ' TabPage4
+        ' PrintPreviewDialog1
         ' 
-        TabPage4.Controls.Add(Panel3)
-        TabPage4.Location = New Point(4, 29)
-        TabPage4.Name = "TabPage4"
-        TabPage4.Padding = New Padding(3)
-        TabPage4.Size = New Size(1610, 667)
-        TabPage4.TabIndex = 0
-        TabPage4.Text = "TabPage4"
-        TabPage4.UseVisualStyleBackColor = True
+        PrintPreviewDialog1.AutoScrollMargin = New Size(0, 0)
+        PrintPreviewDialog1.AutoScrollMinSize = New Size(0, 0)
+        PrintPreviewDialog1.ClientSize = New Size(400, 300)
+        PrintPreviewDialog1.Enabled = True
+        PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), Icon)
+        PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        PrintPreviewDialog1.Visible = False
+        ' 
+        ' PrintDialog1
+        ' 
+        PrintDialog1.UseEXDialog = True
         ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.Honeydew
         Panel3.Controls.Add(ExpectedResolveDare_TextBox)
         Panel3.Controls.Add(Label3)
-        Panel3.Controls.Add(Button1)
         Panel3.Controls.Add(OfficersSent_DataGridView)
         Panel3.Controls.Add(Label11)
         Panel3.Controls.Add(Label16)
@@ -193,15 +196,15 @@ Partial Class CaseRecordShowForm
         Panel3.Controls.Add(GroupBox3)
         Panel3.Controls.Add(CaseIDString_TextBox)
         Panel3.Controls.Add(Label8)
-        Panel3.Location = New Point(0, 0)
+        Panel3.Location = New Point(0, 27)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1622, 700)
-        Panel3.TabIndex = 2
+        Panel3.Size = New Size(1622, 676)
+        Panel3.TabIndex = 3
         ' 
         ' ExpectedResolveDare_TextBox
         ' 
         ExpectedResolveDare_TextBox.BorderStyle = BorderStyle.FixedSingle
-        ExpectedResolveDare_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        ExpectedResolveDare_TextBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         ExpectedResolveDare_TextBox.Location = New Point(945, 172)
         ExpectedResolveDare_TextBox.Name = "ExpectedResolveDare_TextBox"
         ExpectedResolveDare_TextBox.ReadOnly = True
@@ -211,7 +214,7 @@ Partial Class CaseRecordShowForm
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Segoe UI", 9.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.Green
         Label3.Location = New Point(945, 148)
         Label3.Name = "Label3"
@@ -219,34 +222,25 @@ Partial Class CaseRecordShowForm
         Label3.TabIndex = 116
         Label3.Text = "Expected Resolve Date"
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(1507, 10)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(94, 29)
-        Button1.TabIndex = 114
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' OfficersSent_DataGridView
         ' 
-        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = SystemColors.Control
-        DataGridViewCellStyle7.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle7.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
-        OfficersSent_DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = SystemColors.Control
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        OfficersSent_DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         OfficersSent_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = SystemColors.Window
-        DataGridViewCellStyle8.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle8.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = DataGridViewTriState.False
-        OfficersSent_DataGridView.DefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        OfficersSent_DataGridView.DefaultCellStyle = DataGridViewCellStyle2
         OfficersSent_DataGridView.Location = New Point(1148, 222)
         OfficersSent_DataGridView.Name = "OfficersSent_DataGridView"
         OfficersSent_DataGridView.RowHeadersWidth = 51
@@ -256,7 +250,7 @@ Partial Class CaseRecordShowForm
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label11.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label11.ForeColor = Color.Green
         Label11.Location = New Point(766, 3)
         Label11.Name = "Label11"
@@ -289,7 +283,7 @@ Partial Class CaseRecordShowForm
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label10.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label10.ForeColor = Color.Green
         Label10.Location = New Point(766, 463)
         Label10.Name = "Label10"
@@ -299,23 +293,23 @@ Partial Class CaseRecordShowForm
         ' 
         ' CasePeople_DataGridView1
         ' 
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = SystemColors.Control
-        DataGridViewCellStyle9.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle9.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
-        CasePeople_DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        CasePeople_DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         CasePeople_DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = SystemColors.Window
-        DataGridViewCellStyle10.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle10.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.False
-        CasePeople_DataGridView1.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = SystemColors.Window
+        DataGridViewCellStyle4.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle4.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = DataGridViewTriState.False
+        CasePeople_DataGridView1.DefaultCellStyle = DataGridViewCellStyle4
         CasePeople_DataGridView1.Location = New Point(1142, 46)
         CasePeople_DataGridView1.Name = "CasePeople_DataGridView1"
         CasePeople_DataGridView1.RowHeadersWidth = 51
@@ -327,7 +321,7 @@ Partial Class CaseRecordShowForm
         UpdateCaseData_Btn.BackColor = Color.Green
         UpdateCaseData_Btn.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         UpdateCaseData_Btn.ForeColor = Color.White
-        UpdateCaseData_Btn.Location = New Point(526, 606)
+        UpdateCaseData_Btn.Location = New Point(526, 582)
         UpdateCaseData_Btn.Name = "UpdateCaseData_Btn"
         UpdateCaseData_Btn.Size = New Size(128, 52)
         UpdateCaseData_Btn.TabIndex = 114
@@ -337,7 +331,7 @@ Partial Class CaseRecordShowForm
         ' CaseType_TxtBox
         ' 
         CaseType_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        CaseType_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CaseType_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CaseType_TxtBox.Location = New Point(766, 31)
         CaseType_TxtBox.Name = "CaseType_TxtBox"
         CaseType_TxtBox.ReadOnly = True
@@ -396,7 +390,7 @@ Partial Class CaseRecordShowForm
         ' Label45
         ' 
         Label45.AutoSize = True
-        Label45.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label45.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label45.ForeColor = Color.Green
         Label45.Location = New Point(464, 296)
         Label45.Name = "Label45"
@@ -418,7 +412,7 @@ Partial Class CaseRecordShowForm
         ' Label44
         ' 
         Label44.AutoSize = True
-        Label44.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label44.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label44.ForeColor = Color.Green
         Label44.Location = New Point(244, 296)
         Label44.Name = "Label44"
@@ -429,7 +423,7 @@ Partial Class CaseRecordShowForm
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.Green
         Label4.Location = New Point(144, 364)
         Label4.Name = "Label4"
@@ -440,7 +434,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonNo_TxtBox
         ' 
         MissingPersonNo_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonNo_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonNo_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonNo_TxtBox.Location = New Point(464, 327)
         MissingPersonNo_TxtBox.Name = "MissingPersonNo_TxtBox"
         MissingPersonNo_TxtBox.ReadOnly = True
@@ -450,7 +444,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonEmail_TxtBox
         ' 
         MissingPersonEmail_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonEmail_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonEmail_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonEmail_TxtBox.Location = New Point(244, 327)
         MissingPersonEmail_TxtBox.Name = "MissingPersonEmail_TxtBox"
         MissingPersonEmail_TxtBox.ReadOnly = True
@@ -460,7 +454,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonCaseName_Label
         ' 
         MissingPersonCaseName_Label.AutoSize = True
-        MissingPersonCaseName_Label.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonCaseName_Label.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonCaseName_Label.ForeColor = Color.Green
         MissingPersonCaseName_Label.Location = New Point(15, 17)
         MissingPersonCaseName_Label.Name = "MissingPersonCaseName_Label"
@@ -482,7 +476,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonName_TxtBox
         ' 
         MissingPersonName_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonName_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonName_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonName_TxtBox.Location = New Point(22, 327)
         MissingPersonName_TxtBox.Name = "MissingPersonName_TxtBox"
         MissingPersonName_TxtBox.ReadOnly = True
@@ -492,7 +486,7 @@ Partial Class CaseRecordShowForm
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.Green
         Label1.Location = New Point(22, 296)
         Label1.Name = "Label1"
@@ -503,7 +497,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonAge_TxtBox
         ' 
         MissingPersonAge_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonAge_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonAge_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonAge_TxtBox.Location = New Point(22, 395)
         MissingPersonAge_TxtBox.Name = "MissingPersonAge_TxtBox"
         MissingPersonAge_TxtBox.ReadOnly = True
@@ -513,7 +507,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonHeight_TxtBox
         ' 
         MissingPersonHeight_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonHeight_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonHeight_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonHeight_TxtBox.Location = New Point(304, 395)
         MissingPersonHeight_TxtBox.Name = "MissingPersonHeight_TxtBox"
         MissingPersonHeight_TxtBox.ReadOnly = True
@@ -523,7 +517,7 @@ Partial Class CaseRecordShowForm
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Green
         Label6.Location = New Point(22, 364)
         Label6.Name = "Label6"
@@ -534,7 +528,7 @@ Partial Class CaseRecordShowForm
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = Color.Green
         Label7.Location = New Point(304, 361)
         Label7.Name = "Label7"
@@ -545,7 +539,7 @@ Partial Class CaseRecordShowForm
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label9.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.Green
         Label9.Location = New Point(358, 123)
         Label9.Name = "Label9"
@@ -556,7 +550,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonPhysicalDesc_TxtBox
         ' 
         MissingPersonPhysicalDesc_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonPhysicalDesc_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonPhysicalDesc_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonPhysicalDesc_TxtBox.Location = New Point(358, 154)
         MissingPersonPhysicalDesc_TxtBox.Multiline = True
         MissingPersonPhysicalDesc_TxtBox.Name = "MissingPersonPhysicalDesc_TxtBox"
@@ -568,7 +562,7 @@ Partial Class CaseRecordShowForm
         ' MissingPersonLastSeenLocation_TxtBox
         ' 
         MissingPersonLastSeenLocation_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        MissingPersonLastSeenLocation_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        MissingPersonLastSeenLocation_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         MissingPersonLastSeenLocation_TxtBox.Location = New Point(358, 75)
         MissingPersonLastSeenLocation_TxtBox.Name = "MissingPersonLastSeenLocation_TxtBox"
         MissingPersonLastSeenLocation_TxtBox.ReadOnly = True
@@ -618,7 +612,7 @@ Partial Class CaseRecordShowForm
         ' Suspect_Physical_Desc
         ' 
         Suspect_Physical_Desc.AutoSize = True
-        Suspect_Physical_Desc.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Suspect_Physical_Desc.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Suspect_Physical_Desc.ForeColor = Color.Green
         Suspect_Physical_Desc.Location = New Point(400, 105)
         Suspect_Physical_Desc.Name = "Suspect_Physical_Desc"
@@ -630,7 +624,7 @@ Partial Class CaseRecordShowForm
         ' 
         SuspectDesc_TxtBox.BorderStyle = BorderStyle.FixedSingle
         SuspectDesc_TxtBox.Enabled = False
-        SuspectDesc_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        SuspectDesc_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         SuspectDesc_TxtBox.Location = New Point(399, 136)
         SuspectDesc_TxtBox.Multiline = True
         SuspectDesc_TxtBox.Name = "SuspectDesc_TxtBox"
@@ -642,7 +636,7 @@ Partial Class CaseRecordShowForm
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label20.ForeColor = Color.Green
         Label20.Location = New Point(14, 60)
         Label20.Name = "Label20"
@@ -652,23 +646,23 @@ Partial Class CaseRecordShowForm
         ' 
         ' ItemDescription_DataGridView
         ' 
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = SystemColors.Control
-        DataGridViewCellStyle11.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle11.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        ItemDescription_DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = SystemColors.Control
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle5.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        ItemDescription_DataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         ItemDescription_DataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = SystemColors.Window
-        DataGridViewCellStyle12.Font = New Font("Segoe UI", 9F)
-        DataGridViewCellStyle12.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = DataGridViewTriState.False
-        ItemDescription_DataGridView.DefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = SystemColors.Window
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9.0F)
+        DataGridViewCellStyle6.ForeColor = SystemColors.ControlText
+        DataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
+        ItemDescription_DataGridView.DefaultCellStyle = DataGridViewCellStyle6
         ItemDescription_DataGridView.Location = New Point(14, 91)
         ItemDescription_DataGridView.Name = "ItemDescription_DataGridView"
         ItemDescription_DataGridView.RowHeadersWidth = 51
@@ -678,7 +672,7 @@ Partial Class CaseRecordShowForm
         ' StolenItemsCaseName_Label
         ' 
         StolenItemsCaseName_Label.AutoSize = True
-        StolenItemsCaseName_Label.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        StolenItemsCaseName_Label.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         StolenItemsCaseName_Label.ForeColor = Color.Green
         StolenItemsCaseName_Label.Location = New Point(18, 11)
         StolenItemsCaseName_Label.Name = "StolenItemsCaseName_Label"
@@ -689,7 +683,7 @@ Partial Class CaseRecordShowForm
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label22.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.Green
         Label22.Location = New Point(392, 261)
         Label22.Name = "Label22"
@@ -701,7 +695,7 @@ Partial Class CaseRecordShowForm
         ' 
         PropertyDamage_TextBox.BorderStyle = BorderStyle.FixedSingle
         PropertyDamage_TextBox.Enabled = False
-        PropertyDamage_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        PropertyDamage_TextBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         PropertyDamage_TextBox.Location = New Point(396, 292)
         PropertyDamage_TextBox.Multiline = True
         PropertyDamage_TextBox.Name = "PropertyDamage_TextBox"
@@ -713,7 +707,7 @@ Partial Class CaseRecordShowForm
         ' TheftLocation_TxtBox
         ' 
         TheftLocation_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        TheftLocation_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        TheftLocation_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         TheftLocation_TxtBox.Location = New Point(399, 66)
         TheftLocation_TxtBox.Name = "TheftLocation_TxtBox"
         TheftLocation_TxtBox.ReadOnly = True
@@ -770,7 +764,7 @@ Partial Class CaseRecordShowForm
         ' Label28
         ' 
         Label28.AutoSize = True
-        Label28.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label28.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label28.ForeColor = Color.Green
         Label28.Location = New Point(367, 123)
         Label28.Name = "Label28"
@@ -781,7 +775,7 @@ Partial Class CaseRecordShowForm
         ' WhatHappened_TextBox
         ' 
         WhatHappened_TextBox.BorderStyle = BorderStyle.FixedSingle
-        WhatHappened_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        WhatHappened_TextBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         WhatHappened_TextBox.Location = New Point(366, 154)
         WhatHappened_TextBox.Multiline = True
         WhatHappened_TextBox.Name = "WhatHappened_TextBox"
@@ -793,7 +787,7 @@ Partial Class CaseRecordShowForm
         ' Label30
         ' 
         Label30.AutoSize = True
-        Label30.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label30.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label30.ForeColor = Color.Green
         Label30.Location = New Point(9, 351)
         Label30.Name = "Label30"
@@ -804,7 +798,7 @@ Partial Class CaseRecordShowForm
         ' GeneralCaseName_Label
         ' 
         GeneralCaseName_Label.AutoSize = True
-        GeneralCaseName_Label.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GeneralCaseName_Label.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GeneralCaseName_Label.ForeColor = Color.Green
         GeneralCaseName_Label.Location = New Point(14, 34)
         GeneralCaseName_Label.Name = "GeneralCaseName_Label"
@@ -815,7 +809,7 @@ Partial Class CaseRecordShowForm
         ' SpecificCaseType_ComboBox
         ' 
         SpecificCaseType_ComboBox.BorderStyle = BorderStyle.FixedSingle
-        SpecificCaseType_ComboBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        SpecificCaseType_ComboBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         SpecificCaseType_ComboBox.Location = New Point(14, 382)
         SpecificCaseType_ComboBox.Name = "SpecificCaseType_ComboBox"
         SpecificCaseType_ComboBox.ReadOnly = True
@@ -825,7 +819,7 @@ Partial Class CaseRecordShowForm
         ' GeneralCasesLocation_TextBox
         ' 
         GeneralCasesLocation_TextBox.BorderStyle = BorderStyle.FixedSingle
-        GeneralCasesLocation_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        GeneralCasesLocation_TextBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         GeneralCasesLocation_TextBox.Location = New Point(366, 82)
         GeneralCasesLocation_TextBox.Name = "GeneralCasesLocation_TextBox"
         GeneralCasesLocation_TextBox.ReadOnly = True
@@ -879,7 +873,7 @@ Partial Class CaseRecordShowForm
         ' Label27
         ' 
         Label27.AutoSize = True
-        Label27.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label27.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label27.ForeColor = Color.Green
         Label27.Location = New Point(6, 20)
         Label27.Name = "Label27"
@@ -898,7 +892,7 @@ Partial Class CaseRecordShowForm
         ' CaseStatus_TxtBox
         ' 
         CaseStatus_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        CaseStatus_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CaseStatus_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         CaseStatus_TxtBox.Location = New Point(766, 172)
         CaseStatus_TxtBox.Name = "CaseStatus_TxtBox"
         CaseStatus_TxtBox.ReadOnly = True
@@ -908,7 +902,7 @@ Partial Class CaseRecordShowForm
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label13.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.Green
         Label13.Location = New Point(766, 141)
         Label13.Name = "Label13"
@@ -919,7 +913,7 @@ Partial Class CaseRecordShowForm
         ' DateAndTimeReported_TxtBox
         ' 
         DateAndTimeReported_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        DateAndTimeReported_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        DateAndTimeReported_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         DateAndTimeReported_TxtBox.Location = New Point(766, 105)
         DateAndTimeReported_TxtBox.Name = "DateAndTimeReported_TxtBox"
         DateAndTimeReported_TxtBox.ReadOnly = True
@@ -929,7 +923,7 @@ Partial Class CaseRecordShowForm
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label18.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label18.ForeColor = Color.Green
         Label18.Location = New Point(766, 74)
         Label18.Name = "Label18"
@@ -940,7 +934,7 @@ Partial Class CaseRecordShowForm
         ' AdditionalInfo_TxtBox
         ' 
         AdditionalInfo_TxtBox.BorderStyle = BorderStyle.FixedSingle
-        AdditionalInfo_TxtBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        AdditionalInfo_TxtBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AdditionalInfo_TxtBox.Location = New Point(766, 500)
         AdditionalInfo_TxtBox.Multiline = True
         AdditionalInfo_TxtBox.Name = "AdditionalInfo_TxtBox"
@@ -960,7 +954,7 @@ Partial Class CaseRecordShowForm
         GroupBox3.Controls.Add(Email_textbox)
         GroupBox3.Controls.Add(Label5)
         GroupBox3.FlatStyle = FlatStyle.Flat
-        GroupBox3.Location = New Point(21, 500)
+        GroupBox3.Location = New Point(19, 487)
         GroupBox3.Name = "GroupBox3"
         GroupBox3.Size = New Size(490, 154)
         GroupBox3.TabIndex = 110
@@ -989,7 +983,7 @@ Partial Class CaseRecordShowForm
         ' Label39
         ' 
         Label39.AutoSize = True
-        Label39.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        Label39.Font = New Font("Segoe UI", 10.0F, FontStyle.Bold)
         Label39.ForeColor = Color.Green
         Label39.Location = New Point(141, 52)
         Label39.Name = "Label39"
@@ -1053,8 +1047,8 @@ Partial Class CaseRecordShowForm
         ' CaseIDString_TextBox
         ' 
         CaseIDString_TextBox.BorderStyle = BorderStyle.FixedSingle
-        CaseIDString_TextBox.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        CaseIDString_TextBox.Location = New Point(526, 541)
+        CaseIDString_TextBox.Font = New Font("Segoe UI Semibold", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        CaseIDString_TextBox.Location = New Point(526, 530)
         CaseIDString_TextBox.Name = "CaseIDString_TextBox"
         CaseIDString_TextBox.ReadOnly = True
         CaseIDString_TextBox.Size = New Size(186, 34)
@@ -1063,41 +1057,80 @@ Partial Class CaseRecordShowForm
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.Font = New Font("Segoe UI", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label8.ForeColor = Color.Green
-        Label8.Location = New Point(526, 510)
+        Label8.Location = New Point(526, 499)
         Label8.Name = "Label8"
         Label8.Size = New Size(82, 28)
         Label8.TabIndex = 111
         Label8.Text = "Case ID"
         ' 
-        ' Panel1
+        ' MenuStrip1
         ' 
-        Panel1.Location = New Point(3, 1)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1621, 700)
-        Panel1.TabIndex = 79
-        Panel1.Visible = False
+        MenuStrip1.ImageScalingSize = New Size(20, 20)
+        MenuStrip1.Items.AddRange(New ToolStripItem() {OptionsToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(1626, 28)
+        MenuStrip1.TabIndex = 79
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' OptionsToolStripMenuItem
+        ' 
+        OptionsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {PrintOptionsToolStripMenuItem, SaveAsPDFToolStripMenuItem})
+        OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        OptionsToolStripMenuItem.Size = New Size(75, 24)
+        OptionsToolStripMenuItem.Text = "Options"
+        ' 
+        ' PrintOptionsToolStripMenuItem
+        ' 
+        PrintOptionsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {PrintToolStripMenuItem, PrintPreviewToolStripMenuItem, PageSetupToolStripMenuItem})
+        PrintOptionsToolStripMenuItem.Name = "PrintOptionsToolStripMenuItem"
+        PrintOptionsToolStripMenuItem.Size = New Size(178, 26)
+        PrintOptionsToolStripMenuItem.Text = "Print Options"
+        ' 
+        ' PrintToolStripMenuItem
+        ' 
+        PrintToolStripMenuItem.Name = "PrintToolStripMenuItem"
+        PrintToolStripMenuItem.Size = New Size(177, 26)
+        PrintToolStripMenuItem.Text = "Print"
+        ' 
+        ' PrintPreviewToolStripMenuItem
+        ' 
+        PrintPreviewToolStripMenuItem.Name = "PrintPreviewToolStripMenuItem"
+        PrintPreviewToolStripMenuItem.Size = New Size(177, 26)
+        PrintPreviewToolStripMenuItem.Text = "Print Preview"
+        ' 
+        ' PageSetupToolStripMenuItem
+        ' 
+        PageSetupToolStripMenuItem.Name = "PageSetupToolStripMenuItem"
+        PageSetupToolStripMenuItem.Size = New Size(177, 26)
+        PageSetupToolStripMenuItem.Text = "Page Setup"
+        ' 
+        ' SaveAsPDFToolStripMenuItem
+        ' 
+        SaveAsPDFToolStripMenuItem.Name = "SaveAsPDFToolStripMenuItem"
+        SaveAsPDFToolStripMenuItem.Size = New Size(178, 26)
+        SaveAsPDFToolStripMenuItem.Text = "Save As PDF"
         ' 
         ' CaseRecordShowForm
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(8.0F, 20.0F)
         AutoScaleMode = AutoScaleMode.Font
         AutoScroll = True
         BackColor = Color.Honeydew
         ClientSize = New Size(1626, 703)
-        Controls.Add(TabControl2)
+        Controls.Add(Panel3)
         Controls.Add(HiddenCaseID)
-        Controls.Add(Panel1)
         Controls.Add(CaseID_Label)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
         MaximizeBox = False
         MaximumSize = New Size(1718, 750)
         MinimumSize = New Size(859, 375)
         Name = "CaseRecordShowForm"
         ShowIcon = False
         Text = "CaseRecordShowForm"
-        TabControl2.ResumeLayout(False)
-        TabPage4.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         CType(OfficersSent_DataGridView, ComponentModel.ISupportInitialize).EndInit()
@@ -1119,14 +1152,20 @@ Partial Class CaseRecordShowForm
         GroupBox1.PerformLayout()
         GroupBox3.ResumeLayout(False)
         GroupBox3.PerformLayout()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents CaseID_Label As Label
     Friend WithEvents HiddenCaseID As Label
-    Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PageSetupDialog1 As PageSetupDialog
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents ExpectedResolveDare_TextBox As TextBox
+    Friend WithEvents Label3 As Label
     Friend WithEvents OfficersSent_DataGridView As DataGridView
     Friend WithEvents Label11 As Label
     Friend WithEvents Label16 As Label
@@ -1138,8 +1177,12 @@ Partial Class CaseRecordShowForm
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents MissingPerson_GroupBox As GroupBox
+    Friend WithEvents Label45 As Label
     Friend WithEvents BrthDay_DateTimePicker As DateTimePicker
+    Friend WithEvents Label44 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents MissingPersonNo_TxtBox As TextBox
+    Friend WithEvents MissingPersonEmail_TxtBox As TextBox
     Friend WithEvents MissingPersonCaseName_Label As Label
     Friend WithEvents MissingPerson_PicBox As PictureBox
     Public WithEvents MissingPersonName_TxtBox As TextBox
@@ -1175,6 +1218,7 @@ Partial Class CaseRecordShowForm
     Friend WithEvents Label33 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Procedure_ListView As ListView
     Friend WithEvents Label27 As Label
     Friend WithEvents AdditionalPhotos_FlowLayoutPanel As FlowLayoutPanel
     Friend WithEvents CaseStatus_TxtBox As TextBox
@@ -1193,13 +1237,11 @@ Partial Class CaseRecordShowForm
     Friend WithEvents Label5 As Label
     Friend WithEvents CaseIDString_TextBox As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label45 As Label
-    Friend WithEvents Label44 As Label
-    Friend WithEvents MissingPersonNo_TxtBox As TextBox
-    Friend WithEvents MissingPersonEmail_TxtBox As TextBox
-    Friend WithEvents Procedure_ListView As ListView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ExpectedResolveDare_TextBox As TextBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents OptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PrintOptionsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PrintToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PrintPreviewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PageSetupToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SaveAsPDFToolStripMenuItem As ToolStripMenuItem
 End Class

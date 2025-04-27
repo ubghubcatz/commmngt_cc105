@@ -1,4 +1,5 @@
-﻿Imports System.Globalization
+﻿Imports System.DirectoryServices.ActiveDirectory
+Imports System.Globalization
 Imports System.IO
 Imports Microsoft.Data.SqlClient
 
@@ -48,12 +49,13 @@ Public Class CaseRecordTable
                                    sd.casename,
                                    sd.casetype,                               
                                    cr.casestatus,
-                                   STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers
+                                   STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
+                                   cr.ExpectedDateFinish
                                FROM g3_SpecificCaseDetails sd
-                               INNER JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
-                               INNER JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
-                               INNER JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
-                               GROUP BY sd.caseid,caseIDString, sd.casename, sd.casetype, cr.casestatus
+                               LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
+                               LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
+                               LEFT JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
+                               GROUP BY sd.caseid,caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish
                                "
 
         ' Execute the query and load data into DataGridView
@@ -69,6 +71,34 @@ Public Class CaseRecordTable
         ' Style the DataGridView for better readability
         g3CommandCenter_Form.StyleDataGridView(ActiveCases_DataGridView)
 
+        For Each row As DataGridViewRow In ActiveCases_DataGridView.Rows
+            If Not row.IsNewRow Then
+                ' Example: color if no officers assigned
+                If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
+                    row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
+                End If
+
+                ' Example: color if ExpectedDateFinish is close or past
+                Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
+                If expectedDateObj IsNot DBNull.Value AndAlso expectedDateObj IsNot Nothing Then
+                    Dim expectedDate As DateTime
+                    If DateTime.TryParse(expectedDateObj.ToString(), expectedDate) Then
+                        If expectedDate < DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() <> "Resolved" Then
+                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Red
+                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        ElseIf (expectedDate - DateTime.Today).TotalDays <= 5 Then
+                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Orange
+                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        ElseIf expectedDate >= DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() = "Resolved" Then
+                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.DarkGreen
+                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        End If
+                    End If
+                Else
+                    row.Cells("ExpectedDateFinish").Style.BackColor = Color.LightPink
+                End If
+            End If
+        Next
     End Sub
 
     ' Handle double-click on DataGridView row to open case details
