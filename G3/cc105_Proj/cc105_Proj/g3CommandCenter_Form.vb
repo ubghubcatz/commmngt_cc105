@@ -62,28 +62,27 @@ Public Class g3CommandCenter_Form
         LayoutManager.ResizeFormLayout(Me) ' Adjust layout on form resize
         CountCases()
     End Sub
-    Public Sub OpenOrRestoreForm(formType As Type, parentForm As Form)
-        Dim existingForm = Application.OpenForms.Cast(Of Form)().FirstOrDefault(Function(f) f.GetType() Is formType)
-
-        If existingForm IsNot Nothing Then
-            If existingForm.WindowState = FormWindowState.Minimized Then
-                existingForm.WindowState = FormWindowState.Normal
+    Public Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
+        ' Check if the form instance already exists and is not disposed
+        If formInstance IsNot Nothing AndAlso Not formInstance.IsDisposed Then
+            ' Restore if minimized and bring to front
+            If formInstance.WindowState = FormWindowState.Minimized Then
+                formInstance.WindowState = FormWindowState.Normal
             End If
-            existingForm.BringToFront()
-            existingForm.Activate()
+            formInstance.BringToFront()
+            formInstance.Activate()
         Else
-            Dim newForm As Form = CType(Activator.CreateInstance(formType), Form)
-            With newForm
-                .MdiParent = parentForm
+            ' Create new instance and ensure it's fixed single form
+            formInstance = CType(Activator.CreateInstance(formType), Form)
+            With formInstance
                 .TopMost = True
                 .FormBorderStyle = FormBorderStyle.FixedSingle
-                .MaximizeBox = False
-                .MinimizeBox = True
-                .Show()
+                .MaximizeBox = False ' Disable maximize button
+                .MinimizeBox = True  ' Optionally keep minimize enabled
             End With
+            formInstance.Show()
         End If
     End Sub
-
 
     Public Sub CountCases()
         Dim query As String = "SELECT casestatus, COUNT(*) AS StatusCount
@@ -122,15 +121,15 @@ Public Class g3CommandCenter_Form
 
 
     Private Sub CaseRecords_Btn_Click(sender As Object, e As EventArgs) Handles CaseRecords_Btn.Click
-        OpenOrRestoreForm(GetType(CaseRecordTable), MDIBrgySys)
+        OpenOrRestoreForm(CaseRecordForm, GetType(CaseRecordTable))
     End Sub
 
     Private Sub CallLogging_Btn_Click(sender As Object, e As EventArgs) Handles CallLogging_Btn.Click
-        OpenOrRestoreForm(GetType(CallLog_Tables), MDIBrgySys)
+        OpenOrRestoreForm(CallLogForm, GetType(CallLog_Tables))
     End Sub
 
     Private Sub OfficersAvailability_Btn_Click(sender As Object, e As EventArgs) Handles OfficersAvailability_Btn.Click
-        OpenOrRestoreForm(GetType(OfficersAvailabiltyForm), MDIBrgySys)
+        OpenOrRestoreForm(OfficersForm, GetType(OfficersAvailabiltyForm))
     End Sub
 
 

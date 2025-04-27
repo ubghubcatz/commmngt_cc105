@@ -40,66 +40,65 @@ Public Class CaseRecordTable
     End Sub
 
     Public Sub InsertTable()
-
-        ' Define SQL query to fetch case data
         Dim query As String = "
-                               SELECT 
-                                   sd.caseid,
-                                   sd.caseIDString,
-                                   sd.casename,
-                                   sd.casetype,                               
-                                   cr.casestatus,
-                                   STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
-                                   cr.ExpectedDateFinish
-                               FROM g3_SpecificCaseDetails sd
-                               LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
-                               LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
-                               LEFT JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
-                               GROUP BY sd.caseid,caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish
-                               "
+                             SELECT 
+                                 sd.caseid,
+                                 sd.caseIDString,
+                                 sd.casename,
+                                 sd.casetype,                               
+                                 cr.casestatus,
+                                 STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
+                                 cr.ExpectedDateFinish
+                             FROM g3_SpecificCaseDetails sd
+                             LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
+                             LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
+                             LEFT JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
+                             GROUP BY sd.caseid, caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish
+                             "
 
-        ' Execute the query and load data into DataGridView
-        Using conn As New SqlConnection(connectionString)
-            Using cmd As New SqlCommand(query, conn)
-                Dim adapter As New SqlDataAdapter(cmd)
-                Dim table As New DataTable()
-                adapter.Fill(table) ' Fill data table with results
-                ActiveCases_DataGridView.DataSource = table ' Bind the results to DataGridView
+        Try
+            Using conn As New SqlConnection(connectionString)
+                Using cmd As New SqlCommand(query, conn)
+                    Dim adapter As New SqlDataAdapter(cmd)
+                    Dim table As New DataTable()
+                    adapter.Fill(table)
+                    ActiveCases_DataGridView.DataSource = table
+                End Using
             End Using
-        End Using
 
-        ' Style the DataGridView for better readability
-        g3CommandCenter_Form.StyleDataGridView(ActiveCases_DataGridView)
+            g3CommandCenter_Form.StyleDataGridView(ActiveCases_DataGridView)
 
-        For Each row As DataGridViewRow In ActiveCases_DataGridView.Rows
-            If Not row.IsNewRow Then
-                ' Example: color if no officers assigned
-                If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
-                    row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
-                End If
-
-                ' Example: color if ExpectedDateFinish is close or past
-                Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
-                If expectedDateObj IsNot DBNull.Value AndAlso expectedDateObj IsNot Nothing Then
-                    Dim expectedDate As DateTime
-                    If DateTime.TryParse(expectedDateObj.ToString(), expectedDate) Then
-                        If expectedDate < DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() <> "Resolved" Then
-                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Red
-                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
-                        ElseIf (expectedDate - DateTime.Today).TotalDays <= 5 Then
-                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Orange
-                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
-                        ElseIf expectedDate >= DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() = "Resolved" Then
-                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.DarkGreen
-                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
-                        End If
+            For Each row As DataGridViewRow In ActiveCases_DataGridView.Rows
+                If Not row.IsNewRow Then
+                    If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
+                        row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
                     End If
-                Else
-                    row.Cells("ExpectedDateFinish").Style.BackColor = Color.LightPink
+
+                    Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
+                    If expectedDateObj IsNot DBNull.Value AndAlso expectedDateObj IsNot Nothing Then
+                        Dim expectedDate As DateTime
+                        If DateTime.TryParse(expectedDateObj.ToString(), expectedDate) Then
+                            If expectedDate < DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() <> "Resolved" Then
+                                row.Cells("ExpectedDateFinish").Style.BackColor = Color.Red
+                                row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                            ElseIf (expectedDate - DateTime.Today).TotalDays <= 5 Then
+                                row.Cells("ExpectedDateFinish").Style.BackColor = Color.Orange
+                                row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                            ElseIf expectedDate >= DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() = "Resolved" Then
+                                row.Cells("ExpectedDateFinish").Style.BackColor = Color.DarkGreen
+                                row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                            End If
+                        End If
+                    Else
+                        row.Cells("ExpectedDateFinish").Style.BackColor = Color.LightPink
+                    End If
                 End If
-            End If
-        Next
+            Next
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
     End Sub
+
 
     ' Handle double-click on DataGridView row to open case details
     Private Sub DataGridView_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles ActiveCases_DataGridView.CellDoubleClick
@@ -148,7 +147,7 @@ Public Class CaseRecordTable
                         crsf.BringToFront()
                         crsf.Activate() ' Force it to receive focus
                     End If
-                    Return ' Exit the subroutine as the case is already open and handled
+                    Return
                 End If
             End If
         Next
@@ -169,167 +168,168 @@ Public Class CaseRecordTable
 
     End Sub
     Private Function GetCaseIDByName(caseName As String) As String
-        ' Define the SQL query to get the CaseID from the g3_SpecificCaseDetails table 
-        ' based on either casename or caseIDString
         Dim query As String = "SELECT TOP 1 CaseID FROM g3_SpecificCaseDetails WHERE casename = @input OR caseIDString = @input"
 
-        ' Establish a connection to the database using the connection string
-        Using conn As New SqlConnection(connectionString)
-            ' Create a new SqlCommand object with the query and the connection
-            Using cmd As New SqlCommand(query, conn)
-                ' Add the parameter @input to the command to prevent SQL injection
-                cmd.Parameters.AddWithValue("@input", caseName)
+        Try
+            Using conn As New SqlConnection(connectionString)
+                Using cmd As New SqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@input", caseName)
 
-                Try
-                    ' Open the connection to the database
                     conn.Open()
-
-                    ' Execute the query and retrieve the result as a single value (CaseID)
                     Dim result = cmd.ExecuteScalar()
 
-                    ' Check if a result was returned
                     If result IsNot Nothing Then
-                        ' If a CaseID was found, return it as a string
                         Return result.ToString()
                     Else
-                        ' If no CaseID was found, return an empty string
                         Return ""
                     End If
-                Catch ex As Exception
-                    ' In case of an error (e.g., connection issue), log or show the error message
-                    MessageBox.Show("Error: " & ex.Message)
-                    Return ""
-                End Try
+                End Using
             End Using
-        End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+            Return ""
+        End Try
     End Function
+
 
 
     ' This function reloads case data into the form based on a search query.
     Private Sub ReloadCaseDataIntoForm(caseShow As CaseRecordShowForm, searchQuery As String)
         Dim caseDetails As String = ""
         Dim officers As String = ""
-        Dim caseIDString
+        Dim caseIDString As String
         Dim query As String =
-    "SELECT sd.specificdetails, sd.caseimage, sd.casetype, sd.CaseID, sd.casename, caseIDString, " &
-    "cr.casestatus, cr.datetimereported,cr.ExpectedDateFinish, ap.Photo, ap.Description, ap.PhotoID " &
-    "FROM g3_SpecificCaseDetails sd " &
-    "JOIN g3_CaseRecords cr ON sd.caseID = cr.caseid " &
-    "LEFT JOIN g3_AdditionalPhotos ap ON sd.caseID = ap.CaseID " &
-    "WHERE sd.caseIDString LIKE @search OR sd.casename LIKE @search"
+"SELECT sd.specificdetails, sd.caseimage, sd.casetype, sd.CaseID, sd.casename, caseIDString, " &
+"cr.casestatus, cr.datetimereported,cr.ExpectedDateFinish, ap.Photo, ap.Description, ap.PhotoID " &
+"FROM g3_SpecificCaseDetails sd " &
+"JOIN g3_CaseRecords cr ON sd.caseID = cr.caseid " &
+"LEFT JOIN g3_AdditionalPhotos ap ON sd.caseID = ap.CaseID " &
+"WHERE sd.caseIDString LIKE @search OR sd.casename LIKE @search"
 
         viewer = New ImageViewer
-        Using conn As New SqlConnection(connectionString), cmd As New SqlCommand(query, conn)
-            cmd.Parameters.AddWithValue("@search", "%" & searchQuery & "%")
-            caseShow.AdditionalPhotos_FlowLayoutPanel.Controls.Clear()
 
-            conn.Open()
-            Using reader As SqlDataReader = cmd.ExecuteReader()
-                If Not reader.HasRows Then Exit Sub
+        Try
+            Using conn As New SqlConnection(connectionString), cmd As New SqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@search", "%" & searchQuery & "%")
+                caseShow.AdditionalPhotos_FlowLayoutPanel.Controls.Clear()
 
-                caseShow.ItemDescription_DataGridView.Rows.Clear()
-                caseShow.CasePeople_DataGridView1.Rows.Clear()
-
-                While reader.Read()
-                    Dim caseID As Integer = CInt(reader("caseid"))
-                    caseShow.HiddenCaseID.Text = caseID
-                    caseShow.LoadedCaseID = caseID.ToString()
-                    viewer.caseID = caseID.ToString()
-                    caseShow.CaseType_TxtBox.Text = reader("casetype").ToString()
-                    caseShow.CaseStatus_TxtBox.Text = reader("casestatus").ToString()
-                    caseShow.DateAndTimeReported_TxtBox.Text = reader("datetimereported").ToString()
-                    caseShow.CaseIDString_TextBox.Text = reader("caseIDString").ToString()
-                    caseShow.ExpectedResolveDare_TextBox.Text = reader("ExpectedDateFinish").ToString()
-                    caseIDString = reader("caseIDString").ToString()
-                    If reader("casetype") = "Theft" Or reader("casetype") = "Missing Person" Then
-                        caseShow.Text = $"| Case Name: {reader("casename")} | {reader("casetype")} |"
-                    End If
-                    GetReportedBy(caseShow, caseIDString)
-                    GetProcedures(caseShow.Procedure_ListView, caseIDString)
-                    caseDetails = reader("specificdetails").ToString()
-                    Dim specificDetails As String() = caseDetails.Split("|"c)
-                    Select Case reader("casetype").ToString()
-                        Case "Theft"
-                            LoadTheftCase(caseShow, specificDetails, reader("casename").ToString())
-                            specificDetails(3).Replace(", ", "^")
-                            caseShow.TabControl1.SelectedIndex = 1
-                        Case "Missing Person"
-                            LoadMissingPersonCase(caseShow, specificDetails, reader("caseimage"), reader("casename").ToString())
-                            specificDetails(4).Replace(", ", "^")
-                            caseShow.TabControl1.SelectedIndex = 0
-                        Case "Others (Please Specify)"
-                            LoadOtherCase(caseShow, specificDetails, reader("caseimage"), reader("casename").ToString())
-                            If caseShow.CaseType_TxtBox.Text = "Others (Please Specify)" Then
-                                caseShow.SpecificCaseType_ComboBox.Text = specificDetails(0)
-                                caseShow.TabControl1.SelectedIndex = 2
-                            End If
-                            specificDetails(2).Replace(", ", "^")
-                    End Select
-                    ' Combine the array back into a string
-                    caseDetails = String.Join("|", specificDetails)
-
-
-                    If Not IsDBNull(reader("Photo")) Then
-                        AddPhotoToPanel(caseShow, reader)
-                    End If
-                End While
-            End Using
-        End Using
-
-        If caseShow.HiddenCaseID.Text IsNot Nothing AndAlso IsNumeric(caseShow.HiddenCaseID.Text) Then
-            Dim query2 As String = "
-        SELECT ocs.officerid, ed.EmployeeName, ed.Position
-        FROM g3_OfficerCaseAssignments ocs
-        INNER JOIN g4_EmployeeDetails ed ON ocs.officerid = ed.EmployeeID
-        WHERE ocs.caseid = @caseid"
-
-            Using conn As New SqlConnection(connectionString)
                 conn.Open()
-                Using cmd As New SqlCommand(query2, conn)
-                    cmd.Parameters.AddWithValue("@caseid", Convert.ToInt32(caseShow.HiddenCaseID.Text))
+                Using reader As SqlDataReader = cmd.ExecuteReader()
+                    If Not reader.HasRows Then Exit Sub
 
-                    Dim adapter As New SqlDataAdapter(cmd)
-                    Dim table As New DataTable()
-                    table.Reset()
-                    adapter.Fill(table)
+                    caseShow.ItemDescription_DataGridView.Rows.Clear()
+                    caseShow.CasePeople_DataGridView1.Rows.Clear()
 
-                    ' Disable auto column generation
-                    caseShow.OfficersSent_DataGridView.AutoGenerateColumns = False
+                    While reader.Read()
+                        Dim caseID As Integer = CInt(reader("caseid"))
+                        caseShow.HiddenCaseID.Text = caseID
+                        caseShow.LoadedCaseID = caseID.ToString()
+                        viewer.caseID = caseID.ToString()
+                        caseShow.CaseType_TxtBox.Text = reader("casetype").ToString()
+                        caseShow.CaseStatus_TxtBox.Text = reader("casestatus").ToString()
+                        caseShow.DateAndTimeReported_TxtBox.Text = reader("datetimereported").ToString()
+                        caseShow.CaseIDString_TextBox.Text = reader("caseIDString").ToString()
+                        caseShow.ExpectedResolveDare_TextBox.Text = reader("ExpectedDateFinish").ToString()
+                        caseIDString = reader("caseIDString").ToString()
 
-                    ' Set DataSource for officers grid
-                    caseShow.OfficersSent_DataGridView.DataSource = table
+                        If reader("casetype") = "Theft" Or reader("casetype") = "Missing Person" Then
+                            caseShow.Text = $"| Case Name: {reader("casename")} | {reader("casetype")} |"
+                        End If
 
-                    ' Clear and define columns for officers grid
-                    With caseShow.OfficersSent_DataGridView.Columns
-                        .Clear()
-                        .Add(New DataGridViewTextBoxColumn() With {
+                        GetReportedBy(caseShow, caseIDString)
+                        GetProcedures(caseShow.Procedure_ListView, caseIDString)
+
+                        caseDetails = reader("specificdetails").ToString()
+                        Dim specificDetails As String() = caseDetails.Split("|"c)
+
+                        Select Case reader("casetype").ToString()
+                            Case "Theft"
+                                LoadTheftCase(caseShow, specificDetails, reader("casename").ToString())
+                                specificDetails(3) = specificDetails(3).Replace(", ", "^")
+                                caseShow.TabControl1.SelectedIndex = 1
+
+                            Case "Missing Person"
+                                LoadMissingPersonCase(caseShow, specificDetails, reader("caseimage"), reader("casename").ToString())
+                                specificDetails(4) = specificDetails(4).Replace(", ", "^")
+                                caseShow.TabControl1.SelectedIndex = 0
+
+                            Case "Others (Please Specify)"
+                                LoadOtherCase(caseShow, specificDetails, reader("caseimage"), reader("casename").ToString())
+                                If caseShow.CaseType_TxtBox.Text = "Others (Please Specify)" Then
+                                    caseShow.SpecificCaseType_ComboBox.Text = specificDetails(0)
+                                    caseShow.TabControl1.SelectedIndex = 2
+                                End If
+                                specificDetails(2) = specificDetails(2).Replace(", ", "^")
+                        End Select
+
+                        ' Combine back the array into a string
+                        caseDetails = String.Join("|", specificDetails)
+
+                        If Not IsDBNull(reader("Photo")) Then
+                            AddPhotoToPanel(caseShow, reader)
+                        End If
+                    End While
+                End Using
+            End Using
+
+            ' Load officers if a case ID was found
+            If caseShow.HiddenCaseID.Text IsNot Nothing AndAlso IsNumeric(caseShow.HiddenCaseID.Text) Then
+                Dim query2 As String = "
+            SELECT ocs.officerid, ed.EmployeeName, ed.Position
+            FROM g3_OfficerCaseAssignments ocs
+            INNER JOIN g4_EmployeeDetails ed ON ocs.officerid = ed.EmployeeID
+            WHERE ocs.caseid = @caseid"
+
+                Using conn As New SqlConnection(connectionString)
+                    conn.Open()
+                    Using cmd As New SqlCommand(query2, conn)
+                        cmd.Parameters.AddWithValue("@caseid", Convert.ToInt32(caseShow.HiddenCaseID.Text))
+
+                        Dim adapter As New SqlDataAdapter(cmd)
+                        Dim table As New DataTable()
+                        table.Reset()
+                        adapter.Fill(table)
+
+                        ' Disable auto column generation
+                        caseShow.OfficersSent_DataGridView.AutoGenerateColumns = False
+
+                        ' Set DataSource
+                        caseShow.OfficersSent_DataGridView.DataSource = table
+
+                        ' Clear and define columns
+                        With caseShow.OfficersSent_DataGridView.Columns
+                            .Clear()
+                            .Add(New DataGridViewTextBoxColumn() With {
                             .Name = "IDColumn",
                             .HeaderText = "Officer ID",
                             .DataPropertyName = "officerid"
                         })
-
-                        .Add(New DataGridViewTextBoxColumn() With {
+                            .Add(New DataGridViewTextBoxColumn() With {
                             .Name = "NameColumn",
                             .HeaderText = "Officer Name",
                             .DataPropertyName = "EmployeeName"
                         })
-
-                        .Add(New DataGridViewTextBoxColumn() With {
+                            .Add(New DataGridViewTextBoxColumn() With {
                             .Name = "PositionColumn",
                             .HeaderText = "Position",
                             .DataPropertyName = "Position"
                         })
-                    End With
+                        End With
+                    End Using
                 End Using
-            End Using
-        End If
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred while loading the case data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
+
 
     Public Sub GetProcedures(ProcedureListView As ListView, CaseIDString As String)
         Dim query As String = "
-        SELECT Procedures, Remarks, DateAndTime, CaseIDString 
-        FROM g3_AdditionalProcedures
-        WHERE CaseIDString = @CaseIDString"
+    SELECT Procedures, Remarks, DateAndTime, CaseIDString 
+    FROM g3_AdditionalProcedures
+    WHERE CaseIDString = @CaseIDString"
 
         Try
             Using conn As New SqlConnection(connectionString)
@@ -394,6 +394,7 @@ Public Class CaseRecordTable
             MessageBox.Show("An error occurred while retrieving the caller info: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
 
 
     Private Sub LoadTheftCase(caseShow As CaseRecordShowForm, details As String(), caseName As String)

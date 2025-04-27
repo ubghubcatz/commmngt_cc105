@@ -195,21 +195,33 @@ Public Class CaseRecordShowForm
     Private Sub CheckIfSoftDeleted(officerID As String, targetForm As CaseRecordForm)
         Dim query As String = "SELECT 1 FROM g3_OfficerCaseAssignments WHERE officerID = @officerid AND IsDeleted = 1;"
 
-        Using conn As New SqlConnection(connectionString), cmd As New SqlCommand(query, conn)
-            cmd.Parameters.AddWithValue("@officerid", officerID)
+        Try
+            Using conn As New SqlConnection(connectionString), cmd As New SqlCommand(query, conn)
+                cmd.Parameters.AddWithValue("@officerid", officerID)
 
-            conn.Open()
-            Dim result = cmd.ExecuteScalar()
+                conn.Open() ' Open the connection inside Try to catch connection issues
+                Dim result = cmd.ExecuteScalar()
 
-            If result IsNot Nothing Then
-                ' Officer has soft-deleted assignments, now find and highlight rows
-                For Each row As DataGridViewRow In targetForm.OfficersSent_DataGridView.Rows
-                    If Not row.IsNewRow AndAlso row.Cells(0).Value.ToString() = officerID Then
-                        row.DefaultCellStyle.BackColor = Color.LightCoral
-                    End If
-                Next
-            End If
-        End Using
+                ' Check if the officer has soft-deleted assignments
+                If result IsNot Nothing Then
+                    ' Officer has soft-deleted assignments, now find and highlight rows in DataGridView
+                    For Each row As DataGridViewRow In targetForm.OfficersSent_DataGridView.Rows
+                        If Not row.IsNewRow AndAlso row.Cells(0).Value.ToString() = officerID Then
+                            row.DefaultCellStyle.BackColor = Color.LightCoral ' Highlight row with a light coral color
+                        End If
+                    Next
+                End If
+            End Using
+        Catch ex As SqlException
+            ' Handle SQL-specific exceptions (e.g., query issues)
+            MessageBox.Show("Database error: " & ex.Message, "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As InvalidOperationException
+            ' Handle connection-related issues
+            MessageBox.Show("Connection error: " & ex.Message, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            ' Catch any other exceptions
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
 
 
@@ -380,15 +392,30 @@ Public Class CaseRecordShowForm
     End Sub
 
     Private Sub DeleteAdditionalPhotoFromDB(photoID As Integer)
-        Using con As New SqlConnection(connectionString)
-            con.Open()
-            Dim query As String = "DELETE FROM g3_AdditionalPhotos WHERE PhotoID = @PhotoID"
-            Using deleteCmmand As New SqlCommand(query, con)
-                deleteCmmand.Parameters.AddWithValue("@PhotoID", photoID)
-                deleteCmmand.ExecuteNonQuery()
+        Try
+            Using con As New SqlConnection(connectionString)
+                con.Open()
+
+                ' SQL query to delete the photo based on its PhotoID
+                Dim query As String = "DELETE FROM g3_AdditionalPhotos WHERE PhotoID = @PhotoID"
+
+                ' Prepare the SQL command to execute the delete query
+                Using deleteCommand As New SqlCommand(query, con)
+                    deleteCommand.Parameters.AddWithValue("@PhotoID", photoID)
+
+                    ' Execute the delete operation
+                    deleteCommand.ExecuteNonQuery()
+                End Using
             End Using
-        End Using
+        Catch ex As SqlException
+            ' Handle SQL-related exceptions (e.g., issues with the database connection or query)
+            MessageBox.Show("Database error while deleting the photo: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            ' Handle any general exceptions
+            MessageBox.Show("An error occurred while deleting the photo: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
     End Sub
+
 
     Public Sub AdditionalPhoto_Click(sender As Object, e As EventArgs)
         Dim picBox As PictureBox = CType(sender, PictureBox)
@@ -411,26 +438,37 @@ Public Class CaseRecordShowForm
         Dim locations As String = ""
 
         Dim query As String = "SELECT sd.specificdetails " &
-                              "FROM g3_SpecificCaseDetails sd " &
-                              "JOIN g3_CaseRecords cr ON sd.CaseID = cr.CaseID " &
-                              "WHERE sd.CaseID = @caseid"
+                          "FROM g3_SpecificCaseDetails sd " &
+                          "JOIN g3_CaseRecords cr ON sd.CaseID = cr.CaseID " &
+                          "WHERE sd.CaseID = @caseid"
 
-        Using conn As New SqlConnection(connectionString)
-            Using cmd As New SqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@caseid", caseid)
-                Try
-                    conn.Open()
+        Try
+            Using conn As New SqlConnection(connectionString)
+                Using cmd As New SqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@caseid", caseid)
+
+                    conn.Open() ' Open connection inside Try block to catch connection errors
+
                     Using reader As SqlDataReader = cmd.ExecuteReader()
                         While reader.Read()
-                            Dim specificDetails As String = reader("specificdetails").ToString()
-                            locations = specificDetails
+                            ' Ensure data is not DBNull before converting it
+                            If Not IsDBNull(reader("specificdetails")) Then
+                                locations = reader("specificdetails").ToString()
+                            End If
                         End While
                     End Using
-                Catch ex As Exception
-                    MessageBox.Show("Error: " & ex.Message)
-                End Try
+                End Using
             End Using
-        End Using
+        Catch ex As SqlException
+            ' Handle SQL-specific exceptions
+            MessageBox.Show("Database error: " & ex.Message, "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As InvalidOperationException
+            ' Handle connection issues or other operation-related issues
+            MessageBox.Show("Connection error: " & ex.Message, "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Catch ex As Exception
+            ' Catch all other exceptions
+            MessageBox.Show("An error occurred: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
 
         Return locations
     End Function
