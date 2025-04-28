@@ -130,7 +130,7 @@ Partial Class AssistanceForm
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox2.Location = New System.Drawing.Point(2, 3)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(507, 105)
+        Me.GroupBox2.Size = New System.Drawing.Size(507, 92)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Resident Information:"
@@ -139,7 +139,7 @@ Partial Class AssistanceForm
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label8.Location = New System.Drawing.Point(328, 54)
+        Me.Label8.Location = New System.Drawing.Point(328, 45)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(91, 15)
         Me.Label8.TabIndex = 17
@@ -148,7 +148,7 @@ Partial Class AssistanceForm
         'txtResidentMiddleInitial
         '
         Me.txtResidentMiddleInitial.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.txtResidentMiddleInitial.Location = New System.Drawing.Point(331, 72)
+        Me.txtResidentMiddleInitial.Location = New System.Drawing.Point(331, 63)
         Me.txtResidentMiddleInitial.Name = "txtResidentMiddleInitial"
         Me.txtResidentMiddleInitial.Size = New System.Drawing.Size(153, 21)
         Me.txtResidentMiddleInitial.TabIndex = 16
@@ -156,7 +156,7 @@ Partial Class AssistanceForm
         'txtResidentFirstName
         '
         Me.txtResidentFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.txtResidentFirstName.Location = New System.Drawing.Point(172, 72)
+        Me.txtResidentFirstName.Location = New System.Drawing.Point(172, 63)
         Me.txtResidentFirstName.Name = "txtResidentFirstName"
         Me.txtResidentFirstName.Size = New System.Drawing.Size(153, 21)
         Me.txtResidentFirstName.TabIndex = 15
@@ -164,7 +164,7 @@ Partial Class AssistanceForm
         'txtResidentLastName
         '
         Me.txtResidentLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.txtResidentLastName.Location = New System.Drawing.Point(13, 72)
+        Me.txtResidentLastName.Location = New System.Drawing.Point(13, 63)
         Me.txtResidentLastName.Name = "txtResidentLastName"
         Me.txtResidentLastName.Size = New System.Drawing.Size(153, 21)
         Me.txtResidentLastName.TabIndex = 14
@@ -173,7 +173,7 @@ Partial Class AssistanceForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label7.Location = New System.Drawing.Point(169, 54)
+        Me.Label7.Location = New System.Drawing.Point(169, 45)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(81, 15)
         Me.Label7.TabIndex = 13
@@ -183,7 +183,7 @@ Partial Class AssistanceForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label6.Location = New System.Drawing.Point(10, 54)
+        Me.Label6.Location = New System.Drawing.Point(10, 45)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(80, 15)
         Me.Label6.TabIndex = 12
@@ -193,7 +193,7 @@ Partial Class AssistanceForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(10, 29)
+        Me.Label2.Location = New System.Drawing.Point(10, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(115, 15)
         Me.Label2.TabIndex = 11
@@ -216,7 +216,7 @@ Partial Class AssistanceForm
         Me.GroupBox3.Controls.Add(Me.btnViewRequirements)
         Me.GroupBox3.Controls.Add(Me.btnRegisterAssistance)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox3.Location = New System.Drawing.Point(2, 114)
+        Me.GroupBox3.Location = New System.Drawing.Point(2, 101)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(507, 64)
         Me.GroupBox3.TabIndex = 15
@@ -228,7 +228,7 @@ Partial Class AssistanceForm
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGreen
-        Me.ClientSize = New System.Drawing.Size(992, 382)
+        Me.ClientSize = New System.Drawing.Size(992, 293)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)

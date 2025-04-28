@@ -15,10 +15,10 @@
         assistanceForm.Show()
     End Sub
 
-    ' Open Payout System Form
-    Private Sub btnPayout_Click(sender As Object, e As EventArgs) Handles btnPayout.Click
-        Dim payoutForm As New PayoutForm()
-        payoutForm.Show()
+    ' Open Donation System Form
+    Private Sub btnDonation_Click(sender As Object, e As EventArgs) Handles btnDonation.Click
+        Dim donationForm As New DonationForm()
+        donationForm.Show()
     End Sub
 
 End Class

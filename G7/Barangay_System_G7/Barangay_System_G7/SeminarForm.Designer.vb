@@ -23,7 +23,7 @@ Partial Class SeminarForm
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.lvSeminars = New System.Windows.Forms.ListView()
-        Me.btnDeleteSeminar = New System.Windows.Forms.Button()
+        Me.btnViewApprovedSeminars = New System.Windows.Forms.Button()
         Me.btnApproveSeminar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnAddSeminar = New System.Windows.Forms.Button()
@@ -71,22 +71,23 @@ Partial Class SeminarForm
         Me.lvSeminars.UseCompatibleStateImageBehavior = False
         Me.lvSeminars.View = System.Windows.Forms.View.Details
         '
-        'btnDeleteSeminar
+        'btnViewApprovedSeminars
         '
-        Me.btnDeleteSeminar.BackColor = System.Drawing.Color.Red
-        Me.btnDeleteSeminar.Location = New System.Drawing.Point(259, 304)
-        Me.btnDeleteSeminar.Name = "btnDeleteSeminar"
-        Me.btnDeleteSeminar.Size = New System.Drawing.Size(256, 42)
-        Me.btnDeleteSeminar.TabIndex = 17
-        Me.btnDeleteSeminar.Text = "DELETE SEMINAR"
-        Me.btnDeleteSeminar.UseVisualStyleBackColor = False
+        Me.btnViewApprovedSeminars.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.btnViewApprovedSeminars.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnViewApprovedSeminars.Location = New System.Drawing.Point(896, 431)
+        Me.btnViewApprovedSeminars.Name = "btnViewApprovedSeminars"
+        Me.btnViewApprovedSeminars.Size = New System.Drawing.Size(189, 34)
+        Me.btnViewApprovedSeminars.TabIndex = 17
+        Me.btnViewApprovedSeminars.Text = "View Approved Seminar"
+        Me.btnViewApprovedSeminars.UseVisualStyleBackColor = False
         '
         'btnApproveSeminar
         '
         Me.btnApproveSeminar.BackColor = System.Drawing.Color.LimeGreen
-        Me.btnApproveSeminar.Location = New System.Drawing.Point(7, 304)
+        Me.btnApproveSeminar.Location = New System.Drawing.Point(7, 298)
         Me.btnApproveSeminar.Name = "btnApproveSeminar"
-        Me.btnApproveSeminar.Size = New System.Drawing.Size(246, 42)
+        Me.btnApproveSeminar.Size = New System.Drawing.Size(510, 42)
         Me.btnApproveSeminar.TabIndex = 16
         Me.btnApproveSeminar.Text = "APPROVE SEMINAR"
         Me.btnApproveSeminar.UseVisualStyleBackColor = False
@@ -220,7 +221,7 @@ Partial Class SeminarForm
         '
         Me.txtAddSpeaker.Location = New System.Drawing.Point(234, 43)
         Me.txtAddSpeaker.Name = "txtAddSpeaker"
-        Me.txtAddSpeaker.Size = New System.Drawing.Size(190, 21)
+        Me.txtAddSpeaker.Size = New System.Drawing.Size(197, 21)
         Me.txtAddSpeaker.TabIndex = 7
         '
         'Label3
@@ -237,13 +238,12 @@ Partial Class SeminarForm
         '
         Me.grpRegisteredSeminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grpRegisteredSeminar.Controls.Add(Me.lvSeminars)
-        Me.grpRegisteredSeminar.Controls.Add(Me.btnDeleteSeminar)
         Me.grpRegisteredSeminar.Controls.Add(Me.btnApproveSeminar)
         Me.grpRegisteredSeminar.Location = New System.Drawing.Point(568, 13)
         Me.grpRegisteredSeminar.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.grpRegisteredSeminar.Name = "grpRegisteredSeminar"
         Me.grpRegisteredSeminar.Padding = New System.Windows.Forms.Padding(4, 3, 4, 3)
-        Me.grpRegisteredSeminar.Size = New System.Drawing.Size(524, 363)
+        Me.grpRegisteredSeminar.Size = New System.Drawing.Size(524, 348)
         Me.grpRegisteredSeminar.TabIndex = 22
         Me.grpRegisteredSeminar.TabStop = False
         Me.grpRegisteredSeminar.Text = "Registered Seminars:"
@@ -267,7 +267,7 @@ Partial Class SeminarForm
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(374, 55)
+        Me.Label8.Location = New System.Drawing.Point(328, 55)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(91, 15)
         Me.Label8.TabIndex = 6
@@ -275,14 +275,14 @@ Partial Class SeminarForm
         '
         'txtCoordinatorMiddleInitial
         '
-        Me.txtCoordinatorMiddleInitial.Location = New System.Drawing.Point(377, 73)
+        Me.txtCoordinatorMiddleInitial.Location = New System.Drawing.Point(331, 73)
         Me.txtCoordinatorMiddleInitial.Name = "txtCoordinatorMiddleInitial"
         Me.txtCoordinatorMiddleInitial.Size = New System.Drawing.Size(153, 21)
         Me.txtCoordinatorMiddleInitial.TabIndex = 5
         '
         'txtCoordinatorFirstName
         '
-        Me.txtCoordinatorFirstName.Location = New System.Drawing.Point(194, 73)
+        Me.txtCoordinatorFirstName.Location = New System.Drawing.Point(171, 73)
         Me.txtCoordinatorFirstName.Name = "txtCoordinatorFirstName"
         Me.txtCoordinatorFirstName.Size = New System.Drawing.Size(153, 21)
         Me.txtCoordinatorFirstName.TabIndex = 4
@@ -297,7 +297,7 @@ Partial Class SeminarForm
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(191, 55)
+        Me.Label7.Location = New System.Drawing.Point(168, 55)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(81, 15)
         Me.Label7.TabIndex = 2
@@ -329,6 +329,7 @@ Partial Class SeminarForm
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(1094, 473)
         Me.Controls.Add(Me.grpSemianrCoord)
+        Me.Controls.Add(Me.btnViewApprovedSeminars)
         Me.Controls.Add(Me.grpRegisteredSeminar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.grpSeminarDetails)
@@ -349,7 +350,7 @@ Partial Class SeminarForm
 
     End Sub
     Friend WithEvents lvSeminars As ListView
-    Friend WithEvents btnDeleteSeminar As Button
+    Friend WithEvents btnViewApprovedSeminars As Button
     Friend WithEvents btnApproveSeminar As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtDescription As TextBox

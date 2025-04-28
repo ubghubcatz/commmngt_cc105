@@ -53,6 +53,8 @@ Partial Class BurialRequirementsForm
         Me.progressBarUpload = New System.Windows.Forms.ProgressBar()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
         Me.lblProgress = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtRelationToDeceased = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -65,6 +67,8 @@ Partial Class BurialRequirementsForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtRelationToDeceased)
+        Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.dtpDateOfDeath)
         Me.GroupBox1.Controls.Add(Me.dtpDateOfBirth)
         Me.GroupBox1.Controls.Add(Me.Label3)
@@ -78,7 +82,7 @@ Partial Class BurialRequirementsForm
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(492, 166)
+        Me.GroupBox1.Size = New System.Drawing.Size(492, 158)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Enter name of the Deceased:"
@@ -86,23 +90,23 @@ Partial Class BurialRequirementsForm
         'dtpDateOfDeath
         '
         Me.dtpDateOfDeath.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDateOfDeath.Location = New System.Drawing.Point(117, 123)
+        Me.dtpDateOfDeath.Location = New System.Drawing.Point(342, 80)
         Me.dtpDateOfDeath.Name = "dtpDateOfDeath"
-        Me.dtpDateOfDeath.Size = New System.Drawing.Size(149, 21)
+        Me.dtpDateOfDeath.Size = New System.Drawing.Size(112, 21)
         Me.dtpDateOfDeath.TabIndex = 28
         '
         'dtpDateOfBirth
         '
         Me.dtpDateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpDateOfBirth.Location = New System.Drawing.Point(117, 80)
+        Me.dtpDateOfBirth.Location = New System.Drawing.Point(103, 80)
         Me.dtpDateOfBirth.Name = "dtpDateOfBirth"
-        Me.dtpDateOfBirth.Size = New System.Drawing.Size(149, 21)
+        Me.dtpDateOfBirth.Size = New System.Drawing.Size(112, 21)
         Me.dtpDateOfBirth.TabIndex = 27
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 128)
+        Me.Label3.Location = New System.Drawing.Point(237, 85)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(99, 15)
         Me.Label3.TabIndex = 26
@@ -344,7 +348,7 @@ Partial Class BurialRequirementsForm
         '
         Me.btnSubmit.BackColor = System.Drawing.Color.LimeGreen
         Me.btnSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.btnSubmit.Location = New System.Drawing.Point(320, 189)
+        Me.btnSubmit.Location = New System.Drawing.Point(323, 187)
         Me.btnSubmit.Name = "btnSubmit"
         Me.btnSubmit.Size = New System.Drawing.Size(181, 39)
         Me.btnSubmit.TabIndex = 2
@@ -363,7 +367,7 @@ Partial Class BurialRequirementsForm
         Me.GroupBox8.Controls.Add(Me.lblProgress)
         Me.GroupBox8.Controls.Add(Me.progressBarUpload)
         Me.GroupBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold)
-        Me.GroupBox8.Location = New System.Drawing.Point(12, 181)
+        Me.GroupBox8.Location = New System.Drawing.Point(15, 179)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(302, 45)
         Me.GroupBox8.TabIndex = 31
@@ -378,6 +382,22 @@ Partial Class BurialRequirementsForm
         Me.lblProgress.Size = New System.Drawing.Size(92, 15)
         Me.lblProgress.TabIndex = 31
         Me.lblProgress.Text = "0% Complete"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(6, 121)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(212, 15)
+        Me.Label2.TabIndex = 29
+        Me.Label2.Text = "Relationship with the deceased:"
+        '
+        'txtRelationToDeceased
+        '
+        Me.txtRelationToDeceased.Location = New System.Drawing.Point(224, 118)
+        Me.txtRelationToDeceased.Name = "txtRelationToDeceased"
+        Me.txtRelationToDeceased.Size = New System.Drawing.Size(193, 21)
+        Me.txtRelationToDeceased.TabIndex = 30
         '
         'BurialRequirementsForm
         '
@@ -443,4 +463,6 @@ Partial Class BurialRequirementsForm
     Friend WithEvents progressBarUpload As ProgressBar
     Friend WithEvents GroupBox8 As GroupBox
     Friend WithEvents lblProgress As Label
+    Friend WithEvents txtRelationToDeceased As TextBox
+    Friend WithEvents Label2 As Label
 End Class

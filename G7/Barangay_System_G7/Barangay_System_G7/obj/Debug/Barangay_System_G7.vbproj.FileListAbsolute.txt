@@ -12,7 +12,6 @@ C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Bara
 C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.pdb
 C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.SeminarForm.resources
 C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.AssistanceForm.resources
-C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.PayoutForm.resources
 C:\Users\darre\Documents\#IMPORTANT#\School\CC105T\Barangay_System_G7\Barangay_System_G7\bin\Debug\Barangay_System_G7.exe.config
 C:\Users\darre\Documents\#IMPORTANT#\School\CC105T\Barangay_System_G7\Barangay_System_G7\bin\Debug\Barangay_System_G7.exe
 C:\Users\darre\Documents\#IMPORTANT#\School\CC105T\Barangay_System_G7\Barangay_System_G7\bin\Debug\Barangay_System_G7.pdb
@@ -30,3 +29,5 @@ C:\Users\darre\Documents\#IMPORTANT#\School\CC105T\Barangay_System_G7\Barangay_S
 C:\Users\darre\Documents\#IMPORTANT#\School\CC105T\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.pdb
 C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.BurialRequirementsForm.resources
 C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.EducationalRequirementsForm.resources
+C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.DonationForm.resources
+C:\Users\darre\source\repos\Barangay_System_G7\Barangay_System_G7\obj\Debug\Barangay_System_G7.ApprovedSeminarsForm.resources

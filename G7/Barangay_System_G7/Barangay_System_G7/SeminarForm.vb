@@ -1,4 +1,8 @@
-﻿Public Class SeminarForm
+﻿Imports System.Data.SqlClient
+
+Public Class SeminarForm
+    Private connectionString As String = "Data Source=commngtcc105.mssql.somee.com;Initial Catalog=commngtcc105;User ID=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True"
+
     Private SeminarList As New List(Of String)()
     Private SpeakerList As New List(Of String)
 
@@ -66,23 +70,51 @@
     Private Sub btnApproveSeminar_Click(sender As Object, e As EventArgs) Handles btnApproveSeminar.Click
         If lvSeminars.SelectedItems.Count > 0 Then
             Dim selectedItem As ListViewItem = lvSeminars.SelectedItems(0)
-            selectedItem.SubItems(6).Text = "Approved"
-            btnApproveSeminar.Enabled = False
-            MessageBox.Show("The seminar has been approved successfully.", "Approval Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            ' Get seminar details
+            Dim coordinatorName As String = selectedItem.SubItems(0).Text
+            Dim seminarTitle As String = selectedItem.SubItems(1).Text
+            Dim seminarDate As Date = Date.Parse(selectedItem.SubItems(2).Text)
+            Dim location As String = selectedItem.SubItems(3).Text
+            Dim speakers As String = selectedItem.SubItems(4).Text
+            Dim description As String = selectedItem.SubItems(5).Text
+
+            ' Save to database
+            Try
+                Using conn As New SqlConnection(connectionString)
+                    conn.Open()
+                    Dim query As String = "INSERT INTO approved_seminars (coordinator_name, title, seminar_date, location, speakers, description) VALUES (@coordinator, @title, @date, @location, @speakers, @description)"
+                    Using cmd As New SqlCommand(query, conn)
+                        cmd.Parameters.AddWithValue("@coordinator", coordinatorName)
+                        cmd.Parameters.AddWithValue("@title", seminarTitle)
+                        cmd.Parameters.AddWithValue("@date", seminarDate)
+                        cmd.Parameters.AddWithValue("@location", location)
+                        cmd.Parameters.AddWithValue("@speakers", speakers)
+                        cmd.Parameters.AddWithValue("@description", description)
+                        cmd.ExecuteNonQuery()
+                    End Using
+                End Using
+
+                ' After inserting, remove from ListView
+                lvSeminars.Items.Remove(selectedItem)
+
+                MessageBox.Show("The seminar has been approved and moved to the Approved Seminars database.", "Approval Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            Catch ex As Exception
+                MessageBox.Show("Error while saving to database: " & ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+
         Else
             MessageBox.Show("Please select a seminar to approve.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
     End Sub
 
-    ' Delete Selected Seminar
-    Private Sub btnDeleteSeminar_Click(sender As Object, e As EventArgs) Handles btnDeleteSeminar.Click
-        If lvSeminars.SelectedItems.Count > 0 Then
-            lvSeminars.Items.Remove(lvSeminars.SelectedItems(0))
-
-        Else
-            MessageBox.Show("Please select a seminar to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
+    'View Approved Seminar
+    Private Sub btnViewApprovedSeminars_Click(sender As Object, e As EventArgs) Handles btnViewApprovedSeminars.Click
+        Dim approvedForm As New ApprovedSeminarsForm()
+        approvedForm.ShowDialog()
     End Sub
+
 
     ' Function to clear input fields
     Private Sub ClearSeminarFields()

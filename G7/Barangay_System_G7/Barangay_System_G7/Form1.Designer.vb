@@ -24,7 +24,7 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.btnSeminar = New System.Windows.Forms.Button()
         Me.btnAssistance = New System.Windows.Forms.Button()
-        Me.btnPayout = New System.Windows.Forms.Button()
+        Me.btnDonation = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnSeminar
@@ -47,15 +47,15 @@ Partial Class Form1
         Me.btnAssistance.Text = "ASSISTANCE"
         Me.btnAssistance.UseVisualStyleBackColor = True
         '
-        'btnPayout
+        'btnDonation
         '
-        Me.btnPayout.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPayout.Location = New System.Drawing.Point(97, 265)
-        Me.btnPayout.Name = "btnPayout"
-        Me.btnPayout.Size = New System.Drawing.Size(178, 57)
-        Me.btnPayout.TabIndex = 2
-        Me.btnPayout.Text = "PAYOUT"
-        Me.btnPayout.UseVisualStyleBackColor = True
+        Me.btnDonation.Font = New System.Drawing.Font("Arial Rounded MT Bold", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDonation.Location = New System.Drawing.Point(97, 265)
+        Me.btnDonation.Name = "btnDonation"
+        Me.btnDonation.Size = New System.Drawing.Size(178, 57)
+        Me.btnDonation.TabIndex = 2
+        Me.btnDonation.Text = "DONATION"
+        Me.btnDonation.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -63,7 +63,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGreen
         Me.ClientSize = New System.Drawing.Size(379, 440)
-        Me.Controls.Add(Me.btnPayout)
+        Me.Controls.Add(Me.btnDonation)
         Me.Controls.Add(Me.btnAssistance)
         Me.Controls.Add(Me.btnSeminar)
         Me.Font = New System.Drawing.Font("Calibri", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -76,5 +76,5 @@ Partial Class Form1
 
     Friend WithEvents btnSeminar As Button
     Friend WithEvents btnAssistance As Button
-    Friend WithEvents btnPayout As Button
+    Friend WithEvents btnDonation As Button
 End Class
