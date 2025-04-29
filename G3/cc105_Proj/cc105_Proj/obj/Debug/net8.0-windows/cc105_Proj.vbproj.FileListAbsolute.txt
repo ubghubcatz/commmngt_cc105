@@ -81,3 +81,13 @@ C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Pro
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.genruntimeconfig.cache
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\ref\cc105_Proj.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\obj\Debug\net8.0-windows\cc105_Proj.AddProcedure.resources
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.Charting.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.Quality.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.Snippets.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.System.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.WPFonts.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\de\PdfSharp.Charting.resources.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\de\PdfSharp.resources.dll

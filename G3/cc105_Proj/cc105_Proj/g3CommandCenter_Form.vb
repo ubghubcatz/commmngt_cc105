@@ -62,6 +62,7 @@ Public Class g3CommandCenter_Form
         LayoutManager.ResizeFormLayout(Me) ' Adjust layout on form resize
         CountCases()
     End Sub
+
     Public Sub OpenOrRestoreForm(ByRef formInstance As Form, formType As Type)
         ' Check if the form instance already exists and is not disposed
         If formInstance IsNot Nothing AndAlso Not formInstance.IsDisposed Then

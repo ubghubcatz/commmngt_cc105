@@ -3,47 +3,75 @@
   "WorkspaceRootPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\casereportpdfrenderer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\casereportpdfrenderer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordshowform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordshowform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\addpersoninvolvedformvb.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\addpersoninvolvedformvb.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\printclass.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\printclass.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordshowform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordshowform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordshowform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordshowform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\additionalphotoform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\additionalphotoform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\calldetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\calldetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\addprocedure.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\addprocedure.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\calllog_tables.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\calllog_tables.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\calllog_tables.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\calllog_tables.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\caserecordform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordshowform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordshowform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\calldetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\calldetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\cc105_proj.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\cc105_proj.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordshowform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordshowform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordform.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
@@ -55,11 +83,7 @@
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\call _log.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\addpersoninvolvedformvb.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\addpersoninvolvedformvb.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
@@ -71,10 +95,6 @@
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\addofficersform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\layoutmanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\layoutmanager.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -83,19 +103,11 @@
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\calldetails.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\calllog_tables.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\calllog_tables.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\addprocedure.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\addprocedure.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\addpersoninvolvedformvb.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\addpersoninvolvedformvb.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\cc105_proj\\cc105_proj\\caserecordform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\caserecordform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\caserecordform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -113,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\officersavailabiltyform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\officersavailabiltyform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_proj\\additionalphotoform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{CCC62BBF-0CFE-4B7C-A5F1-666A03264D78}|cc105_Proj\\cc105_Proj.vbproj|solutionrelative:cc105_proj\\additionalphotoform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -126,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 382,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -138,32 +146,105 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CaseRecordForm.resx",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.resx",
-              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordForm.resx",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.resx",
-              "RelativeToolTip": "cc105_Proj\\CaseRecordForm.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-10T13:40:37.359Z",
+              "DocumentIndex": 2,
+              "Title": "CaseReportPDFRenderer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseReportPDFRenderer.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CaseReportPDFRenderer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseReportPDFRenderer.vb",
+              "RelativeToolTip": "cc105_Proj\\CaseReportPDFRenderer.vb",
+              "ViewState": "AQIAAIIAAAAAAAAAAAAQwJ0BAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T06:37:16.562Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
+              "Title": "AddProcedure.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddProcedure.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\AddProcedure.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddProcedure.vb [Design]",
+              "RelativeToolTip": "cc105_Proj\\AddProcedure.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-16T16:06:50.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddPersonInvolvedFormvb.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddPersonInvolvedFormvb.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\AddPersonInvolvedFormvb.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddPersonInvolvedFormvb.vb [Design]",
+              "RelativeToolTip": "cc105_Proj\\AddPersonInvolvedFormvb.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-16T18:14:19.506Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AdditionalPhotoForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AdditionalPhotoForm.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\AdditionalPhotoForm.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AdditionalPhotoForm.vb [Design]",
+              "RelativeToolTip": "cc105_Proj\\AdditionalPhotoForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-04T14:39:21.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CaseRecordForm.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordForm.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.vb",
               "RelativeToolTip": "cc105_Proj\\CaseRecordForm.vb",
-              "ViewState": "AQIAAPgBAAAAAAAAAAAgwAMCAAAAAAAA",
+              "ViewState": "AQIAAK4BAAAAAAAAAAAwwJUAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-05T13:40:12.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "PrintClass.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\PrintClass.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\PrintClass.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\PrintClass.vb",
+              "RelativeToolTip": "cc105_Proj\\PrintClass.vb",
+              "ViewState": "AQIAAKIBAAAAAAAAAADwv7sCAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-26T02:28:48.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CaseRecordTable.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordTable.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb",
+              "RelativeToolTip": "cc105_Proj\\CaseRecordTable.vb",
+              "ViewState": "AQIAALgBAAAAAAAAAAAMwMkBAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-05T14:13:04.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CaseRecordShowForm.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordShowForm.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordShowForm.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordShowForm.vb",
+              "RelativeToolTip": "cc105_Proj\\CaseRecordShowForm.vb",
+              "ViewState": "AQIAADUCAAAAAAAAAAAEwPcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-05T13:06:02.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CaseRecordForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordForm.vb",
@@ -175,81 +256,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CaseRecordShowForm.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordShowForm.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordShowForm.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordShowForm.vb",
-              "RelativeToolTip": "cc105_Proj\\CaseRecordShowForm.vb",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwOEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T13:06:02.809Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CallDetails.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallDetails.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\CallDetails.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallDetails.vb [Design]",
-              "RelativeToolTip": "cc105_Proj\\CallDetails.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-09T03:54:49.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PrintClass.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\PrintClass.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\PrintClass.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\PrintClass.vb",
-              "RelativeToolTip": "cc105_Proj\\PrintClass.vb",
-              "ViewState": "AQIAACMCAAAAAAAAAAAAACYCAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-26T02:28:48.449Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CallLog_Tables.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\CallLog_Tables.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb",
-              "RelativeToolTip": "cc105_Proj\\CallLog_Tables.vb",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAkwBQAAAAjAAAA",
+              "Title": "CaseRecordTable.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordTable.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb [Design]",
+              "RelativeToolTip": "cc105_Proj\\CaseRecordTable.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-09T04:04:57.181Z"
+              "WhenOpened": "2025-04-05T14:13:01.24Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "g3CommandCenter_Form.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\g3CommandCenter_Form.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\g3CommandCenter_Form.vb",
               "RelativeToolTip": "cc105_Proj\\g3CommandCenter_Form.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAhAAAA",
+              "ViewState": "AQIAAEwAAAAAAAAAAAAkwD0AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-04T14:41:19.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T14:41:19.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CaseRecordTable.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordTable.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb",
-              "RelativeToolTip": "cc105_Proj\\CaseRecordTable.vb",
-              "ViewState": "AQIAAFIBAAAAAAAAAAAAAGAAAAAKAAAA",
+              "DocumentIndex": 11,
+              "Title": "CallLog_Tables.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CallLog_Tables.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb [Design]",
+              "RelativeToolTip": "cc105_Proj\\CallLog_Tables.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T14:13:04.818Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T04:04:53.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
+              "Title": "CallLog_Tables.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CallLog_Tables.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb",
+              "RelativeToolTip": "cc105_Proj\\CallLog_Tables.vb",
+              "ViewState": "AQIAABkAAAAAAAAAAAAowDIAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-09T04:04:57.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CaseRecordShowForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordShowForm.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordShowForm.vb",
@@ -261,7 +315,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
+              "Title": "CallDetails.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallDetails.vb",
+              "RelativeDocumentMoniker": "cc105_Proj\\CallDetails.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallDetails.vb [Design]",
+              "RelativeToolTip": "cc105_Proj\\CallDetails.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-09T03:54:49.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "cc105_Proj",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
+              "RelativeDocumentMoniker": "cc105_Proj\\cc105_Proj.vbproj",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
+              "RelativeToolTip": "cc105_Proj\\cc105_Proj.vbproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-04-27T06:40:49.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CaseRecordForm.resx",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.resx",
+              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordForm.resx",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.resx",
+              "RelativeToolTip": "cc105_Proj\\CaseRecordForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-10T13:40:37.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "CaseRecordShowForm.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordShowForm.Designer.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordShowForm.Designer.vb",
@@ -274,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "Call _Log.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\Call _Log.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\Call _Log.vb",
@@ -285,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "Call _Log.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\Call _Log.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\Call _Log.vb",
@@ -297,30 +386,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "g3CommandCenter_Form.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\g3CommandCenter_Form.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\g3CommandCenter_Form.vb [Design]",
               "RelativeToolTip": "cc105_Proj\\g3CommandCenter_Form.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-04T14:40:18.844Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-04T14:40:18.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AddPersonInvolvedFormvb.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddPersonInvolvedFormvb.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\AddPersonInvolvedFormvb.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddPersonInvolvedFormvb.vb [Design]",
-              "RelativeToolTip": "cc105_Proj\\AddPersonInvolvedFormvb.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-16T18:14:19.506Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "AddProcedure.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddProcedure.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\AddProcedure.vb",
@@ -332,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "AddOfficersForm.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddOfficersForm.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\AddOfficersForm.vb",
@@ -344,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 23,
               "Title": "LayoutManager.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\LayoutManager.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\LayoutManager.vb",
@@ -356,29 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CaseRecordTable.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordTable.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordTable.vb [Design]",
-              "RelativeToolTip": "cc105_Proj\\CaseRecordTable.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T14:13:01.24Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AddProcedure.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddProcedure.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\AddProcedure.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddProcedure.vb [Design]",
-              "RelativeToolTip": "cc105_Proj\\AddProcedure.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-16T16:06:50.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "CallDetails.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallDetails.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\CallDetails.vb",
@@ -390,18 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CallLog_Tables.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\CallLog_Tables.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CallLog_Tables.vb [Design]",
-              "RelativeToolTip": "cc105_Proj\\CallLog_Tables.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-09T04:04:53.526Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "AddPersonInvolvedFormvb.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddPersonInvolvedFormvb.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\AddPersonInvolvedFormvb.vb",
@@ -409,11 +453,12 @@
               "RelativeToolTip": "cc105_Proj\\AddPersonInvolvedFormvb.vb",
               "ViewState": "AQIAAAIAAAAAAAAAAAAxwBIAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-16T18:14:22.409Z"
+              "WhenOpened": "2025-04-16T18:14:22.409Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "AddOfficersForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AddOfficersForm.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\AddOfficersForm.vb",
@@ -424,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 28,
               "Title": "Call _Log.resx",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\Call _Log.resx",
               "RelativeDocumentMoniker": "cc105_Proj\\Call _Log.resx",
@@ -435,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "Call _Log.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\Call _Log.Designer.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\Call _Log.Designer.vb",
@@ -447,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "CaseRecordForm.Designer.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\CaseRecordForm.Designer.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\CaseRecordForm.Designer.vb",
@@ -460,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "OfficersAvailabiltyForm.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\OfficersAvailabiltyForm.vb",
               "RelativeDocumentMoniker": "cc105_Proj\\OfficersAvailabiltyForm.vb",
@@ -468,17 +513,6 @@
               "RelativeToolTip": "cc105_Proj\\OfficersAvailabiltyForm.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-04T15:29:13.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "AdditionalPhotoForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AdditionalPhotoForm.vb",
-              "RelativeDocumentMoniker": "cc105_Proj\\AdditionalPhotoForm.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\cc105_Proj\\cc105_Proj\\AdditionalPhotoForm.vb [Design]",
-              "RelativeToolTip": "cc105_Proj\\AdditionalPhotoForm.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-04T14:39:21.991Z"
             }
           ]
         },

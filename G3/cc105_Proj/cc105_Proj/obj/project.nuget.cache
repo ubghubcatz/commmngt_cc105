@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PmeIBgFDzDotNFmct1fJiG7F5IXrtVhu/Dnlq4z7kpSVRdqVh2Gl+HICvfzp9yaJiiMuKxDUTkeSEZOt02Z+0g==",
+  "dgSpecHash": "u7Rsu0ZOcALcwSaEH1S+K20A50WU6P2JoRHi5/CYRQEH+1biuAP+zI51IKVqG/zAKN6NDyxfOjdm0/czeI0OEg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
   "expectedPackageFiles": [
@@ -12,7 +12,9 @@
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\6.0.2\\microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.1\\microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
+    "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
@@ -25,6 +27,7 @@
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.5.0\\microsoft.identitymodel.protocols.openidconnect.7.5.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.0\\microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
+    "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\pdfsharp\\6.1.1\\pdfsharp.6.1.1.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.1\\system.configuration.configurationmanager.8.0.1.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

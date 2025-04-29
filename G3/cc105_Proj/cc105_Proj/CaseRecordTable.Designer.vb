@@ -36,11 +36,11 @@ Partial Class CaseRecordTable
         ' 
         ' AddCaseRecord_Btn
         ' 
-        AddCaseRecord_Btn.BackColor = Color.DarkSeaGreen
+        AddCaseRecord_Btn.BackColor = Color.SeaGreen
         AddCaseRecord_Btn.FlatStyle = FlatStyle.Flat
         AddCaseRecord_Btn.Font = New Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddCaseRecord_Btn.ForeColor = Color.White
-        AddCaseRecord_Btn.Location = New Point(1166, 133)
+        AddCaseRecord_Btn.Location = New Point(1166, 134)
         AddCaseRecord_Btn.Name = "AddCaseRecord_Btn"
         AddCaseRecord_Btn.Size = New Size(182, 52)
         AddCaseRecord_Btn.TabIndex = 6

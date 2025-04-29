@@ -1,6 +1,8 @@
 ﻿Imports System.Drawing.Printing
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Data.SqlClient
+Imports PdfSharp.Drawing
+Imports PdfSharp.Pdf
 
 Public Class CaseRecordShowForm
 
@@ -12,6 +14,13 @@ Public Class CaseRecordShowForm
 
     Dim viewer As ImageViewer = Nothing
     Dim mainFormRef As g3CommandCenter_Form = TryCast(Application.OpenForms("g3CommandCenter_Form"), g3CommandCenter_Form)
+    Public Property OldOfficersList As List(Of String)
+
+    Public Property oldSpecificCaseDetails As String
+
+    Public Property oldProcedures As Integer
+
+    Public Property oldStatus As String
 
     Public Property LoadedCaseID As String
     Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,7 +29,7 @@ Public Class CaseRecordShowForm
         Procedure_ListView.OwnerDraw = True
         Procedure_ListView.Columns(2).Width = 0
         Procedure_ListView.Columns(3).Width = 0
-
+        oldProcedures = Procedure_ListView.Items.Count
     End Sub
 
     Private Sub Procedure_ListView_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles Procedure_ListView.ColumnWidthChanging
@@ -241,7 +250,10 @@ Public Class CaseRecordShowForm
         ' Set case status in dropdown 
         Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)
         If index >= 0 Then targetForm.CaseStatus_ComboBox.SelectedIndex = index
-
+        targetForm.OldOfficersList = OldOfficersList
+        targetForm.oldSpecificCaseDetails = oldSpecificCaseDetails
+        targetForm.oldStatus = oldStatus
+        targetForm.oldProcedures = oldProcedures
         targetForm.originalCaseStatus = CaseStatus_TxtBox.Text
     End Sub
 
@@ -490,6 +502,53 @@ Public Class CaseRecordShowForm
         PrintClass.RenderCasePage(e, intStart, currentSection, intPhotoIndex, caseImageIndex, intValIndex, procedureCount, peopleCount, officersCount, numbers)
     End Sub
 
+    Private Sub SaveAsPDFToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsPDFToolStripMenuItem.Click
+        Static intStart As Integer = 0
+        Static currentSection As Integer = 0
+        Static intPhotoIndex As Integer = 0
+        Static caseImageIndex As Integer = 0
+        Static intValIndex As Integer = 0
+        Static procedureCount As Integer = 0
+        Static peopleCount As Integer = 0
+        Static officersCount As Integer = 0
+        Static numbers As Integer() = {0, 0, 0}
+
+        ' Set the case ID and find the matching case
+        CaseReportPDFRenderer.caseID = CaseIDString_TextBox.Text
+        CaseReportPDFRenderer.FindMatchingCase(CaseIDString_TextBox.Text)
+
+        ' Create a new PDF document
+        Dim document As New PdfDocument()
+
+        ' Create a new page for the document
+        Dim page As PdfPage = document.AddPage()
+
+        ' Get the XGraphics object for the page
+        Dim gfx As XGraphics = XGraphics.FromPdfPage(page)
+
+        ' Call the RenderCasePage_PDF function, passing the required arguments
+        CaseReportPDFRenderer.RenderCasePage_PDF(gfx, page, intStart, currentSection, intPhotoIndex, caseImageIndex, intValIndex, procedureCount, peopleCount, officersCount, numbers, document)
+
+        ' Initialize the SaveFileDialog
+        Dim saveFileDialog As New SaveFileDialog()
+        saveFileDialog.Filter = "PDF Files|*.pdf"
+        saveFileDialog.Title = "Save PDF File"
+
+        ' Show the SaveFileDialog and check if the user selected a file
+        If saveFileDialog.ShowDialog() = DialogResult.OK Then
+            ' Get the selected file path from the dialog
+            Dim filePath As String = saveFileDialog.FileName
+
+            ' Save the document to the selected file path
+            document.Save(filePath)
+
+            Dim psi As New ProcessStartInfo()
+            psi.FileName = filePath
+            psi.UseShellExecute = True
+            Process.Start(psi)
+        End If
+    End Sub
+
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
         ' Link the document to PageSetupDialog and PrintDialog
         PageSetupDialog1.Document = PrintDocument1
@@ -547,4 +606,5 @@ Public Class CaseRecordShowForm
             End With
         End If
     End Sub
+
 End Class
