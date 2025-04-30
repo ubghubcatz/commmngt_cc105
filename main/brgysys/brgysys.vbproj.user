@@ -103,6 +103,27 @@
     <Compile Update="G6\venueMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="G7\ApprovedSeminarsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G7\AssistanceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G7\BurialRequirementsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G7\DonationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G7\EducationalRequirementsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G7\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="G7\SeminarForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MDIBrgySys.vb">
       <SubType>Form</SubType>
     </Compile>

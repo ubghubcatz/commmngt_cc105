@@ -55,13 +55,13 @@ Partial Class CallLog_Tables
         ' 
         ' AddCallLog_Btn
         ' 
-        AddCallLog_Btn.BackColor = Color.DarkSeaGreen
+        AddCallLog_Btn.BackColor = Color.SeaGreen
         AddCallLog_Btn.FlatStyle = FlatStyle.Flat
         AddCallLog_Btn.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         AddCallLog_Btn.ForeColor = Color.White
-        AddCallLog_Btn.Location = New Point(1137, 116)
+        AddCallLog_Btn.Location = New Point(1167, 112)
         AddCallLog_Btn.Name = "AddCallLog_Btn"
-        AddCallLog_Btn.Size = New Size(184, 38)
+        AddCallLog_Btn.Size = New Size(234, 38)
         AddCallLog_Btn.TabIndex = 3
         AddCallLog_Btn.Text = "ADD CALL LOG"
         AddCallLog_Btn.UseVisualStyleBackColor = False

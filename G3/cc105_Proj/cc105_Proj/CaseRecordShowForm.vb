@@ -245,7 +245,12 @@ Public Class CaseRecordShowForm
         targetForm.PhoneNumReadnly_TxtBox.Text = PhoneNum_TxtBox.Text
         targetForm.EmailReadnly_TxtBox.Text = Email_textbox.Text
         targetForm.ZoneName_TxtBox.Text = ZoneName_TxtBox.Text
-        targetForm.ExpectedFinish_DateTimePicker.Value = Convert.ToDateTime(ExpectedResolveDare_TextBox.Text)
+        If ExpectedResolveDare_TextBox.Text <> "" Then
+            targetForm.ExpectedFinish_DateTimePicker.Value = Convert.ToDateTime(ExpectedResolveDare_TextBox.Text)
+        Else
+            targetForm.ExpectedFinish_DateTimePicker.Value = DateTime.Now
+        End If
+
         CaseRecordTable.GetProcedures(targetForm.Procedure_ListView, CaseIDString_TextBox.Text)
         ' Set case status in dropdown 
         Dim index = targetForm.CaseStatus_ComboBox.FindStringExact(CaseStatus_TxtBox.Text)

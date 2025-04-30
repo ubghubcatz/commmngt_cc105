@@ -48,7 +48,8 @@ Public Class CaseRecordTable
                                  sd.casetype,                               
                                  cr.casestatus,
                                  STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
-                                 cr.ExpectedDateFinish
+                                 cr.ExpectedDateFinish,
+                                 cr,ResolvedDate
                              FROM g3_SpecificCaseDetails sd
                              LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
                              LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
@@ -72,6 +73,10 @@ Public Class CaseRecordTable
                 If Not row.IsNewRow Then
                     If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
                         row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
+                    End If
+
+                    If String.IsNullOrEmpty(row.Cells("ResolvedDate").Value?.ToString()) Then
+                        row.Cells("ResolvedDate").Style.BackColor = Color.LightPink
                     End If
 
                     Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
@@ -231,6 +236,8 @@ Public Class CaseRecordTable
                         caseShow.CaseIDString_TextBox.Text = reader("caseIDString").ToString()
                         caseShow.ExpectedResolveDare_TextBox.Text = reader("ExpectedDateFinish").ToString()
                         caseIDString = reader("caseIDString").ToString()
+                        caseShow.oldSpecificCaseDetails = reader("specificdetails")
+                        caseShow.oldStatus = reader("casestatus")
 
                         If reader("casetype") = "Theft" Or reader("casetype") = "Missing Person" Then
                             caseShow.Text = $"| Case Name: {reader("casename")} | {reader("casetype")} |"
@@ -279,6 +286,21 @@ Public Class CaseRecordTable
             FROM g3_OfficerCaseAssignments ocs
             INNER JOIN g4_EmployeeDetails ed ON ocs.officerid = ed.EmployeeID
             WHERE ocs.caseid = @caseid"
+
+                Using conn As New SqlConnection(connectionString)
+                    Using cmd As New SqlCommand(query2, conn)
+                        cmd.Parameters.AddWithValue("@caseid", CInt(caseShow.HiddenCaseID.Text))
+                        caseShow.OldOfficersList = New List(Of String)()
+                        conn.Open()
+                        Using reader As SqlDataReader = cmd.ExecuteReader()
+                            While reader.Read()
+                                If Not reader.IsDBNull(0) Then
+                                    caseShow.OldOfficersList.Add(reader("officerid")) ' 0 = first column = officerid
+                                End If
+                            End While
+                        End Using
+                    End Using
+                End Using
 
                 Using conn As New SqlConnection(connectionString)
                     conn.Open()
@@ -447,7 +469,7 @@ Public Class CaseRecordTable
                 caseShow.MissingPerson_PicBox.Image = Image.FromStream(ms)
             End Using
         End If
-        AddPeopleToGrid(caseShow.CasePeople_DataGridView1, details(6))
+        AddPeopleToGrid(caseShow.CasePeople_DataGridView1, details(8))
     End Sub
 
     Private Sub LoadOtherCase(caseShow As CaseRecordShowForm, details As String(), caseImageObj As Object, casename As String)

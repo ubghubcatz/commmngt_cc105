@@ -91,3 +91,6 @@ C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Pro
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\PdfSharp.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\de\PdfSharp.Charting.resources.dll
 C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\de\PdfSharp.resources.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\LiveCharts.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\LiveCharts.WinForms.dll
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\cc105_Proj\cc105_Proj\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll

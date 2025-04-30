@@ -36,10 +36,14 @@ Partial Class g3CommandCenter_Form
         TabControl1 = New TabControl()
         TabPage1 = New TabPage()
         MainPanel = New Panel()
-        lum = New Label()
-        Period_ComboBox = New ComboBox()
-        Label7 = New Label()
         Label6 = New Label()
+        EndDate_DateTimePicker = New DateTimePicker()
+        StartDate_DateTimePicker = New DateTimePicker()
+        AverageCompletion_Label = New Label()
+        CasesResolved_Label = New Label()
+        CasesReported_Label = New Label()
+        Label8 = New Label()
+        lab = New Label()
         IPCasesCount_Panel = New Panel()
         InProgressCasesCount_Label = New Label()
         Label5 = New Label()
@@ -52,12 +56,9 @@ Partial Class g3CommandCenter_Form
         ResolvedCasesCount_Panel = New Panel()
         ResolvedCasesCount_Label = New Label()
         Label2 = New Label()
-        ComboBox2 = New ComboBox()
-        ComboBox1 = New ComboBox()
         Timer1 = New Timer(components)
         MenuStrip1 = New MenuStrip()
         SqlCommand1 = New Microsoft.Data.SqlClient.SqlCommand()
-        Label8 = New Label()
         FlowLayoutPanel1.SuspendLayout()
         TableLayoutPanel1.SuspendLayout()
         TableLayoutPanel2.SuspendLayout()
@@ -230,17 +231,18 @@ Partial Class g3CommandCenter_Form
         ' MainPanel
         ' 
         MainPanel.AutoScroll = True
-        MainPanel.Controls.Add(Label8)
-        MainPanel.Controls.Add(lum)
-        MainPanel.Controls.Add(Period_ComboBox)
-        MainPanel.Controls.Add(Label7)
         MainPanel.Controls.Add(Label6)
+        MainPanel.Controls.Add(EndDate_DateTimePicker)
+        MainPanel.Controls.Add(StartDate_DateTimePicker)
+        MainPanel.Controls.Add(AverageCompletion_Label)
+        MainPanel.Controls.Add(CasesResolved_Label)
+        MainPanel.Controls.Add(CasesReported_Label)
+        MainPanel.Controls.Add(Label8)
+        MainPanel.Controls.Add(lab)
         MainPanel.Controls.Add(IPCasesCount_Panel)
         MainPanel.Controls.Add(OpenCasesCount_Panel)
         MainPanel.Controls.Add(PendingCasesCount_Panel)
         MainPanel.Controls.Add(ResolvedCasesCount_Panel)
-        MainPanel.Controls.Add(ComboBox2)
-        MainPanel.Controls.Add(ComboBox1)
         MainPanel.Location = New Point(0, 0)
         MainPanel.MaximumSize = New Size(1425, 659)
         MainPanel.MinimumSize = New Size(1425, 659)
@@ -248,54 +250,100 @@ Partial Class g3CommandCenter_Form
         MainPanel.Size = New Size(1425, 659)
         MainPanel.TabIndex = 6
         ' 
-        ' lum
-        ' 
-        lum.AutoSize = True
-        lum.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lum.ForeColor = Color.Green
-        lum.Location = New Point(790, 233)
-        lum.Name = "lum"
-        lum.Size = New Size(83, 31)
-        lum.TabIndex = 8
-        lum.Text = "Period"
-        ' 
-        ' Period_ComboBox
-        ' 
-        Period_ComboBox.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        Period_ComboBox.FormattingEnabled = True
-        Period_ComboBox.Location = New Point(790, 267)
-        Period_ComboBox.Name = "Period_ComboBox"
-        Period_ComboBox.Size = New Size(249, 36)
-        Period_ComboBox.TabIndex = 7
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.ForeColor = Color.Green
-        Label7.Location = New Point(535, 233)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(87, 31)
-        Label7.TabIndex = 6
-        Label7.Text = "Month"
-        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = Color.Green
-        Label6.Location = New Point(280, 233)
+        Label6.Location = New Point(647, 228)
         Label6.Name = "Label6"
-        Label6.Size = New Size(59, 31)
-        Label6.TabIndex = 5
-        Label6.Text = "Year"
+        Label6.Size = New Size(145, 31)
+        Label6.TabIndex = 15
+        Label6.Text = "Ending Date"
+        ' 
+        ' EndDate_DateTimePicker
+        ' 
+        EndDate_DateTimePicker.CustomFormat = "MM-dd-yyyy"
+        EndDate_DateTimePicker.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        EndDate_DateTimePicker.Format = DateTimePickerFormat.Custom
+        EndDate_DateTimePicker.Location = New Point(647, 262)
+        EndDate_DateTimePicker.Name = "EndDate_DateTimePicker"
+        EndDate_DateTimePicker.ShowUpDown = True
+        EndDate_DateTimePicker.Size = New Size(223, 34)
+        EndDate_DateTimePicker.TabIndex = 14
+        ' 
+        ' StartDate_DateTimePicker
+        ' 
+        StartDate_DateTimePicker.CustomFormat = "MM-dd-yyyy"
+        StartDate_DateTimePicker.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        StartDate_DateTimePicker.Format = DateTimePickerFormat.Custom
+        StartDate_DateTimePicker.Location = New Point(341, 262)
+        StartDate_DateTimePicker.Name = "StartDate_DateTimePicker"
+        StartDate_DateTimePicker.ShowUpDown = True
+        StartDate_DateTimePicker.Size = New Size(222, 34)
+        StartDate_DateTimePicker.TabIndex = 13
+        ' 
+        ' AverageCompletion_Label
+        ' 
+        AverageCompletion_Label.AutoSize = True
+        AverageCompletion_Label.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Bold)
+        AverageCompletion_Label.ForeColor = Color.Green
+        AverageCompletion_Label.Location = New Point(221, 546)
+        AverageCompletion_Label.Name = "AverageCompletion_Label"
+        AverageCompletion_Label.Size = New Size(222, 46)
+        AverageCompletion_Label.TabIndex = 12
+        AverageCompletion_Label.Text = "Cases Count:"
+        ' 
+        ' CasesResolved_Label
+        ' 
+        CasesResolved_Label.AutoSize = True
+        CasesResolved_Label.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Bold)
+        CasesResolved_Label.ForeColor = Color.Green
+        CasesResolved_Label.Location = New Point(221, 442)
+        CasesResolved_Label.Name = "CasesResolved_Label"
+        CasesResolved_Label.Size = New Size(222, 46)
+        CasesResolved_Label.TabIndex = 11
+        CasesResolved_Label.Text = "Cases Count:"
+        ' 
+        ' CasesReported_Label
+        ' 
+        CasesReported_Label.AutoSize = True
+        CasesReported_Label.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Bold)
+        CasesReported_Label.ForeColor = Color.Green
+        CasesReported_Label.Location = New Point(221, 341)
+        CasesReported_Label.Name = "CasesReported_Label"
+        CasesReported_Label.Size = New Size(222, 46)
+        CasesReported_Label.TabIndex = 10
+        CasesReported_Label.Text = "Cases Count:"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.Green
+        Label8.Location = New Point(221, 12)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(300, 38)
+        Label8.TabIndex = 9
+        Label8.Text = "All Time Cases Count:"
+        ' 
+        ' lab
+        ' 
+        lab.AutoSize = True
+        lab.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        lab.ForeColor = Color.Green
+        lab.Location = New Point(341, 228)
+        lab.Name = "lab"
+        lab.Size = New Size(157, 31)
+        lab.TabIndex = 5
+        lab.Text = "Starting Date"
         ' 
         ' IPCasesCount_Panel
         ' 
         IPCasesCount_Panel.BackColor = Color.SandyBrown
         IPCasesCount_Panel.Controls.Add(InProgressCasesCount_Label)
         IPCasesCount_Panel.Controls.Add(Label5)
-        IPCasesCount_Panel.Location = New Point(936, 89)
+        IPCasesCount_Panel.Location = New Point(934, 66)
         IPCasesCount_Panel.Name = "IPCasesCount_Panel"
         IPCasesCount_Panel.Size = New Size(181, 101)
         IPCasesCount_Panel.TabIndex = 3
@@ -327,7 +375,7 @@ Partial Class g3CommandCenter_Form
         OpenCasesCount_Panel.BackColor = Color.Tomato
         OpenCasesCount_Panel.Controls.Add(OpenCasesCount_Label)
         OpenCasesCount_Panel.Controls.Add(Label4)
-        OpenCasesCount_Panel.Location = New Point(694, 89)
+        OpenCasesCount_Panel.Location = New Point(692, 66)
         OpenCasesCount_Panel.Name = "OpenCasesCount_Panel"
         OpenCasesCount_Panel.Size = New Size(181, 101)
         OpenCasesCount_Panel.TabIndex = 3
@@ -359,7 +407,7 @@ Partial Class g3CommandCenter_Form
         PendingCasesCount_Panel.BackColor = Color.DarkKhaki
         PendingCasesCount_Panel.Controls.Add(PendingCasesCount_Label)
         PendingCasesCount_Panel.Controls.Add(Label3)
-        PendingCasesCount_Panel.Location = New Point(454, 89)
+        PendingCasesCount_Panel.Location = New Point(452, 66)
         PendingCasesCount_Panel.Name = "PendingCasesCount_Panel"
         PendingCasesCount_Panel.Size = New Size(181, 101)
         PendingCasesCount_Panel.TabIndex = 3
@@ -391,7 +439,7 @@ Partial Class g3CommandCenter_Form
         ResolvedCasesCount_Panel.BackColor = Color.Green
         ResolvedCasesCount_Panel.Controls.Add(ResolvedCasesCount_Label)
         ResolvedCasesCount_Panel.Controls.Add(Label2)
-        ResolvedCasesCount_Panel.Location = New Point(223, 89)
+        ResolvedCasesCount_Panel.Location = New Point(221, 66)
         ResolvedCasesCount_Panel.Name = "ResolvedCasesCount_Panel"
         ResolvedCasesCount_Panel.Size = New Size(181, 101)
         ResolvedCasesCount_Panel.TabIndex = 2
@@ -418,24 +466,6 @@ Partial Class g3CommandCenter_Form
         Label2.TabIndex = 4
         Label2.Text = "Resolved Cases"
         ' 
-        ' ComboBox2
-        ' 
-        ComboBox2.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Location = New Point(535, 267)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(249, 36)
-        ComboBox2.TabIndex = 1
-        ' 
-        ' ComboBox1
-        ' 
-        ComboBox1.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Location = New Point(280, 267)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(249, 36)
-        ComboBox1.TabIndex = 0
-        ' 
         ' MenuStrip1
         ' 
         MenuStrip1.ImageScalingSize = New Size(20, 20)
@@ -449,17 +479,6 @@ Partial Class g3CommandCenter_Form
         ' 
         SqlCommand1.CommandTimeout = 30
         SqlCommand1.EnableOptimizedParameterBinding = False
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.ForeColor = Color.Green
-        Label8.Location = New Point(223, 35)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(183, 38)
-        Label8.TabIndex = 9
-        Label8.Text = "Cases Count:"
         ' 
         ' g3CommandCenter_Form
         ' 
@@ -516,8 +535,6 @@ Partial Class g3CommandCenter_Form
     Friend WithEvents OpenCasesCount_Panel As Panel
     Friend WithEvents PendingCasesCount_Panel As Panel
     Friend WithEvents ResolvedCasesCount_Panel As Panel
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents InProgressCasesCount_Label As Label
     Friend WithEvents Label5 As Label
@@ -527,10 +544,13 @@ Partial Class g3CommandCenter_Form
     Friend WithEvents Label3 As Label
     Friend WithEvents ResolvedCasesCount_Label As Label
     Friend WithEvents SqlCommand1 As Microsoft.Data.SqlClient.SqlCommand
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents lum As Label
-    Friend WithEvents Period_ComboBox As ComboBox
+    Friend WithEvents lab As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents EndDate_DateTimePicker As DateTimePicker
+    Friend WithEvents StartDate_DateTimePicker As DateTimePicker
+    Friend WithEvents AverageCompletion_Label As Label
+    Friend WithEvents CasesResolved_Label As Label
+    Friend WithEvents CasesReported_Label As Label
+    Friend WithEvents Label6 As Label
 
 End Class

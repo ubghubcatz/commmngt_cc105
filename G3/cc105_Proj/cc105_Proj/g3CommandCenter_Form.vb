@@ -1,6 +1,7 @@
 ﻿
 Imports Microsoft.Data.SqlClient
 
+
 Public Class g3CommandCenter_Form
 
     ' Establish connection to the SQL Server database
@@ -15,16 +16,16 @@ Public Class g3CommandCenter_Form
     Public CaseRecordForm As CaseRecordTable = Nothing
     Public CallLogForm As CallLog_Tables = Nothing
     Public OfficersForm As OfficersAvailabiltyForm = Nothing
+    Private lastValidStartDate As Date
+    Private lastValidEndDate As Date
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        ' Dynamically set the form size to fit within the available screen space (excluding taskbar)
         Dim workingArea As Rectangle = Screen.PrimaryScreen.WorkingArea
         Me.Width = workingArea.Width
         Me.Height = workingArea.Height
         Me.Size = Me.MinimumSize
 
-        ' Set tab control appearance and size as needed
         TabControl1.Appearance = TabAppearance.Normal
         TabControl1.ItemSize = New Size(0, 1) ' Shrink tabs to 1 pixel
         TabControl1.SizeMode = TabSizeMode.Fixed
@@ -46,7 +47,8 @@ Public Class g3CommandCenter_Form
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message) ' Display error if connection fails
         End Try
-
+        countCurrentCases()
+        CalculateResolutionDate()
         Timer1.Interval = 10000 ' Refresh every 10 seconds
         Timer1.Enabled = True
     End Sub
@@ -84,6 +86,79 @@ Public Class g3CommandCenter_Form
             formInstance.Show()
         End If
     End Sub
+
+
+    Private Sub countCurrentCases()
+        Dim query As String = "SELECT COUNT(*) AS CaseCount
+                       FROM g3_CaseRecords
+                       WHERE CAST(datetimereported AS DATE) BETWEEN @StartDate AND @EndDate;"
+
+        Try
+            Using conn As New SqlConnection(connectionString)
+                Using cmd As New SqlCommand(query, conn)
+                    ' Add parameters
+                    cmd.Parameters.AddWithValue("@StartDate", StartDate_DateTimePicker.Value.Date)
+                    cmd.Parameters.AddWithValue("@EndDate", EndDate_DateTimePicker.Value.Date)
+
+                    conn.Open()
+
+                    ' No reader needed, just ExecuteScalar
+                    Dim caseCount As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                    CasesReported_Label.Text = "Number of Reported Cases in the Time Frame: " & caseCount
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CalculateResolutionDate()
+        Dim query As String = "
+    SELECT 
+        DATEDIFF(DAY, datetimereported, ResolvedDate) AS DaysToResolve
+    FROM 
+        g3_CaseRecords
+    WHERE 
+        casestatus = 'Resolved'
+        AND CAST(ResolvedDate AS DATE) BETWEEN @StartDate AND @EndDate;"
+
+        Try
+            Using conn As New SqlConnection(connectionString)
+                Using cmd As New SqlCommand(query, conn)
+                    ' Add parameters
+                    cmd.Parameters.AddWithValue("@StartDate", StartDate_DateTimePicker.Value.Date)
+                    cmd.Parameters.AddWithValue("@EndDate", EndDate_DateTimePicker.Value.Date)
+
+                    conn.Open()
+
+                    ' Execute the query and read the results
+                    Dim reader As SqlDataReader = cmd.ExecuteReader()
+                    Dim totalDays As Integer = 0
+                    Dim resolvedCases As Integer = 0
+
+                    While reader.Read()
+                        totalDays += Convert.ToInt32(reader("DaysToResolve"))
+                        resolvedCases += 1
+                    End While
+
+                    CasesResolved_Label.Text = "Cases Resolved In the Time Frame: " & resolvedCases
+
+                    If resolvedCases > 0 Then
+                        Dim averageDays As Double = totalDays / resolvedCases
+
+                        AverageCompletion_Label.Text = "Average Resolution Duration: " & averageDays & " Days."
+                    Else
+                        AverageCompletion_Label.Text = "Can't Calculate Average Resolution Duration."
+                    End If
+
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        End Try
+    End Sub
+
 
     Public Sub CountCases()
         Dim query As String = "SELECT casestatus, COUNT(*) AS StatusCount
@@ -172,6 +247,27 @@ Public Class g3CommandCenter_Form
         Next
         dgv.AllowUserToAddRows = False ' Prevent adding rows manually
 
+    End Sub
+    Private Sub StartDate_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles StartDate_DateTimePicker.ValueChanged
+        If StartDate_DateTimePicker.Value > EndDate_DateTimePicker.Value Or StartDate_DateTimePicker.Value > Date.Now Then
+            MessageBox.Show("Invalid Start Date")
+            StartDate_DateTimePicker.Value = lastValidStartDate ' Reset to previous valid date
+        Else
+            lastValidStartDate = StartDate_DateTimePicker.Value ' Update last valid
+            countCurrentCases()
+            CalculateResolutionDate()
+        End If
+    End Sub
+
+    Private Sub EndDate_DateTimePicker_ValueChanged(sender As Object, e As EventArgs) Handles EndDate_DateTimePicker.ValueChanged
+        If StartDate_DateTimePicker.Value > EndDate_DateTimePicker.Value Or EndDate_DateTimePicker.Value > Date.Now Then
+            MessageBox.Show("Invalid End Date")
+            EndDate_DateTimePicker.Value = lastValidEndDate ' Reset to previous valid date
+        Else
+            lastValidEndDate = EndDate_DateTimePicker.Value ' Update last valid
+            countCurrentCases()
+            CalculateResolutionDate()
+        End If
     End Sub
 
 End Class

@@ -3,6 +3,7 @@ Imports Microsoft.Data.SqlClient
 Imports System.Drawing.Imaging
 Imports System.ComponentModel
 Imports System.DirectoryServices
+Imports System.Diagnostics.Eventing.Reader
 
 Public Class CaseRecordForm
     ' Connection string for the database
@@ -17,6 +18,18 @@ Public Class CaseRecordForm
     Dim hiddenLabel As New Label
 
     Dim mainForm As g3CommandCenter_Form = Nothing
+    Public Property newOfficersList As List(Of String)
+    Public Property newSpecificCaseDetails As String
+    Public Property procedureCount As Integer
+    Public Property newStatus As String
+
+    Public Property OldOfficersList As List(Of String)
+
+    Public Property oldSpecificCaseDetails As String
+
+    Public Property oldProcedures As Integer
+
+    Public Property oldStatus As String
 
     ' Boolean variable to track validation status
     Dim isValid As Boolean = True
@@ -31,6 +44,7 @@ Public Class CaseRecordForm
     Public Property originalCaseStatus
     ' Property to store the loaded case ID
     Public Property LoadedCaseID As String
+
     Dim caseId As Integer = -1 ' Initialize case ID to -1, which indicates a new case
 
 
@@ -155,6 +169,7 @@ Public Class CaseRecordForm
                 Next
                 PermanentlyDeleteMarkedAssignments()
                 SaveToCaseRecords()
+                updateDate(caseId)
                 caseRecordTable.loadCaseData(CaseName_Txt.Text)
                 For Each frm As Form In Application.OpenForms
                     If TypeOf frm Is CaseRecordTable Then
@@ -204,15 +219,22 @@ Public Class CaseRecordForm
                     End Using
                 Else
                     Using cmdUpdate As New SqlCommand("
-                UPDATE g3_CaseRecords
-                SET casestatus = @casestatus,
-                    datetimereported = @datetimereported,
-                    ExpectedDateFinish = @ExpectedDateFinish
-                WHERE caseid = @caseid", con)
+    UPDATE g3_CaseRecords
+    SET 
+        casestatus = @casestatus,
+        datetimereported = @datetimereported,
+        ExpectedDateFinish = @ExpectedDateFinish,
+        ResolvedDate = CASE 
+                          WHEN @casestatus = 'Resolved' THEN @ResolvedDate
+                          ELSE ResolvedDate
+                       END
+    WHERE caseid = @caseid", con)
+
 
                         cmdUpdate.Parameters.AddWithValue("@casestatus", CaseStatus_ComboBox.SelectedItem.ToString())
                         cmdUpdate.Parameters.AddWithValue("@datetimereported", DateAndimeReported_DateTimePicker.Value)
                         cmdUpdate.Parameters.AddWithValue("@ExpectedDateFinish", ExpectedFinish_DateTimePicker.Value)
+                        cmdUpdate.Parameters.AddWithValue("@ResolvedDate", DateTime.Now)
                         cmdUpdate.Parameters.AddWithValue("@caseid", caseId)
 
                         cmdUpdate.ExecuteNonQuery() ' Update the existing case record  
@@ -243,9 +265,44 @@ Public Class CaseRecordForm
         End Try
     End Sub
 
+    Private Sub updateDate(caseId As Integer)
+        ' Build the new officers list
+        newOfficersList = New List(Of String)
+        newOfficersList.Clear() ' Make sure the list is empty before filling it
+        For Each row As DataGridViewRow In OfficersSent_DataGridView.Rows
+            If Not row.IsNewRow Then
+                Dim cellValue As String = row.Cells(0).Value?.ToString()
+                newOfficersList.Add(cellValue)
+            End If
+        Next
+
+        ' Other updates
+        procedureCount = Procedure_ListView.Items.Count
+        newSpecificCaseDetails = BuildSpecificCaseDetails()
+        newStatus = CaseStatus_ComboBox.SelectedItem.ToString()
+
+        ' Now update the Update_DateTime in database
+        Dim query As String = "
+    UPDATE g3_CaseRecords
+    SET Update_DateTime = @date
+    WHERE CaseID = @caseId"
+
+        Using conn As New SqlConnection(connectionString)
+            Using cmd As New SqlCommand(query, conn)
+                If Not newOfficersList.SequenceEqual(OldOfficersList) Or procedureCount <> oldProcedures Or newStatus <> oldStatus Or newSpecificCaseDetails <> oldSpecificCaseDetails Then
+                    cmd.Parameters.AddWithValue("@caseId", caseId)
+                    cmd.Parameters.AddWithValue("@date", DateTime.Now)
+                Else
+                    cmd.Parameters.AddWithValue("@caseId", caseId)
+                    cmd.Parameters.AddWithValue("@date", DateAndimeReported_DateTimePicker.Value)
+                End If
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
 
     Public Sub SaveToMainFormIfExists(caseRecordTable As CaseRecordTable)
-        ' Check if the form instance already exists and is not disposed
         If caseRecordTable IsNot Nothing AndAlso Not mainForm.IsDisposed Then
             caseRecordTable.InsertTable()
         End If
@@ -284,9 +341,6 @@ Public Class CaseRecordForm
                 Dim dateReported As String = DateAndimeReported_DateTimePicker.Value.ToString("MM/dd/yyyy")
                 Dim paddedCaseId As String = caseId.ToString("D4")
                 Dim caseIdString As String = $"Case-{dateReported}-{paddedCaseId}"
-                If CaseStatus_ComboBox.SelectedItem.ToString() <> originalCaseStatus Then
-                    UpdateStatus(caseIdString)
-                End If
                 SaveProcedures(caseIdString)
 
                 ' Execute the INSERT or UPDATE query  
@@ -485,26 +539,6 @@ Public Class CaseRecordForm
         ' Check for invalid characters in concatenatedString
         Return Not ContainsInvalidCharacters(concatenatedString)
     End Function
-
-    Private Sub UpdateStatus(caseIDString As String)
-        Try
-            Dim query As String = "INSERT INTO g3_CaseStatusUpdate (CaseIDString, CaseStatus, DateAndTime) VALUES (@CaseIDString, @CaseStatus, @DateAndTime)"
-
-            Using con As New SqlConnection(connectionString)
-                con.Open()
-                Using cmd As New SqlCommand(query, con)
-                    cmd.Parameters.AddWithValue("@CaseIDString", caseIDString)
-                    cmd.Parameters.AddWithValue("@CaseStatus", CaseStatus_ComboBox.SelectedItem.ToString())
-                    cmd.Parameters.AddWithValue("@DateAndTime", DateTime.Now)
-
-                    ' Execute the query
-                    cmd.ExecuteNonQuery()
-                End Using
-            End Using
-        Catch ex As Exception
-            MessageBox.Show("An error occurred while updating the case status: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        End Try
-    End Sub
 
     Private Sub InsertOfficerAssignment(officerId As String, caseId As Integer)
         Try

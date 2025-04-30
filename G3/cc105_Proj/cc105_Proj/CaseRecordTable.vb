@@ -48,7 +48,8 @@ Public Class CaseRecordTable
                                  sd.casetype,                               
                                  cr.casestatus,
                                  STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
-                                 cr.ExpectedDateFinish
+                                 cr.ExpectedDateFinish,
+                                 cr,ResolvedDate
                              FROM g3_SpecificCaseDetails sd
                              LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
                              LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
@@ -72,6 +73,10 @@ Public Class CaseRecordTable
                 If Not row.IsNewRow Then
                     If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
                         row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
+                    End If
+
+                    If String.IsNullOrEmpty(row.Cells("ResolvedDate").Value?.ToString()) Then
+                        row.Cells("ResolvedDate").Style.BackColor = Color.LightPink
                     End If
 
                     Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
