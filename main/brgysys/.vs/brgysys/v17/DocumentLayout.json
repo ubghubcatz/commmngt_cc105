@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
@@ -124,7 +124,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,13 +136,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "g3CommandCenter_Form.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "G3\\g3CommandCenter_Form.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeToolTip": "G3\\g3CommandCenter_Form.vb",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAgwEAAAAAAAAAA",
+              "ViewState": "AQIAALgAAAAAAAAAAAAwwLkAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-27T05:49:02.237Z",
               "EditorCaption": ""
@@ -156,8 +156,7 @@
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb [Design]",
               "RelativeToolTip": "G3\\g3CommandCenter_Form.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T05:48:54.352Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-27T05:48:54.352Z"
             },
             {
               "$type": "Document",
@@ -196,13 +195,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MDIBrgySys.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeToolTip": "MDIBrgySys.vb",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAwAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-05T13:28:39.226Z",
               "EditorCaption": ""
