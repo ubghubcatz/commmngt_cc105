@@ -49,12 +49,12 @@ Public Class CaseRecordTable
                                  cr.casestatus,
                                  STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
                                  cr.ExpectedDateFinish,
-                                 cr,ResolvedDate
+                                 cr.ResolvedDate
                              FROM g3_SpecificCaseDetails sd
                              LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
                              LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
                              LEFT JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
-                             GROUP BY sd.caseid, caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish
+                             GROUP BY sd.caseid, caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish, cr.ResolvedDate
                              "
 
         Try
@@ -204,10 +204,10 @@ Public Class CaseRecordTable
         Dim officers As String = ""
         Dim caseIDString As String
         Dim query As String =
-"SELECT sd.specificdetails, sd.caseimage, sd.casetype, sd.CaseID, sd.casename, caseIDString, " &
-"cr.casestatus, cr.datetimereported,cr.ExpectedDateFinish, ap.Photo, ap.Description, ap.PhotoID " &
+"SELECT sd.specificdetails, sd.caseimage, sd.casetype, sd.CaseID, sd.casename, sd.caseIDString, " &
+"cr.casestatus, cr.datetimereported, cr.ExpectedDateFinish, cr.Update_DateTime, ap.Photo, ap.Description, ap.PhotoID " &
 "FROM g3_SpecificCaseDetails sd " &
-"JOIN g3_CaseRecords cr ON sd.caseID = cr.caseid " &
+"LEFT JOIN g3_CaseRecords cr ON sd.caseID = cr.caseid " &
 "LEFT JOIN g3_AdditionalPhotos ap ON sd.caseID = ap.CaseID " &
 "WHERE sd.caseIDString LIKE @search OR sd.casename LIKE @search"
 
@@ -225,6 +225,8 @@ Public Class CaseRecordTable
                     caseShow.ItemDescription_DataGridView.Rows.Clear()
                     caseShow.CasePeople_DataGridView1.Rows.Clear()
 
+
+
                     While reader.Read()
                         Dim caseID As Integer = CInt(reader("caseid"))
                         caseShow.HiddenCaseID.Text = caseID
@@ -238,7 +240,7 @@ Public Class CaseRecordTable
                         caseIDString = reader("caseIDString").ToString()
                         caseShow.oldSpecificCaseDetails = reader("specificdetails")
                         caseShow.oldStatus = reader("casestatus")
-
+                        caseShow.lastUpdatedOn = reader("Update_DateTime").ToString()
                         If reader("casetype") = "Theft" Or reader("casetype") = "Missing Person" Then
                             caseShow.Text = $"| Case Name: {reader("casename")} | {reader("casetype")} |"
                         End If

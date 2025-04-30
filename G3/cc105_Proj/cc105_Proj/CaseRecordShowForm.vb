@@ -21,7 +21,7 @@ Public Class CaseRecordShowForm
     Public Property oldProcedures As Integer
 
     Public Property oldStatus As String
-
+    Public Property lastUpdatedOn As String
     Public Property LoadedCaseID As String
     Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initiateTables()
@@ -538,6 +538,7 @@ Public Class CaseRecordShowForm
         Dim saveFileDialog As New SaveFileDialog()
         saveFileDialog.Filter = "PDF Files|*.pdf"
         saveFileDialog.Title = "Save PDF File"
+        saveFileDialog.FileName = CaseIDString_TextBox.Text & " - (Updated On: " & lastUpdatedOn & ")"
 
         ' Show the SaveFileDialog and check if the user selected a file
         If saveFileDialog.ShowDialog() = DialogResult.OK Then
@@ -553,6 +554,7 @@ Public Class CaseRecordShowForm
             Process.Start(psi)
         End If
     End Sub
+
 
     Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
         ' Link the document to PageSetupDialog and PrintDialog

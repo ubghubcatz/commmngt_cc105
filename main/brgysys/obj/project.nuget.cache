@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9vGuBBvlw4ZpEvYfnVZohgetDmSZu/GHRbJR6dqjHJguZmcTM0OZHw+pWyj6bBDzjuXmkYH10EydzXDhfDPj4w==",
+  "dgSpecHash": "SlGO2c9YAQo9kd4e4zpPbmSINKyVgbMdkTmB8atY0uv7bhKFavSewlFvgSvFRGmDdybhdxscyDh1QXBHzAI8sw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
   "expectedPackageFiles": [
@@ -15,7 +15,9 @@
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\6.0.2\\microsoft.data.sqlclient.sni.runtime.6.0.2.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.1\\microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
+    "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
@@ -29,6 +31,7 @@
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.5.0\\microsoft.identitymodel.tokens.7.5.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\pdfsharp\\6.1.1\\pdfsharp.6.1.1.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\qrcoder\\1.6.0\\qrcoder.1.6.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.3\\system.configuration.configurationmanager.9.0.3.nupkg.sha512",

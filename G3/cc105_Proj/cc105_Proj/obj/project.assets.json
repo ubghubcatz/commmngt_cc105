@@ -2019,11 +2019,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
+      "projectUniqueName": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\G3\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
       "projectName": "cc105_Proj",
-      "projectPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
+      "projectPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\G3\\cc105_Proj\\cc105_Proj\\cc105_Proj.vbproj",
       "packagesPath": "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\cc105_Proj\\cc105_Proj\\obj\\",
+      "outputPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\G3\\cc105_Proj\\cc105_Proj\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

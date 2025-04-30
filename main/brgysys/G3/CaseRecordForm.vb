@@ -207,14 +207,16 @@ Public Class CaseRecordForm
                 ' Insert a new case if it doesn't exist, otherwise update the existing case  
                 If caseId = -1 Then
                     Using cmdAdd As New SqlCommand("
-                INSERT INTO g3_CaseRecords (casename, casestatus, datetimereported, ExpectedDateFinish)
+                INSERT INTO g3_CaseRecords (casename, casestatus, datetimereported, ExpectedDateFinish, UpdateDateTime)
                 OUTPUT INSERTED.caseid
-                VALUES (@casename, @casestatus, @datetimereported, @ExpectedDateFinish)", con)
+                VALUES (@casename, @casestatus, @datetimereported, @ExpectedDateFinish, @firstCreationDate)", con)
 
                         cmdAdd.Parameters.AddWithValue("@casename", CaseName_Txt.Text.Trim())
                         cmdAdd.Parameters.AddWithValue("@casestatus", CaseStatus_ComboBox.SelectedItem.ToString())
                         cmdAdd.Parameters.AddWithValue("@datetimereported", DateAndimeReported_DateTimePicker.Value)
                         cmdAdd.Parameters.AddWithValue("@ExpectedDateFinish", ExpectedFinish_DateTimePicker.Value)
+                        cmdAdd.Parameters.AddWithValue("@firstCreationDate", DateTime.Now)
+
                         caseId = Convert.ToInt32(cmdAdd.ExecuteScalar()) ' Retrieve the inserted case ID  
                     End Using
                 Else
