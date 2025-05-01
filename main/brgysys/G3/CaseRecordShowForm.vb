@@ -538,8 +538,11 @@ Public Class CaseRecordShowForm
         Dim saveFileDialog As New SaveFileDialog()
         saveFileDialog.Filter = "PDF Files|*.pdf"
         saveFileDialog.Title = "Save PDF File"
-        saveFileDialog.FileName = CaseIDString_TextBox.Text & " - (Updated On: " & lastUpdatedOn & ")"
+        Dim safeCaseID As String = CaseIDString_TextBox.Text.Replace(":", "-").Replace("/", "-").Replace("\", "-").Trim()
+        Dim lastUpdatedDate As DateTime = DateTime.Parse(lastUpdatedOn)
+        Dim safeDate As String = lastUpdatedDate.ToString("yyyy-MM-dd HH-mm-ss")
 
+        saveFileDialog.FileName = $"{safeCaseID} - Updated On {safeDate}.pdf"
         ' Show the SaveFileDialog and check if the user selected a file
         If saveFileDialog.ShowDialog() = DialogResult.OK Then
             ' Get the selected file path from the dialog

@@ -625,9 +625,13 @@ Module CaseReportPDFRenderer
                            leftMargin As Double, topMargin As Double, ByRef intLineNumber As Integer,
                            lineHeight As Double, page As PdfPage, bottomMargin As Double, Document As PdfDocument) As Boolean
 
-        Dim availableWidth As Double = page.Height.Point - (topMargin + bottomMargin)
+        Dim rightMargin As Double = leftMargin ' Assuming symmetric margins; adjust if different
+        Dim availableWidth As Double = page.Width.Point - (leftMargin + rightMargin)
         Dim maxImageHeight As Double = 160 ' Max display height
         Dim spacing As Double = 10
+
+        ' Track exact vertical position instead of estimating with intLineNumber
+        Dim currentY As Double = topMargin + (intLineNumber * lineHeight)
 
         For i As Integer = intPhotoIndex To photos.Count - 1
             Dim photo = photos(i).Item1
@@ -641,42 +645,45 @@ Module CaseReportPDFRenderer
             Dim scaledWidth As Integer = CInt(originalWidth * scaleFactor)
             Dim scaledHeight As Integer = CInt(originalHeight * scaleFactor)
 
-            Dim yPos As Integer = topMargin + intLineNumber * lineHeight
-            Dim captionHeight As Integer = CInt(e.MeasureString(caption, font).Height)
-            Dim totalHeight As Integer = scaledHeight + spacing + captionHeight
+            Dim captionHeight As Double = e.MeasureString(caption, font).Height
+            Dim totalHeight As Double = scaledHeight + spacing + captionHeight
 
-            ' Check if there's space on the page
-            If yPos + totalHeight > page.Height.Point - (bottomMargin) Then
+            ' Check for space
+            If currentY + totalHeight > page.Height.Point - bottomMargin Then
                 intPhotoIndex = i
                 page = Document.AddPage()
                 e = XGraphics.FromPdfPage(page)
-                intLineNumber = 0 ' reset line number for new page
+                intLineNumber = 0
+                currentY = topMargin
             End If
 
-            ' Center image horizontally if narrower than availableWidth
-            Dim xPos As Integer = leftMargin
+            ' Center image
+            Dim xPos As Double = leftMargin + ((availableWidth - scaledWidth) / 2)
 
-            Dim ms As New System.IO.MemoryStream()
-            Using clonedPhoto As New Bitmap(photo)
-                clonedPhoto.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
+            ' Draw image
+            Using ms As New System.IO.MemoryStream()
+                Using clonedPhoto As New Bitmap(photo)
+                    clonedPhoto.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
+                End Using
+                ms.Position = 0
+                Using xImage As XImage = XImage.FromStream(ms)
+                    e.DrawImage(xImage, xPos, currentY, scaledWidth, scaledHeight)
+                End Using
             End Using
-            ms.Position = 0 ' Reset memory stream position
-            Dim xImage As XImage = XImage.FromStream(ms)
 
-            e.DrawImage(xImage, xPos, yPos, scaledWidth, scaledHeight)
+            ' Draw caption
+            currentY += scaledHeight + spacing
+            e.DrawString(caption, font, XBrushes.Black, New XRect(leftMargin, currentY, availableWidth, captionHeight), XStringFormats.TopLeft)
 
-
-            ' Draw the caption below the image
-            yPos += scaledHeight + spacing
-            e.DrawString(caption, font, XBrushes.Black, leftMargin, yPos)
-
-            ' Advance the line number by estimated space used
-            intLineNumber += (totalHeight \ lineHeight) + 1
+            ' Update for next photo
+            currentY += captionHeight + spacing
+            intLineNumber = CInt((currentY - topMargin) / lineHeight)
         Next
 
         intPhotoIndex = photos.Count
         Return True
     End Function
+
 
     Private Function columnFix(ByRef e As XGraphics,
                                   ByRef leftMargin As Double,

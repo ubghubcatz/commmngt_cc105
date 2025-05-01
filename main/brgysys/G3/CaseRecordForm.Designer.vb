@@ -1010,6 +1010,7 @@ Partial Class CaseRecordForm
         ' 
         ' AdditionalPhotos_FlowLayoutPanel
         ' 
+        AdditionalPhotos_FlowLayoutPanel.AutoScroll = True
         AdditionalPhotos_FlowLayoutPanel.BackColor = Color.Green
         AdditionalPhotos_FlowLayoutPanel.Location = New Point(1129, 408)
         AdditionalPhotos_FlowLayoutPanel.Name = "AdditionalPhotos_FlowLayoutPanel"

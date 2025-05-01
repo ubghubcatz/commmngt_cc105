@@ -883,6 +883,7 @@ Partial Class CaseRecordShowForm
         ' 
         ' AdditionalPhotos_FlowLayoutPanel
         ' 
+        AdditionalPhotos_FlowLayoutPanel.AutoScroll = True
         AdditionalPhotos_FlowLayoutPanel.BackColor = Color.Green
         AdditionalPhotos_FlowLayoutPanel.Location = New Point(1145, 400)
         AdditionalPhotos_FlowLayoutPanel.Name = "AdditionalPhotos_FlowLayoutPanel"
@@ -1086,7 +1087,7 @@ Partial Class CaseRecordShowForm
         ' 
         PrintOptionsToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {PrintToolStripMenuItem, PrintPreviewToolStripMenuItem, PageSetupToolStripMenuItem})
         PrintOptionsToolStripMenuItem.Name = "PrintOptionsToolStripMenuItem"
-        PrintOptionsToolStripMenuItem.Size = New Size(224, 26)
+        PrintOptionsToolStripMenuItem.Size = New Size(178, 26)
         PrintOptionsToolStripMenuItem.Text = "Print Options"
         ' 
         ' PrintToolStripMenuItem
@@ -1110,7 +1111,7 @@ Partial Class CaseRecordShowForm
         ' SaveAsPDFToolStripMenuItem
         ' 
         SaveAsPDFToolStripMenuItem.Name = "SaveAsPDFToolStripMenuItem"
-        SaveAsPDFToolStripMenuItem.Size = New Size(224, 26)
+        SaveAsPDFToolStripMenuItem.Size = New Size(178, 26)
         SaveAsPDFToolStripMenuItem.Text = "Save As PDF"
         ' 
         ' CaseRecordShowForm
