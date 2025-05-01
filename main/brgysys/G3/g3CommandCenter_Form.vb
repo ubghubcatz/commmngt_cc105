@@ -20,7 +20,7 @@ Public Class g3CommandCenter_Form
     Private lastValidEndDate As Date
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.IsMdiContainer = False
         Dim workingArea As Rectangle = Screen.PrimaryScreen.WorkingArea
         Me.Width = workingArea.Width
         Me.Height = workingArea.Height
@@ -78,6 +78,7 @@ Public Class g3CommandCenter_Form
         Else
             Dim newForm As Form = CType(Activator.CreateInstance(formType), Form)
             With newForm
+                .IsMdiContainer = False
                 .MdiParent = parentForm
                 .TopMost = True
                 .FormBorderStyle = FormBorderStyle.FixedSingle

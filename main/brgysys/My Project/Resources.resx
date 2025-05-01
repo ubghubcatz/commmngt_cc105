@@ -136,4 +136,25 @@
   <data name="IDBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\G4\Resources\IDBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CallLogs_Open__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\CallLogs_Open_(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CallLogs__Closed_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\CallLogs (Closed).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaseRecord_Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\CaseRecord_Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Officers__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\Officers (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4595376_200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\4595376-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_482404742_1844290563062342_2384674934892593673_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\482404742_1844290563062342_2384674934892593673_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_482585122_1176975447200876_593564339372044358_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\G3\Resources\482585122_1176975447200876_593564339372044358_n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

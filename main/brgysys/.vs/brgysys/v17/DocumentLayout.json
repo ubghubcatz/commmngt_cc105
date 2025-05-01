@@ -1,120 +1,134 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\",
+  "WorkspaceRootPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\my project\\resources.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:my project\\resources.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\g3\\g3commandcenter_form.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\g3\\officersavailabiltyform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\officersavailabiltyform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\g3\\calllog_tables.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\calllog_tables.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:G3\\CaseRecordForm.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g5\\Form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g5\\Form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g3\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\caserecordform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g3\\caserecordform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\caserecordform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\caserecordform.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\list.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\schedule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:brgysys.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\g4_employeeid.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g4\\attendance.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:my project\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:splashscreen1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:frmlogin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:splashscreen1.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\g3\\g3_commandcenter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:g3\\g3_commandcenter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\kean jiro trillanes\\documents\\github\\commmngt_cc105\\main\\brgysys\\g3\\g3_commandcenter.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g3\\printoptions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:g3\\printoptions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g3\\printoptions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
   "DocumentGroupContainers": [
@@ -124,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -136,58 +150,87 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\My Project\\Resources.resx",
+              "RelativeDocumentMoniker": "My Project\\Resources.resx",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\My Project\\Resources.resx",
+              "RelativeToolTip": "My Project\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-05-01T03:19:20.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "g3CommandCenter_Form.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.Designer.vb",
+              "RelativeDocumentMoniker": "G3\\g3CommandCenter_Form.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.Designer.vb",
+              "RelativeToolTip": "G3\\g3CommandCenter_Form.Designer.vb",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAMwIQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-01T03:18:45.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CallLog_Tables.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CallLog_Tables.Designer.vb",
+              "RelativeDocumentMoniker": "G3\\CallLog_Tables.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CallLog_Tables.Designer.vb",
+              "RelativeToolTip": "G3\\CallLog_Tables.Designer.vb",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAMwFsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-01T03:17:45.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "g3CommandCenter_Form.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "G3\\g3CommandCenter_Form.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeToolTip": "G3\\g3CommandCenter_Form.vb",
-              "ViewState": "AQIAALgAAAAAAAAAAAAwwLkAAABPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-27T05:49:02.237Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "g3CommandCenter_Form.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "G3\\g3CommandCenter_Form.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3CommandCenter_Form.vb [Design]",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.vb [Design]",
               "RelativeToolTip": "G3\\g3CommandCenter_Form.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T05:48:54.352Z"
+              "WhenOpened": "2025-04-27T05:48:54.352Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g5\\Form1.vb",
-              "RelativeDocumentMoniker": "g5\\Form1.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\g5\\Form1.vb",
-              "RelativeToolTip": "g5\\Form1.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T01:51:22.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "List.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
-              "RelativeDocumentMoniker": "G4\\List.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb [Design]",
-              "RelativeToolTip": "G4\\List.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-03T01:35:30.927Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MDIBrgySys.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
+              "DocumentIndex": 3,
+              "Title": "MDIBrgySys.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb [Design]",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeToolTip": "MDIBrgySys.vb",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBEAAACFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-05T13:28:39.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MDIBrgySys.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeDocumentMoniker": "MDIBrgySys.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb [Design]",
               "RelativeToolTip": "MDIBrgySys.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-05T12:42:28.493Z",
@@ -195,106 +238,136 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MDIBrgySys.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
-              "RelativeDocumentMoniker": "MDIBrgySys.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\MDIBrgySys.vb",
-              "RelativeToolTip": "MDIBrgySys.vb",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAALAAAA",
+              "DocumentIndex": 7,
+              "Title": "OfficersAvailabiltyForm.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\OfficersAvailabiltyForm.Designer.vb",
+              "RelativeDocumentMoniker": "G3\\OfficersAvailabiltyForm.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\OfficersAvailabiltyForm.Designer.vb",
+              "RelativeToolTip": "G3\\OfficersAvailabiltyForm.Designer.vb",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAMwFoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T13:28:39.226Z",
+              "WhenOpened": "2025-05-01T03:18:47.192Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CaseRecordForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb",
-              "RelativeDocumentMoniker": "G3\\CaseRecordForm.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb [Design]",
-              "RelativeToolTip": "G3\\CaseRecordForm.vb [Design]",
+              "Title": "Resources.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\My Project\\Resources.Designer.vb",
+              "RelativeDocumentMoniker": "My Project\\Resources.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\My Project\\Resources.Designer.vb",
+              "RelativeToolTip": "My Project\\Resources.Designer.vb",
+              "ViewState": "AQIAABYAAAAAAAAAAAAMwBwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-24T02:14:03.984Z"
+              "WhenOpened": "2025-05-01T03:19:44.035Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
+              "Title": "List.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\List.vb",
+              "RelativeDocumentMoniker": "G4\\List.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\List.vb [Design]",
+              "RelativeToolTip": "G4\\List.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-03T01:35:30.927Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CaseRecordForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.vb",
+              "RelativeDocumentMoniker": "G3\\CaseRecordForm.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.vb [Design]",
+              "RelativeToolTip": "G3\\CaseRecordForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-24T02:14:03.984Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AQIAAD8NAAAAAAAAAAAwwDkNAAAEAAAA",
+              "ViewState": "AQIAADUNAAAAAAAAAAAawDkNAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-03-25T00:21:35.747Z"
+              "WhenOpened": "2025-03-25T00:21:35.747Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "PrintOptions.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\PrintOptions.vb",
-              "RelativeDocumentMoniker": "G3\\PrintOptions.vb",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\PrintOptions.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\PrintOptions.vb",
-              "RelativeToolTip": "G3\\PrintOptions.vb",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\PrintOptions.vb",
               "ViewState": "AQIAAJkAAAAAAAAAAADwv5oAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-24T02:08:37.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "CaseRecordForm.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.vb",
               "RelativeDocumentMoniker": "G3\\CaseRecordForm.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.vb",
               "RelativeToolTip": "G3\\CaseRecordForm.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T01:55:45.662Z"
+              "WhenOpened": "2025-04-27T01:55:45.662Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "List.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\List.vb",
               "RelativeDocumentMoniker": "G4\\List.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\List.vb",
               "RelativeToolTip": "G4\\List.vb",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-07T23:49:00.164Z"
+              "WhenOpened": "2025-04-07T23:49:00.164Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "g3_CommandCenter.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3_CommandCenter.vb",
-              "RelativeDocumentMoniker": "G3\\g3_CommandCenter.vb",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3_CommandCenter.vb",
               "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3_CommandCenter.vb",
-              "RelativeToolTip": "G3\\g3_CommandCenter.vb",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\g3_CommandCenter.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-04-27T01:55:31.173Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "CaseRecordForm.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.Designer.vb",
               "RelativeDocumentMoniker": "G3\\CaseRecordForm.Designer.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G3\\CaseRecordForm.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordForm.Designer.vb",
               "RelativeToolTip": "G3\\CaseRecordForm.Designer.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-27T02:00:51.878Z"
+              "WhenOpened": "2025-04-27T02:00:51.878Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Schedule.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeToolTip": "G4\\Schedule.vb",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -302,11 +375,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "g4_EmployeeID.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeToolTip": "G4\\g4_EmployeeID.vb",
               "ViewState": "AgIAAGcAAAAAAAAAAAAkwG4AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -314,20 +387,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "List.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\List.Designer.vb",
               "RelativeDocumentMoniker": "G4\\List.Designer.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\List.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\List.Designer.vb",
               "RelativeToolTip": "G4\\List.Designer.vb",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T14:06:59.728Z"
+              "WhenOpened": "2025-04-05T14:06:59.728Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Schedule.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\Schedule.vb",
               "RelativeDocumentMoniker": "G4\\Schedule.vb",
               "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Schedule.vb [Design]",
@@ -336,22 +410,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "brgysys",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\brgysys.vbproj",
               "RelativeDocumentMoniker": "brgysys.vbproj",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\brgysys.vbproj",
               "RelativeToolTip": "brgysys.vbproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
-              "WhenOpened": "2025-03-25T00:49:57.346Z"
+              "WhenOpened": "2025-03-25T00:49:57.346Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Attendance.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeToolTip": "G4\\Attendance.vb",
               "ViewState": "AgIAABwAAAAAAAAAAAA8wD4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -359,9 +434,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "g4_EmployeeID.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\g4_EmployeeID.vb",
               "RelativeDocumentMoniker": "G4\\g4_EmployeeID.vb",
               "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\g4_EmployeeID.vb [Design]",
@@ -370,9 +445,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "Attendance.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G4\\Attendance.vb",
               "RelativeDocumentMoniker": "G4\\Attendance.vb",
               "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\G4\\Attendance.vb [Design]",
@@ -381,11 +456,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "app.manifest",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\My Project\\app.manifest",
               "RelativeDocumentMoniker": "My Project\\app.manifest",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\My Project\\app.manifest",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\My Project\\app.manifest",
               "RelativeToolTip": "My Project\\app.manifest",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
@@ -393,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "WindowsFormsApplicationBase.cs",
               "DocumentMoniker": "C:\\Users\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Aizelle Lorein\\AppData\\Local\\Temp\\.vsdbgsrc\\74897a6fe29fdee7e4def858abe944f628ae5f8cc1e182725da687d65510d20d\\WindowsFormsApplicationBase.cs",
@@ -404,11 +479,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "SplashScreen1.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\SplashScreen1.vb",
               "RelativeDocumentMoniker": "SplashScreen1.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\SplashScreen1.vb",
               "RelativeToolTip": "SplashScreen1.vb",
               "ViewState": "AgIAACgAAAAAAAAAAAAowDMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -416,11 +491,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "frmLogin.Designer.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.Designer.vb",
               "RelativeDocumentMoniker": "frmLogin.Designer.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.Designer.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.Designer.vb",
               "RelativeToolTip": "frmLogin.Designer.vb",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -428,11 +503,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "frmLogin.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.vb",
               "RelativeToolTip": "frmLogin.vb",
               "ViewState": "AgIAAA8AAAAAAAAAAAAowBYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
@@ -440,9 +515,9 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "frmLogin.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.vb",
               "RelativeDocumentMoniker": "frmLogin.vb",
               "ToolTip": "C:\\Users\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb [Design]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\mendo\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.vb [Design]",
@@ -451,22 +526,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "frmLogin.resx",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.resx",
               "RelativeDocumentMoniker": "frmLogin.resx",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\frmLogin.resx",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\frmLogin.resx",
               "RelativeToolTip": "frmLogin.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-03-05T12:43:28.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "SplashScreen1.resx",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\SplashScreen1.resx",
               "RelativeDocumentMoniker": "SplashScreen1.resx",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\SplashScreen1.resx",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\SplashScreen1.resx",
               "RelativeToolTip": "SplashScreen1.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-03-05T13:58:14.924Z"

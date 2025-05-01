@@ -61,69 +61,6 @@
     <Compile Update="G4\Schedule.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="g5\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="g5\FrmNEW.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="g5\My Project\frmRECORDS.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\aquaVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\blueVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\courtVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\denovoVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\dvgVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\formMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\historyMENU.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\pacitaVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\penaVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\privateVENUE.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G6\venueMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\ApprovedSeminarsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\AssistanceForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\BurialRequirementsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\DonationForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\EducationalRequirementsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\SeminarForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="MDIBrgySys.vb">
       <SubType>Form</SubType>
     </Compile>

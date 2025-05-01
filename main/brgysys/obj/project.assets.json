@@ -2345,11 +2345,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+      "projectUniqueName": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\main\\brgysys\\brgysys.vbproj",
       "projectName": "brgysys",
-      "projectPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+      "projectPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\main\\brgysys\\brgysys.vbproj",
       "packagesPath": "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\obj\\",
+      "outputPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c++\\IMPORTANT\\main\\brgysys\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

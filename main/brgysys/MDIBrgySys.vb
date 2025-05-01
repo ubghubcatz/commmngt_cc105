@@ -16,6 +16,10 @@
     End Sub
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
+        g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
+    End Sub
+
+    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         Dim OpenFileDialog As New OpenFileDialog
         OpenFileDialog.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyDocuments
         OpenFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*"
@@ -23,10 +27,6 @@
             Dim FileName As String = OpenFileDialog.FileName
             ' TODO: Add code here to open the file.
         End If
-    End Sub
-
-    Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
-        g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
     End Sub
 
 
