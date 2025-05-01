@@ -1,0 +1,249 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\formmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\formmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\historymenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\historymenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\pendingmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\pendingmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\pendingmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\pendingmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\historymenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\historymenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\formmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\formmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\approvedmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\approvedmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\approvedmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\approvedmenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\my project\\formmenu.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\my project\\formmenu.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|c:\\users\\figss\\downloads\\ecreate-20250501t091118z-001\\ecreate\\ecreate\\ecreate.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{05C3C20C-74F7-4062-9ADA-9A59413D971B}|ECreate\\ECreate.vbproj|solutionrelative:ecreate\\ecreate.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAADcNAAAAAAAAAAAAAGENAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-05-01T10:58:53.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApprovedMENU.vb",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\ApprovedMENU.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\ApprovedMENU.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\ApprovedMENU.vb",
+              "RelativeToolTip": "ECreate\\My Project\\ApprovedMENU.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T23:07:56.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PendingMENU.vb",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\PendingMENU.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\PendingMENU.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\PendingMENU.vb",
+              "RelativeToolTip": "ECreate\\My Project\\PendingMENU.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T19:31:37.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PendingMENU.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\PendingMENU.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\PendingMENU.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\PendingMENU.vb [Design]",
+              "RelativeToolTip": "ECreate\\My Project\\PendingMENU.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T19:31:32.487Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "historyMENU.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\historyMENU.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\historyMENU.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\historyMENU.vb [Design]",
+              "RelativeToolTip": "ECreate\\My Project\\historyMENU.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-19T20:26:08.612Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "formMenu.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\formMenu.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\formMenu.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\formMenu.vb [Design]",
+              "RelativeToolTip": "ECreate\\My Project\\formMenu.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-19T20:26:09.529Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "formMenu.vb",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\formMenu.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\formMenu.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\formMenu.vb",
+              "RelativeToolTip": "ECreate\\My Project\\formMenu.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAADwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-19T20:30:38.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\Form1.vb",
+              "RelativeDocumentMoniker": "ECreate\\Form1.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\Form1.vb",
+              "RelativeToolTip": "ECreate\\Form1.vb",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAEwBMAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-11T18:48:27.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\Form1.vb",
+              "RelativeDocumentMoniker": "ECreate\\Form1.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\Form1.vb [Design]",
+              "RelativeToolTip": "ECreate\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-11T18:34:44.387Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApprovedMENU.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\ApprovedMENU.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\ApprovedMENU.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\ApprovedMENU.vb [Design]",
+              "RelativeToolTip": "ECreate\\My Project\\ApprovedMENU.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-27T05:42:17.578Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\Resources.resx",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\Resources.resx",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\Resources.resx",
+              "RelativeToolTip": "ECreate\\My Project\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-27T06:19:53.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "historyMENU.vb",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\historyMENU.vb",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\historyMENU.vb",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\historyMENU.vb",
+              "RelativeToolTip": "ECreate\\My Project\\historyMENU.vb",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCsAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-03-24T19:34:23.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "formMenu.resx",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\formMenu.resx",
+              "RelativeDocumentMoniker": "ECreate\\My Project\\formMenu.resx",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\My Project\\formMenu.resx",
+              "RelativeToolTip": "ECreate\\My Project\\formMenu.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-03-11T18:57:38.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ECreate.vbproj",
+              "DocumentMoniker": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\ECreate.vbproj",
+              "RelativeDocumentMoniker": "ECreate\\ECreate.vbproj",
+              "ToolTip": "C:\\Users\\figss\\Downloads\\ECreate-20250501T091118Z-001\\ECreate\\ECreate\\ECreate.vbproj",
+              "RelativeToolTip": "ECreate\\ECreate.vbproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-03-11T19:04:55.625Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
