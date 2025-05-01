@@ -442,8 +442,9 @@ Partial Class formMenu
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(dtpDate)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "formMenu"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "formMenu"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

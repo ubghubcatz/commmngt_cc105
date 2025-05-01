@@ -39,7 +39,6 @@ Partial Class MDIBrgySys
         EmployeesAvailabilityToolStripMenuItem = New ToolStripMenuItem()
         ToolStripMenuItem1 = New ToolStripMenuItem()
         ToolStripMenuItem2 = New ToolStripMenuItem()
-        ToolStripMenuItem3 = New ToolStripMenuItem()
         History = New ToolStripMenuItem()
         ToolStripSeparator3 = New ToolStripSeparator()
         SaveToolStripMenuItem = New ToolStripMenuItem()
@@ -89,6 +88,8 @@ Partial Class MDIBrgySys
         StatusStrip = New StatusStrip()
         ToolStripStatusLabel = New ToolStripStatusLabel()
         ToolTip = New ToolTip(components)
+        PendingToolStripMenuItem = New ToolStripMenuItem()
+        ApprovedToolStripMenuItem = New ToolStripMenuItem()
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
         StatusStrip.SuspendLayout()
@@ -184,7 +185,7 @@ Partial Class MDIBrgySys
         ' 
         ' ToolStripMenuItem1
         ' 
-        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, History})
+        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, PendingToolStripMenuItem, ApprovedToolStripMenuItem, History})
         ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         ToolStripMenuItem1.Size = New Size(261, 26)
         ToolStripMenuItem1.Text = "Event Creation"
@@ -194,12 +195,6 @@ Partial Class MDIBrgySys
         ToolStripMenuItem2.Name = "ToolStripMenuItem2"
         ToolStripMenuItem2.Size = New Size(224, 26)
         ToolStripMenuItem2.Text = "Form"
-        ' 
-        ' ToolStripMenuItem3
-        ' 
-        ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        ToolStripMenuItem3.Size = New Size(224, 26)
-        ToolStripMenuItem3.Text = "Venue"
         ' 
         ' History
         ' 
@@ -548,6 +543,18 @@ Partial Class MDIBrgySys
         ToolStripStatusLabel.Size = New Size(49, 20)
         ToolStripStatusLabel.Text = "Status"
         ' 
+        ' PendingToolStripMenuItem
+        ' 
+        PendingToolStripMenuItem.Name = "PendingToolStripMenuItem"
+        PendingToolStripMenuItem.Size = New Size(224, 26)
+        PendingToolStripMenuItem.Text = "Pending"
+        ' 
+        ' ApprovedToolStripMenuItem
+        ' 
+        ApprovedToolStripMenuItem.Name = "ApprovedToolStripMenuItem"
+        ApprovedToolStripMenuItem.Size = New Size(224, 26)
+        ApprovedToolStripMenuItem.Text = "Approved"
+        ' 
         ' MDIBrgySys
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -631,11 +638,12 @@ Partial Class MDIBrgySys
     Friend WithEvents EmployeeListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
     Friend WithEvents History As ToolStripMenuItem
     Friend WithEvents CaseRecordsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EmployeesAvailabilityToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PendingToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ApprovedToolStripMenuItem As ToolStripMenuItem
 
 End Class

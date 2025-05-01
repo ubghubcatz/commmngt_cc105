@@ -133,4 +133,28 @@
     Private Sub EmployeesAvailabilityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesAvailabilityToolStripMenuItem.Click
         g3CommandCenter_Form.OpenOrRestoreForm(GetType(OfficersAvailabiltyForm), Me)
     End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        Dim Fmenu As New formMenu
+        Fmenu.MdiParent = Me
+        Fmenu.Show()
+    End Sub
+
+    Private Sub PendingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PendingToolStripMenuItem.Click
+        Dim Pmenu As New PendingMENU
+        Pmenu.MdiParent = Me
+        Pmenu.Show()
+    End Sub
+
+    Private Sub ApprovedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApprovedToolStripMenuItem.Click
+        Dim APmenu As New ApprovedMENU
+        APmenu.MdiParent = Me
+        APmenu.Show()
+    End Sub
+
+    Private Sub History_Click(sender As Object, e As EventArgs) Handles History.Click
+        Dim Hmenu As New historyMENU
+        Hmenu.MdiParent = Me
+        Hmenu.Show()
+    End Sub
 End Class

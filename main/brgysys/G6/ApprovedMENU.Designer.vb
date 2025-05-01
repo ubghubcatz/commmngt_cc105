@@ -289,7 +289,7 @@ Partial Class ApprovedMENU
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button2.ForeColor = SystemColors.ControlLightLight
-        Button2.Location = New Point(767, 624)
+        Button2.Location = New Point(780, 596)
         Button2.Name = "Button2"
         Button2.Size = New Size(143, 63)
         Button2.TabIndex = 127
@@ -347,7 +347,7 @@ Partial Class ApprovedMENU
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button1.ForeColor = SystemColors.ControlLightLight
-        Button1.Location = New Point(767, 555)
+        Button1.Location = New Point(780, 527)
         Button1.Name = "Button1"
         Button1.Size = New Size(143, 63)
         Button1.TabIndex = 133
@@ -390,8 +390,9 @@ Partial Class ApprovedMENU
         Controls.Add(attend)
         Controls.Add(Label1)
         Controls.Add(DataGridView1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "ApprovedMENU"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "ApprovedMENU"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj": {}
+    "C:\\Users\\figss\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj": {
+    "C:\\Users\\figss\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+        "projectUniqueName": "C:\\Users\\figss\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
         "projectName": "brgysys",
-        "projectPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
-        "packagesPath": "C:\\Users\\Kean Jiro Trillanes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kean Jiro Trillanes\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\obj\\",
+        "projectPath": "C:\\Users\\figss\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\brgysys.vbproj",
+        "packagesPath": "C:\\Users\\figss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\figss\\OneDrive\\Documents\\GitHub\\commmngt_cc105\\main\\brgysys\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kean Jiro Trillanes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\figss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -102,7 +102,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

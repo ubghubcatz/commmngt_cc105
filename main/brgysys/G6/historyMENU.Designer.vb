@@ -59,8 +59,9 @@ Partial Class historyMENU
         ClientSize = New Size(935, 718)
         Controls.Add(Button1)
         Controls.Add(DataGridView1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "historyMENU"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "historyMENU"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
