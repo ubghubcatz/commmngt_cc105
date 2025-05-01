@@ -15,9 +15,7 @@
         'Attendance.Show()
     End Sub
 
-    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
-        g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
-    End Sub
+
 
     Private Sub SaveAsToolStripMenuItem_Click(ByVal sender As Object, ByVal e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         Dim OpenFileDialog As New OpenFileDialog
@@ -117,5 +115,22 @@
     Private Sub EmployeeListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeeListToolStripMenuItem.Click
         List.MdiParent = Me
         List.Show()
+    End Sub
+
+    Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
+        g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
+    End Sub
+
+    Private Sub CaseRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CaseRecordsToolStripMenuItem.Click
+        g3CommandCenter_Form.OpenOrRestoreForm(GetType(CaseRecordTable), Me)
+    End Sub
+
+    Private Sub LogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogsToolStripMenuItem.Click
+        g3CommandCenter_Form.OpenOrRestoreForm(GetType(CallLog_Tables), Me)
+
+    End Sub
+
+    Private Sub EmployeesAvailabilityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesAvailabilityToolStripMenuItem.Click
+        g3CommandCenter_Form.OpenOrRestoreForm(GetType(OfficersAvailabiltyForm), Me)
     End Sub
 End Class

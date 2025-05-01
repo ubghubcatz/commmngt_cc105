@@ -34,6 +34,13 @@ Partial Class MDIBrgySys
         EmployeeIDToolStripMenuItem = New ToolStripMenuItem()
         EmployeeListToolStripMenuItem = New ToolStripMenuItem()
         OpenToolStripMenuItem = New ToolStripMenuItem()
+        CaseRecordsToolStripMenuItem = New ToolStripMenuItem()
+        LogsToolStripMenuItem = New ToolStripMenuItem()
+        EmployeesAvailabilityToolStripMenuItem = New ToolStripMenuItem()
+        ToolStripMenuItem1 = New ToolStripMenuItem()
+        ToolStripMenuItem2 = New ToolStripMenuItem()
+        ToolStripMenuItem3 = New ToolStripMenuItem()
+        History = New ToolStripMenuItem()
         ToolStripSeparator3 = New ToolStripSeparator()
         SaveToolStripMenuItem = New ToolStripMenuItem()
         SaveAsToolStripMenuItem = New ToolStripMenuItem()
@@ -82,10 +89,6 @@ Partial Class MDIBrgySys
         StatusStrip = New StatusStrip()
         ToolStripStatusLabel = New ToolStripStatusLabel()
         ToolTip = New ToolTip(components)
-        ToolStripMenuItem1 = New ToolStripMenuItem()
-        ToolStripMenuItem2 = New ToolStripMenuItem()
-        ToolStripMenuItem3 = New ToolStripMenuItem()
-        History = New ToolStripMenuItem()
         MenuStrip.SuspendLayout()
         ToolStrip.SuspendLayout()
         StatusStrip.SuspendLayout()
@@ -124,41 +127,85 @@ Partial Class MDIBrgySys
         ' DashboardToolStripMenuItem
         ' 
         DashboardToolStripMenuItem.Name = "DashboardToolStripMenuItem"
-        DashboardToolStripMenuItem.Size = New Size(224, 26)
+        DashboardToolStripMenuItem.Size = New Size(184, 26)
         DashboardToolStripMenuItem.Text = "Dashboard"
         ' 
         ' AttendanceToolStripMenuItem
         ' 
         AttendanceToolStripMenuItem.Name = "AttendanceToolStripMenuItem"
-        AttendanceToolStripMenuItem.Size = New Size(224, 26)
+        AttendanceToolStripMenuItem.Size = New Size(184, 26)
         AttendanceToolStripMenuItem.Text = "Attendance"
         ' 
         ' SchedulingToolStripMenuItem
         ' 
         SchedulingToolStripMenuItem.Name = "SchedulingToolStripMenuItem"
-        SchedulingToolStripMenuItem.Size = New Size(224, 26)
+        SchedulingToolStripMenuItem.Size = New Size(184, 26)
         SchedulingToolStripMenuItem.Text = "Scheduling"
         ' 
         ' EmployeeIDToolStripMenuItem
         ' 
         EmployeeIDToolStripMenuItem.Name = "EmployeeIDToolStripMenuItem"
-        EmployeeIDToolStripMenuItem.Size = New Size(224, 26)
+        EmployeeIDToolStripMenuItem.Size = New Size(184, 26)
         EmployeeIDToolStripMenuItem.Text = "Employee ID "
         ' 
         ' EmployeeListToolStripMenuItem
         ' 
         EmployeeListToolStripMenuItem.Name = "EmployeeListToolStripMenuItem"
-        EmployeeListToolStripMenuItem.Size = New Size(224, 26)
+        EmployeeListToolStripMenuItem.Size = New Size(184, 26)
         EmployeeListToolStripMenuItem.Text = "Employee List"
         ' 
         ' OpenToolStripMenuItem
         ' 
+        OpenToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {CaseRecordsToolStripMenuItem, LogsToolStripMenuItem, EmployeesAvailabilityToolStripMenuItem})
         OpenToolStripMenuItem.Image = CType(resources.GetObject("OpenToolStripMenuItem.Image"), Image)
         OpenToolStripMenuItem.ImageTransparentColor = Color.Black
         OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
         OpenToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.O
         OpenToolStripMenuItem.Size = New Size(261, 26)
         OpenToolStripMenuItem.Text = "Command Center"
+        ' 
+        ' CaseRecordsToolStripMenuItem
+        ' 
+        CaseRecordsToolStripMenuItem.Name = "CaseRecordsToolStripMenuItem"
+        CaseRecordsToolStripMenuItem.Size = New Size(240, 26)
+        CaseRecordsToolStripMenuItem.Text = "Case Records"
+        ' 
+        ' LogsToolStripMenuItem
+        ' 
+        LogsToolStripMenuItem.Name = "LogsToolStripMenuItem"
+        LogsToolStripMenuItem.Size = New Size(240, 26)
+        LogsToolStripMenuItem.Text = "Logs"
+        ' 
+        ' EmployeesAvailabilityToolStripMenuItem
+        ' 
+        EmployeesAvailabilityToolStripMenuItem.Name = "EmployeesAvailabilityToolStripMenuItem"
+        EmployeesAvailabilityToolStripMenuItem.Size = New Size(240, 26)
+        EmployeesAvailabilityToolStripMenuItem.Text = "Employees availability"
+        ' 
+        ' ToolStripMenuItem1
+        ' 
+        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, History})
+        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        ToolStripMenuItem1.Size = New Size(261, 26)
+        ToolStripMenuItem1.Text = "Event Creation"
+        ' 
+        ' ToolStripMenuItem2
+        ' 
+        ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        ToolStripMenuItem2.Size = New Size(224, 26)
+        ToolStripMenuItem2.Text = "Form"
+        ' 
+        ' ToolStripMenuItem3
+        ' 
+        ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        ToolStripMenuItem3.Size = New Size(224, 26)
+        ToolStripMenuItem3.Text = "Venue"
+        ' 
+        ' History
+        ' 
+        History.Name = "History"
+        History.Size = New Size(224, 26)
+        History.Text = "History"
         ' 
         ' ToolStripSeparator3
         ' 
@@ -501,31 +548,6 @@ Partial Class MDIBrgySys
         ToolStripStatusLabel.Size = New Size(49, 20)
         ToolStripStatusLabel.Text = "Status"
         ' 
-        ' ToolStripMenuItem1
-        ' 
-        ToolStripMenuItem1.DropDownItems.AddRange(New ToolStripItem() {ToolStripMenuItem2, ToolStripMenuItem3, History})
-        ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        ToolStripMenuItem1.Size = New Size(261, 26)
-        ToolStripMenuItem1.Text = "Event Creation"
-        ' 
-        ' ToolStripMenuItem2
-        ' 
-        ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        ToolStripMenuItem2.Size = New Size(224, 26)
-        ToolStripMenuItem2.Text = "Form"
-        ' 
-        ' ToolStripMenuItem3
-        ' 
-        ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        ToolStripMenuItem3.Size = New Size(224, 26)
-        ToolStripMenuItem3.Text = "Venue"
-        ' 
-        ' History
-        ' 
-        History.Name = "History"
-        History.Size = New Size(224, 26)
-        History.Text = "History"
-        ' 
         ' MDIBrgySys
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -612,5 +634,8 @@ Partial Class MDIBrgySys
     Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
     Friend WithEvents History As ToolStripMenuItem
+    Friend WithEvents CaseRecordsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EmployeesAvailabilityToolStripMenuItem As ToolStripMenuItem
 
 End Class

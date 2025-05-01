@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\g3\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
@@ -11,20 +23,8 @@
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\g3\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\caserecordtable.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|c:\\users\\kean jiro trillanes\\desktop\\projects c\u002B\u002B\\important\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:g3\\g3commandcenter_form.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|solutionrelative:mdibrgysys.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7FB6BF2C-01C2-4679-9C50-66039401FD53}|brgysys.vbproj|C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\my project\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
@@ -146,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -158,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CaseRecordTable.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordTable.vb",
               "RelativeDocumentMoniker": "G3\\CaseRecordTable.vb",
@@ -168,18 +168,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-05-01T03:54:18.405Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CaseRecordTable.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordTable.vb",
-              "RelativeDocumentMoniker": "G3\\CaseRecordTable.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordTable.vb [Design]",
-              "RelativeToolTip": "G3\\CaseRecordTable.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-05-01T03:54:14.391Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -219,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "g3CommandCenter_Form.vb",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "G3\\g3CommandCenter_Form.vb",
@@ -232,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "g3CommandCenter_Form.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\g3CommandCenter_Form.vb",
               "RelativeDocumentMoniker": "G3\\g3CommandCenter_Form.vb",
@@ -244,20 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MDIBrgySys.vb",
-              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
-              "RelativeDocumentMoniker": "MDIBrgySys.vb",
-              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
-              "RelativeToolTip": "MDIBrgySys.vb",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBEAAACFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-04-05T13:28:39.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MDIBrgySys.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
               "RelativeDocumentMoniker": "MDIBrgySys.vb",
@@ -266,6 +241,30 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-05T12:42:28.493Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MDIBrgySys.vb",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeDocumentMoniker": "MDIBrgySys.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\MDIBrgySys.vb",
+              "RelativeToolTip": "MDIBrgySys.vb",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAvwIUAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-04-05T13:28:39.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CaseRecordTable.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordTable.vb",
+              "RelativeDocumentMoniker": "G3\\CaseRecordTable.vb",
+              "ToolTip": "C:\\Users\\Kean Jiro Trillanes\\Desktop\\projects c\u002B\u002B\\IMPORTANT\\main\\brgysys\\G3\\CaseRecordTable.vb [Design]",
+              "RelativeToolTip": "G3\\CaseRecordTable.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-05-01T03:54:14.391Z"
             },
             {
               "$type": "Document",
