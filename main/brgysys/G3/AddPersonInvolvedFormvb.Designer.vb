@@ -120,6 +120,7 @@ Partial Class AddPersonInvolvedFormvb
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "AddPersonInvolvedFormvb"
+        Text = "Add Person"
         ResumeLayout(False)
         PerformLayout()
     End Sub

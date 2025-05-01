@@ -137,6 +137,7 @@ Partial Class CaseRecordTable
         FormBorderStyle = FormBorderStyle.FixedSingle
         MaximizeBox = False
         Name = "CaseRecordTable"
+        Text = "Case Revords"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
         CType(ActiveCases_DataGridView, ComponentModel.ISupportInitialize).EndInit()

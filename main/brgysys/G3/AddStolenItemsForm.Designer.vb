@@ -87,6 +87,7 @@ Partial Class AddStolenItemsForm
         Controls.Add(ItemName_TextBox)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "AddStolenItemsForm"
+        Tag = ""
         ResumeLayout(False)
         PerformLayout()
     End Sub

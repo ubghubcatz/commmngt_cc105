@@ -390,7 +390,7 @@ Partial Class CallDetails
         MaximumSize = New Size(1259, 672)
         MinimumSize = New Size(600, 600)
         Name = "CallDetails"
-        Text = "CallDetails"
+        Text = "Call Details"
         CType(CallNotes_Table, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()

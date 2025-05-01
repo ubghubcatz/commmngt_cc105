@@ -97,7 +97,7 @@ Partial Class AdditionalPhotoForm
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         MaximizeBox = False
         Name = "AdditionalPhotoForm"
-        Text = "AdditionalPhotoForm"
+        Text = "Add Photo"
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         ResumeLayout(False)

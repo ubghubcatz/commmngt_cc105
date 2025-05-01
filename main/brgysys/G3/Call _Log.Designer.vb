@@ -417,6 +417,7 @@ Partial Class Call_Log
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "Call_Log"
+        Text = "New Log"
         ResumeLayout(False)
         PerformLayout()
     End Sub

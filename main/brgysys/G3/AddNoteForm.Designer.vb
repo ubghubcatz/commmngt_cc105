@@ -127,6 +127,7 @@ Partial Class AddNoteForm
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "AddNoteForm"
+        Text = "Add Note"
         ResumeLayout(False)
         PerformLayout()
     End Sub

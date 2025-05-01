@@ -121,7 +121,7 @@ Partial Class CallLog_Tables
         MaximizeBox = False
         Name = "CallLog_Tables"
         StartPosition = FormStartPosition.Manual
-        Text = "CallLog_Tables"
+        Text = "Logs"
         CType(CallLog_Table, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()

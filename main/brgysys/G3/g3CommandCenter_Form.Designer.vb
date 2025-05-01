@@ -494,6 +494,7 @@ Partial Class g3CommandCenter_Form
         MaximizeBox = False
         MinimumSize = New Size(1681, 796)
         Name = "g3CommandCenter_Form"
+        Text = "Command Center"
         FlowLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel1.ResumeLayout(False)
         TableLayoutPanel2.ResumeLayout(False)

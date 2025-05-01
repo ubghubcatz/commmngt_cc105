@@ -100,6 +100,7 @@ Partial Class AddOfficersForm
         Controls.Add(Panel1)
         FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "AddOfficersForm"
+        Text = "Add Officer"
         ResumeLayout(False)
         PerformLayout()
     End Sub
