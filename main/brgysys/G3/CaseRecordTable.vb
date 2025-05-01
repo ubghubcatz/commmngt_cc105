@@ -68,40 +68,47 @@ Public Class CaseRecordTable
             End Using
 
             g3CommandCenter_Form.StyleDataGridView(ActiveCases_DataGridView)
-
-            For Each row As DataGridViewRow In ActiveCases_DataGridView.Rows
-                If Not row.IsNewRow Then
-                    If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
-                        row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
-                    End If
-
-                    If String.IsNullOrEmpty(row.Cells("ResolvedDate").Value?.ToString()) Then
-                        row.Cells("ResolvedDate").Style.BackColor = Color.LightPink
-                    End If
-
-                    Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
-                    If expectedDateObj IsNot DBNull.Value AndAlso expectedDateObj IsNot Nothing Then
-                        Dim expectedDate As DateTime
-                        If DateTime.TryParse(expectedDateObj.ToString(), expectedDate) Then
-                            If expectedDate < DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() <> "Resolved" Then
-                                row.Cells("ExpectedDateFinish").Style.BackColor = Color.Red
-                                row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
-                            ElseIf (expectedDate - DateTime.Today).TotalDays <= 5 Then
-                                row.Cells("ExpectedDateFinish").Style.BackColor = Color.Orange
-                                row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
-                            ElseIf expectedDate >= DateTime.Today AndAlso row.Cells("casestatus").Value.ToString() = "Resolved" Then
-                                row.Cells("ExpectedDateFinish").Style.BackColor = Color.DarkGreen
-                                row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
-                            End If
-                        End If
-                    Else
-                        row.Cells("ExpectedDateFinish").Style.BackColor = Color.LightPink
-                    End If
-                End If
-            Next
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         End Try
+    End Sub
+
+    Private Sub ActiveCases_DataGridView_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles ActiveCases_DataGridView.DataBindingComplete
+        For Each row As DataGridViewRow In ActiveCases_DataGridView.Rows
+            If Not row.IsNewRow Then
+                If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
+                    row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
+                End If
+
+                If String.IsNullOrEmpty(row.Cells("ResolvedDate").Value?.ToString()) Then
+                    row.Cells("ResolvedDate").Style.BackColor = Color.LightPink
+                End If
+
+                Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
+                Dim resolvedDate = row.Cells("ResolvedDate").Value
+
+                If expectedDateObj IsNot DBNull.Value AndAlso expectedDateObj IsNot Nothing Then
+                    Dim expectedDate As DateTime
+                    Dim resolvedDateVal As DateTime
+                    If DateTime.TryParse(expectedDateObj.ToString(), expectedDate) Then
+                        DateTime.TryParse(resolvedDate?.ToString(), resolvedDateVal)
+
+                        If (expectedDate < resolvedDateVal) Or (row.Cells("casestatus").Value.ToString() <> "Resolved" AndAlso expectedDate < DateTime.Now) Then
+                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Red
+                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        ElseIf (expectedDate - DateTime.Today).TotalDays <= 5 Then
+                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Orange
+                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        ElseIf expectedDate >= resolvedDateVal Then
+                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.DarkGreen
+                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        End If
+                    End If
+                Else
+                    row.Cells("ExpectedDateFinish").Style.BackColor = Color.LightPink
+                End If
+            End If
+        Next
     End Sub
 
 

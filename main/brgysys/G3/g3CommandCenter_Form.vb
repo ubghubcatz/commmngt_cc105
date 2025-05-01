@@ -200,6 +200,7 @@ Public Class g3CommandCenter_Form
 
 
     Private Sub CaseRecords_Btn_Click(sender As Object, e As EventArgs) Handles CaseRecords_Btn.Click
+        CaseRecordTable.InsertTable()
         OpenOrRestoreForm(GetType(CaseRecordTable), MDIBrgySys)
     End Sub
 
