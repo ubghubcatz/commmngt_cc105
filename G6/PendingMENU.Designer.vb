@@ -274,7 +274,7 @@ Partial Class PendingMENU
         Button1.FlatStyle = FlatStyle.Flat
         Button1.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button1.ForeColor = SystemColors.ControlLightLight
-        Button1.Location = New Point(765, 553)
+        Button1.Location = New Point(780, 553)
         Button1.Name = "Button1"
         Button1.Size = New Size(143, 65)
         Button1.TabIndex = 97
@@ -287,7 +287,7 @@ Partial Class PendingMENU
         Button2.FlatStyle = FlatStyle.Flat
         Button2.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button2.ForeColor = SystemColors.ControlLightLight
-        Button2.Location = New Point(765, 624)
+        Button2.Location = New Point(780, 624)
         Button2.Name = "Button2"
         Button2.Size = New Size(143, 63)
         Button2.TabIndex = 98
@@ -366,7 +366,7 @@ Partial Class PendingMENU
         Button3.FlatStyle = FlatStyle.Flat
         Button3.Font = New Font("Segoe UI", 9F, FontStyle.Bold)
         Button3.ForeColor = SystemColors.ControlLightLight
-        Button3.Location = New Point(765, 483)
+        Button3.Location = New Point(780, 485)
         Button3.Name = "Button3"
         Button3.Size = New Size(143, 63)
         Button3.TabIndex = 134
@@ -410,8 +410,9 @@ Partial Class PendingMENU
         Controls.Add(attend)
         Controls.Add(Label1)
         Controls.Add(DataGridView1)
-        FormBorderStyle = FormBorderStyle.None
+        FormBorderStyle = FormBorderStyle.FixedToolWindow
         Name = "PendingMENU"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "PendingMENU"
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)

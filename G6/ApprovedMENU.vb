@@ -22,17 +22,17 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-            nameInfo.Text = selectedRow.Cells(1).Value.ToString()
+            nameInfo.Text = selectedRow.Cells("Name").Value.ToString()
             lname.Text = selectedRow.Cells("Lname").Value.ToString()
-            con.Text = selectedRow.Cells(2).Value.ToString()
-            email.Text = selectedRow.Cells(3).Value.ToString()
-            eventName.Text = selectedRow.Cells(4).Value.ToString()
-            attend.Text = selectedRow.Cells(5).Value.ToString()
-            type.Text = selectedRow.Cells(6).Value.ToString()
-            venue.Text = selectedRow.Cells(7).Value.ToString()
-            datesche.Text = selectedRow.Cells(8).Value.ToString()
-            startsche.Text = selectedRow.Cells(9).Value.ToString()
-            endsche.Text = selectedRow.Cells(10).Value.ToString()
+            con.Text = selectedRow.Cells("Contact").Value.ToString()
+            email.Text = selectedRow.Cells("Email").Value.ToString()
+            eventName.Text = selectedRow.Cells("EventName").Value.ToString()
+            attend.Text = selectedRow.Cells("Attendees").Value.ToString()
+            type.Text = selectedRow.Cells("Type").Value.ToString()
+            venue.Text = selectedRow.Cells("Venue").Value.ToString()
+            datesche.Text = selectedRow.Cells("DateBooked").Value.ToString()
+            startsche.Text = selectedRow.Cells("StartTime").Value.ToString()
+            endsche.Text = selectedRow.Cells("EndTime").Value.ToString()
         End If
     End Sub
 
