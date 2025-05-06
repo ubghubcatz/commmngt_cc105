@@ -26,10 +26,12 @@ Public Class CaseRecordShowForm
     Private Sub CaseRecordShowForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         initiateTables()
         HideTabSelector()
-        Procedure_ListView.OwnerDraw = True
-        Procedure_ListView.Columns(2).Width = 0
-        Procedure_ListView.Columns(3).Width = 0
-        oldProcedures = Procedure_ListView.Items.Count
+        If Procedure_ListView.Items.Count > 0 Then
+            Procedure_ListView.OwnerDraw = True
+            Procedure_ListView.Columns(2).Width = 0
+            Procedure_ListView.Columns(3).Width = 0
+            oldProcedures = Procedure_ListView.Items.Count
+        End If
     End Sub
 
     Private Sub Procedure_ListView_ColumnWidthChanging(sender As Object, e As ColumnWidthChangingEventArgs) Handles Procedure_ListView.ColumnWidthChanging
@@ -537,12 +539,12 @@ Public Class CaseRecordShowForm
         ' Initialize the SaveFileDialog
         Dim saveFileDialog As New SaveFileDialog()
         saveFileDialog.Filter = "PDF Files|*.pdf"
-        saveFileDialog.Title = "Save PDF File"
         Dim safeCaseID As String = CaseIDString_TextBox.Text.Replace(":", "-").Replace("/", "-").Replace("\", "-").Trim()
         Dim lastUpdatedDate As DateTime = DateTime.Parse(lastUpdatedOn)
         Dim safeDate As String = lastUpdatedDate.ToString("yyyy-MM-dd HH-mm-ss")
 
         saveFileDialog.FileName = $"{safeCaseID} - Updated On {safeDate}.pdf"
+
         ' Show the SaveFileDialog and check if the user selected a file
         If saveFileDialog.ShowDialog() = DialogResult.OK Then
             ' Get the selected file path from the dialog
@@ -582,18 +584,31 @@ Public Class CaseRecordShowForm
             PrintDocument1.PrintController = New StandardPrintController()
             PrintPreviewDialog1.Document = PrintDocument1
             PrintPreviewDialog1.TopMost = True
-            PrintPreviewDialog1.ShowDialog()
+
+            Try
+                PrintPreviewDialog1.ShowDialog(Me)
+
+            Catch ex As Exception
+                MessageBox.Show("Printing stopped.")
+            End Try
         End If
     End Sub
 
     Private Sub PrintPreviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintPreviewToolStripMenuItem.Click
         ' If PrintDocument1.DefaultPageSettings Is Nothing Then
+
         'PrintDocument1.DefaultPageSettings = New Printing.PageSettings()
-        'End If
+        ' End If
         PrintDocument1.PrintController = New StandardPrintController()
+
         PrintPreviewDialog1.Document = PrintDocument1
         PrintPreviewDialog1.TopMost = True
-        PrintPreviewDialog1.ShowDialog()
+        Try
+            PrintPreviewDialog1.ShowDialog(Me)
+
+        Catch ex As Exception
+            MessageBox.Show("Printing stopped.")
+        End Try
     End Sub
 
 

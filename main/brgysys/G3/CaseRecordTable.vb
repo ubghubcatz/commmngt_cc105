@@ -155,7 +155,6 @@ Public Class CaseRecordTable
                         If crsf.WindowState = FormWindowState.Minimized Then crsf.WindowState = FormWindowState.Normal
 
                         ' Bring it to front and focus it properly
-                        crsf.TopMost = True
                         crsf.BringToFront()
                         crsf.Activate() ' Force it to receive focus
                     End If
