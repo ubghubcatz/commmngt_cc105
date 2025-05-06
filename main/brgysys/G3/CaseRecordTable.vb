@@ -41,21 +41,21 @@ Public Class CaseRecordTable
 
     Public Sub InsertTable()
         Dim query As String = "
-                             SELECT 
-                                 sd.caseid,
-                                 sd.caseIDString,
-                                 sd.casename,
-                                 sd.casetype,                               
-                                 cr.casestatus,
-                                 STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
-                                 cr.ExpectedDateFinish,
-                                 cr.ResolvedDate
-                             FROM g3_SpecificCaseDetails sd
-                             LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
-                             LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
-                             LEFT JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
-                             GROUP BY sd.caseid, caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish, cr.ResolvedDate
-                             "
+                         SELECT 
+                             sd.caseid,
+                             sd.caseIDString,
+                             sd.casename,
+                             sd.casetype,                               
+                             cr.casestatus,
+                             STRING_AGG(emp.EmployeeName, ', ') AS AssignedOfficers,
+                             cr.ExpectedDateFinish,
+                             cr.ResolvedDate
+                         FROM g3_SpecificCaseDetails sd
+                         LEFT JOIN g3_CaseRecords cr ON sd.caseid = cr.caseid
+                         LEFT JOIN g3_OfficerCaseAssignments oca ON sd.caseid = oca.caseid
+                         LEFT JOIN g4_EmployeeDetails emp ON oca.officerid = emp.EmployeeID
+                         GROUP BY sd.caseid, caseIDString, sd.casename, sd.casetype, cr.casestatus, cr.ExpectedDateFinish, cr.ResolvedDate
+                         "
 
         Try
             Using conn As New SqlConnection(connectionString)
@@ -63,6 +63,17 @@ Public Class CaseRecordTable
                     Dim adapter As New SqlDataAdapter(cmd)
                     Dim table As New DataTable()
                     adapter.Fill(table)
+
+                    ' Rename columns
+                    table.Columns("caseid").ColumnName = "Case ID"
+                    table.Columns("caseIDString").ColumnName = "Case No."
+                    table.Columns("casename").ColumnName = "Case Name"
+                    table.Columns("casetype").ColumnName = "Case Type"
+                    table.Columns("casestatus").ColumnName = "Status"
+                    table.Columns("AssignedOfficers").ColumnName = "Assigned Officers"
+                    table.Columns("ExpectedDateFinish").ColumnName = "Expected Finish"
+                    table.Columns("ResolvedDate").ColumnName = "Resolved Date"
+
                     ActiveCases_DataGridView.DataSource = table
                 End Using
             End Using
@@ -76,16 +87,16 @@ Public Class CaseRecordTable
     Private Sub ActiveCases_DataGridView_DataBindingComplete(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles ActiveCases_DataGridView.DataBindingComplete
         For Each row As DataGridViewRow In ActiveCases_DataGridView.Rows
             If Not row.IsNewRow Then
-                If String.IsNullOrEmpty(row.Cells("AssignedOfficers").Value?.ToString()) Then
-                    row.Cells("AssignedOfficers").Style.BackColor = Color.LightPink
+                If String.IsNullOrEmpty(row.Cells("Assigned Officers").Value?.ToString()) Then
+                    row.Cells("Assigned Officers").Style.BackColor = Color.LightPink
                 End If
 
-                If String.IsNullOrEmpty(row.Cells("ResolvedDate").Value?.ToString()) Then
-                    row.Cells("ResolvedDate").Style.BackColor = Color.LightPink
+                If String.IsNullOrEmpty(row.Cells("Resolved Date").Value?.ToString()) Then
+                    row.Cells("Resolved Date").Style.BackColor = Color.LightPink
                 End If
 
-                Dim expectedDateObj = row.Cells("ExpectedDateFinish").Value
-                Dim resolvedDate = row.Cells("ResolvedDate").Value
+                Dim expectedDateObj = row.Cells("Expected Finish").Value
+                Dim resolvedDate = row.Cells("Resolved Date").Value
 
                 If expectedDateObj IsNot DBNull.Value AndAlso expectedDateObj IsNot Nothing Then
                     Dim expectedDate As DateTime
@@ -93,23 +104,24 @@ Public Class CaseRecordTable
                     If DateTime.TryParse(expectedDateObj.ToString(), expectedDate) Then
                         DateTime.TryParse(resolvedDate?.ToString(), resolvedDateVal)
 
-                        If (expectedDate < resolvedDateVal) Or (row.Cells("casestatus").Value.ToString() <> "Resolved" AndAlso expectedDate < DateTime.Now) Then
-                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Red
-                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                        If (expectedDate < resolvedDateVal) Or (row.Cells("Status").Value.ToString() <> "Resolved" AndAlso expectedDate < DateTime.Now) Then
+                            row.Cells("Expected Finish").Style.BackColor = Color.Red
+                            row.Cells("Expected Finish").Style.ForeColor = Color.White
                         ElseIf (expectedDate - DateTime.Today).TotalDays <= 5 Then
-                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.Orange
-                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                            row.Cells("Expected Finish").Style.BackColor = Color.Orange
+                            row.Cells("Expected Finish").Style.ForeColor = Color.White
                         ElseIf expectedDate >= resolvedDateVal Then
-                            row.Cells("ExpectedDateFinish").Style.BackColor = Color.DarkGreen
-                            row.Cells("ExpectedDateFinish").Style.ForeColor = Color.White
+                            row.Cells("Expected Finish").Style.BackColor = Color.DarkGreen
+                            row.Cells("Expected Finish").Style.ForeColor = Color.White
                         End If
                     End If
                 Else
-                    row.Cells("ExpectedDateFinish").Style.BackColor = Color.LightPink
+                    row.Cells("Expected Finish").Style.BackColor = Color.LightPink
                 End If
             End If
         Next
     End Sub
+
 
 
     ' Handle double-click on DataGridView row to open case details

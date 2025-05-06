@@ -233,7 +233,7 @@ Partial Class CaseRecordForm
         ' 
         SpecificCaseType_ComboBox.DropDownStyle = ComboBoxStyle.DropDownList
         SpecificCaseType_ComboBox.FormattingEnabled = True
-        SpecificCaseType_ComboBox.Items.AddRange(New Object() {"Environmental and Sanitation Issues", "Public Order Violations", "Neighborhood and Community Conflicts", "Business and Financial Disputes", "", "Physical Injuries and Assault", "Property and Boundary Disputes", "Family and Domestic Disputes"})
+        SpecificCaseType_ComboBox.Items.AddRange(New Object() {"Assault and Physical Injury", "Family and Domestic Disputes", "", "", "Property and Boundary Disputes", "", "", "Business and Financial Disputes", "", "", "Neighborhood and Community Disputes", "", "", "Public Order Offenses", "", "", "Environmental and Sanitation Complaints", "", "", "Vandalism and Property Damage", "", "", "Drug-Related Incidents", "", "", "Child Welfare and Protection", "", "", "Sexual Offenses and Harassment", "", "", "Traffic and Vehicular Incidents", "", "", "Animal-Related Issues", "", "", "Noise and Disturbance Complaints", "", "", "Arson and Fire Incidents", "", "", "Fraud and Cybercrime", "", "", "Trespassing and Unlawful Entry", "", "", "Homicide and Suspicious Deaths", "", "", "Illegal Possession of Weapons"})
         SpecificCaseType_ComboBox.Location = New Point(12, 354)
         SpecificCaseType_ComboBox.Name = "SpecificCaseType_ComboBox"
         SpecificCaseType_ComboBox.Size = New Size(300, 28)
@@ -242,11 +242,11 @@ Partial Class CaseRecordForm
         ' generalCases_PicBox
         ' 
         generalCases_PicBox.BorderStyle = BorderStyle.FixedSingle
-        generalCases_PicBox.InitialImage = CType(resources.GetObject("generalCases_PicBox.InitialImage"), Image)
+        generalCases_PicBox.InitialImage = My.Resources.Resources._4595376_200
         generalCases_PicBox.Location = New Point(12, 54)
         generalCases_PicBox.Name = "generalCases_PicBox"
         generalCases_PicBox.Size = New Size(338, 252)
-        generalCases_PicBox.SizeMode = PictureBoxSizeMode.StretchImage
+        generalCases_PicBox.SizeMode = PictureBoxSizeMode.AutoSize
         generalCases_PicBox.TabIndex = 38
         generalCases_PicBox.TabStop = False
         ' 
