@@ -61,15 +61,6 @@
     <Compile Update="G4\Schedule.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="g5\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="g5\FrmNEW.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="g5\My Project\frmRECORDS.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="G6\ApprovedMENU.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -80,27 +71,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="G6\PendingMENU.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\ApprovedSeminarsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\AssistanceForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\BurialRequirementsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\DonationForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\EducationalRequirementsForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="G7\SeminarForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MDIBrgySys.vb">

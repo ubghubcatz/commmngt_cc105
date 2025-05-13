@@ -410,3 +410,7 @@ C:\Users\figss\OneDrive\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\n
 C:\Users\figss\OneDrive\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.dll
 C:\Users\figss\OneDrive\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\refint\brgysys.dll
 C:\Users\figss\OneDrive\Documents\GitHub\commmngt_cc105\main\brgysys\obj\Debug\net8.0-windows\brgysys.pdb
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\main\brgysys\obj\Debug\net8.0-windows\brgysys.ApprovedMENU.resources
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\main\brgysys\obj\Debug\net8.0-windows\brgysys.formMenu.resources
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\main\brgysys\obj\Debug\net8.0-windows\brgysys.historyMENU.resources
+C:\Users\Kean Jiro Trillanes\Desktop\projects c++\IMPORTANT\main\brgysys\obj\Debug\net8.0-windows\brgysys.PendingMENU.resources

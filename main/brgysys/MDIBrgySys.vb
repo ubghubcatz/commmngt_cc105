@@ -118,20 +118,36 @@
     End Sub
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
-        g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
+        If g3CommandCenter_Form.HasScreenAccess("EM0004") Then
+            g3CommandCenter_Form.OpenOrRestoreForm(GetType(g3CommandCenter_Form), Me)
+
+        Else
+            MessageBox.Show("Access Not Allowed")
+        End If
     End Sub
 
     Private Sub CaseRecordsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CaseRecordsToolStripMenuItem.Click
-        g3CommandCenter_Form.OpenOrRestoreForm(GetType(CaseRecordTable), Me)
+        If g3CommandCenter_Form.HasScreenAccess("EM0004") Then
+            g3CommandCenter_Form.OpenOrRestoreForm(GetType(CaseRecordTable), Me)
+        Else
+            MessageBox.Show("Access Not Allowed")
+        End If
     End Sub
 
     Private Sub LogsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogsToolStripMenuItem.Click
-        g3CommandCenter_Form.OpenOrRestoreForm(GetType(CallLog_Tables), Me)
-
+        If g3CommandCenter_Form.HasScreenAccess("EM0004") Then
+            g3CommandCenter_Form.OpenOrRestoreForm(GetType(CallLog_Tables), Me)
+        Else
+            MessageBox.Show("Access Not Allowed")
+        End If
     End Sub
 
     Private Sub EmployeesAvailabilityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesAvailabilityToolStripMenuItem.Click
-        g3CommandCenter_Form.OpenOrRestoreForm(GetType(OfficersAvailabiltyForm), Me)
+        If g3CommandCenter_Form.HasScreenAccess("EM0004") Then
+            g3CommandCenter_Form.OpenOrRestoreForm(GetType(OfficersAvailabiltyForm), Me)
+        Else
+            MessageBox.Show("Access Not Allowed")
+        End If
     End Sub
 
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click

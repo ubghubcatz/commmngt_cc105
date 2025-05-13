@@ -274,5 +274,19 @@ Public Class g3CommandCenter_Form
         End If
     End Sub
 
+    Function HasScreenAccess(screenID As String) As Boolean
+        Dim rsAccess As New ADODB.Recordset
+        Dim gs_Conn As String = "FILE NAME=" & App_Path() & "\RE.udl"
+        rsAccess.CursorLocation = ADODB.CursorLocationEnum.adUseClient
+        rsAccess.CursorType = ADODB.CursorTypeEnum.adOpenStatic
+        rsAccess.LockType = ADODB.LockTypeEnum.adLockReadOnly
+        rsAccess.Open("SELECT * FROM mn_AccessRight WHERE userid = '" & gs_User & "' AND screenID = '" & screenID & "' AND status = 'A'", gs_Conn)
+        Dim hasAccess As Boolean = Not rsAccess.EOF
+
+        rsAccess.Close()
+
+        Return hasAccess
+    End Function
+
 End Class
 
