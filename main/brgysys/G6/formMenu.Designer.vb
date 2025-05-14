@@ -52,7 +52,7 @@ Partial Class formMenu
         Button1 = New Button()
         Button2 = New Button()
         Label16 = New Label()
-        LastName = New TextBox()
+        lstname = New TextBox()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -261,7 +261,6 @@ Partial Class formMenu
         ' 
         ' cmbvenue
         ' 
-        cmbvenue.DropDownStyle = ComboBoxStyle.DropDownList
         cmbvenue.FlatStyle = FlatStyle.Popup
         cmbvenue.Font = New Font("Segoe UI", 7.8F, FontStyle.Bold)
         cmbvenue.FormattingEnabled = True
@@ -393,13 +392,13 @@ Partial Class formMenu
         Label16.TabIndex = 83
         Label16.Text = "LAST NAME"
         ' 
-        ' LastName
+        ' lstname
         ' 
-        LastName.Font = New Font("Segoe UI", 7.8F, FontStyle.Bold)
-        LastName.Location = New Point(12, 577)
-        LastName.Name = "LastName"
-        LastName.Size = New Size(239, 25)
-        LastName.TabIndex = 82
+        lstname.Font = New Font("Segoe UI", 7.8F, FontStyle.Bold)
+        lstname.Location = New Point(12, 577)
+        lstname.Name = "lstname"
+        lstname.Size = New Size(239, 25)
+        lstname.TabIndex = 82
         ' 
         ' formMenu
         ' 
@@ -412,7 +411,7 @@ Partial Class formMenu
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(935, 718)
         Controls.Add(Label16)
-        Controls.Add(LastName)
+        Controls.Add(lstname)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(Label6)
@@ -480,5 +479,5 @@ Partial Class formMenu
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label16 As Label
-    Friend WithEvents LastName As TextBox
+    Friend WithEvents lstname As TextBox
 End Class

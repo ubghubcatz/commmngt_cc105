@@ -11,7 +11,7 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
     Private Sub LoadDataGridView()
         Using conn As New SqlConnection(connectionString)
             conn.Open()
-            Dim query As String = "SELECT ID, Name, Lname, Contact, Email, EventName, Attendees, Type, Venue, DateBooked, StartTime, EndTime FROM g6_Pending"
+            Dim query As String = "SELECT ID, Firstname, Lastname, Contact, Email, EventName, Attendees, Type, Venue, DateBooked, StartTime, EndTime FROM g6_BookedPending"
             Using cmd As New SqlCommand(query, conn)
                 Using reader As SqlDataReader = cmd.ExecuteReader()
                     Dim dt As New DataTable()
@@ -24,7 +24,7 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
     Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
         ' User info
         Dim name = nameInfo.Text
-        Dim lname = LastName.Text
+        Dim lname = lstname.Text
         Dim contact = conInfo.Text
         Dim email = emailInfo.Text
         ' Event info
@@ -60,17 +60,17 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
 
                 ' Proceed with the insertions if no conflicts
                 Dim queries As New List(Of String) From {
-            "INSERT INTO g6_userInfo (Name, Lname, Contact, Email) VALUES (@name, @lname, @contact, @email)",
+            "INSERT INTO g6_BookersInfo (Firstname, Lastname, Contact, Email) VALUES (@name, @lname, @contact, @email)",
             "INSERT INTO g6_venueInfo (EventName, Attendees, Type, Venue) VALUES (@eventN, @attendee, @eventType, @venue)",
             "INSERT INTO g6_schedule (DateBooked, StartTime, EndTime) VALUES (@dateSche, @startT, @endT)",
             "INSERT INTO g6_BookedVenue (EventName, Venue, DateBooked, StartTime, EndTime) VALUES (@eventN, @venue, @dateSche, @startT, @endT)",
-            "INSERT INTO g6_Pending (Name, Lname, Contact, Email, EventName, Venue, Attendees, Type, DateBooked, StartTime, EndTime) VALUES (@name, @lname, @contact, @email, @eventN, @venue, @attendee, @eventType, @dateSche, @startT, @endT)"
+            "INSERT INTO g6_BookedPending (Firstname, Lastname, Contact, Email, EventName, Venue, Attendees, Type, DateBooked, StartTime, EndTime) VALUES (@name, @lname, @contact, @email, @eventN, @venue, @attendee, @eventType, @dateSche, @startT, @endT)"
         }
 
                 For Each query In queries
                     Using cmd As New SqlCommand(query, conn, transaction)
                         ' Add parameters based on the specific query
-                        If query.Contains("g6_userInfo") Then
+                        If query.Contains("g6_BookersInfo") Then
                             cmd.Parameters.AddWithValue("@name", name)
                             cmd.Parameters.AddWithValue("@lname", lname)
                             cmd.Parameters.AddWithValue("@contact", contact)
@@ -90,7 +90,7 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
                             cmd.Parameters.AddWithValue("@dateSche", dateSche)
                             cmd.Parameters.AddWithValue("@startT", startT)
                             cmd.Parameters.AddWithValue("@endT", endT)
-                        ElseIf query.Contains("g6_Pending") Then
+                        ElseIf query.Contains("g6_BookedPending") Then
                             cmd.Parameters.AddWithValue("@name", name)
                             cmd.Parameters.AddWithValue("@lname", lname)
                             cmd.Parameters.AddWithValue("@contact", contact)
@@ -117,7 +117,7 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
             End Try
         End Using
         nameInfo.Clear()
-        LastName.Clear()
+        lstname.Clear()
         conInfo.Clear()
         emailInfo.Clear()
         eventName.Clear()
@@ -134,8 +134,8 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         ' User info
-        Dim name = nameInfo.Text
-        Dim lname = LastName.Text
+        Dim Firstname = nameInfo.Text
+        Dim Lastname = lstname.Text
         Dim contact = conInfo.Text
         ' Event info
         Dim eventN As String = eventName.Text
@@ -162,10 +162,10 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
 
             Try
                 ' Update the Pending
-                Dim updatePendingQuery As String = "UPDATE g6_Pending SET Name = @name, Lname = @lname, Contact = @contact, EventName = @eventN, Attendees = @attendee, Type = @eventType, Venue = @venue, DateBooked = @dateSche, StartTime = @startT, EndTime = @endT WHERE ID = @ID"
+                Dim updatePendingQuery As String = "UPDATE g6_BookedPending SET Firstname = @Firstname, Lastname = @Lastname, Contact = @contact, EventName = @eventN, Attendees = @attendee, Type = @eventType, Venue = @venue, DateBooked = @dateSche, StartTime = @startT, EndTime = @endT WHERE ID = @ID"
                 Using updatePendingCmd As New SqlCommand(updatePendingQuery, con, transaction)
-                    updatePendingCmd.Parameters.AddWithValue("@name", name)
-                    updatePendingCmd.Parameters.AddWithValue("@lname", lname)
+                    updatePendingCmd.Parameters.AddWithValue("@Firstname", Firstname)
+                    updatePendingCmd.Parameters.AddWithValue("@Lastname", Lastname)
                     updatePendingCmd.Parameters.AddWithValue("@contact", contact)
                     updatePendingCmd.Parameters.AddWithValue("@attendee", attendee)
                     updatePendingCmd.Parameters.AddWithValue("@eventN", eventN)
@@ -193,9 +193,9 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
             Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
 
             ' Load data into form fields
-            nameInfo.Text = selectedRow.Cells("Name").Value.ToString()
+            nameInfo.Text = selectedRow.Cells("Firstname").Value.ToString()
             conInfo.Text = selectedRow.Cells("Contact").Value.ToString()
-            LastName.Text = selectedRow.Cells("Lname").Value.ToString()
+            lstname.Text = selectedRow.Cells("Lastname").Value.ToString()
             eventName.Text = selectedRow.Cells("eventName").Value.ToString()
             emailInfo.Text = selectedRow.Cells("Email").Value.ToString()
             attendeeCo.Text = selectedRow.Cells("Attendees").Value.ToString()

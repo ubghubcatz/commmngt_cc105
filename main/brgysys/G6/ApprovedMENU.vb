@@ -8,7 +8,7 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
     Private Sub ApprovedMENU_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Using conn As New SqlConnection(connectionString)
             conn.Open()
-            Dim query As String = "SELECT ID, Name, Lname, Contact, Email, EventName, Attendees, Type, Venue, DateBooked, StartTime, EndTime FROM g6_Approved"
+            Dim query As String = "SELECT ID, FirstName, Lastname, Contact, Email, EventName, Attendees, Type, Venue, DateBooked, StartTime, EndTime FROM g6_Approved"
             Using cmd As New SqlCommand(query, conn)
                 Using reader As SqlDataReader = cmd.ExecuteReader()
                     Dim dt As New DataTable()
@@ -22,8 +22,8 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-            nameInfo.Text = selectedRow.Cells("Name").Value.ToString()
-            lname.Text = selectedRow.Cells("Lname").Value.ToString()
+            nameInfo.Text = selectedRow.Cells("Firstname").Value.ToString()
+            lname.Text = selectedRow.Cells("Lastname").Value.ToString()
             con.Text = selectedRow.Cells("Contact").Value.ToString()
             email.Text = selectedRow.Cells("Email").Value.ToString()
             eventName.Text = selectedRow.Cells("EventName").Value.ToString()
@@ -50,11 +50,11 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
                 ' Get the ID of the selected row (replace "ID" with your actual primary key column name)
                 Dim id = Convert.ToInt32(selectedRow.Cells("ID").Value)
 
-                Dim cmd As New SqlCommand("INSERT INTO g6_History (Name, Lname, Contact, Email, EventName, Venue, Attendees, Type, DateBooked, StartTime, EndTime, EventStatus) VALUES (@name, @lname, @contact, @email, @eventN, @venue, @attendee, @eventType, @dateSche, @startT, @endT, @status)", conn)
+                Dim cmd As New SqlCommand("INSERT INTO g6_History (Firstname, Lastname, Contact, Email, EventName, Venue, Attendees, Type, DateBooked, StartTime, EndTime, EventStatus) VALUES (@name, @lname, @contact, @email, @eventN, @venue, @attendee, @eventType, @dateSche, @startT, @endT, @status)", conn)
 
                 ' Add parameters to the command
-                cmd.Parameters.AddWithValue("@name", nameInfo.Text)
-                cmd.Parameters.AddWithValue("@lname", lname.Text)
+                cmd.Parameters.AddWithValue("@Firstname", nameInfo.Text)
+                cmd.Parameters.AddWithValue("@Lastname", lname.Text)
                 cmd.Parameters.AddWithValue("@contact", con.Text)
                 cmd.Parameters.AddWithValue("@email", email.Text)
                 cmd.Parameters.AddWithValue("@eventN", eventName.Text)
@@ -99,7 +99,7 @@ User Id=ublipa_SQLLogin_1;Password=nktg6ikffl;TrustServerCertificate=True;"
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Using conn As New SqlConnection(connectionString)
             conn.Open()
-            Dim query As String = "SELECT ID, Name, Lname, Contact, Email, EventName, Attendees, Type, Venue, DateBooked, StartTime, EndTime FROM g6_Approved"
+            Dim query As String = "SELECT ID, Firstname, Lastname, Contact, Email, EventName, Attendees, Type, Venue, DateBooked, StartTime, EndTime FROM g6_Approved"
             Using cmd As New SqlCommand(query, conn)
                 Using reader As SqlDataReader = cmd.ExecuteReader()
                     Dim dt As New DataTable()
